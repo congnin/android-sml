@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">android-widget</string>
+
+    <string name="LBL_SECOND">second</string>
+    <string name="LBL_SECONDS">seconds</string>
 </resources>

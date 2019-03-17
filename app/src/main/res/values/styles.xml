@@ -8,4 +8,18 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <attr format="reference" name="circularProgressbarStyle"/>
+    <declare-styleable name="CircularProgressbar">
+        <attr format="integer" name="startAngle"/>
+        <attr format="float" name="progressbar_thickness" type="dimen"/>
+        <attr format="enum" name="rotation">
+            <enum name="clockwise" value="0"/>
+            <enum name="anticlockwise" value="1"/>
+        </attr>
+        <attr format="float" name="currentProgress"/>
+        <attr format="float" name="maxProgress"/>
+        <attr format="color" name="innerProgressColor"/>
+        <attr format="color" name="progressColor"/>
+        <attr format="color" name="progressBackgroundColor"/>
+    </declare-styleable>
 </resources>
