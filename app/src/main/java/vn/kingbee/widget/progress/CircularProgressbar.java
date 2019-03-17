@@ -53,14 +53,14 @@ public class CircularProgressbar extends View {
         this.mUnprogressedBounds = new RectF();
         this.mTraverse = 0.0F;
         this.mBackgroundColor = 0;
-        this.mStartAngle = 270.0F;
+        this.mStartAngle = DEFAULT_START_ANGLE;
         TypedArray attributes = context.obtainStyledAttributes(attrs,
                 R.styleable.CircularProgressbar, defStyleAttr, 0);
         if (attributes != null) {
             try {
                 this.mMaxProgress = attributes.getFloat(R.styleable.CircularProgressbar_maxProgress, 100.0F);
                 this.mCurrentProgress = attributes.getFloat(R.styleable.CircularProgressbar_currentProgress, 0.0F);
-                this.mStartAngle = (float)attributes.getInteger(R.styleable.CircularProgressbar_startAngle, 270);
+                this.mStartAngle = (float)attributes.getInteger(R.styleable.CircularProgressbar_startAngle, DEFAULT_START_ANGLE);
                 this.mRotation = attributes.getInteger(R.styleable.CircularProgressbar_rotation, 0);
                 this.mInnerProgressbarColor = attributes.getColor(R.styleable.CircularProgressbar_innerProgressColor, 0);
                 this.mProgressbarColor = attributes.getColor(R.styleable.CircularProgressbar_progressColor, 0);
@@ -141,7 +141,7 @@ public class CircularProgressbar extends View {
 
     protected void onDraw(Canvas canvas) {
         float sweepAngle = this.mTraverse;
-        float sweepAngleUnProgress = this.mTraverse - 360.0F;
+        float sweepAngleUnProgress = this.mTraverse - CIRCLE_DEGREE;
         if (this.mRotation == 1) {
             sweepAngle = -sweepAngle;
             sweepAngleUnProgress = -sweepAngleUnProgress;
@@ -206,7 +206,7 @@ public class CircularProgressbar extends View {
     }
 
     private float getProgressAngle(float progress) {
-        return progress >= this.mMaxProgress ? 360.0F : progress * 360.0F / this.mMaxProgress;
+        return progress >= this.mMaxProgress ? CIRCLE_DEGREE : progress * CIRCLE_DEGREE / this.mMaxProgress;
     }
 
     private void startAnimation() {
