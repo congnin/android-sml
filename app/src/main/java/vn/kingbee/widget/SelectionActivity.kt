@@ -4,6 +4,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import vn.kingbee.widget.edittext.FormatEditTextActivity
 import vn.kingbee.widget.progress.CircleProcessBarActivity
 
 class SelectionActivity : AppCompatActivity() {
@@ -15,5 +16,9 @@ class SelectionActivity : AppCompatActivity() {
 
     fun startCircleProcessBarActivity(v: View) {
         startActivity(Intent(this@SelectionActivity, CircleProcessBarActivity::class.java))
+    }
+
+    fun startFormatEditTextActivity(v: View) {
+        startActivity(Intent(this@SelectionActivity, FormatEditTextActivity::class.java))
     }
 }

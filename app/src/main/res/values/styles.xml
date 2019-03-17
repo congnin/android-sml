@@ -22,4 +22,11 @@
         <attr format="color" name="progressColor"/>
         <attr format="color" name="progressBackgroundColor"/>
     </declare-styleable>
+
+    <declare-styleable name="FormatEditTextStyle">
+        <attr format="string" name="formatInput"/>
+        <attr format="boolean" name="enableMask"/>
+        <attr format="reference" name="characterMask"/>
+        <attr format="integer" name="delayMask"/>
+    </declare-styleable>
 </resources>

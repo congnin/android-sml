@@ -3,4 +3,9 @@
 
     <string name="LBL_SECOND">second</string>
     <string name="LBL_SECONDS">seconds</string>
+
+    <string name="DIGITS_NUMBER_SPACE">012345678 9</string>
+    <string name="LBL_CELLPHONE_HINT">083 123 1234</string>
+    <string name="LBL_ID_NUMBER_HINT">123456 1234 12 1</string>
+    <string name="LBL_SSC_HINT">1234 1234 1234 1234</string>
 </resources>

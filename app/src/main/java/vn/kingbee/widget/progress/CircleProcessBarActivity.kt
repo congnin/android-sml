@@ -17,7 +17,7 @@ class CircleProcessBarActivity : AppCompatActivity(), CountDownTimerCallback {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_circle_process_bar)
         mTimeoutProgressBar = findViewById(R.id.circular_progress_bar)
         mTxtTimeoutCounter = findViewById(R.id.text_timeout_counter)
         mTxtTimeoutSeconds = findViewById(R.id.text_timeout_seconds)
