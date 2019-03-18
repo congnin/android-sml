@@ -8,12 +8,11 @@ import vn.kingbee.widget.R
 
 class CircleProcessBarActivity : AppCompatActivity(), CountDownTimerCallback {
 
-
-    var mTimeoutProgressBar: CircularProgressbar? = null
-    var mTxtTimeoutCounter: TextView? = null
-    var mTxtTimeoutSeconds: TextView? = null
-    var mCountDownTimerView: CountDownTimerView? = null
-    var btReset: Button? = null
+    private var mTimeoutProgressBar: CircularProgressbar? = null
+    private var mTxtTimeoutCounter: TextView? = null
+    private var mTxtTimeoutSeconds: TextView? = null
+    private var mCountDownTimerView: CountDownTimerView? = null
+    private var btReset: Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,8 +31,8 @@ class CircleProcessBarActivity : AppCompatActivity(), CountDownTimerCallback {
 
     private fun getCountDownTimeGot(timeGot: Int): CountDownTimerView {
         return CountDownTimerView(
-            this, mTimeoutProgressBar, mTxtTimeoutCounter,
-            mTxtTimeoutSeconds, timeGot, this
+            this, mTimeoutProgressBar!!, mTxtTimeoutCounter!!,
+            mTxtTimeoutSeconds!!, timeGot, this
         )
     }
 

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SquarePinEntryView">
+        <!-- The number of digits in the pin -->
+        <attr name="pinNumbers" format="integer" />
+        <!-- Digit dimensions, default 50dp x 50dp -->
+        <attr name="pinSize" format="dimension" />
+        <!-- Spacing between the pin boxes, default 20dp -->
+        <attr name="pinSpacing" format="dimension" />
+        <!-- Digit background, colour or drawable -->
+        <attr name="pinDefaultColor" format="reference|color" />
+        <attr name="pinInActiveColor" format="reference|color" />
+        <attr name="pinBackgroundColor" format="reference|color" />
+        <!-- Digit Focused background, colour or drawable -->
+        <attr name="pinActiveColor" format="reference|color" />
+        <!-- Digit Focused background, colour or drawable -->
+        <attr name="pinErrorColor" format="reference|color" />
+        <!-- Digit Focused background, colour or drawable -->
+        <attr name="pinCircleSize" format="dimension" />
+        <!-- Font size to use for the mask text, default 15sp -->
+        <attr name="pinTextSize" format="dimension" />
+        <!-- Colour of the mask text, defaults to theme textColorPrimary -->
+        <attr name="pinTextColor" format="color" />
+    </declare-styleable>
+</resources>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:id="@+id/ln_sa_in_contain"
+             android:id="@+id/ln_in_contain"
              android:layout_width="@dimen/dimen_40"
              android:layout_height="@dimen/dimen_40"
              android:layout_gravity="center"
@@ -8,7 +8,7 @@
              android:padding="@dimen/dimen_1">
 
     <vn.kingbee.widget.textview.SATextView
-            android:id="@+id/tv_sa_pin_number"
+            android:id="@+id/tv_pin_number"
             style="@style/Font.RobotoMedium"
             android:layout_width="@dimen/dimen_18"
             android:layout_height="@dimen/dimen_18"
