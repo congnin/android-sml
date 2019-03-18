@@ -29,4 +29,20 @@
         <attr format="reference" name="characterMask"/>
         <attr format="integer" name="delayMask"/>
     </declare-styleable>
+
+    <declare-styleable name="SATextView">
+        <attr name="typeFace" format="enum">
+            <enum name="Aachen_Bold" value="0" />
+            <enum name="helvetica_neue_medium_italic" value="1" />
+            <enum name="HelveticaNeue" value="2" />
+            <enum name="HelveticaNeue_Italic" value="3" />
+            <enum name="HelveticaNeue_LightItalic" value="4" />
+            <enum name="HelveticaNeue_UltraLight" value="5" />
+            <enum name="HelveticaNeue_Light" value="6" />
+            <enum name="Roboto_Regular" value="7" />
+            <enum name="Roboto_Medium" value="8" />
+            <enum name="Roboto_Light" value="9" />
+            <enum name="Roboto_Bold" value="10" />
+        </attr>
+    </declare-styleable>
 </resources>
