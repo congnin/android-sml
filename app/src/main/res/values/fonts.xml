@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.HelveticaNeue" parent="android:TextAppearance">
+        <item name="fontPath">fonts/HelveticaNeue.ttf</item>
+    </style>
+
+    <style name="TextAppearance.HelveticaNeueLight" parent="android:TextAppearance">
+        <item name="fontPath">fonts/HelveticaNeue_Light.ttf</item>
+    </style>
+
+    <style name="TextAppearance.HelveticaNeueBold" parent="android:TextAppearance">
+        <item name="fontPath">fonts/HelveticaNeue-Bold.ttf</item>
+    </style>
+
+    <style name="TextAppearance.HelveticaNeueMedium" parent="android:TextAppearance">
+        <item name="fontPath">fonts/HelveticaNeue_Medium.ttf</item>
+    </style>
+
+    <style name="TextAppearance.RobotoRegular" parent="android:TextAppearance">
+        <item name="fontPath">fonts/Roboto_Regular.ttf</item>
+    </style>
+
+    <style name="TextAppearance.RobotoMedium" parent="android:TextAppearance">
+        <item name="fontPath">fonts/Roboto_Medium.ttf</item>
+    </style>
+
+    <style name="TextAppearance.RobotoLight" parent="android:TextAppearance">
+        <item name="fontPath">fonts/Roboto_Light.ttf</item>
+    </style>
+
+    <style name="Font.RobotoMedium" parent="android:TextAppearance">
+        <item name="typeFace">Roboto_Medium</item>
+    </style>
+
+    <style name="Font.RobotoBold" parent="android:TextAppearance">
+        <item name="typeFace">Roboto_Bold</item>
+    </style>
+
+    <style name="Font.RobotoRegular" parent="android:TextAppearance">
+        <item name="typeFace">Roboto_Regular</item>
+    </style>
+
+    <style name="Font.RobotoLight" parent="android:TextAppearance">
+        <item name="typeFace">Roboto_Light</item>
+    </style>
+</resources>

@@ -35,4 +35,28 @@
     <dimen name="dimen_33">33dp</dimen>
     <dimen name="dimen_34">34dp</dimen>
     <dimen name="dimen_35">35dp</dimen>
+    <dimen name="dimen_36">36dp</dimen>
+    <dimen name="dimen_37">37dp</dimen>
+    <dimen name="dimen_38">38dp</dimen>
+    <dimen name="dimen_39">39dp</dimen>
+    <dimen name="dimen_40">40dp</dimen>
+    <dimen name="dimen_41">41dp</dimen>
+    <dimen name="dimen_42">42dp</dimen>
+    <dimen name="dimen_43">43dp</dimen>
+    <dimen name="dimen_44">44dp</dimen>
+    <dimen name="dimen_45">45dp</dimen>
+    <dimen name="dimen_46">46dp</dimen>
+
+    <!-- general font -->
+    <dimen name="text_size_8">8dp</dimen>
+    <dimen name="text_size_10">10dp</dimen>
+    <dimen name="text_size_12">12dp</dimen>
+    <dimen name="text_size_13">13dp</dimen>
+    <dimen name="text_size_14">14dp</dimen>
+    <dimen name="text_size_16">16dp</dimen>
+    <dimen name="text_size_18">18dp</dimen>
+    <dimen name="text_size_20">20dp</dimen>
+    <dimen name="text_size_22">22dp</dimen>
+    <dimen name="text_size_24">24dp</dimen>
+    <dimen name="text_size_28">28dp</dimen>
 </resources>

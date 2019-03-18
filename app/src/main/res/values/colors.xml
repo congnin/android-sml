@@ -101,4 +101,60 @@
     <color name="ksk_yellow_down_active">#FFDF3A</color>
     <color name="ksk_yellow_normal">#ffcc00</color>
     <color name="ksk_yellow_normal_disable">#80ffcc00</color>
+
+    <!-- Generic color -->
+    <color name="light_grey5">#CBCBCB</color>
+    <color name="light_grey6">#6b757d</color>
+    <color name="light_grey7">#7b7979</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="light_grey4_50">#80F7F7F7</color>
+
+    <!-- Zeplin color -->
+    <color name="dark_4">#7A7A7A</color>
+    <color name="light_grey_80">#e3e3e3</color>
+    <color name="light_grey">#D1D1D1</color>
+    <color name="light_grey3">#E8E8E8</color>
+    <color name="light_grey4">#F7F7F7</color>
+    <color name="blue">#107BBF</color>
+    <color name="blue_30">#4D107BBF</color>
+    <color name="red">#FF001F</color>
+    <color name="cbsa_color_red">#FFFF001F</color>
+    <color name="yellow">#ffcc00</color>
+    <color name="yellow_80">#80ffcc00</color>
+    <color name="green">#60D154</color>
+    <color name="white">#FFFFFF</color>
+    <color name="cbsa_color_white">#FFFFFFFF</color>
+    <color name="divider">#e5e4e5</color>
+    <color name="light_black">#231F20</color>
+    <color name="main_background">#231F20</color>
+    <color name="cbsa_color_transparent">#00000000</color>
+    <color name="cbsa_color_grey">#FFDEDEDE</color>
+    <color name="cbsa_color_white_30">#4DFFFFFF</color>
+    <color name="cbsa_color_yellow">#FFFFCC00</color>
+    <color name="cbsa_color_blue">#FF107BBF</color>
+
+    <color name="light_black_2">#B3000000</color>
+    <color name="light_black_1">#231F20</color>
+    <color name="light_black_30">#4d231F20</color>
+    <color name="base_text_color1">#55393536</color>
+    <color name="text_color_black1">#231f20</color>
+    <color name="text_color_gray1">#676767</color>
+    <color name="text_color_gray2">#4f4c4d</color>
+    <color name="text_color_gray3">#7a7a7a</color>
+    <color name="text_color_gray4">#333333</color>
+    <color name="cbsa_primary_color_black">#231F20</color>
+
+    <!-- White transparent -->
+    <color name="white_transparent_87_percent">#ddffffff</color>
+    <color name="white_transparent_80_percent">#CCFFFFFF</color>
+    <color name="white_transparent_53_percent">#88ffffff</color>
+    <color name="white_transparent_50_percent">#80ffffff</color>
+    <color name="white_transparent_60_percent">#99ffffff</color>
+    <color name="white_transparent_70_percent">#B3ffffff</color>
+    <color name="white_transparent_30_percent">#48ffffff</color>
+    <color name="white_transparent_34_percent">#55FFFFFF</color>
+    <color name="white_transparent_26_percent">#44ffffff</color>
+    <color name="white_opacity_15">#38ffffff</color>
+    <color name="white_transparent_85_percent">#D9FFFFFF</color>
 </resources>

@@ -2,6 +2,7 @@ package vn.kingbee.widget
 
 import android.app.Application
 import timber.log.Timber
+import vn.kingbee.widget.utils.FontHelper
 
 class MyApp : Application() {
     override fun onCreate() {
@@ -11,6 +12,9 @@ class MyApp : Application() {
         } else {
             Timber.plant(Timber.DebugTree())
         }
+
+        // setup font family
+        FontHelper.initializeFontConfig()
     }
 
     private class NotLoggingTree : Timber.Tree() {
