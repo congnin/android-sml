@@ -8,6 +8,11 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="Dialog_Infade_OutFade_Animation">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
     <attr format="reference" name="circularProgressbarStyle"/>
     <declare-styleable name="CircularProgressbar">
         <attr format="integer" name="startAngle"/>
