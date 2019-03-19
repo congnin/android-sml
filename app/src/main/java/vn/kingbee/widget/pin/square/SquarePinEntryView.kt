@@ -1,4 +1,4 @@
-package vn.kingbee.widget.pin
+package vn.kingbee.widget.pin.square
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -103,7 +103,8 @@ class SquarePinEntryView : LinearLayoutCompat, EditTextInterface {
 
         mCircleSize = array.getDimensionPixelSize(
             R.styleable.SquarePinEntryView_pinCircleSize,
-            TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, DEFAULT_PIN_CIRCLE_SIZE, metrics).toInt()
+            TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
+                DEFAULT_PIN_CIRCLE_SIZE, metrics).toInt()
         )
 
         mDigitFocusedBackground = array.getResourceId(R.styleable.PinEntryView_digitFocusedBackground, -1)

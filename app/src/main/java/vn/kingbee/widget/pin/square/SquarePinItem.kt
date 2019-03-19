@@ -1,4 +1,4 @@
-package vn.kingbee.widget.pin
+package vn.kingbee.widget.pin.square
 
 import android.content.Context
 import android.graphics.Typeface

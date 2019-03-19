@@ -45,4 +45,19 @@
             <enum name="Roboto_Bold" value="10" />
         </attr>
     </declare-styleable>
+
+    <style name="SquarePinEntry">
+        <item name="pinNumbers">4</item>
+        <item name="pinSize">@dimen/dimen_40</item>
+        <item name="pinSpacing">@dimen/dimen_12</item>
+        <item name="pinDefaultColor">@drawable/bg_square_pin_black_30</item>
+        <item name="pinInActiveColor">@drawable/bg_square_pin_black</item>
+        <item name="pinActiveColor">@drawable/bg_square_pin_yellow</item>
+        <item name="pinBackgroundColor">@drawable/bg_circle_pin_black</item>
+        <item name="pinErrorColor">@drawable/bg_square_pin_error</item>
+        <item name="pinCircleSize">@dimen/dimen_15</item>
+        <item name="pinTextSize">@dimen/text_size_18</item>
+        <item name="pinTextColor">@color/black</item>
+        <item name="android:gravity">center</item>
+    </style>
 </resources>
