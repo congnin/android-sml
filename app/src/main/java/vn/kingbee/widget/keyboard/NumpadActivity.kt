@@ -10,12 +10,13 @@ import android.widget.RelativeLayout
 import android.widget.ScrollView
 import net.yslibrary.android.keyboardvisibilityevent.KeyboardVisibilityEvent
 import net.yslibrary.android.keyboardvisibilityevent.KeyboardVisibilityEventListener
+import vn.kingbee.widget.edittext.material.MaterialEditText
 
 class NumpadActivity : BaseActivity(), NumpadKeyboard.OnKeyboardStateChangedListener {
 
     private var mContentScrollView: ScrollView? = null
     private var mPinKeyboardView: NumpadKeyboardView? = null
-    private var mOTPEditText: NumpadKeyboardEditText? = null
+    private var mOTPEditText: MaterialEditText? = null
     private var mNumberAccountEditText: NumpadKeyboardEditText? = null
 
     private var mPinKeyboard: NumpadKeyboard? = null
@@ -37,7 +38,7 @@ class NumpadActivity : BaseActivity(), NumpadKeyboard.OnKeyboardStateChangedList
 
     private fun addEvents() {
         mPinKeyboard = NumpadKeyboard(this, mPinKeyboardView!!, this)
-        mPinKeyboard?.registerResponder(mOTPEditText!!, true)
+        mPinKeyboard?.registerResponder(mOTPEditText?.getEditText() as NumpadKeyboardEditText, true)
         mOTPEditText?.setNumpadType(NumpadKeyboardType.NUMPAD_PIN)
 
         mPinKeyboard?.registerResponder(mNumberAccountEditText!!, true)

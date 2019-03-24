@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:textColorHint="@color/dark_4"
+        app:errorEnabled="true"
+        app:errorTextAppearance="@style/TextInputLayoutErrorStyle"
+        app:theme="@style/InputFieldStyle">
+
+        <vn.kingbee.widget.keyboard.NumpadKeyboardEditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:imeOptions="actionNext"
+            android:inputType="textCapWords"
+            android:lines="1"
+            android:textColor="@color/black"
+            android:textColorHint="@color/light_grey3"
+            android:textCursorDrawable="@drawable/cursor_yellow"
+            android:textSize="@dimen/text_size_16" />
+
+    </android.support.design.widget.TextInputLayout>
+
+</LinearLayout>

@@ -184,6 +184,7 @@ class NumpadKeyboard(
         mKeyboardView?.deselectCurrentActiveResponderViewIfNeed()
         if (mActiveResponderView != null) {
             mActiveResponderView?.inputType = InputType.TYPE_NULL
+            mActiveResponderView?.clearFocus()
         }
         if (isCustomKeyboardVisible()) {
             mStateListener?.onHideNumpadKeyboard(mKeyboardView!!, mActiveResponderView!!)
