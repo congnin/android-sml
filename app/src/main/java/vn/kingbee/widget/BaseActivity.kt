@@ -1,9 +1,12 @@
 package vn.kingbee.widget
 
 import android.content.Context
+import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.MotionEvent
 import android.widget.EditText
+import net.yslibrary.android.keyboardvisibilityevent.KeyboardVisibilityEvent
+import net.yslibrary.android.keyboardvisibilityevent.KeyboardVisibilityEventListener
 import vn.kingbee.widget.utils.CommonUtils
 import vn.kingbee.widget.utils.FontHelper
 
@@ -19,6 +22,8 @@ abstract class BaseActivity : AppCompatActivity() {
                 val isTouchInsideEditTextField = CommonUtils.isTouchInsideEditText(event, v)
                 if (event.action == 0 && isAfterDispatch && beforeDispatch && !isTouchInsideEditTextField) {
                     CommonUtils.hideKeyboard(this, this.window.currentFocus)
+                } else if (event.action == 0 && !isTouchInsideEditTextField) {
+                    hideCustomKeyboard(event)
                 }
             }
 
@@ -30,5 +35,9 @@ abstract class BaseActivity : AppCompatActivity() {
 
     override fun attachBaseContext(newBase: Context?) {
         super.attachBaseContext(FontHelper.attachBaseContext(newBase!!))
+    }
+
+    open fun hideCustomKeyboard(event: MotionEvent) {
+
     }
 }

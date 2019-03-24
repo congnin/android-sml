@@ -22,6 +22,7 @@
         <activity android:name=".progress.CircleProcessBarActivity" />
         <activity android:name=".edittext.FormatEditTextActivity" />
         <activity android:name=".pin.PinActivity" />
+        <activity android:name=".keyboard.NumpadActivity" />
     </application>
 
 </manifest>

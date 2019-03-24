@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import vn.kingbee.widget.edittext.FormatEditTextActivity
+import vn.kingbee.widget.keyboard.NumpadActivity
 import vn.kingbee.widget.pin.PinActivity
 import vn.kingbee.widget.progress.CircleProcessBarActivity
 
@@ -25,5 +26,9 @@ class SelectionActivity : AppCompatActivity() {
 
     fun startPinActivity(v: View) {
         startActivity(Intent(this@SelectionActivity, PinActivity::class.java))
+    }
+
+    fun startNumpadActivity(v: View) {
+        startActivity(Intent(this@SelectionActivity, NumpadActivity::class.java))
     }
 }

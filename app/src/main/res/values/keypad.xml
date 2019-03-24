@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="KEY_PAD_DONE">Done</string>
+    <string name="KEY_PAD_CLEAR">Clear</string>
+    <string name="KEY_PAD_NEXT">Next</string>
+    <string name="KEYPAD_BACK">Back</string>
+</resources>

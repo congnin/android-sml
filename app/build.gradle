@@ -10,7 +10,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "vn.kingbee.widget"
-        minSdkVersion 21
+        minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -35,6 +35,7 @@ dependencies {
     kapt 'com.jakewharton:butterknife-compiler:8.7.0'
 
     implementation 'com.jakewharton.timber:timber:4.7.1'
+    implementation 'net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:2.2.1'
 
     implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
 }

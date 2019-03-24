@@ -133,6 +133,7 @@
     <color name="cbsa_color_white_30">#4DFFFFFF</color>
     <color name="cbsa_color_yellow">#FFFFCC00</color>
     <color name="cbsa_color_blue">#FF107BBF</color>
+    <color name="cba_dusk">#61818f</color>
 
     <color name="light_black_2">#B3000000</color>
     <color name="light_black_1">#231F20</color>
@@ -157,4 +158,6 @@
     <color name="white_transparent_26_percent">#44ffffff</color>
     <color name="white_opacity_15">#38ffffff</color>
     <color name="white_transparent_85_percent">#D9FFFFFF</color>
+
+
 </resources>
