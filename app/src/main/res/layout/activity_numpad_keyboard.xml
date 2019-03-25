@@ -44,10 +44,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp" />
 
-            <EditText
+            <vn.kingbee.widget.edittext.material.MaterialEditText
+                android:id="@+id/edtCurrencyAmount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp" />
+                android:layout_marginTop="25dp"
+                android:singleLine="true"
+                app:editTextFirstHint="Amount"
+                app:editTextSecondHint="Amount" />
 
             <EditText
                 android:layout_width="match_parent"

@@ -20,9 +20,12 @@ import timber.log.Timber
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.animation.AnimationUtils
+import vn.kingbee.widget.keyboard.NumpadKeyboardEditText
+import vn.kingbee.widget.keyboard.NumpadKeyboardType
 
 const val DEFAULT_PIN_CIRCLE_SIZE = 24F
 const val DELAY_TIME = 500L
+
 class SquarePinEntryView : LinearLayoutCompat, EditTextInterface {
 
     private var mDigits = 4
@@ -38,7 +41,7 @@ class SquarePinEntryView : LinearLayoutCompat, EditTextInterface {
     private var mDigitTextColor: Int = 0
     private var mDigitFocusedBackground: Int = 0
     private var mCircleSize: Int = 0
-    private var mEditText: EditText? = null
+    private var mEditText: NumpadKeyboardEditText? = null
 
     private var mOnPinValidated: EventListener? = null
     private var mOnPinUnvalidtated: EventListener? = null
@@ -64,21 +67,21 @@ class SquarePinEntryView : LinearLayoutCompat, EditTextInterface {
     private fun initAttributes(context: Context, attrs: AttributeSet) {
         val array = getContext().obtainStyledAttributes(attrs, R.styleable.SquarePinEntryView)
         mDigits = array.getInt(
-            R.styleable.SquarePinEntryView_pinNumbers,
-            context.resources.getInteger(R.integer.pin_max_length)
+                R.styleable.SquarePinEntryView_pinNumbers,
+                context.resources.getInteger(R.integer.pin_max_length)
         )
         val metrics = resources.displayMetrics
         mDigitWidth = array.getDimensionPixelSize(
-            R.styleable.SquarePinEntryView_pinSize,
-            TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 30f, metrics).toInt()
+                R.styleable.SquarePinEntryView_pinSize,
+                TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 30f, metrics).toInt()
         )
         mDigitHeight = array.getDimensionPixelSize(
-            R.styleable.SquarePinEntryView_pinSize,
-            TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 30f, metrics).toInt()
+                R.styleable.SquarePinEntryView_pinSize,
+                TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 30f, metrics).toInt()
         )
         mDigitSpacing = array.getDimensionPixelSize(
-            R.styleable.SquarePinEntryView_pinSpacing,
-            TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 20f, metrics).toInt()
+                R.styleable.SquarePinEntryView_pinSpacing,
+                TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 20f, metrics).toInt()
         )
         mDigitTextSize = array.getDimensionPixelSize(R.styleable.SquarePinEntryView_pinTextSize, 12)
         // Get theme to resolve defaults
@@ -89,8 +92,8 @@ class SquarePinEntryView : LinearLayoutCompat, EditTextInterface {
         theme.resolveAttribute(android.R.attr.windowBackground, background, true)
 
         mDefaultDrawableResource = array.getResourceId(
-            R.styleable.SquarePinEntryView_pinDefaultColor,
-            background.resourceId
+                R.styleable.SquarePinEntryView_pinDefaultColor,
+                background.resourceId
         )
 
         mInActiveDrawableResource = array.getResourceId(R.styleable.SquarePinEntryView_pinInActiveColor, -1)
@@ -102,9 +105,9 @@ class SquarePinEntryView : LinearLayoutCompat, EditTextInterface {
         mErrorDrawableResource = array.getResourceId(R.styleable.SquarePinEntryView_pinErrorColor, -1)
 
         mCircleSize = array.getDimensionPixelSize(
-            R.styleable.SquarePinEntryView_pinCircleSize,
-            TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                DEFAULT_PIN_CIRCLE_SIZE, metrics).toInt()
+                R.styleable.SquarePinEntryView_pinCircleSize,
+                TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
+                        DEFAULT_PIN_CIRCLE_SIZE, metrics).toInt()
         )
 
         mDigitFocusedBackground = array.getResourceId(R.styleable.PinEntryView_digitFocusedBackground, -1)
@@ -113,8 +116,8 @@ class SquarePinEntryView : LinearLayoutCompat, EditTextInterface {
         val textColor = TypedValue()
         theme.resolveAttribute(android.R.attr.textColorPrimary, textColor, true)
         mDigitTextColor = array.getColor(
-            R.styleable.SquarePinEntryView_pinTextColor,
-            ContextCompat.getColor(getContext(), if (textColor.resourceId > 0) textColor.resourceId else textColor.data)
+                R.styleable.SquarePinEntryView_pinTextColor,
+                ContextCompat.getColor(getContext(), if (textColor.resourceId > 0) textColor.resourceId else textColor.data)
         )
 
         // recycle array
@@ -140,8 +143,8 @@ class SquarePinEntryView : LinearLayoutCompat, EditTextInterface {
 
     fun shake() {
         val animation = AnimationUtils.loadAnimation(
-            context,
-            R.anim.shake_horizontal
+                context,
+                R.anim.shake_horizontal
         )
         startAnimation(animation)
     }
@@ -161,37 +164,37 @@ class SquarePinEntryView : LinearLayoutCompat, EditTextInterface {
         initEditTextValues()
         addView(mEditText)
         mEditText?.addTextChangedListener(
-            object : TextWatcher {
-                override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
-                    mIsTextIsInDeleteMode = count > after
-                    hideSAPinPreviousItem(s)
-                }
-
-                override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
-                    // Do nothing
-                }
-
-                override fun afterTextChanged(s: Editable) {
-                    Timber.i("SquarePinEntryView.afterTextChanged(), s=$s")
-                    val length = s.length
-                    if (length == 0) {
-                        setPinItemStatusAtFirstTime()
-                        return
-                    }
-                    if (mIsTextIsInDeleteMode) {
-                        mDelayHidePinEntryHandler.removeCallbacksAndMessages()
-                        setPinItemStatusWhenDeleteAtPosition(length)
-                    } else {
-                        processWhenUserTypeAtPosition(s, length)
+                object : TextWatcher {
+                    override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
+                        mIsTextIsInDeleteMode = count > after
+                        hideSAPinPreviousItem(s)
                     }
 
-                    if (length == mDigits) {
-                        mOnPinValidated?.onEvent()
-                    } else {
-                        mOnPinUnvalidtated?.onEvent()
+                    override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
+                        // Do nothing
                     }
-                }
-            })
+
+                    override fun afterTextChanged(s: Editable) {
+                        Timber.i("SquarePinEntryView.afterTextChanged(), s=$s")
+                        val length = s.length
+                        if (length == 0) {
+                            setPinItemStatusAtFirstTime()
+                            return
+                        }
+                        if (mIsTextIsInDeleteMode) {
+                            mDelayHidePinEntryHandler.removeCallbacksAndMessages()
+                            setPinItemStatusWhenDeleteAtPosition(length)
+                        } else {
+                            processWhenUserTypeAtPosition(s, length)
+                        }
+
+                        if (length == mDigits) {
+                            mOnPinValidated?.onEvent()
+                        } else {
+                            mOnPinUnvalidtated?.onEvent()
+                        }
+                    }
+                })
     }
 
     private fun hideSAPinPreviousItem(s: CharSequence) {
@@ -247,7 +250,7 @@ class SquarePinEntryView : LinearLayoutCompat, EditTextInterface {
     }
 
     private fun initEditTextValues() {
-        mEditText = EditText(context)
+        mEditText = NumpadKeyboardEditText(context)
         mEditText?.gravity = Gravity.CENTER
         mEditText?.setBackgroundColor(ContextCompat.getColor(context, android.R.color.transparent))
         mEditText?.setTextColor(ContextCompat.getColor(context, android.R.color.transparent))
@@ -258,19 +261,20 @@ class SquarePinEntryView : LinearLayoutCompat, EditTextInterface {
         val params = LinearLayoutCompat.LayoutParams(0, 0)
         mEditText?.layoutParams = params
         ViewCompat.setImportantForAccessibility(
-            mEditText!!,
-            ViewCompat.IMPORTANT_FOR_ACCESSIBILITY_NO
+                mEditText!!,
+                ViewCompat.IMPORTANT_FOR_ACCESSIBILITY_NO
         )
+        mEditText?.setNumpadType(NumpadKeyboardType.NUMPAD_PIN)
     }
 
     private fun addPinItems() {
         for (i in 0 until mDigits) {
             val digitView = SquarePinItem(context)
-            digitView.setBackgroundDefault(resources.getDrawable(mDefaultDrawableResource, null))
-            digitView.background = context.resources.getDrawable(mInActiveDrawableResource, null)
-            digitView.setFocusBackground(context.resources.getDrawable(mFocusedDrawableResource, null))
-            digitView.setErrorColor(context.resources.getDrawable(mErrorDrawableResource, null))
-            digitView.setTextBackgroundColor(context.resources.getDrawable(mTextBackgroundDrawableResource, null))
+            digitView.setBackgroundDefault(ContextCompat.getDrawable(context, mDefaultDrawableResource)!!)
+            digitView.background = ContextCompat.getDrawable(context, mInActiveDrawableResource)
+            digitView.setFocusBackground(ContextCompat.getDrawable(context, mFocusedDrawableResource)!!)
+            digitView.setErrorColor(ContextCompat.getDrawable(context, mErrorDrawableResource)!!)
+            digitView.setTextBackgroundColor(ContextCompat.getDrawable(context, mTextBackgroundDrawableResource)!!)
             digitView.setTextColor(mDigitTextColor)
             digitView.setTextSize(mDigitTextSize)
             digitView.setCircleSize(mCircleSize)

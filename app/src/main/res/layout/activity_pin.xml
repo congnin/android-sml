@@ -1,61 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:focusableInTouchMode="true"
     android:focusable="true"
-    android:paddingTop="@dimen/dimen_45">
+    android:focusableInTouchMode="true">
 
-    <vn.kingbee.widget.pin.square.SquarePinEntryView
-        android:id="@+id/otp_view"
-        style="@style/SquarePinEntry"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <LinearLayout
+    <ScrollView
+        android:id="@+id/mainScrollView"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dimen_44"
-        android:layout_gravity="center"
-        android:layout_marginTop="@dimen/dimen_18"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:paddingLeft="@dimen/dimen_24"
-        android:paddingRight="@dimen/dimen_24"
-        android:paddingBottom="@dimen/dimen_1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/otp_view">
+        android:layout_height="match_parent"
+        android:background="#f2f3f5"
+        android:fillViewport="true"
+        android:overScrollMode="never">
 
-        <vn.kingbee.widget.textview.SATextView
-            android:id="@+id/fragment_link_device_otp"
-            style="@style/Font.RobotoRegular"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:paddingLeft="@dimen/dimen_2"
-            android:text="Did not receive OTP?"
-            android:textColor="@color/dark_4"
-            android:textSize="@dimen/text_size_12" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/dimen_45">
 
-        <vn.kingbee.widget.textview.SATextView
-            android:id="@+id/fragment_otp_resend"
-            style="@style/Font.RobotoRegular"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:paddingLeft="@dimen/dimen_3"
-            android:text="Resend"
-            android:textColor="@color/cbsa_color_blue"
-            android:textSize="@dimen/text_size_12" />
+            <vn.kingbee.widget.pin.square.SquarePinEntryView
+                android:id="@+id/otp_view"
+                style="@style/SquarePinEntry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    </LinearLayout>
-</android.support.constraint.ConstraintLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_44"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dimen_18"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dimen_24"
+                android:paddingRight="@dimen/dimen_24"
+                android:paddingBottom="@dimen/dimen_1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/otp_view">
+
+                <vn.kingbee.widget.textview.SATextView
+                    android:id="@+id/fragment_link_device_otp"
+                    style="@style/Font.RobotoRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/dimen_2"
+                    android:text="Did not receive OTP?"
+                    android:textColor="@color/dark_4"
+                    android:textSize="@dimen/text_size_12" />
+
+                <vn.kingbee.widget.textview.SATextView
+                    android:id="@+id/fragment_otp_resend"
+                    style="@style/Font.RobotoRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/dimen_3"
+                    android:text="Resend"
+                    android:textColor="@color/cbsa_color_blue"
+                    android:textSize="@dimen/text_size_12" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <vn.kingbee.widget.keyboard.NumpadKeyboardView
+        android:id="@+id/keyboardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@drawable/pin_keyboard_background"
+        android:keyBackground="@drawable/pin_keypad_button_selector"
+        android:keyTextColor="@android:color/transparent"
+        android:paddingTop="2dp"
+        android:visibility="gone"
+        android:shadowRadius="0.0" />
+</RelativeLayout>
