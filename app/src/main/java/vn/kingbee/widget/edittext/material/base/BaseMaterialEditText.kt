@@ -156,6 +156,7 @@ abstract class BaseMaterialEditText : FrameLayout, View.OnFocusChangeListener, T
         (mRules as? ArrayList)?.clear()
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     fun setEnable(isEnable: Boolean) {
         mEnable = isEnable
         if (mEnable) {
@@ -165,7 +166,7 @@ abstract class BaseMaterialEditText : FrameLayout, View.OnFocusChangeListener, T
             getEditText().isFocusableInTouchMode = true
         } else {
             getEditText().setTextColor(ContextCompat.getColor(context, R.color.light_grey))
-            getEditText().setOnTouchListener { v, event -> true }
+            getEditText().setOnTouchListener { _, _ -> true }
             getEditText().isFocusable = false
             getEditText().isFocusableInTouchMode = false
         }
@@ -212,7 +213,7 @@ abstract class BaseMaterialEditText : FrameLayout, View.OnFocusChangeListener, T
      * This is the tricky to support ignoring the empty rule
      * This method try to break the core rule which defied as the standard rule at the beginning.
      */
-    fun ignoreEmptyValidationCheck(isIgnore: Boolean) {
+    fun ignoreEmptyValidationCheck() {
         mIsIgnoreEmptyValidationCheck = true
     }
 
@@ -229,13 +230,13 @@ abstract class BaseMaterialEditText : FrameLayout, View.OnFocusChangeListener, T
     }
 
     override fun onFocusChange(v: View?, hasFocus: Boolean) {
-        handleFocusChange(v!!, hasFocus)
+        handleFocusChange(hasFocus)
         if (mOnFocusChangeListener != null) {
             mOnFocusChangeListener?.onFocusChange(v, hasFocus)
         }
     }
 
-    protected fun handleFocusChange(v: View, hasFocus: Boolean) {
+    protected fun handleFocusChange(hasFocus: Boolean) {
         if (hasFocus) {
             getEditText().hint = mSecondHint
             CommonUtils.showKeyboard(context as Activity, getEditText())

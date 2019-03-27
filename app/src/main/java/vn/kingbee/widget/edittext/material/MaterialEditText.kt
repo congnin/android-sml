@@ -26,7 +26,7 @@ class MaterialEditText : BaseMaterialEditText {
 
     override fun getLayout(): Int = R.layout.view_material_edittext_layout
 
-    public override fun getEditText(): EditText = mEditText!! as NumpadKeyboardEditText
+    public override fun getEditText(): EditText = mEditText!!
 
     override fun getTextInputLayout(): TextInputLayout = mTextInputLayout!!
 
