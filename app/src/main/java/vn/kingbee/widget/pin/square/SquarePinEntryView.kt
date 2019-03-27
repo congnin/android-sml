@@ -48,7 +48,7 @@ class SquarePinEntryView : LinearLayoutCompat, EditTextInterface {
 
     private var mIsTextIsInDeleteMode = false
     private var mIsPinEntryShowing = false
-    private val mDelayHidePinEntryHandler = DelayHidePinEntryHandler()
+//    private val mDelayHidePinEntryHandler = DelayHidePinEntryHandler()
 
     constructor(context: Context) : super(context)
 
@@ -110,7 +110,7 @@ class SquarePinEntryView : LinearLayoutCompat, EditTextInterface {
                         DEFAULT_PIN_CIRCLE_SIZE, metrics).toInt()
         )
 
-        mDigitFocusedBackground = array.getResourceId(R.styleable.PinEntryView_digitFocusedBackground, -1)
+        mDigitFocusedBackground = array.getResourceId(R.styleable.PinEntryView_digitBackground, -1)
 
         // Text colour, default to android:textColorPrimary from theme
         val textColor = TypedValue()
@@ -157,7 +157,7 @@ class SquarePinEntryView : LinearLayoutCompat, EditTextInterface {
     }
 
     private fun removeAllCallback() {
-        mDelayHidePinEntryHandler.removeCallbacksAndMessages()
+//        mDelayHidePinEntryHandler.removeCallbacksAndMessages()
     }
 
     private fun addHiddenEditText() {
@@ -182,7 +182,7 @@ class SquarePinEntryView : LinearLayoutCompat, EditTextInterface {
                             return
                         }
                         if (mIsTextIsInDeleteMode) {
-                            mDelayHidePinEntryHandler.removeCallbacksAndMessages()
+//                            mDelayHidePinEntryHandler.removeCallbacksAndMessages()
                             setPinItemStatusWhenDeleteAtPosition(length)
                         } else {
                             processWhenUserTypeAtPosition(s, length)
@@ -222,9 +222,9 @@ class SquarePinEntryView : LinearLayoutCompat, EditTextInterface {
         }
 
         mIsPinEntryShowing = true
-        mDelayHidePinEntryHandler.removeCallbacksAndMessages()
-        mDelayHidePinEntryHandler.setPinEntryTextView(pinEntryView)
-        mDelayHidePinEntryHandler.sendEmptyMessageDelayed(indexView, DELAY_TIME)
+//        mDelayHidePinEntryHandler.removeCallbacksAndMessages()
+//        mDelayHidePinEntryHandler.setPinEntryTextView(pinEntryView)
+//        mDelayHidePinEntryHandler.sendEmptyMessageDelayed(indexView, DELAY_TIME)
     }
 
     private fun setPinItemStatusWhenDeleteAtPosition(length: Int) {

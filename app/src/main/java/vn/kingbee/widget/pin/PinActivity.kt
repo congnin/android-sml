@@ -1,5 +1,6 @@
 package vn.kingbee.widget.pin
 
+import android.annotation.SuppressLint
 import android.graphics.Rect
 import android.inputmethodservice.Keyboard
 import android.inputmethodservice.KeyboardView
@@ -44,6 +45,7 @@ class PinActivity : BaseActivity(), NumpadKeyboard.OnKeyboardStateChangedListene
         mContentScrollView = findViewById(R.id.mainScrollView)
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     private fun addEvents() {
         mKeyboard = NumpadKeyboard(this, mKeyboardView!!, this)
         mKeyboard?.registerResponder(otpView?.getEditText() as NumpadKeyboardEditText, false)
@@ -54,8 +56,16 @@ class PinActivity : BaseActivity(), NumpadKeyboard.OnKeyboardStateChangedListene
         })
         otpView?.setOnClickListener {
             otpView?.getEditText()?.requestFocus()
-            mKeyboardView?.visibility = View.VISIBLE
+            mKeyboard?.showCustomKeyboard(otpView?.getEditText() as NumpadKeyboardEditText, true)
         }
+
+        otpView?.setOnTouchListener(object : View.OnTouchListener {
+            override fun onTouch(v: View?, event: MotionEvent?): Boolean {
+                otpView?.getEditText()?.requestFocus()
+                mKeyboard?.showCustomKeyboard(otpView?.getEditText() as NumpadKeyboardEditText, true)
+                return true
+            }
+        })
 
         otpResend?.setOnClickListener {
 
@@ -80,11 +90,14 @@ class PinActivity : BaseActivity(), NumpadKeyboard.OnKeyboardStateChangedListene
     }
 
     override fun hideCustomKeyboard(event: MotionEvent) {
-//        val keyboardRect = Rect()
-//        mKeyboardView?.getGlobalVisibleRect(keyboardRect)
-//        if (mKeyboard != null && !keyboardRect.contains(event.rawX.toInt(), event.rawY.toInt())) {
-//            mKeyboard?.hideCustomKeyboard()
-//        }
+        val keyboardRect = Rect()
+        val otpViewRect = Rect()
+        mKeyboardView?.getGlobalVisibleRect(keyboardRect)
+        otpView?.getGlobalVisibleRect(otpViewRect)
+        if (mKeyboard != null && !keyboardRect.contains(event.rawX.toInt(), event.rawY.toInt())
+                && !otpViewRect.contains(event.rawX.toInt(), event.rawY.toInt())) {
+            mKeyboard?.hideCustomKeyboard()
+        }
     }
 
     private fun systemKeyboardOpen(isOpen: Boolean) {

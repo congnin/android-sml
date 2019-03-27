@@ -8,12 +8,8 @@
         <attr name="digitHeight" format="dimension" />
         <!-- Spacing between the pin boxes, default 20dp -->
         <attr name="digitSpacing" format="dimension" />
-        <!-- Padding top, default 20dp -->
-        <attr name="digitPaddingTop" format="dimension" />
         <!-- Digit background, colour or drawable -->
         <attr name="digitBackground" format="reference|color" />
-        <!-- Digit Focused background, colour or drawable -->
-        <attr name="digitFocusedBackground" format="reference|color" />
         <!-- Font size to use for the mask text, default 15sp -->
         <attr name="digitTextSize" format="dimension" />
         <!-- Colour of the mask text, defaults to theme textColorPrimary -->
@@ -21,7 +17,7 @@
         <!-- Digit elevation (API 21+ only), default 0dp -->
         <attr name="digitElevation" format="dimension" />
         <!-- The character to use to mask the input -->
-        <attr name="pinMask" format="string" />
+        <attr name="mask" format="string" />
         <!-- Accent color, defaults to theme colorAccent -->
         <attr name="pinAccentColor" format="color" />
         <!-- Accent width, default 3dp -->
@@ -32,5 +28,12 @@
             <enum name="all" value="1" />
             <enum name="character" value="2" />
         </attr>
+        <!-- Input type -->
+        <attr name="pinInputType" format="enum">
+            <enum name="text" value="1" />
+            <enum name="number" value="2" />
+        </attr>
+        <!-- Only draw accent when View has focus -->
+        <attr name="accentRequiresFocus" format="boolean" />
     </declare-styleable>
 </resources>

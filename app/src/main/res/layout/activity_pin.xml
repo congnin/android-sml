@@ -72,6 +72,36 @@
                     android:textSize="@dimen/text_size_12" />
 
             </LinearLayout>
+
+            <vn.kingbee.widget.pin.accent.PinEntryView
+                android:id="@+id/pin_entry_simple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:accentType="all"
+                app:digitBackground="@android:color/white"
+                app:digitElevation="10dp" />
+
+            <vn.kingbee.widget.pin.accent.PinEntryView
+                android:id="@+id/pin_entry_border"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:accentType="character"
+                app:digitBackground="@drawable/background_border"
+                app:digitTextSize="11sp"
+                app:mask=""
+                app:pinInputType="text" />
+
+            <vn.kingbee.widget.pin.accent.PinEntryView
+                android:id="@+id/pin_entry_colors"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:accentType="all"
+                app:digitBackground="@color/red"
+                app:digitTextColor="@android:color/white"
+                app:pinAccentColor="#FFC107" />
         </LinearLayout>
     </ScrollView>
 
