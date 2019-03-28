@@ -268,7 +268,7 @@ class NumpadKeyboard(
             }
         })
 
-        responderView.onFocusChangeListener = View.OnFocusChangeListener { v, hasFocus ->
+        responderView.onFocusChangeListener = View.OnFocusChangeListener { _, hasFocus ->
             if (hasFocus) {
                 CommonUtils.hideKeyboard(mActivity, responderView)
             }
