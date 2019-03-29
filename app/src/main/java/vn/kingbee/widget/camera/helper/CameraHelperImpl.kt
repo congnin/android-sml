@@ -26,6 +26,9 @@ import android.hardware.camera2.CameraCharacteristics
 import android.hardware.camera2.CameraMetadata
 import android.hardware.camera2.TotalCaptureResult
 import io.reactivex.Observable
+import io.reactivex.ObservableEmitter
+import io.reactivex.ObservableOnSubscribe
+import io.reactivex.schedulers.Schedulers
 
 class CameraHelperImpl(
     context: Context,
@@ -485,7 +488,26 @@ class CameraHelperImpl(
         }
     }
 
+    @SuppressLint("CheckResult")
     override fun release() {
-        
+        Observable.create(ObservableOnSubscribe<Boolean> { emitter ->
+            try {
+                mCameraListener = null
+                closeCamera()
+                stopBackgroundThread()
+                emitter.onNext(true)
+                emitter.onComplete()
+            } catch (error: Exception) {
+                emitter.onError(error)
+            }
+        }).subscribeOn(Schedulers.io())
+            .subscribe(
+                {
+                    Timber.d("CameraHelperImpl Camera release successfully")
+                }, {
+                    Timber.d("CameraHelperImpl Camera release failure")
+                }
+            )
+
     }
 }

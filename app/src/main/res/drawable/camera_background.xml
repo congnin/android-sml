@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval"
+            >
+            <solid android:color="@color/white"/>
+        </shape>
+    </item>
+    <item>
+        <selector>
+            <item android:state_enabled="true">
+                <bitmap android:src="@mipmap/ic_camera_enable" android:gravity="center"/>
+            </item>
+
+            <item android:state_enabled="false">
+                <bitmap android:src="@mipmap/ic_camera" android:gravity="center"/>
+            </item>
+        </selector>
+    </item>
+</layer-list>
