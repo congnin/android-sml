@@ -49,4 +49,17 @@
         android:id="@+id/btn_next"
         style="@style/CircleButton.Next"
         android:src="@mipmap/ic_next" />
+
+    <vn.kingbee.widget.spinner.MaterialSpinner
+        android:id="@+id/spPaymentNotificationMethod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_marginRight="@dimen/dimen_10"
+        android:layout_marginTop="@dimen/dimen_23"
+        app:spinnerEmptyErrorMessage="Please select an option"
+        app:spinnerFirstHint="Select an option"
+        app:spinnerSecondHint="Select an option"
+        app:spinnerSecondHintColor="@color/light_grey3"
+        app:spinnerTextColor="@color/light_black" />
 </LinearLayout>

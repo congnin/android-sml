@@ -59,4 +59,18 @@
     <dimen name="text_size_22">22dp</dimen>
     <dimen name="text_size_24">24dp</dimen>
     <dimen name="text_size_28">28dp</dimen>
+
+    <!-- Text View height -->
+    <dimen name="text_view_height_20sp">24dp</dimen>
+    <dimen name="text_view_height_14sp">18dp</dimen>
+    <dimen name="text_view_height_14sp_medium">20dp</dimen>
+    <dimen name="text_view_height_12sp">16dp</dimen>
+    <dimen name="text_view_height_12sp_medium">16dp</dimen>
+    <dimen name="text_view_extra_spacing_default">4dp</dimen>
+    <dimen name="text_view_12sp_extra_spacing">3dp</dimen>
+    <dimen name="text_view_14sp_extra_spacing">4dp</dimen>
+    <dimen name="text_view_16sp_extra_spacing">1dp</dimen>
+    <dimen name="empty_space_width">5dp</dimen>
+    <dimen name="text_view_extra_spacing_2sp">2dp</dimen>
+    <dimen name="text_empty_width_height">0dp</dimen>
 </resources>

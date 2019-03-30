@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <vn.kingbee.widget.textview.SATextView
+        android:id="@+id/vas_hint"
+        style="@style/text_view_12sp_regular_single_line_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color_gray3"
+        android:textSize="@dimen/text_size_12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tool:text="Network Provider" />
+
+    <vn.kingbee.widget.textview.SATextView
+        android:id="@+id/vas_spinner"
+        style="@style/text_view_16sp_regular_single_line_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/spinner_under_line_selector"
+        android:focusable="true"
+        android:gravity="bottom"
+        android:paddingTop="@dimen/dimen_10"
+        android:paddingBottom="@dimen/dimen_3"
+        android:textColor="@color/light_black_1"
+        android:textColorHint="@color/light_grey"
+        android:textSize="@dimen/text_size_16"
+        app:layout_constraintTop_toBottomOf="@+id/vas_hint"
+        tool:hint="Network provider" />
+
+    <ImageView
+        android:id="@+id/vas_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/vas_spinner"
+        app:layout_constraintRight_toRightOf="@+id/vas_spinner"
+        app:layout_constraintTop_toTopOf="@+id/vas_spinner"
+        app:srcCompat="@drawable/ic_arrow_down" />
+
+    <vn.kingbee.widget.textview.SATextView
+        android:id="@+id/vas_error"
+        style="@style/text_view_12sp_regular_single_line_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:layout_marginBottom="@dimen/dimen_13"
+        android:textColor="@color/red"
+        android:textSize="@dimen/text_size_12"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vas_spinner"
+        tool:text="Please select a network provider." />
+</android.support.constraint.ConstraintLayout>

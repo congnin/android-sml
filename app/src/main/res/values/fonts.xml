@@ -44,4 +44,64 @@
     <style name="Font.RobotoLight" parent="android:TextAppearance">
         <item name="typeFace">Roboto_Light</item>
     </style>
+
+    <style name="text_view_12sp_regular_single_line_style" parent="Font.RobotoRegular">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">@dimen/text_size_12</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="text_view_12sp_medium_single_line_style" parent="Font.RobotoMedium">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">@dimen/text_size_12</item>
+        <item name="android:layout_height">@dimen/text_view_height_12sp_medium</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="text_view_12sp_regular_multiple_line_style" parent="Font.RobotoRegular">
+        <item name="android:textSize">@dimen/text_size_12</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">@dimen/text_view_12sp_extra_spacing</item>
+        <item name="android:lineSpacingMultiplier">0.9</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="text_view_14sp_regular_single_line_style" parent="Font.RobotoRegular">
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:layout_height">@dimen/text_view_height_14sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="text_view_14sp_medium_single_line_style" parent="Font.RobotoMedium">
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:layout_height">@dimen/text_view_height_14sp_medium</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="text_view_14sp_regular_multiple_line_style" parent="Font.RobotoRegular">
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">@dimen/text_view_14sp_extra_spacing</item>
+        <item name="android:lineSpacingMultiplier">0.9</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="text_view_16sp_regular_multiple_line_style" parent="Font.RobotoRegular">
+        <item name="android:textSize">@dimen/text_size_16</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">@dimen/text_view_16sp_extra_spacing</item>
+    </style>
+
+    <style name="text_view_16sp_regular_single_line_style" parent="Font.RobotoRegular">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:paddingTop">@dimen/dimen_1</item>
+    </style>
 </resources>

@@ -36,6 +36,7 @@ dependencies {
 
     implementation 'com.jakewharton.timber:timber:4.7.1'
     implementation 'net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:2.2.1'
+    implementation(group: 'org.apache.commons', name: 'commons-lang3', version: '3.5')
 
     implementation "io.reactivex.rxjava2:rxjava:2.2.8"
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'

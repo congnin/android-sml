@@ -83,5 +83,9 @@ class CommonUtils {
         fun dpToPx(res: Resources, dp: Int): Int {
             return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp.toFloat(), res.displayMetrics).toInt()
         }
+
+        fun isEmpty(listData: List<*>?): Boolean {
+            return listData == null || listData.isEmpty()
+        }
     }
 }
