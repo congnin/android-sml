@@ -48,7 +48,7 @@ class CameraCaptureActivity : BaseActivity(), CameraListener {
 
     private fun addEvents() {
         if (PermissionUtils.isRuntimePermissionRequired()) {
-            if
+            
         }
         initEKTPView()
         initCameraView()
