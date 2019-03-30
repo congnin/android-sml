@@ -1,18 +1,25 @@
 package vn.kingbee.widget.progress
 
 import android.os.Bundle
+import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import android.widget.Button
 import android.widget.TextView
+import io.reactivex.Observable
+import kotlinx.android.synthetic.main.activity_circle_process_bar.*
 import vn.kingbee.widget.R
+import io.reactivex.disposables.Disposable
+import java.util.concurrent.TimeUnit
+import io.reactivex.android.schedulers.AndroidSchedulers
 
 class CircleProcessBarActivity : AppCompatActivity(), CountDownTimerCallback {
-
+    val QUESTION_TIMEOUT = 30L
     private var mTimeoutProgressBar: CircularProgressbar? = null
     private var mTxtTimeoutCounter: TextView? = null
     private var mTxtTimeoutSeconds: TextView? = null
     private var mCountDownTimerView: CountDownTimerView? = null
     private var btReset: Button? = null
+    private var looper: Disposable? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +34,8 @@ class CircleProcessBarActivity : AppCompatActivity(), CountDownTimerCallback {
         btReset!!.setOnClickListener {
             resetCountdownTimer()
         }
+
+        addEvents()
     }
 
     private fun getCountDownTimeGot(timeGot: Int): CountDownTimerView {
@@ -62,5 +71,45 @@ class CircleProcessBarActivity : AppCompatActivity(), CountDownTimerCallback {
     private fun resetCountdownTimer() {
         stopCountdownTimer()
         startCountdownTimer()
+    }
+
+    private fun addEvents() {
+        forgot_pin_mcq_question_progress_circle.setMax(100)
+        Handler().postDelayed({ startCountdownCircleProgress() }, 2000)
+    }
+
+    private fun startCountdownCircleProgress() {
+        stopCountdownCircleProgress()
+        updateCountdownCircleProgress(QUESTION_TIMEOUT)
+        looper = Observable
+            .interval(1, TimeUnit.SECONDS)
+            .take(QUESTION_TIMEOUT)
+            .subscribeOn(AndroidSchedulers.mainThread())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe { duration ->
+                val timeLeft = QUESTION_TIMEOUT - 1 - duration
+                updateCountdownCircleProgress(timeLeft)
+                if (timeLeft <= 0) {
+                    startCountdownCircleProgress()
+                }
+            }
+    }
+
+    private fun stopCountdownCircleProgress() {
+        if (looper != null) {
+            looper?.dispose();
+            looper = null;
+        }
+    }
+
+    private fun updateCountdownCircleProgress(timeLeft: Long) {
+
+        forgot_pin_mcq_question_progress_second.text = String.format("%ds", timeLeft)
+        forgot_pin_mcq_question_progress_circle.setProgress((timeLeft * 100 / QUESTION_TIMEOUT).toFloat())
+    }
+
+    override fun onDestroy() {
+        stopCountdownCircleProgress()
+        super.onDestroy()
     }
 }
