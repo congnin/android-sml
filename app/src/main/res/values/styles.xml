@@ -30,6 +30,20 @@
         <item name="colorControlActivated">@color/light_grey3</item>
     </style>
 
+    <style name="CircleButton">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:background">@drawable/btn_circle_capture_border</item>
+        <item name="android:gravity">center</item>
+        <item name="cb_color">@color/yellow</item>
+        <item name="cb_disable_color">@color/circle_button_disable</item>
+        <item name="cb_pressedRingWidth">5dp</item>
+    </style>
+
+    <style name="CircleButton.Next">
+        <item name="android:src">@mipmap/ic_next</item>
+    </style>
+
     <attr format="reference" name="circularProgressbarStyle"/>
     <declare-styleable name="CircularProgressbar">
         <attr format="integer" name="startAngle"/>
@@ -100,5 +114,11 @@
         <attr name="android:maxLength"/>
         <attr name="android:digits"/>
         <attr name="android:imeOptions"/>
+    </declare-styleable>
+
+    <declare-styleable name="CircleButton">
+        <attr name="cb_color" format="color"/>
+        <attr name="cb_disable_color" format="color"/>
+        <attr name="cb_pressedRingWidth" format="dimension"/>
     </declare-styleable>
 </resources>

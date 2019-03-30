@@ -1,45 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
 
     <vn.kingbee.widget.edittext.FormatEditText
-            android:id="@+id/view_keyboard_phone_number"
-            android:layout_width="255dp"
-            android:layout_height="60dp"
-            android:layout_gravity="top|center_horizontal|center_vertical"
-            android:digits="@string/DIGITS_NUMBER_SPACE"
-            android:gravity="center|center_vertical|center_horizontal"
-            android:hint="@string/LBL_CELLPHONE_HINT"
-            android:textColorHint="@color/c_gray_step_text"
-            app:enableMask="false"
-            app:formatInput="### ### ####"/>
+        android:id="@+id/view_keyboard_phone_number"
+        android:layout_width="255dp"
+        android:layout_height="60dp"
+        android:layout_gravity="top|center_horizontal|center_vertical"
+        android:digits="@string/DIGITS_NUMBER_SPACE"
+        android:gravity="center|center_vertical|center_horizontal"
+        android:hint="@string/LBL_CELLPHONE_HINT"
+        android:textColorHint="@color/c_gray_step_text"
+        app:enableMask="false"
+        app:formatInput="### ### ####" />
 
     <vn.kingbee.widget.edittext.FormatEditText
-            android:id="@+id/view_keyboard_id_number"
-            android:layout_width="255dp"
-            android:layout_height="60dp"
-            android:layout_gravity="top|center_horizontal|center_vertical"
-            android:digits="@string/DIGITS_NUMBER_SPACE"
-            android:gravity="center|center_vertical|center_horizontal"
-            android:hint="@string/LBL_ID_NUMBER_HINT"
-            android:textColorHint="@color/c_gray_step_text"
-            app:enableMask="true"
-            app:formatInput="###### #### ## #"/>
+        android:id="@+id/view_keyboard_id_number"
+        android:layout_width="255dp"
+        android:layout_height="60dp"
+        android:layout_gravity="top|center_horizontal|center_vertical"
+        android:digits="@string/DIGITS_NUMBER_SPACE"
+        android:gravity="center|center_vertical|center_horizontal"
+        android:hint="@string/LBL_ID_NUMBER_HINT"
+        android:textColorHint="@color/c_gray_step_text"
+        app:enableMask="true"
+        app:formatInput="###### #### ## #" />
 
     <vn.kingbee.widget.edittext.FormatEditText
-            android:id="@+id/view_keyboard_card_number"
-            android:layout_width="255dp"
-            android:layout_height="60dp"
-            android:layout_gravity="top|center_horizontal|center_vertical"
-            android:digits="@string/DIGITS_NUMBER_SPACE"
-            android:gravity="center|center_vertical|center_horizontal"
-            android:hint="@string/LBL_SSC_HINT"
-            android:textColorHint="@color/c_gray_step_text"
-            app:enableMask="false"
-            app:formatInput="#### #### #### ####"/>
+        android:id="@+id/view_keyboard_card_number"
+        android:layout_width="255dp"
+        android:layout_height="60dp"
+        android:layout_gravity="top|center_horizontal|center_vertical"
+        android:digits="@string/DIGITS_NUMBER_SPACE"
+        android:gravity="center|center_vertical|center_horizontal"
+        android:hint="@string/LBL_SSC_HINT"
+        android:textColorHint="@color/c_gray_step_text"
+        app:enableMask="false"
+        app:formatInput="#### #### #### ####" />
+
+    <vn.kingbee.widget.button.CircleButton
+        android:id="@+id/btn_next"
+        style="@style/CircleButton.Next"
+        android:src="@mipmap/ic_next" />
 </LinearLayout>
