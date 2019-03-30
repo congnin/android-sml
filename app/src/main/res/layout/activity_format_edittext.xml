@@ -14,6 +14,7 @@
         android:digits="@string/DIGITS_NUMBER_SPACE"
         android:gravity="center|center_vertical|center_horizontal"
         android:hint="@string/LBL_CELLPHONE_HINT"
+        android:inputType="number"
         android:textColorHint="@color/c_gray_step_text"
         app:enableMask="false"
         app:formatInput="### ### ####" />
@@ -26,6 +27,7 @@
         android:digits="@string/DIGITS_NUMBER_SPACE"
         android:gravity="center|center_vertical|center_horizontal"
         android:hint="@string/LBL_ID_NUMBER_HINT"
+        android:inputType="number"
         android:textColorHint="@color/c_gray_step_text"
         app:enableMask="true"
         app:formatInput="###### #### ## #" />
@@ -38,6 +40,7 @@
         android:digits="@string/DIGITS_NUMBER_SPACE"
         android:gravity="center|center_vertical|center_horizontal"
         android:hint="@string/LBL_SSC_HINT"
+        android:inputType="number"
         android:textColorHint="@color/c_gray_step_text"
         app:enableMask="false"
         app:formatInput="#### #### #### ####" />
