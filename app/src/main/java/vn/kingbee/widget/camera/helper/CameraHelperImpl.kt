@@ -4,8 +4,6 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.BitmapFactory
 import android.graphics.Rect
-import android.util.SparseIntArray
-import android.view.Surface
 import android.os.HandlerThread
 import android.media.ImageReader
 import android.os.Handler
@@ -26,7 +24,6 @@ import android.hardware.camera2.CameraCharacteristics
 import android.hardware.camera2.CameraMetadata
 import android.hardware.camera2.TotalCaptureResult
 import io.reactivex.Observable
-import io.reactivex.ObservableEmitter
 import io.reactivex.ObservableOnSubscribe
 import io.reactivex.schedulers.Schedulers
 
@@ -36,7 +33,6 @@ class CameraHelperImpl(
     storeImagePath: String,
     listener: CameraListener,
     scaleRatio: Float,
-    deviceRotation: Int,
     previewWidth: Int,
     previewHeight: Int
 ) : CameraHelper {
@@ -47,15 +43,6 @@ class CameraHelperImpl(
     private val STATE_WAITING_PRECAPTURE = 2
     private val STATE_WAITING_NON_PRECAPTURE = 3
     private val STATE_PICTURE_TAKEN = 4
-
-    private val ORIENTATIONS = SparseIntArray()
-
-    init {
-        ORIENTATIONS.append(Surface.ROTATION_0, 90)
-        ORIENTATIONS.append(Surface.ROTATION_90, 0)
-        ORIENTATIONS.append(Surface.ROTATION_180, 270)
-        ORIENTATIONS.append(Surface.ROTATION_270, 180)
-    }
 
     private var mPreviewSurface: SurfaceView? = previewSurface
     private var mCameraListener: CameraListener? = listener
@@ -71,13 +58,13 @@ class CameraHelperImpl(
     private var mCameraId: String? = null
     private var mState = STATE_PREVIEW
     private var mPreviewRect: Rect? = null
-    private var mDeviceRotation: Int = deviceRotation
     private var mScaleRatio: Float = scaleRatio
 
     private var mPreviewWidth: Int = previewWidth
     private var mPreviewHeight: Int = previewHeight
 
     private val mOnImageAvailableListener = ImageReader.OnImageAvailableListener {
+        mImageReader = it
         val image = it.acquireLatestImage()
         mBackgroundHandler?.post(kotlin.run {
             Runnable {
@@ -138,7 +125,7 @@ class CameraHelperImpl(
                 }
                 STATE_WAITING_LOCK -> {
                     val afState = result.get(CaptureResult.CONTROL_AF_STATE)
-                    Timber.d("CameraHelperImpl #CaptureCallback #STATE_WAITING_LOCK: " + afState!!)
+                    Timber.d("CameraHelperImpl #CaptureCallback #STATE_WAITING_LOCK: %s", afState!!)
                     if (CaptureResult.CONTROL_AF_STATE_FOCUSED_LOCKED == afState ||
                         CaptureResult.CONTROL_AF_STATE_NOT_FOCUSED_LOCKED == afState ||
                         countLockFocus >= MAXIMUM_TIMES_TRY_LOCK_FOCUS
@@ -253,20 +240,20 @@ class CameraHelperImpl(
                 }, null
             )
         } catch (e: CameraAccessException) {
-            Timber.d("CameraHelperImpl #createCameraPreviewSession #CameraAccessException #" + e.message)
+            Timber.d("CameraHelperImpl #createCameraPreviewSession #CameraAccessException #%s", e.message)
             dispatchCameraErrorEvent()
         } catch (e: NullPointerException) {
             Timber.d("CameraHelperImpl #createCameraPreviewSession #NullPointerException")
         }
     }
 
-    fun startBackgroundThread() {
+    private fun startBackgroundThread() {
         mBackgroundThread = HandlerThread("CameraBackground")
         try {
             mBackgroundThread?.start()
             mBackgroundHandler = Handler(mBackgroundThread?.looper)
         } catch (exception: IllegalStateException) {
-            Timber.d("CameraHelperImpl #startBackgroundThread #CaptureCallback #" + exception.message)
+            Timber.d("CameraHelperImpl #startBackgroundThread #CaptureCallback #%s", exception.message)
         }
     }
 
@@ -278,7 +265,7 @@ class CameraHelperImpl(
                 mBackgroundThread = null
                 mBackgroundHandler = null
             } catch (e: InterruptedException) {
-                Timber.d("CameraHelperImpl #stopBackgroundThread #CaptureCallback #" + e.message)
+                Timber.d("CameraHelperImpl #stopBackgroundThread #CaptureCallback #%s", e.message)
             }
         }
     }
@@ -408,7 +395,6 @@ class CameraHelperImpl(
             )
 
             // Orientation
-            captureBuilder.set(CaptureRequest.JPEG_ORIENTATION, getOrientation(mDeviceRotation))
             captureBuilder.set(CaptureRequest.SCALER_CROP_REGION, mPreviewRect)
 
             val captureCallback = object : CameraCaptureSession.CaptureCallback() {
@@ -444,12 +430,8 @@ class CameraHelperImpl(
             mCaptureSession?.abortCaptures()
             mCaptureSession?.capture(captureBuilder.build(), captureCallback, null)
         } catch (e: CameraAccessException) {
-            Timber.d("CameraHelperImpl #CaptureStillPicture #CameraAccessException #" + e.message)
+            Timber.d("CameraHelperImpl #CaptureStillPicture #CameraAccessException #%s", e.message)
         }
-    }
-
-    private fun getOrientation(rotation: Int): Int {
-        return (ORIENTATIONS.get(rotation) + 360) % 360
     }
 
     private fun dispatchCameraErrorEvent() {
@@ -478,13 +460,13 @@ class CameraHelperImpl(
             )
         } catch (e: CameraAccessException) {
             dispatchCameraErrorEvent()
-            Timber.d("CameraHelperImpl #CameraAccessException #" + e.message)
+            Timber.d("CameraHelperImpl #CameraAccessException #%s", e.message)
         } catch (e: IllegalStateException) {
             dispatchCameraErrorEvent()
-            Timber.d("CameraHelperImpl #IllegalStateException #" + e.message)
+            Timber.d("CameraHelperImpl #IllegalStateException #%s", e.message)
         } catch (e: IllegalArgumentException) {
             dispatchCameraErrorEvent()
-            Timber.d("CameraHelperImpl #IllegalArgumentException #" + e.message)
+            Timber.d("CameraHelperImpl #IllegalArgumentException #%s", e.message)
         }
     }
 

@@ -42,5 +42,12 @@
             android:text="Numpad Keyboard"
             android:textColor="@android:color/black" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startCameraDemo1Activity"
+            android:text="Camera Demo 1"
+            android:textColor="@android:color/black" />
+
     </LinearLayout>
 </ScrollView>

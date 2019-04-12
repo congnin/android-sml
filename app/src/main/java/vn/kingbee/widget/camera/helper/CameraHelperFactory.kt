@@ -38,7 +38,7 @@ class CameraHelperFactory {
         ): CameraHelper {
             return CameraHelperImpl(
                 context, surfaceView, imagePath, cameraListener, scaleLevel,
-                windowManager.defaultDisplay.rotation, imageWidth, imageHeight
+                imageWidth, imageHeight
             )
         }
     }

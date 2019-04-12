@@ -4,6 +4,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import vn.kingbee.widget.camera.demo.CameraDemo1Activity
 import vn.kingbee.widget.edittext.FormatEditTextActivity
 import vn.kingbee.widget.keyboard.NumpadActivity
 import vn.kingbee.widget.pin.PinActivity
@@ -30,5 +31,9 @@ class SelectionActivity : AppCompatActivity() {
 
     fun startNumpadActivity(v: View) {
         startActivity(Intent(this@SelectionActivity, NumpadActivity::class.java))
+    }
+
+    fun startCameraDemo1Activity(v: View) {
+        startActivity(Intent(this@SelectionActivity, CameraDemo1Activity::class.java))
     }
 }
