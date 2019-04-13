@@ -159,5 +159,6 @@
     <color name="white_opacity_15">#38ffffff</color>
     <color name="white_transparent_85_percent">#D9FFFFFF</color>
 
-
+    <color name="shimmer_color">#a2878787</color>
+    <color name="shimmer_background_color">#b1b1b1</color>
 </resources>

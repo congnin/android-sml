@@ -73,4 +73,6 @@
     <dimen name="empty_space_width">5dp</dimen>
     <dimen name="text_view_extra_spacing_2sp">2dp</dimen>
     <dimen name="text_empty_width_height">0dp</dimen>
+
+    <dimen name="monogram_width">40dp</dimen>
 </resources>
