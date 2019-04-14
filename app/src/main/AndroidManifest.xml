@@ -33,6 +33,7 @@
         <activity android:name="vn.kingbee.rxjava.RxJava2SelectionActivity" />
         <activity android:name="vn.kingbee.rxjava.OperatorsActivity" />
         <activity android:name="vn.kingbee.rxjava.operators.SimpleExampleActivity" />
+        <activity android:name="vn.kingbee.rxjava.operators.MapExampleActivity" />
     </application>
 
 </manifest>

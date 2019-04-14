@@ -4,6 +4,7 @@ import vn.kingbee.widget.BaseActivity
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import vn.kingbee.rxjava.operators.MapExampleActivity
 import vn.kingbee.rxjava.operators.SimpleExampleActivity
 import vn.kingbee.widget.R
 
@@ -18,7 +19,7 @@ class OperatorsActivity : BaseActivity() {
     }
 
     fun startMapActivity(view: View) {
-//        startActivity(Intent(this@OperatorsActivity, MapExampleActivity::class.java))
+        startActivity(Intent(this@OperatorsActivity, MapExampleActivity::class.java))
     }
 
     fun startZipActivity(view: View) {
