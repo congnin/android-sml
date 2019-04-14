@@ -29,6 +29,8 @@
         <activity android:name=".keyboard.NumpadActivity" />
         <activity android:name=".camera.demo.CameraDemo1Activity" />
         <activity android:name=".animation.demo.ShimmerActivityDemo" />
+
+        <activity android:name="vn.kingbee.rxjava.RxJava2SelectionActivity" />
     </application>
 
 </manifest>

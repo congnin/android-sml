@@ -4,6 +4,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import vn.kingbee.rxjava.RxJava2SelectionActivity
 import vn.kingbee.widget.animation.demo.ShimmerActivityDemo
 import vn.kingbee.widget.camera.demo.CameraDemo1Activity
 import vn.kingbee.widget.edittext.FormatEditTextActivity
@@ -16,6 +17,10 @@ class SelectionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_selection)
+    }
+
+    fun startRxJavaSelectionActivity(v: View) {
+        startActivity(Intent(this@SelectionActivity, RxJava2SelectionActivity::class.java))
     }
 
     fun startCircleProcessBarActivity(v: View) {
