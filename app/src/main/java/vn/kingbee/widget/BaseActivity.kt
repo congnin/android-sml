@@ -4,8 +4,8 @@ import android.content.Context
 import android.support.v7.app.AppCompatActivity
 import android.view.MotionEvent
 import android.widget.EditText
-import vn.kingbee.widget.utils.CommonUtils
-import vn.kingbee.widget.utils.FontHelper
+import vn.kingbee.utils.CommonUtils
+import vn.kingbee.utils.FontHelper
 
 abstract class BaseActivity : AppCompatActivity() {
 

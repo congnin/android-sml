@@ -7,7 +7,7 @@ import android.inputmethodservice.KeyboardView
 import android.util.AttributeSet
 import android.graphics.Color
 import android.graphics.Typeface
-import vn.kingbee.widget.utils.CommonUtils
+import vn.kingbee.utils.CommonUtils
 
 
 class NumpadKeyboardView(context: Context, attrs: AttributeSet) : KeyboardView(context, attrs) {

@@ -1,10 +1,10 @@
 package vn.kingbee.rxjava
 
+import android.content.Intent
 import android.os.Bundle
 import vn.kingbee.widget.BaseActivity
 import android.view.View
 import vn.kingbee.widget.R
-
 
 class RxJava2SelectionActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,7 +13,7 @@ class RxJava2SelectionActivity : BaseActivity() {
     }
 
     fun startOperatorsActivity(view: View) {
-//        startActivity(Intent(this@SelectionActivity, OperatorsActivity::class.java))
+        startActivity(Intent(this@RxJava2SelectionActivity, OperatorsActivity::class.java))
     }
 
     fun startNetworkingActivity(view: View) {

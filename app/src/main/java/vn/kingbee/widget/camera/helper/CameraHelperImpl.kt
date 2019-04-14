@@ -11,7 +11,7 @@ import android.os.Looper
 import vn.kingbee.widget.camera.CameraListener
 import android.view.SurfaceView
 import timber.log.Timber
-import vn.kingbee.widget.utils.ImageUtils
+import vn.kingbee.utils.ImageUtils
 import android.hardware.camera2.CaptureResult
 import android.hardware.camera2.CaptureRequest
 import android.hardware.camera2.CameraCaptureSession

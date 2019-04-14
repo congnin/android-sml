@@ -14,10 +14,10 @@ import vn.kingbee.widget.camera.helper.CameraHelper
 import vn.kingbee.widget.camera.helper.CameraHelperFactory
 import vn.kingbee.widget.camera.helper.KTP_SURFACE_HEIGHT
 import vn.kingbee.widget.camera.helper.KTP_SURFACE_WIDTH
-import vn.kingbee.widget.utils.ANDROID_WIDGET
-import vn.kingbee.widget.utils.FileUtils
+import vn.kingbee.utils.ANDROID_WIDGET
+import vn.kingbee.utils.FileUtils
 import android.graphics.drawable.AnimationDrawable
-import vn.kingbee.widget.utils.PermissionUtils
+import vn.kingbee.utils.PermissionUtils
 
 class CameraCaptureActivity : BaseActivity(), CameraListener {
 

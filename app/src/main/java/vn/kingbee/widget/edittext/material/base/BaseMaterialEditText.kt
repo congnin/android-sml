@@ -15,7 +15,7 @@ import android.support.annotation.StringRes
 import android.support.design.widget.TextInputLayout
 import android.widget.EditText
 import android.app.Activity
-import vn.kingbee.widget.utils.CommonUtils
+import vn.kingbee.utils.CommonUtils
 import android.text.*
 import vn.kingbee.widget.R
 

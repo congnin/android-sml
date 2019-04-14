@@ -1,4 +1,4 @@
-package vn.kingbee.widget.utils
+package vn.kingbee.utils
 
 class StringUtils {
     companion object {

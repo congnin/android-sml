@@ -1,8 +1,9 @@
-package vn.kingbee.widget
+package vn.kingbee.application
 
 import android.app.Application
 import timber.log.Timber
-import vn.kingbee.widget.utils.FontHelper
+import vn.kingbee.utils.FontHelper
+import vn.kingbee.widget.BuildConfig
 
 class MyApp : Application() {
     override fun onCreate() {

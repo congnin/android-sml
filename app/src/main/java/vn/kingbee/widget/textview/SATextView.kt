@@ -6,7 +6,7 @@ import android.support.v7.widget.AppCompatTextView
 import android.util.AttributeSet
 import android.view.View
 import vn.kingbee.widget.R
-import vn.kingbee.widget.utils.CommonUtils
+import vn.kingbee.utils.CommonUtils
 
 class SATextView : AppCompatTextView, View.OnClickListener {
 

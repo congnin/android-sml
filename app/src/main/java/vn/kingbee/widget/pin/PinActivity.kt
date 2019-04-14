@@ -2,7 +2,6 @@ package vn.kingbee.widget.pin
 
 import android.annotation.SuppressLint
 import android.graphics.Rect
-import android.inputmethodservice.Keyboard
 import android.inputmethodservice.KeyboardView
 import android.os.Bundle
 import android.view.MotionEvent
@@ -19,7 +18,6 @@ import vn.kingbee.widget.keyboard.NumpadKeyboardEditText
 import vn.kingbee.widget.keyboard.NumpadKeyboardType
 import vn.kingbee.widget.keyboard.NumpadKeyboardView
 import vn.kingbee.widget.pin.square.SquarePinEntryView
-import vn.kingbee.widget.utils.CommonUtils
 
 class PinActivity : BaseActivity(), NumpadKeyboard.OnKeyboardStateChangedListener {
 

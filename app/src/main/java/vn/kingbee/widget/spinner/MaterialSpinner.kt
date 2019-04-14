@@ -11,9 +11,9 @@ import android.widget.TextView
 import vn.kingbee.widget.R
 import android.support.v4.view.ViewCompat
 import android.support.v4.content.ContextCompat
-import vn.kingbee.widget.utils.StringUtils
+import vn.kingbee.utils.StringUtils
 import android.widget.AdapterView
-import vn.kingbee.widget.utils.CommonUtils
+import vn.kingbee.utils.CommonUtils
 
 class MaterialSpinner : LinearLayout {
     private var mHint: TextView? = null

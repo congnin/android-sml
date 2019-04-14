@@ -1,4 +1,4 @@
-package vn.kingbee.widget.utils
+package vn.kingbee.utils
 
 import android.app.Activity
 import android.content.Context

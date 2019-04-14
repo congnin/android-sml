@@ -12,7 +12,7 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.view.inputmethod.InputMethodManager
 import vn.kingbee.widget.R
-import vn.kingbee.widget.utils.CommonUtils
+import vn.kingbee.utils.CommonUtils
 
 
 const val KEY_CODE_NIL = -1

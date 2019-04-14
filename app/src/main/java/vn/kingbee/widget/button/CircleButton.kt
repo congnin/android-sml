@@ -10,7 +10,7 @@ import android.util.AttributeSet
 import android.widget.ImageView
 import android.util.TypedValue
 import vn.kingbee.widget.R
-import vn.kingbee.widget.utils.CommonUtils
+import vn.kingbee.utils.CommonUtils
 
 class CircleButton : ImageView, View.OnClickListener {
     private val PRESSED_COLOR_LIGHTUP = 255 / 25
