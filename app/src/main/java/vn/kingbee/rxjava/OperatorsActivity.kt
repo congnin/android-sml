@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import vn.kingbee.rxjava.operators.MapExampleActivity
 import vn.kingbee.rxjava.operators.SimpleExampleActivity
+import vn.kingbee.rxjava.operators.ZipExampleActivity
 import vn.kingbee.widget.R
 
 class OperatorsActivity : BaseActivity() {
@@ -23,7 +24,7 @@ class OperatorsActivity : BaseActivity() {
     }
 
     fun startZipActivity(view: View) {
-//        startActivity(Intent(this@OperatorsActivity, ZipExampleActivity::class.java))
+        startActivity(Intent(this@OperatorsActivity, ZipExampleActivity::class.java))
     }
 
     fun startDisposableActivity(view: View) {
