@@ -43,7 +43,7 @@ class IntervalExampleActivity : BaseActivity() {
     }
 
     private fun getObservable() : Observable<out Long> =
-            Observable.interval(0, 2, TimeUnit.SECONDS)
+            Observable.interval(0, 2, TimeUnit.SECONDS).take(60)
 
     private fun getObserver() : DisposableObserver<Long> {
         return object : DisposableObserver<Long>() {

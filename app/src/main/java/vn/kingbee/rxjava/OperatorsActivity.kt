@@ -42,7 +42,7 @@ class OperatorsActivity : BaseActivity() {
     }
 
     fun startSingleObserverActivity(view: View) {
-//        startActivity(Intent(this@OperatorsActivity, SingleObserverExampleActivity::class.java))
+        startActivity(Intent(this@OperatorsActivity, SingleObserverExampleActivity::class.java))
     }
 
     fun startCompletableObserverActivity(view: View) {
