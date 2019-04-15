@@ -4,10 +4,7 @@ import vn.kingbee.widget.BaseActivity
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import vn.kingbee.rxjava.operators.DisposableExampleActivity
-import vn.kingbee.rxjava.operators.MapExampleActivity
-import vn.kingbee.rxjava.operators.SimpleExampleActivity
-import vn.kingbee.rxjava.operators.ZipExampleActivity
+import vn.kingbee.rxjava.operators.*
 import vn.kingbee.widget.R
 
 class OperatorsActivity : BaseActivity() {
@@ -33,7 +30,7 @@ class OperatorsActivity : BaseActivity() {
     }
 
     fun startTakeActivity(view: View) {
-//        startActivity(Intent(this@OperatorsActivity, TakeExampleActivity::class.java))
+        startActivity(Intent(this@OperatorsActivity, TakeExampleActivity::class.java))
     }
 
     fun startTimerActivity(view: View) {
