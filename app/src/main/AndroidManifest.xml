@@ -35,6 +35,7 @@
         <activity android:name="vn.kingbee.rxjava.operators.SimpleExampleActivity" />
         <activity android:name="vn.kingbee.rxjava.operators.MapExampleActivity" />
         <activity android:name="vn.kingbee.rxjava.operators.ZipExampleActivity" />
+        <activity android:name="vn.kingbee.rxjava.operators.DisposableExampleActivity" />
     </application>
 
 </manifest>
