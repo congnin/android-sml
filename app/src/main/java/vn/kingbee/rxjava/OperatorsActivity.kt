@@ -38,7 +38,7 @@ class OperatorsActivity : BaseActivity() {
     }
 
     fun startIntervalActivity(view: View) {
-//        startActivity(Intent(this@OperatorsActivity, IntervalExampleActivity::class.java))
+        startActivity(Intent(this@OperatorsActivity, IntervalExampleActivity::class.java))
     }
 
     fun startSingleObserverActivity(view: View) {
