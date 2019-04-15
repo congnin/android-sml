@@ -34,7 +34,7 @@ class OperatorsActivity : BaseActivity() {
     }
 
     fun startTimerActivity(view: View) {
-//        startActivity(Intent(this@OperatorsActivity, TimerExampleActivity::class.java))
+        startActivity(Intent(this@OperatorsActivity, TimerExampleActivity::class.java))
     }
 
     fun startIntervalActivity(view: View) {
