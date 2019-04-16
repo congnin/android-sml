@@ -19,6 +19,7 @@ abstract class BaseActivity : AppCompatActivity() {
                 val isTouchInsideEditTextField = CommonUtils.isTouchInsideEditText(event, v)
                 if (event.action == 0 && isAfterDispatch && beforeDispatch && !isTouchInsideEditTextField) {
                     CommonUtils.hideKeyboard(this, this.window.currentFocus!!)
+                    v.clearFocus()
                 } else if (event.action == 0 && !isTouchInsideEditTextField) {
                     hideCustomKeyboard(event)
                 }

@@ -15,11 +15,12 @@ import vn.kingbee.widget.edittext.material.MaterialEditText
 class NumpadActivity : BaseActivity(), NumpadKeyboard.OnKeyboardStateChangedListener {
 
     private var mContentScrollView: ScrollView? = null
-    private var mPinKeyboardView: NumpadKeyboardView? = null
+    private var mKeyboardView: NumpadKeyboardView? = null
     private var mOTPEditText: MaterialEditText? = null
+    private var mCurrentAmount: MaterialEditText? = null
     private var mNumberAccountEditText: NumpadKeyboardEditText? = null
 
-    private var mPinKeyboard: NumpadKeyboard? = null
+    private var mKeyboard: NumpadKeyboard? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_numpad_keyboard)
@@ -29,20 +30,24 @@ class NumpadActivity : BaseActivity(), NumpadKeyboard.OnKeyboardStateChangedList
     }
 
     private fun addViews() {
-        mPinKeyboardView = findViewById(R.id.pinKeyboardView)
+        mKeyboardView = findViewById(R.id.pinKeyboardView)
         mOTPEditText = findViewById(R.id.edtOTP)
+        mCurrentAmount = findViewById(R.id.edtCurrencyAmount)
         mNumberAccountEditText = findViewById(R.id.edtAccountNumber)
 
         mContentScrollView = findViewById(R.id.fragment_payment_confirm_contentScrollView)
     }
 
     private fun addEvents() {
-        mPinKeyboard = NumpadKeyboard(this, mPinKeyboardView!!, this)
-        mPinKeyboard?.registerResponder(mOTPEditText?.getEditText() as NumpadKeyboardEditText, true)
+        mKeyboard = NumpadKeyboard(this, mKeyboardView!!, this)
+        mKeyboard?.registerResponder(mOTPEditText?.getEditText() as NumpadKeyboardEditText, true)
         mOTPEditText?.setNumpadType(NumpadKeyboardType.NUMPAD_PIN)
 
-        mPinKeyboard?.registerResponder(mNumberAccountEditText!!, true)
+        mKeyboard?.registerResponder(mNumberAccountEditText!!, true)
         mNumberAccountEditText?.setNumpadType(NumpadKeyboardType.NUMPAD_ACCOUNT_NUMBER)
+
+        mKeyboard?.registerResponder(mCurrentAmount?.getEditText() as NumpadKeyboardEditText, true)
+        mCurrentAmount?.setNumpadType(NumpadKeyboardType.NUMPAD_CURRENCY_AMOUNT)
 
         KeyboardVisibilityEvent.setEventListener(this, KeyboardVisibilityEventListener {
             systemKeyboardOpen(it)
@@ -55,7 +60,7 @@ class NumpadActivity : BaseActivity(), NumpadKeyboard.OnKeyboardStateChangedList
             RelativeLayout.LayoutParams.MATCH_PARENT,
             RelativeLayout.LayoutParams.MATCH_PARENT
         )
-        params.addRule(RelativeLayout.ABOVE, mPinKeyboardView!!.id)
+        params.addRule(RelativeLayout.ABOVE, mKeyboardView!!.id)
         mContentScrollView?.layoutParams = params
     }
 
@@ -69,16 +74,16 @@ class NumpadActivity : BaseActivity(), NumpadKeyboard.OnKeyboardStateChangedList
 
     override fun hideCustomKeyboard(event: MotionEvent) {
         val keyboardRect = Rect()
-        mPinKeyboardView?.getGlobalVisibleRect(keyboardRect)
-        if (mPinKeyboard != null && !keyboardRect.contains(event.rawX.toInt(), event.rawY.toInt())) {
-            mPinKeyboard?.hideCustomKeyboard()
+        mKeyboardView?.getGlobalVisibleRect(keyboardRect)
+        if (mKeyboard != null && !keyboardRect.contains(event.rawX.toInt(), event.rawY.toInt())) {
+            mKeyboard?.hideCustomKeyboard()
         }
     }
 
     private fun systemKeyboardOpen(isOpen: Boolean) {
         if (isOpen) {
-            if (mPinKeyboard != null) {
-                mPinKeyboard?.hideCustomKeyboard()
+            if (mKeyboard != null) {
+                mKeyboard?.hideCustomKeyboard()
             }
         }
     }

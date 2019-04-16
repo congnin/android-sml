@@ -7,27 +7,26 @@ import android.view.View
 import android.app.Activity
 import android.os.Build
 import android.text.InputType
-import android.view.MotionEvent
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.view.inputmethod.InputMethodManager
 import vn.kingbee.widget.R
 import vn.kingbee.utils.CommonUtils
 
+class NumpadKeyboard(activity: Activity,
+                     keyboardView: NumpadKeyboardView,
+                     stateListener: OnKeyboardStateChangedListener) {
 
-const val KEY_CODE_NIL = -1
-const val KEY_CODE_BACK = Keyboard.KEYCODE_DELETE
-const val KEY_CODE_DONE = Keyboard.KEYCODE_DONE
-const val KEY_CODE_DECIMAL = 46
-const val KEY_CODE_NEXT = 55005
-const val KEY_CODE_CLEAR = 55006
-const val KEY_CODE_TRIPLE_ZERO = 55007
-const val PTBC_CURRENCY = "RP "
-
-class NumpadKeyboard(
-    activity: Activity, keyboardView: NumpadKeyboardView, stateListener: OnKeyboardStateChangedListener
-) {
-
+    companion object {
+        private const val KEY_CODE_NIL = -1
+        private const val KEY_CODE_BACK = Keyboard.KEYCODE_DELETE
+        private const val KEY_CODE_DONE = Keyboard.KEYCODE_DONE
+        private const val KEY_CODE_DECIMAL = 46
+        private const val KEY_CODE_NEXT = 55005
+        private const val KEY_CODE_CLEAR = 55006
+        private const val KEY_CODE_TRIPLE_ZERO = 55007
+        private const val PTBC_CURRENCY = "RP "
+    }
 
     private var mKeyboardView: NumpadKeyboardView? = keyboardView
     private var mActivity: Activity? = activity
@@ -74,11 +73,9 @@ class NumpadKeyboard(
                     //format the amount as currency amount
                     if (editable != null && editable.isNotEmpty()) {
                         val digitString = editable.toString().replace("[^\\d]".toRegex(), "")
-                        if (!digitString.isEmpty()) {
+                        if (digitString.isNotEmpty()) {
                             editable.replace(
-                                0,
-                                editable.length,
-                                digitString.toBigDecimal().toString()
+                                0, editable.length, digitString.toBigDecimal().toString()
                             )
                         } else {
                             editable.replace(0, editable.length, "")
@@ -132,21 +129,22 @@ class NumpadKeyboard(
         //hide the android keyboard if shown
         val focusedView = mActivity?.currentFocus
         if (focusedView != null) {
-            val imm = mActivity?.getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+            val imm =
+                mActivity?.getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
             imm.hideSoftInputFromWindow(focusedView.windowToken, InputMethodManager.HIDE_NOT_ALWAYS)
         }
 
         //setting the keyboard layout
-        val numpadType = mActiveResponderView?.getNumpadType()
-        when (numpadType) {
+        when (mActiveResponderView?.getNumpadType()) {
             NumpadKeyboardType.NUMPAD_CURRENCY_AMOUNT -> mKeyboardView?.keyboard =
                 Keyboard(mActivity, R.xml.currency_amount_keyboard)
             NumpadKeyboardType.NUMPAD_ACCOUNT_NUMBER -> mKeyboardView?.keyboard =
                 Keyboard(mActivity, R.xml.bank_account_number_keyboard)
-            NumpadKeyboardType.NUMPAD_PIN -> mKeyboardView?.keyboard = Keyboard(mActivity, R.xml.pin_keyboard)
+            NumpadKeyboardType.NUMPAD_PIN -> mKeyboardView?.keyboard =
+                Keyboard(mActivity, R.xml.pin_keyboard)
         }
         if (!isCustomKeyboardVisible()) {
-            mKeyboardView?.visibility = View.VISIBLE
+
             if (shouldAnimate) {
                 //animate the keyboard sliding up
                 val slide = AnimationUtils.loadAnimation(mActivity, R.anim.slide_bottom_up)
@@ -156,8 +154,12 @@ class NumpadKeyboard(
                     }
 
                     override fun onAnimationEnd(animation: Animation?) {
+                        mKeyboardView?.visibility = View.VISIBLE
                         //delay the call until animation ends
-                        mStateListener?.onDisplayNumpadKeyboard(mKeyboardView!!, mActiveResponderView!!)
+                        mStateListener?.onDisplayNumpadKeyboard(
+                            mKeyboardView!!, mActiveResponderView!!
+                        )
+
                     }
 
                     override fun onAnimationRepeat(animation: Animation?) {
@@ -222,7 +224,8 @@ class NumpadKeyboard(
 
         if (mActiveResponderView != null && mActiveResponderView?.getTag(R.id.PLACEHOLDER_TEXT) != null) {
             //restore the placeholder
-            mActiveResponderView?.hint = mActiveResponderView?.getTag(R.id.PLACEHOLDER_TEXT).toString()
+            mActiveResponderView?.hint =
+                mActiveResponderView?.getTag(R.id.PLACEHOLDER_TEXT).toString()
         }
     }
 
@@ -235,7 +238,7 @@ class NumpadKeyboard(
             responderView.setTag(R.id.PLACEHOLDER_TEXT, responderView.hint.toString())
         }
 
-        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
             if (shouldShowCursor) {
                 responderView.setTextIsSelectable(true)    //Required for cursor to show
             }
@@ -244,29 +247,25 @@ class NumpadKeyboard(
         if (!shouldShowCursor) {
             responderView.isCursorVisible = false
         }
-        responderView.setOnClickListener { view ->
-            showCustomKeyboard(view as NumpadKeyboardEditText, true)
-            CommonUtils.hideKeyboard(mActivity, responderView)
-        }
 
-        responderView.setOnTouchListener(object : View.OnTouchListener {
-            override fun onTouch(v: View?, event: MotionEvent?): Boolean {
-                val editText = v as NumpadKeyboardEditText
+        responderView.setOnTouchListener { v, event ->
+            val editText = v as NumpadKeyboardEditText
 
-                if (shouldShowCursor) {
-                    editText.isCursorVisible = true    //force show the cursor indicator
-                }
-                editText.onTouchEvent(event)   //propogate event
-                showCustomKeyboard(editText, true)
-                CommonUtils.hideKeyboard(mActivity, responderView)
-
-                if (shouldShowCursor && android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+            if (shouldShowCursor) {
+                //force show the cursor indicator
+                editText.isCursorVisible = true
+                if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB){
                     editText.setRawInputType(InputType.TYPE_CLASS_TEXT)    //required to show the cursor indicator
+                    editText.requestFocus()
                 }
-
-                return true // Consume touch event
             }
-        })
+            editText.onTouchEvent(event)   //propogate event
+
+            CommonUtils.hideKeyboard(mActivity, responderView)
+            showCustomKeyboard(editText, true)
+
+            true // Consume touch event
+        }
 
         responderView.onFocusChangeListener = View.OnFocusChangeListener { _, hasFocus ->
             if (hasFocus) {
@@ -277,9 +276,11 @@ class NumpadKeyboard(
 
 
     interface OnKeyboardStateChangedListener {
-        fun onDisplayNumpadKeyboard(currentKeyboard: KeyboardView, responderView: NumpadKeyboardEditText)
+        fun onDisplayNumpadKeyboard(currentKeyboard: KeyboardView,
+                                    responderView: NumpadKeyboardEditText)
 
-        fun onHideNumpadKeyboard(currentKeyboard: KeyboardView, responderView: NumpadKeyboardEditText)
+        fun onHideNumpadKeyboard(currentKeyboard: KeyboardView,
+                                 responderView: NumpadKeyboardEditText)
 
         fun onKeyPressNumpadKeyboard(responderView: NumpadKeyboardEditText, keyCode: Int): Boolean
     }

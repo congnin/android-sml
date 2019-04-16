@@ -29,10 +29,10 @@ class NumpadKeyboardView(context: Context, attrs: AttributeSet) : KeyboardView(c
         val keys = keyboard.keys
         for (key in keys) {
             canvas?.translate(key.x.toFloat(), key.y.toFloat())
-            mPaint?.color = Color.BLACK
+            mPaint?.color = Color.BLUE
 
             if (key.label != null) {
-                mPaint!!.textSize = CommonUtils.pxFromDp(22F, mContext!!)
+                mPaint!!.textSize = CommonUtils.pxFromDp(20F, mContext!!)
                 canvas?.drawText(
                     key.label.toString(),
                     (key.width / 2).toFloat(),
