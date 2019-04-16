@@ -40,6 +40,7 @@
         <activity android:name="vn.kingbee.rxjava.operators.TimerExampleActivity" />
         <activity android:name="vn.kingbee.rxjava.operators.IntervalExampleActivity" />
         <activity android:name="vn.kingbee.rxjava.operators.SingleObserverExampleActivity" />
+        <activity android:name="vn.kingbee.rxjava.operators.CompletableObserverExampleActivity" />
     </application>
 
 </manifest>

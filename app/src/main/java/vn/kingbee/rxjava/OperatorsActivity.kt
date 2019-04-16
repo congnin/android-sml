@@ -46,12 +46,12 @@ class OperatorsActivity : BaseActivity() {
     }
 
     fun startCompletableObserverActivity(view: View) {
-//        startActivity(
-//            Intent(
-//                this@OperatorsActivity,
-//                CompletableObserverExampleActivity::class.java
-//            )
-//        )
+        startActivity(
+            Intent(
+                this@OperatorsActivity,
+                CompletableObserverExampleActivity::class.java
+            )
+        )
     }
 
     fun startFlowableActivity(view: View) {
