@@ -54,21 +54,23 @@ class NumpadActivity : BaseActivity(), NumpadKeyboard.OnKeyboardStateChangedList
         })
     }
 
-    override fun onDisplayNumpadKeyboard(currentKeyboard: KeyboardView, responderView: NumpadKeyboardEditText) {
+    override fun onDisplayNumpadKeyboard(currentKeyboard: KeyboardView,
+                                         responderView: NumpadKeyboardEditText) {
         //show the custom keyboard below the scrollview
         val params = RelativeLayout.LayoutParams(
-            RelativeLayout.LayoutParams.MATCH_PARENT,
-            RelativeLayout.LayoutParams.MATCH_PARENT
+            RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT
         )
         params.addRule(RelativeLayout.ABOVE, mKeyboardView!!.id)
         mContentScrollView?.layoutParams = params
     }
 
-    override fun onHideNumpadKeyboard(currentKeyboard: KeyboardView, responderView: NumpadKeyboardEditText) {
+    override fun onHideNumpadKeyboard(currentKeyboard: KeyboardView,
+                                      responderView: NumpadKeyboardEditText) {
 
     }
 
-    override fun onKeyPressNumpadKeyboard(responderView: NumpadKeyboardEditText, keyCode: Int): Boolean {
+    override fun onKeyPressNumpadKeyboard(responderView: NumpadKeyboardEditText,
+                                          keyCode: Int): Boolean {
         return false   //use default behavior
     }
 
@@ -86,5 +88,20 @@ class NumpadActivity : BaseActivity(), NumpadKeyboard.OnKeyboardStateChangedList
                 mKeyboard?.hideCustomKeyboard()
             }
         }
+    }
+
+    override fun onBackPressed() {
+        if (!hideCurrencyKeyboard()) {
+            super.onBackPressed()
+        }
+    }
+
+    private fun hideCurrencyKeyboard(): Boolean {
+        if (mKeyboard != null && mKeyboard!!.isCustomKeyboardVisible()) {
+            mKeyboard?.hideCustomKeyboard()
+            return true
+        }
+
+        return false
     }
 }
