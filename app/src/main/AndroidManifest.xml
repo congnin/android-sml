@@ -5,6 +5,7 @@
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <uses-feature android:name="android.hardware.camera2.full" />
     <application
@@ -29,6 +30,7 @@
         <activity android:name=".keyboard.NumpadActivity" />
         <activity android:name=".camera.demo.CameraDemo1Activity" />
         <activity android:name=".animation.demo.ShimmerActivityDemo" />
+        <activity android:name=".calendar.demo.DatePickerDemoActivity" />
 
         <activity android:name="vn.kingbee.rxjava.RxJava2SelectionActivity" />
         <activity android:name="vn.kingbee.rxjava.OperatorsActivity" />

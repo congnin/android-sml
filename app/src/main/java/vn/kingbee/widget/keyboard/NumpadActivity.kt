@@ -30,12 +30,12 @@ class NumpadActivity : BaseActivity(), NumpadKeyboard.OnKeyboardStateChangedList
     }
 
     private fun addViews() {
-        mKeyboardView = findViewById(R.id.pinKeyboardView)
+        mKeyboardView = findViewById(R.id.keyboardView)
         mOTPEditText = findViewById(R.id.edtOTP)
         mCurrentAmount = findViewById(R.id.edtCurrencyAmount)
         mNumberAccountEditText = findViewById(R.id.edtAccountNumber)
 
-        mContentScrollView = findViewById(R.id.fragment_payment_confirm_contentScrollView)
+        mContentScrollView = findViewById(R.id.scrollView)
     }
 
     private fun addEvents() {
