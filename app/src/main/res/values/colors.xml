@@ -161,4 +161,6 @@
 
     <color name="shimmer_color">#a2878787</color>
     <color name="shimmer_background_color">#b1b1b1</color>
+    
+    <color name="light_gray">#fff5f5f5</color>
 </resources>

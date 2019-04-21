@@ -12,4 +12,10 @@
     <string name="payment_notification_input_email_and_cellphone_option">Email address and cellphone number</string>
     <string name="payment_notification_input_email_option">Email address</string>
     <string name="payment_notification_input_cellphone_option">Cellphone number</string>
+
+    <string-array name="courses">
+        <item>English</item>
+        <item>Chinese</item>
+        <item>Math</item>
+    </string-array>
 </resources>
