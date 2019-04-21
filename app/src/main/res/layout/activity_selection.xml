@@ -68,5 +68,12 @@
             android:onClick="startDatePickerDemoActivity"
             android:text="Date Picker"
             android:textColor="@android:color/black" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startButtonDemoActivity"
+            android:text="Fit Button"
+            android:textColor="@android:color/black" />
     </LinearLayout>
 </ScrollView>

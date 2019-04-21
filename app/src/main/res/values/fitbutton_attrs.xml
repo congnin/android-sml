@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FitButton">
+        <!-- Image -->
+        <attr name="fb_icon" format="color|reference" />
+        <attr name="fb_iconColor" format="color" />
+        <attr name="fb_iconWidth" format="dimension" />
+        <attr name="fb_iconHeight" format="dimension" />
+        <attr name="fb_iconMarginStart" format="dimension" />
+        <attr name="fb_iconMarginTop" format="dimension" />
+        <attr name="fb_iconMarginEnd" format="dimension" />
+        <attr name="fb_iconMarginBottom" format="dimension" />
+        <attr name="fb_iconPosition">
+            <enum name="top" value="0" />
+            <enum name="bottom" value="1" />
+            <enum name="left" value="2" />
+            <enum name="right" value="3" />
+            <enum name="center" value="4" />
+        </attr>
+        <attr name="fb_iconVisibility">
+            <enum name="visible" value="0x00000000" />
+            <enum name="invisible" value="0x00000004" />
+            <enum name="gone" value="0x00000008" />
+        </attr>
+
+        <!-- Divider -->
+        <attr name="fb_divColor" format="color" />
+        <attr name="fb_divWidth" format="dimension" />
+        <attr name="fb_divHeight" format="dimension" />
+        <attr name="fb_divMarginTop" format="dimension" />
+        <attr name="fb_divMarginBottom" format="dimension" />
+        <attr name="fb_divMarginStart" format="dimension" />
+        <attr name="fb_divMarginEnd" format="dimension" />
+        <attr name="fb_divVisibility">
+            <enum name="visible" value="0x00000000" />
+            <enum name="invisible" value="0x00000004" />
+            <enum name="gone" value="0x00000008" />
+        </attr>
+
+        <!-- Text -->
+        <attr name="fb_text" format="string|reference" />
+        <attr name="fb_textPaddingStart" format="dimension" />
+        <attr name="fb_textPaddingTop" format="dimension" />
+        <attr name="fb_textPaddingEnd" format="dimension" />
+        <attr name="fb_textPaddingBottom" format="dimension" />
+        <attr name="fb_fontFamilyRes" format="reference" />
+        <attr name="fb_textStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+        <attr name="fb_textSize" format="dimension" />
+        <attr name="fb_textColor" format="color" />
+        <attr name="fb_textAllCaps" format="boolean" />
+        <attr name="fb_textVisibility">
+            <enum name="visible" value="0x00000000" />
+            <enum name="invisible" value="0x00000004" />
+            <enum name="gone" value="0x00000008" />
+        </attr>
+
+        <!-- Button -->
+        <attr name="fb_backgroundColor" format="color|reference" />
+        <attr name="fb_cornerRadius" format="dimension" />
+        <attr name="fb_enableRipple" format="boolean" />
+        <attr name="fb_rippleColor" format="color|reference" />
+        <attr name="fb_shape">
+            <enum name="rectangle" value="0" />
+            <enum name="square" value="1" />
+            <enum name="circle" value="2" />
+            <enum name="oval" value="3" />
+        </attr>
+        <attr name="android:enabled" format="boolean" />
+
+        <!-- Border -->
+        <attr name="fb_borderColor" format="color" />
+        <attr name="fb_borderWidth" format="dimension" />
+    </declare-styleable>
+</resources>

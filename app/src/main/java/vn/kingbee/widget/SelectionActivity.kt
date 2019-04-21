@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import vn.kingbee.rxjava.RxJava2SelectionActivity
 import vn.kingbee.widget.animation.demo.ShimmerActivityDemo
+import vn.kingbee.widget.button.demo.ButtonDemoActivity
 import vn.kingbee.widget.calendar.demo.DatePickerDemoActivity
 import vn.kingbee.widget.camera.demo.CameraDemo1Activity
 import vn.kingbee.widget.edittext.FormatEditTextActivity
@@ -50,5 +51,9 @@ class SelectionActivity : AppCompatActivity() {
 
     fun startDatePickerDemoActivity(v: View) {
         startActivity(Intent(this@SelectionActivity, DatePickerDemoActivity::class.java))
+    }
+
+    fun startButtonDemoActivity(v: View) {
+        startActivity(Intent(this@SelectionActivity, ButtonDemoActivity::class.java))
     }
 }

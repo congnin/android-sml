@@ -11,10 +11,11 @@ import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 
-const val EXPECT_DELAY_TIME_BETWEEN_CLICKS_DEFAULT: Long = 650
+
 class CommonUtils {
 
     companion object {
+        private const val EXPECT_DELAY_TIME_BETWEEN_CLICKS_DEFAULT: Long = 650
         private var lastClickTime: Long = 0
         fun isClickAvailable(): Boolean {
             return isClickAvailable(EXPECT_DELAY_TIME_BETWEEN_CLICKS_DEFAULT)
@@ -35,7 +36,8 @@ class CommonUtils {
                 return
             }
             val inputMethodManager = activity.getSystemService(
-                    Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+                Activity.INPUT_METHOD_SERVICE
+            ) as InputMethodManager
             inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
         }
 
@@ -45,7 +47,8 @@ class CommonUtils {
             }
             view.requestFocus()
             val imm = activity.getSystemService(
-                    Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                Context.INPUT_METHOD_SERVICE
+            ) as InputMethodManager
             imm.showSoftInput(view, InputMethodManager.SHOW_IMPLICIT)
         }
 
@@ -81,11 +84,37 @@ class CommonUtils {
         }
 
         fun dpToPx(res: Resources, dp: Int): Int {
-            return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp.toFloat(), res.displayMetrics).toInt()
+            return TypedValue.applyDimension(
+                TypedValue.COMPLEX_UNIT_DIP,
+                dp.toFloat(),
+                res.displayMetrics
+            ).toInt()
         }
 
         fun isEmpty(listData: List<*>?): Boolean {
             return listData == null || listData.isEmpty()
+        }
+
+        fun dpToPx(dp: Float): Float {
+            return TypedValue.applyDimension(
+                TypedValue.COMPLEX_UNIT_DIP, dp, Resources.getSystem().displayMetrics
+            )
+        }
+
+        fun pxToDp(px: Float): Float {
+            return TypedValue.applyDimension(
+                TypedValue.COMPLEX_UNIT_PX, px, Resources.getSystem().displayMetrics
+            )
+        }
+
+        fun txtPxToSp(px: Float): Float {
+            return TypedValue.applyDimension(
+                TypedValue.COMPLEX_UNIT_SP, px, Resources.getSystem().displayMetrics
+            )
+        }
+
+        fun getDensity(): Float {
+            return Resources.getSystem().displayMetrics.density
         }
     }
 }
