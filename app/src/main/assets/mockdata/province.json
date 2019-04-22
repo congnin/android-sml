@@ -1,0 +1,3256 @@
+{
+  "province": [
+    {
+      "code": "0300-DKI JAYA",
+      "name": "JAKARTA",
+      "ektp_name": "DKI JAKARTA",
+      "isDefault": false,
+      "town": [
+        {
+          "code": "0393-JAKARTA BARAT",
+          "name": "JAKARTA BARAT",
+          "ektp_name": "JAKARTA BARAT",
+          "isDefault": false
+        },
+        {
+          "code": "0391-JAKARTA PUSAT",
+          "name": "JAKARTA PUSAT",
+          "ektp_name": "JAKARTA PUSAT",
+          "isDefault": false
+        },
+        {
+          "code": "0394-JAKARTA SELATAN",
+          "name": "JAKARTA SELATAN",
+          "ektp_name": "JAKARTA SELATAN",
+          "isDefault": false
+        },
+        {
+          "code": "0395-JAKARTA TIMUR",
+          "name": "JAKARTA TIMUR",
+          "ektp_name": "JAKARTA TIMUR",
+          "isDefault": false
+        },
+        {
+          "code": "0392-JAKARTA UTARA",
+          "name": "JAKARTA UTARA",
+          "ektp_name": "JAKARTA UTARA",
+          "isDefault": false
+        },
+        {
+          "code": "0396-KEPULAUAN SERIBU",
+          "name": "KEPULAUAN SERIBU",
+          "ektp_name": "KABUPATEN KEPULAUAN SERIBU",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "0200-BANTEN",
+      "name": "BANTEN",
+      "ektp_name": "BANTEN",
+      "isDefault": false,
+      "town": [
+        {
+          "code": "0201-KAB LEBAK",
+          "name": "LEBAK (KAB)",
+          "ektp_name": "KABUPATEN LEBAK",
+          "isDefault": false
+        },
+        {
+          "code": "0202-KAB PANDEGLANG",
+          "name": "PANDEGLANG (KAB)",
+          "ektp_name": "KABUPATEN PANDEGLANG",
+          "isDefault": false
+        },
+        {
+          "code": "0203-KAB SERANG",
+          "name": "SERANG (KAB)",
+          "ektp_name": "KABUPATEN SERANG",
+          "isDefault": false
+        },
+        {
+          "code": "0204-KAB TANGERANG",
+          "name": "TANGERANG (KAB)",
+          "ektp_name": "KABUPATEN TANGERANG",
+          "isDefault": false
+        },
+        {
+          "code": "0291-CILEGON",
+          "name": "CILEGON (KOTA)",
+          "ektp_name": "KOTA CILEGON",
+          "isDefault": false
+        },
+        {
+          "code": "0293-SERANG",
+          "name": "SERANG (KOTA)",
+          "ektp_name": "KOTA SERANG",
+          "isDefault": false
+        },
+        {
+          "code": "0292-TANGERANG",
+          "name": "TANGERANG (KOTA)",
+          "ektp_name": "KOTA TANGERANG",
+          "isDefault": false
+        },
+        {
+          "code": "0294-TANGERNGSELATN",
+          "name": "TANGERANG SELATAN (KOTA)",
+          "ektp_name": "KOTA TANGERANG SELATAN",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "0100-JAWA BARAT",
+      "name": "JAWA BARAT",
+      "ektp_name": "JAWA BARAT",
+      "isDefault": false,
+      "town": [
+        {
+          "code": "0111-KAB BANDUNG",
+          "name": "BANDUNG (KAB)",
+          "ektp_name": "KABUPATEN BANDUNG",
+          "isDefault": false
+        },
+        {
+          "code": "0122-KAB BANDUNG BARAT",
+          "name": "BANDUNG BARAT (KAB)",
+          "ektp_name": "KABUPATEN BANDUNG BARAT",
+          "isDefault": false
+        },
+        {
+          "code": "0102-KAB BEKASI",
+          "name": "BEKASI (KAB)",
+          "ektp_name": "KABUPATEN BEKASI",
+          "isDefault": false
+        },
+        {
+          "code": "0108-KAB BOGOR",
+          "name": "BOGOR (KAB)",
+          "ektp_name": "KABUPATEN BOGOR",
+          "isDefault": false
+        },
+        {
+          "code": "0115-KAB CIAMIS",
+          "name": "CIAMIS (KAB)",
+          "ektp_name": "KABUPATEN CIAMIS",
+          "isDefault": false
+        },
+        {
+          "code": "0110-KAB CIANJUR",
+          "name": "CIANJUR (KAB)",
+          "ektp_name": "KABUPATEN CIANJUR",
+          "isDefault": false
+        },
+        {
+          "code": "0116-KAB CIREBON",
+          "name": "CIREBON (KAB)",
+          "ektp_name": "KABUPATEN CIREBON",
+          "isDefault": false
+        },
+        {
+          "code": "0114-KAB GARUT",
+          "name": "GARUT (KAB)",
+          "ektp_name": "KABUPATEN GARUT",
+          "isDefault": false
+        },
+        {
+          "code": "0118-KAB INDRAMAYU",
+          "name": "INDRAMAYU (KAB)",
+          "ektp_name": "KABUPATEN INDRAMAYU",
+          "isDefault": false
+        },
+        {
+          "code": "0106-KAB KARAWANG",
+          "name": "KARAWANG (KAB)",
+          "ektp_name": "KABUPATEN KARAWANG",
+          "isDefault": false
+        },
+        {
+          "code": "0117-KAB KUNINGAN",
+          "name": "KUNINGAN (KAB)",
+          "ektp_name": "KABUPATEN KUNINGAN",
+          "isDefault": false
+        },
+        {
+          "code": "0119-KAB MAJALENGKA",
+          "name": "MAJALENGKA (KAB)",
+          "ektp_name": "KABUPATEN MAJALENGKA",
+          "isDefault": false
+        },
+        {
+          "code": "0103-KAB PURWAKARTA",
+          "name": "PURWAKARTA (KAB)",
+          "ektp_name": "KABUPATEN PURWAKARTA",
+          "isDefault": false
+        },
+        {
+          "code": "0121-KAB SUBANG",
+          "name": "SUBANG (KAB)",
+          "ektp_name": "KABUPATEN SUBANG",
+          "isDefault": false
+        },
+        {
+          "code": "0109-KAB SUKABUMI",
+          "name": "SUKABUMI (KAB)",
+          "ektp_name": "KABUPATEN SUKABUMI",
+          "isDefault": false
+        },
+        {
+          "code": "0112-KAB SUMEDANG",
+          "name": "SUMEDANG (KAB)",
+          "ektp_name": "KABUPATEN SUMEDANG",
+          "isDefault": false
+        },
+        {
+          "code": "0113-KAB TASIKMALAYA",
+          "name": "TASIKMALAYA (KAB)",
+          "ektp_name": "KABUPATEN TASIKMALAYA",
+          "isDefault": false
+        },
+        {
+          "code": "0191-BANDUNG",
+          "name": "BANDUNG (KOTA)",
+          "ektp_name": "KOTA BANDUNG",
+          "isDefault": false
+        },
+        {
+          "code": "0180-BANJAR",
+          "name": "BANJAR (KOTA)",
+          "ektp_name": "KOTA BANJAR",
+          "isDefault": false
+        },
+        {
+          "code": "0198-BEKASI",
+          "name": "BEKASI (KOTA)",
+          "ektp_name": "KOTA BEKASI",
+          "isDefault": false
+        },
+        {
+          "code": "0192-BOGOR",
+          "name": "BOGOR (KOTA)",
+          "ektp_name": "KOTA BOGOR",
+          "isDefault": false
+        },
+        {
+          "code": "0196-CIMAHI",
+          "name": "CIMAHI (KOTA)",
+          "ektp_name": "KOTA CIMAHI",
+          "isDefault": false
+        },
+        {
+          "code": "0194-CIREBON",
+          "name": "CIREBON (KOTA)",
+          "ektp_name": "KOTA CIREBON",
+          "isDefault": false
+        },
+        {
+          "code": "0197-DEPOK",
+          "name": "DEPOK (KOTA)",
+          "ektp_name": "KOTA DEPOK",
+          "isDefault": false
+        },
+        {
+          "code": "0193-SUKABUMI",
+          "name": "SUKABUMI (KOTA)",
+          "ektp_name": "KOTA SUKABUMI",
+          "isDefault": false
+        },
+        {
+          "code": "0195-TASIKMALAYA",
+          "name": "TASIKMALAYA (KOTA)",
+          "ektp_name": "KOTA TASIKMALAYA",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "0900-JAWA TENGAH",
+      "name": "JAWA TENGAH",
+      "ektp_name": "JAWA TENGAH",
+      "isDefault": false,
+      "town": [
+        {
+          "code": "0917-KAB BANJARNEGARA",
+          "name": "BANJARNEGARA (KAB)",
+          "ektp_name": "KABUPATEN BANJARNEGARA",
+          "isDefault": false
+        },
+        {
+          "code": "0914-KAB BANYUMAS",
+          "name": "BANYUMAS (KAB)",
+          "ektp_name": "KABUPATEN BANYUMAS",
+          "isDefault": false
+        },
+        {
+          "code": "0929-KAB BATANG",
+          "name": "BATANG (KAB)",
+          "ektp_name": "KABUPATEN BATANG",
+          "isDefault": false
+        },
+        {
+          "code": "0913-KAB BLORA",
+          "name": "BLORA (KAB)",
+          "ektp_name": "KABUPATEN BLORA",
+          "isDefault": false
+        },
+        {
+          "code": "0924-KAB BOYOLALI",
+          "name": "BOYOLALI (KAB)",
+          "ektp_name": "KABUPATEN BOYOLALI",
+          "isDefault": false
+        },
+        {
+          "code": "0907-KAB BREBES",
+          "name": "BREBES (KAB)",
+          "ektp_name": "KABUPATEN BREBES",
+          "isDefault": false
+        },
+        {
+          "code": "0915-KAB CILACAP",
+          "name": "CILACAP (KAB)",
+          "ektp_name": "KABUPATEN CILACAP",
+          "isDefault": false
+        },
+        {
+          "code": "0903-KAB DEMAK",
+          "name": "DEMAK (KAB)",
+          "ektp_name": "KABUPATEN DEMAK",
+          "isDefault": false
+        },
+        {
+          "code": "0904-KAB GROBOGAN",
+          "name": "GROBOGAN (KAB)",
+          "ektp_name": "KABUPATEN GROBOGAN",
+          "isDefault": false
+        },
+        {
+          "code": "0911-KAB JEPARA",
+          "name": "JEPARA (KAB)",
+          "ektp_name": "KABUPATEN JEPARA",
+          "isDefault": false
+        },
+        {
+          "code": "0927-KAB KARANGANYAR",
+          "name": "KARANGANYAR (KAB)",
+          "ektp_name": "KABUPATEN KARANGANYAR",
+          "isDefault": false
+        },
+        {
+          "code": "0922-KAB KEBUMEN",
+          "name": "KEBUMEN (KAB)",
+          "ektp_name": "KABUPATEN KEBUMEN",
+          "isDefault": false
+        },
+        {
+          "code": "0902-KAB KENDAL",
+          "name": "KENDAL (KAB)",
+          "ektp_name": "KABUPATEN KENDAL",
+          "isDefault": false
+        },
+        {
+          "code": "0923-KAB KLATEN",
+          "name": "KLATEN (KAB)",
+          "ektp_name": "KABUPATEN KLATEN",
+          "isDefault": false
+        },
+        {
+          "code": "0909-KAB KUDUS",
+          "name": "KUDUS (KAB)",
+          "ektp_name": "KABUPATEN KUDUS",
+          "isDefault": false
+        },
+        {
+          "code": "0918-KAB MAGELANG",
+          "name": "MAGELANG (KAB)",
+          "ektp_name": "KABUPATEN MAGELANG",
+          "isDefault": false
+        },
+        {
+          "code": "0908-KAB PATI",
+          "name": "PATI (KAB)",
+          "ektp_name": "KABUPATEN PATI",
+          "isDefault": false
+        },
+        {
+          "code": "0905-KAB PEKALONGAN",
+          "name": "PEKALONGAN (KAB)",
+          "ektp_name": "KABUPATEN PEKALONGAN",
+          "isDefault": false
+        },
+        {
+          "code": "0910-KAB PEMALANG",
+          "name": "PEMALANG (KAB)",
+          "ektp_name": "KABUPATEN PEMALANG",
+          "isDefault": false
+        },
+        {
+          "code": "0916-KAB PURBALINGGA",
+          "name": "PURBALINGGA (KAB)",
+          "ektp_name": "KABUPATEN PURBALINGGA",
+          "isDefault": false
+        },
+        {
+          "code": "0921-KAB PURWOREJO",
+          "name": "PURWOREJO (KAB)",
+          "ektp_name": "KABUPATEN PURWOREJO",
+          "isDefault": false
+        },
+        {
+          "code": "0912-KAB REMBANG",
+          "name": "REMBANG (KAB)",
+          "ektp_name": "KABUPATEN REMBANG",
+          "isDefault": false
+        },
+        {
+          "code": "0901-KAB SEMARANG",
+          "name": "SEMARANG (KAB)",
+          "ektp_name": "KABUPATEN SEMARANG",
+          "isDefault": false
+        },
+        {
+          "code": "0925-KAB SRAGEN",
+          "name": "SRAGEN (KAB)",
+          "ektp_name": "KABUPATEN SRAGEN",
+          "isDefault": false
+        },
+        {
+          "code": "0926-KAB SUKOHARJO",
+          "name": "SUKOHARJO (KAB)",
+          "ektp_name": "KABUPATEN SUKOHARJO",
+          "isDefault": false
+        },
+        {
+          "code": "0906-KAB TEGAL",
+          "name": "TEGAL (KAB)",
+          "ektp_name": "KABUPATEN TEGAL",
+          "isDefault": false
+        },
+        {
+          "code": "0919-KAB TEMANGGUNG",
+          "name": "TEMANGGUNG (KAB)",
+          "ektp_name": "KABUPATEN TEMANGGUNG",
+          "isDefault": false
+        },
+        {
+          "code": "0928-KAB WONOGIRI",
+          "name": "WONOGIRI (KAB)",
+          "ektp_name": "KABUPATEN WONOGIRI",
+          "isDefault": false
+        },
+        {
+          "code": "0920-KAB WONOSOBO",
+          "name": "WONOSOBO (KAB)",
+          "ektp_name": "KABUPATEN WONOSOBO",
+          "isDefault": false
+        },
+        {
+          "code": "0995-MAGELANG",
+          "name": "MAGELANG (KOTA)",
+          "ektp_name": "KOTA MAGELANG",
+          "isDefault": false
+        },
+        {
+          "code": "0993-PEKALONGAN",
+          "name": "PEKALONGAN (KOTA)",
+          "ektp_name": "KOTA PEKALONGAN",
+          "isDefault": false
+        },
+        {
+          "code": "0992-SALATIGA",
+          "name": "SALATIGA (KOTA)",
+          "ektp_name": "KOTA SALATIGA",
+          "isDefault": false
+        },
+        {
+          "code": "0991-SEMARANG",
+          "name": "SEMARANG (KOTA)",
+          "ektp_name": "KOTA SEMARANG",
+          "isDefault": false
+        },
+        {
+          "code": "0996-SURAKARTA_SOLO",
+          "name": "SURAKARTA/SOLO (KOTA)",
+          "ektp_name": "KOTA SURAKARTA",
+          "isDefault": false
+        },
+        {
+          "code": "0994-TEGAL",
+          "name": "TEGAL (KOTA)",
+          "ektp_name": "KOTA TEGAL",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "1200-JAWA TIMUR",
+      "name": "JAWA TIMUR",
+      "ektp_name": "JAWA TIMUR",
+      "isDefault": false,
+      "town": [
+        {
+          "code": "1208-KAB BANGKALAN",
+          "name": "BANGKALAN (KAB)",
+          "ektp_name": "KABUPATEN BANGKALAN",
+          "isDefault": false
+        },
+        {
+          "code": "1211-KAB BANYUWANGI",
+          "name": "BANYUWANGI (KAB)",
+          "ektp_name": "KABUPATEN BANYUWANGI",
+          "isDefault": false
+        },
+        {
+          "code": "1221-KAB BLITAR",
+          "name": "BLITAR (KAB)",
+          "ektp_name": "KABUPATEN BLITAR",
+          "isDefault": false
+        },
+        {
+          "code": "1227-KAB BOJONEGORO",
+          "name": "BOJONEGORO (KAB)",
+          "ektp_name": "KABUPATEN BOJONEGORO",
+          "isDefault": false
+        },
+        {
+          "code": "1209-KAB BONDOWOSO",
+          "name": "BONDOWOSO (KAB)",
+          "ektp_name": "KABUPATEN BONDOWOSO",
+          "isDefault": false
+        },
+        {
+          "code": "1201-KAB GRESIK",
+          "name": "GRESIK (KAB)",
+          "ektp_name": "KABUPATEN GRESIK",
+          "isDefault": false
+        },
+        {
+          "code": "1212-KAB JEMBER",
+          "name": "JEMBER (KAB)",
+          "ektp_name": "KABUPATEN JEMBER",
+          "isDefault": false
+        },
+        {
+          "code": "1204-KAB JOMBANG",
+          "name": "JOMBANG (KAB)",
+          "ektp_name": "KABUPATEN JOMBANG",
+          "isDefault": false
+        },
+        {
+          "code": "1217-KAB KEDIRI",
+          "name": "KEDIRI (KAB)",
+          "ektp_name": "KABUPATEN KEDIRI",
+          "isDefault": false
+        },
+        {
+          "code": "1229-KAB LAMONGAN",
+          "name": "LAMONGAN (KAB)",
+          "ektp_name": "KABUPATEN LAMONGAN",
+          "isDefault": false
+        },
+        {
+          "code": "1216-KAB LUMAJANG",
+          "name": "LUMAJANG (KAB)",
+          "ektp_name": "KABUPATEN LUMAJANG",
+          "isDefault": false
+        },
+        {
+          "code": "1222-KAB MADIUN",
+          "name": "MADIUN (KAB)",
+          "ektp_name": "KABUPATEN MADIUN",
+          "isDefault": false
+        },
+        {
+          "code": "1224-KAB MAGETAN",
+          "name": "MAGETAN (KAB)",
+          "ektp_name": "KABUPATEN MAGETAN",
+          "isDefault": false
+        },
+        {
+          "code": "1213-KAB MALANG",
+          "name": "MALANG (KAB)",
+          "ektp_name": "KABUPATEN MALANG",
+          "isDefault": false
+        },
+        {
+          "code": "1203-KAB MOJOKERTO",
+          "name": "MOJOKERTO (KAB)",
+          "ektp_name": "KABUPATEN MOJOKERTO",
+          "isDefault": false
+        },
+        {
+          "code": "1218-KAB NGANJUK",
+          "name": "NGANJUK (KAB)",
+          "ektp_name": "KABUPATEN NGANJUK",
+          "isDefault": false
+        },
+        {
+          "code": "1223-KAB NGAWI",
+          "name": "NGAWI (KAB)",
+          "ektp_name": "KABUPATEN NGAWI",
+          "isDefault": false
+        },
+        {
+          "code": "1226-KAB PACITAN",
+          "name": "PACITAN (KAB)",
+          "ektp_name": "KABUPATEN PACITAN",
+          "isDefault": false
+        },
+        {
+          "code": "1206-KAB PAMEKASAN",
+          "name": "PAMEKASAN (KAB)",
+          "ektp_name": "KABUPATEN PAMEKASAN",
+          "isDefault": false
+        },
+        {
+          "code": "1214-KAB PASURUAN",
+          "name": "PASURUAN (KAB)",
+          "ektp_name": "KABUPATEN PASURUAN",
+          "isDefault": false
+        },
+        {
+          "code": "1225-KAB PONOROGO",
+          "name": "PONOROGO (KAB)",
+          "ektp_name": "KABUPATEN PONOROGO",
+          "isDefault": false
+        },
+        {
+          "code": "1215-KAB PROBOLINGGO",
+          "name": "PROBOLINGGO (KAB)",
+          "ektp_name": "KABUPATEN PROBOLINGGO",
+          "isDefault": false
+        },
+        {
+          "code": "1205-KAB SAMPANG",
+          "name": "SAMPANG (KAB)",
+          "ektp_name": "KABUPATEN SAMPANG",
+          "isDefault": false
+        },
+        {
+          "code": "1202-KAB SIDOARJO",
+          "name": "SIDOARJO (KAB)",
+          "ektp_name": "KABUPATEN SIDOARJO",
+          "isDefault": false
+        },
+        {
+          "code": "1230-KAB SITUBONDO",
+          "name": "SITUBONDO (KAB)",
+          "ektp_name": "KABUPATEN SITUBONDO",
+          "isDefault": false
+        },
+        {
+          "code": "1207-KAB SUMENEP",
+          "name": "SUMENEP (KAB)",
+          "ektp_name": "KABUPATEN SUMENEP",
+          "isDefault": false
+        },
+        {
+          "code": "1220-KAB TRENGGALEK",
+          "name": "TRENGGALEK (KAB)",
+          "ektp_name": "KABUPATEN TRENGGALEK",
+          "isDefault": false
+        },
+        {
+          "code": "1228-KAB TUBAN",
+          "name": "TUBAN (KAB)",
+          "ektp_name": "KABUPATEN TUBAN",
+          "isDefault": false
+        },
+        {
+          "code": "1219-KAB TULUNGAGUNG",
+          "name": "TULUNGAGUNG (KAB)",
+          "ektp_name": "KABUPATEN TULUNGAGUNG",
+          "isDefault": false
+        },
+        {
+          "code": "1271-BATU",
+          "name": "BATU (KOTA)",
+          "ektp_name": "KOTA BATU",
+          "isDefault": false
+        },
+        {
+          "code": "1296-BLITAR",
+          "name": "BLITAR (KOTA)",
+          "ektp_name": "KOTA BLITAR",
+          "isDefault": false
+        },
+        {
+          "code": "1297-KEDIRI",
+          "name": "KEDIRI (KOTA)",
+          "ektp_name": "KOTA KEDIRI",
+          "isDefault": false
+        },
+        {
+          "code": "1298-MADIUN",
+          "name": "MADIUN (KOTA)",
+          "ektp_name": "KOTA MADIUN",
+          "isDefault": false
+        },
+        {
+          "code": "1293-MALANG",
+          "name": "MALANG (KOTA)",
+          "ektp_name": "KOTA MALANG",
+          "isDefault": false
+        },
+        {
+          "code": "1292-MOJOKERTO",
+          "name": "MOJOKERTO (KOTA)",
+          "ektp_name": "KOTA MOJOKERTO",
+          "isDefault": false
+        },
+        {
+          "code": "1294-PASURUAN",
+          "name": "PASURUAN (KOTA)",
+          "ektp_name": "KOTA PASURUAN",
+          "isDefault": false
+        },
+        {
+          "code": "1295-PROBOLINGGO",
+          "name": "PROBOLINGGO (KOTA)",
+          "ektp_name": "KOTA PROBOLINGGO",
+          "isDefault": false
+        },
+        {
+          "code": "1291-SURABAYA",
+          "name": "SURABAYA (KOTA)",
+          "ektp_name": "KOTA SURABAYA",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "0500-DI YOGYAKARTA",
+      "name": "YOGYAKARTA",
+      "ektp_name": "DAERAH ISTIMEWA YOGYAKARTA",
+      "isDefault": false,
+      "town": [
+        {
+          "code": "0501-KAB BANTUL",
+          "name": "BANTUL (KAB)",
+          "ektp_name": "KABUPATEN BANTUL",
+          "isDefault": false
+        },
+        {
+          "code": "0503-KAB GUNUNG KIDUL",
+          "name": "GUNUNG KIDUL (KAB)",
+          "ektp_name": "KABUPATEN GUNUNG KIDUL",
+          "isDefault": false
+        },
+        {
+          "code": "0504-KAB KULON PROGO",
+          "name": "KULON PROGO (KAB)",
+          "ektp_name": "KABUPATEN KULON PROGO",
+          "isDefault": false
+        },
+        {
+          "code": "0502-KAB SLEMAN",
+          "name": "SLEMAN (KAB)",
+          "ektp_name": "KABUPATEN SLEMAN",
+          "isDefault": false
+        },
+        {
+          "code": "0591-YOGYAKARTA",
+          "name": "YOGYAKARTA (KOTA)",
+          "ektp_name": "KOTA YOGYAKARTA",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "3200-NAD",
+      "name": "ACEH",
+      "ektp_name": "NAGGROE ACEH DARUSSALAM",
+      "isDefault": false,
+      "town": [
+        {
+          "code": "3206-KAB ACEH BARAT",
+          "name": "ACEH BARAT (KAB)",
+          "ektp_name": "KABUPATEN ACEH BARAT",
+          "isDefault": false
+        },
+        {
+          "code": "3213-KAB ACEH BARAT DAYA",
+          "name": "ACEH BARAT DAYA (KAB)",
+          "ektp_name": "KABUPATEN ACEH BARAT DAYA",
+          "isDefault": false
+        },
+        {
+          "code": "3201-KAB ACEH BESAR",
+          "name": "ACEH BESAR (KAB)",
+          "ektp_name": "KABUPATEN ACEH BESAR",
+          "isDefault": false
+        },
+        {
+          "code": "3214-KAB ACEH JAYA",
+          "name": "ACEH JAYA (KAB)",
+          "ektp_name": "KABUPATEN ACEH JAYA",
+          "isDefault": false
+        },
+        {
+          "code": "3210-KAB ACEH JEUMPABIREN",
+          "name": "ACEH JEUMPA/BIREUEN (KAB)",
+          "ektp_name": "KABUPATEN BIREUEN",
+          "isDefault": false
+        },
+        {
+          "code": "3205-KAB ACEH SELATAN",
+          "name": "ACEH SELATAN (KAB)",
+          "ektp_name": "KABUPATEN ACEH SELATAN",
+          "isDefault": false
+        },
+        {
+          "code": "3216-KAB ACEH SIMEULEU",
+          "name": "ACEH SIMEULEU (KAB)",
+          "ektp_name": "KABUPATEN SIMEULUE",
+          "isDefault": false
+        },
+        {
+          "code": "3209-KAB ACEH SINGKIL",
+          "name": "ACEH SINGKIL (KAB)",
+          "ektp_name": "KABUPATEN ACEH SINGKIL",
+          "isDefault": false
+        },
+        {
+          "code": "3211-KAB ACEH TAMIANG",
+          "name": "ACEH TAMIANG (KAB)",
+          "ektp_name": "KABUPATEN ACEH TAMIANG",
+          "isDefault": false
+        },
+        {
+          "code": "3207-KAB ACEH TENGAH",
+          "name": "ACEH TENGAH (KAB)",
+          "ektp_name": "KABUPATEN ACEH TENGAH",
+          "isDefault": false
+        },
+        {
+          "code": "3208-KAB ACEH TENGGARA",
+          "name": "ACEH TENGGARA (KAB)",
+          "ektp_name": "KABUPATEN ACEH TENGGARA",
+          "isDefault": false
+        },
+        {
+          "code": "3204-KAB ACEH TIMUR",
+          "name": "ACEH TIMUR (KAB)",
+          "ektp_name": "KABUPATEN ACEH TIMUR",
+          "isDefault": false
+        },
+        {
+          "code": "3203-KAB ACEH UTARA",
+          "name": "ACEH UTARA (KAB)",
+          "ektp_name": "KABUPATEN ACEH UTARA",
+          "isDefault": false
+        },
+        {
+          "code": "3217-KAB BENER MERIAH",
+          "name": "BENER MERIAH (KAB)",
+          "ektp_name": "KABUPATEN BENER MERIAH",
+          "isDefault": false
+        },
+        {
+          "code": "3212-KAB GAYO LUWES",
+          "name": "GAYO LUWES (KAB)",
+          "ektp_name": "KABUPATEN GAYO LUES",
+          "isDefault": false
+        },
+        {
+          "code": "3215-KAB NAGAN RAYA",
+          "name": "NAGAN RAYA (KAB)",
+          "ektp_name": "KABUPATEN NAGAN RAYA",
+          "isDefault": false
+        },
+        {
+          "code": "3202-KAB PIDIE",
+          "name": "PIDIE (KAB)",
+          "ektp_name": "KABUPATEN PIDIE",
+          "isDefault": false
+        },
+        {
+          "code": "3218-KAB PIDIE JAYA",
+          "name": "PIDIE JAYA (KAB)",
+          "ektp_name": "KABUPATEN PIDIE JAYA",
+          "isDefault": false
+        },
+        {
+          "code": "3219-KAB SUBULUSSALAM",
+          "name": "SUBULUSSALAM (KAB)",
+          "ektp_name": "KOTA SUBULUSSALAM",
+          "isDefault": false
+        },
+        {
+          "code": "3291-BANDA ACEH",
+          "name": "BANDA ACEH (KOTA)",
+          "ektp_name": "KOTA BANDA ACEH",
+          "isDefault": false
+        },
+        {
+          "code": "3294-LANGSA",
+          "name": "LANGSA (KOTA)",
+          "ektp_name": "KOTA LANGSA",
+          "isDefault": false
+        },
+        {
+          "code": "3293-LHOKSEUMAWE",
+          "name": "LHOKSEUMAWE (KOTA)",
+          "ektp_name": "KOTA LHOKSEUMAWE",
+          "isDefault": false
+        },
+        {
+          "code": "3292-SABANG",
+          "name": "SABANG (KOTA)",
+          "ektp_name": "KOTA SABANG",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "7200-BALI",
+      "name": "BALI",
+      "ektp_name": "BALI",
+      "isDefault": false,
+      "town": [
+        {
+          "code": "7204-KAB BADUNG",
+          "name": "BADUNG (KAB)",
+          "ektp_name": "KABUPATEN BADUNG",
+          "isDefault": false
+        },
+        {
+          "code": "7207-KAB BANGLI",
+          "name": "BANGLI (KAB)",
+          "ektp_name": "KABUPATEN BANGLI",
+          "isDefault": false
+        },
+        {
+          "code": "7201-KAB BULELENG",
+          "name": "BULELENG (KAB)",
+          "ektp_name": "KABUPATEN BULELENG",
+          "isDefault": false
+        },
+        {
+          "code": "7205-KAB GIANYAR",
+          "name": "GIANYAR (KAB)",
+          "ektp_name": "KABUPATEN GIANYAR",
+          "isDefault": false
+        },
+        {
+          "code": "7202-KAB JEMBRANA",
+          "name": "JEMBRANA (KAB)",
+          "ektp_name": "KABUPATEN JEMBRANA",
+          "isDefault": false
+        },
+        {
+          "code": "7208-KAB KARANGASEM",
+          "name": "KARANGASEM (KAB)",
+          "ektp_name": "KABUPATEN KARANGASEM",
+          "isDefault": false
+        },
+        {
+          "code": "7206-KAB KLUNGKUNG",
+          "name": "KLUNGKUNG (KAB)",
+          "ektp_name": "KABUPATEN KLUNGKUNG",
+          "isDefault": false
+        },
+        {
+          "code": "7203-KAB TABANAN",
+          "name": "TABANAN (KAB)",
+          "ektp_name": "KABUPATEN TABANAN",
+          "isDefault": false
+        },
+        {
+          "code": "7291-DENPASAR",
+          "name": "DENPASAR (KOTA)",
+          "ektp_name": "KOTA DENPASAR",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "2300-BENGKULU",
+      "name": "BENGKULU",
+      "ektp_name": "BENGKULU",
+      "isDefault": false,
+      "town": [
+        {
+          "code": "2301-KAB BENGKULU SELATAN",
+          "name": "BENGKULU SELATAN (KAB)",
+          "ektp_name": "KABUPATEN BENGKULU SELATAN",
+          "isDefault": false
+        },
+        {
+          "code": "2302-KAB BENGKULU UTARA",
+          "name": "BENGKULU UTARA (KAB)",
+          "ektp_name": "KABUPATEN BENGKULU UTARA",
+          "isDefault": false
+        },
+        {
+          "code": "2308-KAB KAUR",
+          "name": "KAUR (KAB)",
+          "ektp_name": "KABUPATEN KAUR",
+          "isDefault": false
+        },
+        {
+          "code": "2305-KAB KEPAHIANG",
+          "name": "KEPAHIANG (KAB)",
+          "ektp_name": "KABUPATEN KEPAHIANG",
+          "isDefault": false
+        },
+        {
+          "code": "2304-KAB LEBONG",
+          "name": "LEBONG (KAB)",
+          "ektp_name": "KABUPATEN LEBONG",
+          "isDefault": false
+        },
+        {
+          "code": "2306-KAB MUKOMUKO",
+          "name": "MUKOMUKO (KAB)",
+          "ektp_name": "KABUPATEN MUKO MUKO",
+          "isDefault": false
+        },
+        {
+          "code": "2303-KAB REJANG LEBONG",
+          "name": "REJANG LEBONG (KAB)",
+          "ektp_name": "KABUPATEN REJANG LEBONG",
+          "isDefault": false
+        },
+        {
+          "code": "2307-KAB SELUMA",
+          "name": "SELUMA (KAB)",
+          "ektp_name": "KABUPATEN SELUMA",
+          "isDefault": false
+        },
+        {
+          "code": "2391-BENGKULU",
+          "name": "BENGKULU (KOTA)",
+          "ektp_name": "KOTA BENGKULU",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "6300-GORONTALO",
+      "name": "GORONTALO",
+      "ektp_name": "GORONTALO",
+      "isDefault": false,
+      "town": [
+        {
+          "code": "6303-KAB BONEBOLANGO",
+          "name": "BONEBOLANGO (KAB)",
+          "ektp_name": "KABUPATEN BONE BOLANGO",
+          "isDefault": false
+        },
+        {
+          "code": "6302-KAB BUALEMO",
+          "name": "BUALEMO (KAB)",
+          "ektp_name": "KABUPATEN BUALEMO",
+          "isDefault": false
+        },
+        {
+          "code": "6301-KAB GORONTALO",
+          "name": "GORONTALO (KAB)",
+          "ektp_name": "KABUPATEN GORONTALO",
+          "isDefault": false
+        },
+        {
+          "code": "6305-KAB GORONTALO UTARA",
+          "name": "GORONTALO UTARA (KAB)",
+          "ektp_name": "KABUPATEN GORONTALO UTARA",
+          "isDefault": false
+        },
+        {
+          "code": "6304-KAB POHUWATO",
+          "name": "POHUWATO (KAB)",
+          "ektp_name": "KABUPATEN POHUWATO",
+          "isDefault": false
+        },
+        {
+          "code": "6391-GORONTALO",
+          "name": "GORONTALO (KOTA)",
+          "ektp_name": "KOTA GORONTALO",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "8400-IRIAN JAYA BARAT",
+      "name": "IRIAN JAYA BARAT",
+      "ektp_name": "IRIAN JAYA BARAT",
+      "isDefault": false,
+      "town": [
+        {
+          "code": "8402-KAB FAK_FAK",
+          "name": "FAK-FAK (KAB)",
+          "ektp_name": "KABUPATEN FAK FAK",
+          "isDefault": false
+        },
+        {
+          "code": "8406-KAB KAIMANA",
+          "name": "KAIMANA (KAB)",
+          "ektp_name": "KABUPATEN KAIMANA",
+          "isDefault": false
+        },
+        {
+          "code": "8403-KAB MANOKWARI",
+          "name": "MANOKWARI (KAB)",
+          "ektp_name": "KABUPATEN MANOKWARI",
+          "isDefault": false
+        },
+        {
+          "code": "8410-KAB MAYBRAT",
+          "name": "MAYBRAT (KAB)",
+          "ektp_name": "KABUPATEN MAYBRAT",
+          "isDefault": false
+        },
+        {
+          "code": "8405-KAB RAJA AMPAT",
+          "name": "RAJA AMPAT (KAB)",
+          "ektp_name": "KABUPATEN RAJA AMPAT",
+          "isDefault": false
+        },
+        {
+          "code": "8401-KAB SORONG",
+          "name": "SORONG (KAB)",
+          "ektp_name": "KABUPATEN SORONG",
+          "isDefault": false
+        },
+        {
+          "code": "8404-KAB SORONG SELATAN",
+          "name": "SORONG SELATAN (KAB)",
+          "ektp_name": "KABUPATEN SORONG SELATAN",
+          "isDefault": false
+        },
+        {
+          "code": "8407-KAB TELUK BINTUNI",
+          "name": "TELUK BINTUNI (KAB)",
+          "ektp_name": "KABUPATEN TELUK BINTUNI",
+          "isDefault": false
+        },
+        {
+          "code": "8408-KAB TELUK WONDAMA",
+          "name": "TELUK WONDAMA (KAB)",
+          "ektp_name": "KABUPATEN TELUK WONDAMA",
+          "isDefault": false
+        },
+        {
+          "code": "8409-KAB TEMBRAUW",
+          "name": "TEMBRAUW (KAB)",
+          "ektp_name": "KABUPATEN TEMBRAUW",
+          "isDefault": false
+        },
+        {
+          "code": "8491-SORONG",
+          "name": "SORONG (KOTA)",
+          "ektp_name": "KOTA SORONG",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "3100-JAMBI",
+      "name": "JAMBI",
+      "ektp_name": "JAMBI",
+      "isDefault": false,
+      "town": [
+        {
+          "code": "3101-KAB BATANGHARI",
+          "name": "BATANGHARI (KAB)",
+          "ektp_name": "KABUPATEN BATANGHARI",
+          "isDefault": false
+        },
+        {
+          "code": "3112-KAB BUNGO",
+          "name": "BUNGO (KAB)",
+          "ektp_name": "KABUPATEN BUNGO",
+          "isDefault": false
+        },
+        {
+          "code": "3105-KAB KERINCI",
+          "name": "KERINCI (KAB)",
+          "ektp_name": "KABUPATEN KERINCI",
+          "isDefault": false
+        },
+        {
+          "code": "3111-KAB MERANGIN",
+          "name": "MERANGIN (KAB)",
+          "ektp_name": "KABUPATEN MERANGIN",
+          "isDefault": false
+        },
+        {
+          "code": "3106-KAB MUARO JAMBI",
+          "name": "MUARO JAMBI (KAB)",
+          "ektp_name": "KABUPATEN MUARO JAMBI",
+          "isDefault": false
+        },
+        {
+          "code": "3104-KAB SAROLANGUN",
+          "name": "SAROLANGUN (KAB)",
+          "ektp_name": "KABUPATEN SAROLANGUN",
+          "isDefault": false
+        },
+        {
+          "code": "3107-KAB TJ JABUNG BARAT",
+          "name": "TANJUNG JABUNG BARAT (KAB)",
+          "ektp_name": "KABUPATEN TANJUNG JABUNG BARAT",
+          "isDefault": false
+        },
+        {
+          "code": "3108-KAB TJ JABUNG TIMUR",
+          "name": "TANJUNG JABUNG TIMUR (KAB)",
+          "ektp_name": "KABUPATEN TANJUNG JABUNG TIMUR",
+          "isDefault": false
+        },
+        {
+          "code": "3109-KAB TEBO",
+          "name": "TEBO (KAB)",
+          "ektp_name": "KABUPATEN TEBO",
+          "isDefault": false
+        },
+        {
+          "code": "3191-JAMBI",
+          "name": "JAMBI (KOTA)",
+          "ektp_name": "KOTA JAMBI",
+          "isDefault": false
+        },
+        {
+          "code": "3192-SUNGAI PENUH",
+          "name": "SUNGAI PENUH (KOTA)",
+          "ektp_name": "KOTA SUNGAI PENUH",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "5300-KALIMANTAN BARAT",
+      "name": "KALIMANTAN BARAT",
+      "ektp_name": "KALIMANTAN BARAT",
+      "isDefault": false,
+      "town": [
+        {
+          "code": "5307-KAB BENGKAYANG",
+          "name": "BENGKAYANG (KAB)",
+          "ektp_name": "KABUPATEN BENGKAYANG",
+          "isDefault": false
+        },
+        {
+          "code": "5306-KAB KAPUAS HULU",
+          "name": "KAPUAS HULU (KAB)",
+          "ektp_name": "KABUPATEN KAPUAS HULU",
+          "isDefault": false
+        },
+        {
+          "code": "5311-KAB KAYONG UTARA",
+          "name": "KAYONG UTARA (KAB)",
+          "ektp_name": "KABUPATEN KAYONG UTARA",
+          "isDefault": false
+        },
+        {
+          "code": "5303-KAB KETAPANG",
+          "name": "KETAPANG (KAB)",
+          "ektp_name": "KABUPATEN KETAPANG",
+          "isDefault": false
+        },
+        {
+          "code": "5312-KAB KUBU RAYA",
+          "name": "KUBU RAYA (KAB)",
+          "ektp_name": "KABUPATEN KUBU RAYA",
+          "isDefault": false
+        },
+        {
+          "code": "5308-KAB LANDAK",
+          "name": "LANDAK (KAB)",
+          "ektp_name": "KABUPATEN LANDAK",
+          "isDefault": false
+        },
+        {
+          "code": "5310-KAB MELAWI",
+          "name": "MELAWI (KAB)",
+          "ektp_name": "KABUPATEN MELAWI",
+          "isDefault": false
+        },
+        {
+          "code": "5301-KAB PONTIANAK",
+          "name": "PONTIANAK (KAB)",
+          "ektp_name": "KABUPATEN PONTIANAK",
+          "isDefault": false
+        },
+        {
+          "code": "5302-KAB SAMBAS",
+          "name": "SAMBAS (KAB)",
+          "ektp_name": "KABUPATEN SAMBAS",
+          "isDefault": false
+        },
+        {
+          "code": "5304-KAB SANGGAU",
+          "name": "SANGGAU (KAB)",
+          "ektp_name": "KABUPATEN SANGGAU",
+          "isDefault": false
+        },
+        {
+          "code": "5309-KAB SEKADAU",
+          "name": "SEKADAU (KAB)",
+          "ektp_name": "KABUPATEN SEKADAU",
+          "isDefault": false
+        },
+        {
+          "code": "5305-KAB SINTANG",
+          "name": "SINTANG (KAB)",
+          "ektp_name": "KABUPATEN SINTANG",
+          "isDefault": false
+        },
+        {
+          "code": "5391-PONTIANAK",
+          "name": "PONTIANAK (KOTA)",
+          "ektp_name": "KOTA PONTIANAK",
+          "isDefault": false
+        },
+        {
+          "code": "5392-SINGKAWANG",
+          "name": "SINGKAWANG (KOTA)",
+          "ektp_name": "KOTA SINGKAWANG",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "5100-KALIMANTAN SELATAN",
+      "name": "KALIMANTAN SELATAN",
+      "ektp_name": "KALIMANTAN SELATAN",
+      "isDefault": false,
+      "town": [
+        {
+          "code": "5111-KAB BALANGAN",
+          "name": "BALANGAN (KAB)",
+          "ektp_name": "KABUPATEN BALANGAN",
+          "isDefault": false
+        },
+        {
+          "code": "5101-KAB BANJAR",
+          "name": "BANJAR (KAB)",
+          "ektp_name": "KABUPATEN BANJAR",
+          "isDefault": false
+        },
+        {
+          "code": "5107-KAB BARITO KUALA",
+          "name": "BARITO KUALA (KAB)",
+          "ektp_name": "KABUPATEN BARITO KUALA",
+          "isDefault": false
+        },
+        {
+          "code": "5104-KAB HULU SUNGAI SLTN",
+          "name": "HULU SUNGAI SELATAN (KAB)",
+          "ektp_name": "KABUPATEN HULU SUNGAI SELATAN",
+          "isDefault": false
+        },
+        {
+          "code": "5105-KAB HULU SUNGAI TNGH",
+          "name": "HULU SUNGAI TENGAH (KAB)",
+          "ektp_name": "KABUPATEN HULU SUNGAI TENGAH",
+          "isDefault": false
+        },
+        {
+          "code": "5106-KAB HULU SUNGAI UTR",
+          "name": "HULU SUNGAI UTARA (KAB)",
+          "ektp_name": "KABUPATEN HULU SUNGAI UTARA",
+          "isDefault": false
+        },
+        {
+          "code": "5108-KAB KOTA BARU",
+          "name": "BARU (KAB)",
+          "ektp_name": "KABUPATEN KOTABARU",
+          "isDefault": false
+        },
+        {
+          "code": "5109-KAB TABALONG",
+          "name": "TABALONG (KAB)",
+          "ektp_name": "KABUPATEN TABALONG",
+          "isDefault": false
+        },
+        {
+          "code": "5110-KAB TANAH BUMBU",
+          "name": "TANAH BUMBU (KAB)",
+          "ektp_name": "KABUPATEN TANAH BUMBU",
+          "isDefault": false
+        },
+        {
+          "code": "5102-KAB TANAH LAUT",
+          "name": "TANAH LAUT (KAB)",
+          "ektp_name": "KABUPATEN TANAH LAUT",
+          "isDefault": false
+        },
+        {
+          "code": "5103-KAB TAPIN",
+          "name": "TAPIN (KAB)",
+          "ektp_name": "KABUPATEN TAPIN",
+          "isDefault": false
+        },
+        {
+          "code": "5192-BANJARBARU",
+          "name": "BANJARBARU (KOTA)",
+          "ektp_name": "KOTA BANJARBARU",
+          "isDefault": false
+        },
+        {
+          "code": "5191-BANJARMASIN",
+          "name": "BANJARMASIN (KOTA)",
+          "ektp_name": "KOTA BANJARMASIN",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "5800-KALIMANTAN TENGAH",
+      "name": "KALIMANTAN TENGAH",
+      "ektp_name": "KALIMANTAN TENGAH",
+      "isDefault": false,
+      "town": [
+        {
+          "code": "5806-KAB BARITO SELATAN",
+          "name": "BARITO SELATAN (KAB)",
+          "ektp_name": "KABUPATEN BARITO SELATAN",
+          "isDefault": false
+        },
+        {
+          "code": "5805-KAB BARITO TIMUR",
+          "name": "BARITO TIMUR (KAB)",
+          "ektp_name": "KABUPATEN BARITO TIMUR",
+          "isDefault": false
+        },
+        {
+          "code": "5808-KAB BARITO UTARA",
+          "name": "BARITO UTARA (KAB)",
+          "ektp_name": "KABUPATEN BARITO UTARA",
+          "isDefault": false
+        },
+        {
+          "code": "5807-KAB GUNUNG MAS",
+          "name": "GUNUNG MAS (KAB)",
+          "ektp_name": "KABUPATEN GUNUNG MAS",
+          "isDefault": false
+        },
+        {
+          "code": "5801-KAB KAPUAS",
+          "name": "KAPUAS (KAB)",
+          "ektp_name": "KABUPATEN KAPUAS",
+          "isDefault": false
+        },
+        {
+          "code": "5811-KAB KATINGAN",
+          "name": "KATINGAN (KAB)",
+          "ektp_name": "KABUPATEN KATINGAN",
+          "isDefault": false
+        },
+        {
+          "code": "5802-KAB KOTAWARINGIN BRT",
+          "name": "WARINGIN BARAT (KAB)",
+          "ektp_name": "KABUPATEN KOTAWARINGIN BARAT",
+          "isDefault": false
+        },
+        {
+          "code": "5803-KAB KOTAWARINGIN TMR",
+          "name": "WARINGIN TIMUR (KAB)",
+          "ektp_name": "KABUPATEN KOTAWARINGIN TIMUR",
+          "isDefault": false
+        },
+        {
+          "code": "5813-KAB LAMANDAU",
+          "name": "LAMANDAU (KAB)",
+          "ektp_name": "KABUPATEN LAMANDAU",
+          "isDefault": false
+        },
+        {
+          "code": "5804-KAB MURUNG RAYA",
+          "name": "MURUNG RAYA (KAB)",
+          "ektp_name": "KABUPATEN MURUNG RAYA",
+          "isDefault": false
+        },
+        {
+          "code": "5809-KAB PULANG PISAU",
+          "name": "PULANG PISAU (KAB)",
+          "ektp_name": "KABUPATEN PULANG PISAU",
+          "isDefault": false
+        },
+        {
+          "code": "5810-KAB SERUYAN",
+          "name": "SERUYAN (KAB)",
+          "ektp_name": "KABUPATEN SERUYAN",
+          "isDefault": false
+        },
+        {
+          "code": "5812-KAB SUKAMARA",
+          "name": "SUKAMARA (KAB)",
+          "ektp_name": "KABUPATEN SUKAMARA",
+          "isDefault": false
+        },
+        {
+          "code": "5892-PALANGKARAYA",
+          "name": "PALANGKARAYA (KOTA)",
+          "ektp_name": "KOTA PALANGKARAYA",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "5400-KALIMANTAN TIMUR",
+      "name": "KALIMANTAN TIMUR",
+      "ektp_name": "KALIMANTAN TIMUR",
+      "isDefault": false,
+      "town": [
+        {
+          "code": "5402-KAB BERAU",
+          "name": "BERAU (KAB)",
+          "ektp_name": "KABUPATEN BERAU",
+          "isDefault": false
+        },
+        {
+          "code": "5404-KAB BULUNGAN",
+          "name": "BULUNGAN (KAB)",
+          "ektp_name": "KABUPATEN BULUNGAN",
+          "isDefault": false
+        },
+        {
+          "code": "5405-KAB KUTAI BARAT",
+          "name": "KUTAI BARAT (KAB)",
+          "ektp_name": "KABUPATEN KUTAI BARAT",
+          "isDefault": false
+        },
+        {
+          "code": "5401-KAB KUTAIKARTANEGARA",
+          "name": "KUTAI KARTANEGARA (KAB)",
+          "ektp_name": "KABUPATEN KUTAI KARTANEGARA",
+          "isDefault": false
+        },
+        {
+          "code": "5406-KAB KUTAI TIMUR",
+          "name": "KUTAI TIMUR (KAB)",
+          "ektp_name": "KABUPATEN KUTAI TIMUR",
+          "isDefault": false
+        },
+        {
+          "code": "5410-KAB MALINAU",
+          "name": "MALINAU (KAB)",
+          "ektp_name": "KABUPATEN MALINAU",
+          "isDefault": false
+        },
+        {
+          "code": "5409-KAB NUNUKAN",
+          "name": "NUNUKAN (KAB)",
+          "ektp_name": "KABUPATEN NUNUKAN",
+          "isDefault": false
+        },
+        {
+          "code": "5403-KAB PASIR",
+          "name": "PASIR (KAB)",
+          "ektp_name": "KABUPATEN PASIR",
+          "isDefault": false
+        },
+        {
+          "code": "5411-KAB PENAJAM PASERUTR",
+          "name": "PENAJAM PASER UTARA (KAB)",
+          "ektp_name": "KABUPATEN PENAJAM PASER UTARA",
+          "isDefault": false
+        },
+        {
+          "code": "5412-KAB TANA TIDUNG",
+          "name": "TANA TIDUNG (KAB)",
+          "ektp_name": "KABUPATEN TANA TIDUNG",
+          "isDefault": false
+        },
+        {
+          "code": "5492-BALIKPAPAN",
+          "name": "BALIKPAPAN (KOTA)",
+          "ektp_name": "KOTA BALIKPAPAN",
+          "isDefault": false
+        },
+        {
+          "code": "5494-BONTANG",
+          "name": "BONTANG (KOTA)",
+          "ektp_name": "KOTA BONTANG",
+          "isDefault": false
+        },
+        {
+          "code": "5491-SAMARINDA",
+          "name": "SAMARINDA (KOTA)",
+          "ektp_name": "KOTA SAMARINDA",
+          "isDefault": false
+        },
+        {
+          "code": "5493-TARAKAN",
+          "name": "TARAKAN (KOTA)",
+          "ektp_name": "KOTA TARAKAN",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "3700-KEP BANGKA BELITUNG",
+      "name": "KEP. BANGKA BELITUNG",
+      "ektp_name": "KEPULAUAN BANGKA BELITUNG",
+      "isDefault": false,
+      "town": [
+        {
+          "code": "3701-KAB BANGKA",
+          "name": "BANGKA (KAB)",
+          "ektp_name": "KABUPATEN BANGKA",
+          "isDefault": false
+        },
+        {
+          "code": "3703-KAB BANGKA BARAT",
+          "name": "BANGKA BARAT (KAB)",
+          "ektp_name": "KABUPATEN BANGKA BARAT",
+          "isDefault": false
+        },
+        {
+          "code": "3707-KAB BANGKA BELITUNG",
+          "name": "BANGKA BELITUNG (KAB)",
+          "ektp_name": "KABUPATEN BANGKA BELITUNG",
+          "isDefault": false
+        },
+        {
+          "code": "3704-KAB BANGKA SELATAN",
+          "name": "BANGKA SELATAN (KAB)",
+          "ektp_name": "KABUPATEN BANGKA SELATAN",
+          "isDefault": false
+        },
+        {
+          "code": "3705-KAB BANGKA TENGAH",
+          "name": "BANGKA TENGAH (KAB)",
+          "ektp_name": "KABUPATEN BANGKA TENGAH",
+          "isDefault": false
+        },
+        {
+          "code": "3702-KAB BELITUNG",
+          "name": "BELITUNG (KAB)",
+          "ektp_name": "KABUPATEN BELITUNG",
+          "isDefault": false
+        },
+        {
+          "code": "3706-KAB BELITUNG TIMUR",
+          "name": "BELITUNG TIMUR (KAB)",
+          "ektp_name": "KABUPATEN BELITUNG TIMUR",
+          "isDefault": false
+        },
+        {
+          "code": "3791-PANGKAL PINANG",
+          "name": "PANGKAL PINANG (KOTA)",
+          "ektp_name": "KOTA PANGKAL PINANG",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "3800-KEPULAUAN RIAU",
+      "name": "KEP. RIAU",
+      "ektp_name": "KEPULAUAN RIAU",
+      "isDefault": false,
+      "town": [
+        {
+          "code": "3805-KAB ANAMBAS",
+          "name": "ANAMBAS (KAB)",
+          "ektp_name": "KABUPATEN KEPULAUAN ANAMBAS",
+          "isDefault": false
+        },
+        {
+          "code": "3804-KAB BINTAN",
+          "name": "BINTAN (KAB)",
+          "ektp_name": "KABUPATEN BINTAN",
+          "isDefault": false
+        },
+        {
+          "code": "3801-KAB KARIMUN",
+          "name": "KARIMUN (KAB)",
+          "ektp_name": "KABUPATEN KARIMUN",
+          "isDefault": false
+        },
+        {
+          "code": "3802-KAB LINGGA",
+          "name": "LINGGA (KAB)",
+          "ektp_name": "KABUPATEN LINGGA",
+          "isDefault": false
+        },
+        {
+          "code": "3803-KAB NATUNA",
+          "name": "NATUNA (KAB)",
+          "ektp_name": "KABUPATEN NATUNA",
+          "isDefault": false
+        },
+        {
+          "code": "3892-BATAM",
+          "name": "BATAM (KOTA)",
+          "ektp_name": "KOTA BATAM",
+          "isDefault": false
+        },
+        {
+          "code": "3891-TANJUNG PINANG",
+          "name": "TANJUNG PINANG (KOTA)",
+          "ektp_name": "KOTA TANJUNG PINANG",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "3900-LAMPUNG",
+      "name": "LAMPUNG",
+      "ektp_name": "LAMPUNG",
+      "isDefault": false,
+      "town": [
+        {
+          "code": "3904-KAB LAMPUNG BARAT",
+          "name": "LAMPUNG BARAT (KAB)",
+          "ektp_name": "KABUPATEN LAMPUNG BARAT",
+          "isDefault": false
+        },
+        {
+          "code": "3901-KAB LAMPUNG SELATAN",
+          "name": "LAMPUNG SELATAN (KAB)",
+          "ektp_name": "KABUPATEN LAMPUNG SELATAN",
+          "isDefault": false
+        },
+        {
+          "code": "3902-KAB LAMPUNG TENGAH",
+          "name": "LAMPUNG TENGAH (KAB)",
+          "ektp_name": "KABUPATEN LAMPUNG TENGAH",
+          "isDefault": false
+        },
+        {
+          "code": "3907-KAB LAMPUNG TIMUR",
+          "name": "LAMPUNG TIMUR (KAB)",
+          "ektp_name": "KABUPATEN LAMPUNG TIMUR",
+          "isDefault": false
+        },
+        {
+          "code": "3903-KAB LAMPUNG UTARA",
+          "name": "LAMPUNG UTARA (KAB)",
+          "ektp_name": "KABUPATEN LAMPUNG UTARA",
+          "isDefault": false
+        },
+        {
+          "code": "3912-KAB MESUJI",
+          "name": "MESUJI (KAB)",
+          "ektp_name": "KABUPATEN MESUJI",
+          "isDefault": false
+        },
+        {
+          "code": "3909-KAB PESAWARAN",
+          "name": "PESAWARAN (KAB)",
+          "ektp_name": "KABUPATEN PESAWARAN",
+          "isDefault": false
+        },
+        {
+          "code": "3910-KAB PRINGSEWU",
+          "name": "PRINGSEWU (KAB)",
+          "ektp_name": "KABUPATEN PRINGSEWU",
+          "isDefault": false
+        },
+        {
+          "code": "3906-KAB TANGGAMUS",
+          "name": "TANGGAMUS (KAB)",
+          "ektp_name": "KABUPATEN TANGGAMUS",
+          "isDefault": false
+        },
+        {
+          "code": "3905-KAB TULANG BAWANG",
+          "name": "TULANG BAWANG (KAB)",
+          "ektp_name": "KABUPATEN TULANG BAWANG",
+          "isDefault": false
+        },
+        {
+          "code": "3911-KAB TULANG BWANG BRT",
+          "name": "TULANG BAWANG BARAT (KAB)",
+          "ektp_name": "KABUPATEN TULANG BAWANG BARAT",
+          "isDefault": false
+        },
+        {
+          "code": "3908-KAB WAY KANAN",
+          "name": "WAY KANAN (KAB)",
+          "ektp_name": "KABUPATEN WAY KANAN",
+          "isDefault": false
+        },
+        {
+          "code": "3991-BANDAR LAMPUNG",
+          "name": "BANDAR LAMPUNG (KOTA)",
+          "ektp_name": "KOTA BANDAR LAMPUNG",
+          "isDefault": false
+        },
+        {
+          "code": "3992-METRO",
+          "name": "METRO (KOTA)",
+          "ektp_name": "KOTA METRO",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "8100-MALUKU",
+      "name": "MALUKU",
+      "ektp_name": "MALUKU",
+      "isDefault": false,
+      "town": [
+        {
+          "code": "8104-KAB BURU",
+          "name": "BURU (KAB)",
+          "ektp_name": "KABUPATEN BURU",
+          "isDefault": false
+        },
+        {
+          "code": "8109-KAB BURU SELATAN",
+          "name": "BURU SELATAN (KAB)",
+          "ektp_name": "KABUPATEN BURU SELATAN",
+          "isDefault": false
+        },
+        {
+          "code": "8107-KAB KEP ARU",
+          "name": "KEPULAUAN ARU (KAB)",
+          "ektp_name": "KABUPATEN KEPULAUAN ARU",
+          "isDefault": false
+        },
+        {
+          "code": "8108-KAB MALUKU BRT DAYA",
+          "name": "MALUKU BARAT DAYA (KAB)",
+          "ektp_name": "KABUPATEN MALUKU BARAT DAYA",
+          "isDefault": false
+        },
+        {
+          "code": "8101-KAB MALUKU TENGAH",
+          "name": "MALUKU TENGAH (KAB)",
+          "ektp_name": "KABUPATEN MALUKU TENGAH",
+          "isDefault": false
+        },
+        {
+          "code": "8102-KAB MALUKU TENGGARA",
+          "name": "MALUKU TENGGARA (KAB)",
+          "ektp_name": "KABUPATEN MALUKU TENGGARA",
+          "isDefault": false
+        },
+        {
+          "code": "8103-KAB MALUKUTNGGARABRT",
+          "name": "MALUKU TENGGARA BARAT (KAB)",
+          "ektp_name": "KABUPATEN MALUKU TENGGARA BARAT",
+          "isDefault": false
+        },
+        {
+          "code": "8105-KAB SERAM BAG BARAT",
+          "name": "SERAM BAGIAN BARAT (KAB)",
+          "ektp_name": "KABUPATEN SERAM BAGIAN BARAT",
+          "isDefault": false
+        },
+        {
+          "code": "8106-KAB SERAM BAG TMR",
+          "name": "SERAM BAGIAN TIMUR (KAB)",
+          "ektp_name": "KABUPATEN SERAM BAGIAN TIMUR",
+          "isDefault": false
+        },
+        {
+          "code": "8191-AMBON",
+          "name": "AMBON (KOTA)",
+          "ektp_name": "KOTA AMBON",
+          "isDefault": false
+        },
+        {
+          "code": "8192-TUAL",
+          "name": "TUAL (KOTA)",
+          "ektp_name": "KOTA TUAL",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "8300-MALUKU UTARA",
+      "name": "MALUKU UTARA",
+      "ektp_name": "MALUKU UTARA",
+      "isDefault": false,
+      "town": [
+        {
+          "code": "8305-KAB HALMAHERA BARAT",
+          "name": "HALMAHERA BARAT (KAB)",
+          "ektp_name": "KABUPATEN HALMAHERA BARAT",
+          "isDefault": false
+        },
+        {
+          "code": "8306-KAB HALMAHERA SLTN",
+          "name": "HALMAHERA SELATAN (KAB)",
+          "ektp_name": "KABUPATEN HALMAHERA SELATAN",
+          "isDefault": false
+        },
+        {
+          "code": "8302-KAB HALMAHERA TENGAH",
+          "name": "HALMAHERA TENGAH (KAB)",
+          "ektp_name": "KABUPATEN HALMAHERA TENGAH",
+          "isDefault": false
+        },
+        {
+          "code": "8304-KAB HALMAHERA TIMUR",
+          "name": "HALMAHERA TIMUR (KAB)",
+          "ektp_name": "KABUPATEN HALMAHERA TIMUR",
+          "isDefault": false
+        },
+        {
+          "code": "8303-KAB HALMAHERA UTARA",
+          "name": "HALMAHERA UTARA (KAB)",
+          "ektp_name": "KABUPATEN HALMAHERA UTARA",
+          "isDefault": false
+        },
+        {
+          "code": "8307-KAB KEPULAUAN SULA",
+          "name": "KEPULAUAN SULA (KAB)",
+          "ektp_name": "KABUPATEN KEPULAUAN SULA",
+          "isDefault": false
+        },
+        {
+          "code": "8308-KAB PULAU MOROTAI",
+          "name": "PULAU MOROTAI (KAB)",
+          "ektp_name": "KABUPATEN PULAU MOROTAI",
+          "isDefault": false
+        },
+        {
+          "code": "8390-TERNATE",
+          "name": "TERNATE (KOTA)",
+          "ektp_name": "KOTA TERNATE",
+          "isDefault": false
+        },
+        {
+          "code": "8391-TIDOREKEP",
+          "name": "TIDOREKEPULAUAN (KOTA)",
+          "ektp_name": "KOTA TIDORE KEPULAUAN",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "7100-NUSA TENGGARA BARAT",
+      "name": "NUSA TENGGARA BARAT",
+      "ektp_name": "NUSA TENGGARA BARAT",
+      "isDefault": false,
+      "town": [
+        {
+          "code": "7105-KAB BIMA",
+          "name": "BIMA (KAB)",
+          "ektp_name": "KABUPATEN BIMA",
+          "isDefault": false
+        },
+        {
+          "code": "7106-KAB DOMPU",
+          "name": "DOMPU (KAB)",
+          "ektp_name": "KABUPATEN DOMPU",
+          "isDefault": false
+        },
+        {
+          "code": "7101-KAB LOMBOK BARAT",
+          "name": "LOMBOK BARAT (KAB)",
+          "ektp_name": "KABUPATEN LOMBOK BARAT",
+          "isDefault": false
+        },
+        {
+          "code": "7102-KAB LOMBOK TENGAH",
+          "name": "LOMBOK TENGAH (KAB)",
+          "ektp_name": "KABUPATEN LOMBOK TENGAH",
+          "isDefault": false
+        },
+        {
+          "code": "7103-KAB LOMBOK TIMUR",
+          "name": "LOMBOK TIMUR (KAB)",
+          "ektp_name": "KABUPATEN LOMBOK TIMUR",
+          "isDefault": false
+        },
+        {
+          "code": "7108-KAB LOMBOK UTARA",
+          "name": "LOMBOK UTARA (KAB)",
+          "ektp_name": "KABUPATEN LOMBOK UTARA",
+          "isDefault": false
+        },
+        {
+          "code": "7104-KAB SUMBAWA",
+          "name": "SUMBAWA (KAB)",
+          "ektp_name": "KABUPATEN SUMBAWA",
+          "isDefault": false
+        },
+        {
+          "code": "7107-KAB SUMBAWA BARAT",
+          "name": "SUMBAWA BARAT (KAB)",
+          "ektp_name": "KABUPATEN SUMBAWA BARAT",
+          "isDefault": false
+        },
+        {
+          "code": "7192-BIMA",
+          "name": "BIMA (KOTA)",
+          "ektp_name": "KOTA BIMA",
+          "isDefault": false
+        },
+        {
+          "code": "7191-MATARAM",
+          "name": "MATARAM (KOTA)",
+          "ektp_name": "KOTA MATARAM",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "7400-NUSA TENGGARA TIMUR",
+      "name": "NUSA TENGGARA TIMUR",
+      "ektp_name": "NUSA TENGGARA TIMUR",
+      "isDefault": false,
+      "town": [
+        {
+          "code": "7405-KAB ALOR",
+          "name": "ALOR (KAB)",
+          "ektp_name": "KABUPATEN ALOR",
+          "isDefault": false
+        },
+        {
+          "code": "7404-KAB BELU",
+          "name": "BELU (KAB)",
+          "ektp_name": "KABUPATEN BELU",
+          "isDefault": false
+        },
+        {
+          "code": "7408-KAB ENDE",
+          "name": "ENDE (KAB)",
+          "ektp_name": "KABUPATEN ENDE",
+          "isDefault": false
+        },
+        {
+          "code": "7406-KAB FLORES TIMUR",
+          "name": "FLORES TIMUR (KAB)",
+          "ektp_name": "KABUPATEN FLORES TIMUR",
+          "isDefault": false
+        },
+        {
+          "code": "7401-KAB KUPANG",
+          "name": "KUPANG (KAB)",
+          "ektp_name": "KABUPATEN KUPANG",
+          "isDefault": false
+        },
+        {
+          "code": "7413-KAB LEMBATA",
+          "name": "LEMBATA (KAB)",
+          "ektp_name": "KABUPATEN LEMBATA",
+          "isDefault": false
+        },
+        {
+          "code": "7410-KAB MANGGARAI",
+          "name": "MANGGARAI (KAB)",
+          "ektp_name": "KABUPATEN MANGGARAI",
+          "isDefault": false
+        },
+        {
+          "code": "7415-KAB MANGGARAI BARAT",
+          "name": "MANGGARAI BARAT (KAB)",
+          "ektp_name": "KABUPATEN MANGGARAI BARAT",
+          "isDefault": false
+        },
+        {
+          "code": "7418-KAB MANGGARAI TIMUR",
+          "name": "MANGGARAI TIMUR (KAB)",
+          "ektp_name": "KABUPATEN MANGGARAI TIMUR",
+          "isDefault": false
+        },
+        {
+          "code": "7419-KAB NAGEKEO",
+          "name": "NAGEKEO (KAB)",
+          "ektp_name": "KABUPATEN NAGEKEO",
+          "isDefault": false
+        },
+        {
+          "code": "7409-KAB NGADA",
+          "name": "NGADA (KAB)",
+          "ektp_name": "KABUPATEN NGADA",
+          "isDefault": false
+        },
+        {
+          "code": "7414-KAB ROTE",
+          "name": "ROTE (KAB)",
+          "ektp_name": "KABUPATEN ROTE NDAO",
+          "isDefault": false
+        },
+        {
+          "code": "7420-KAB SABU RAIJUA",
+          "name": "SABU RAIJUA (KAB)",
+          "ektp_name": "KABUPATEN SABU RAIJUA",
+          "isDefault": false
+        },
+        {
+          "code": "7407-KAB SIKKA",
+          "name": "SIKKA (KAB)",
+          "ektp_name": "KABUPATEN SIKKA",
+          "isDefault": false
+        },
+        {
+          "code": "7412-KAB SUMBA BARAT",
+          "name": "SUMBA BARAT (KAB)",
+          "ektp_name": "KABUPATEN SUMBA BARAT",
+          "isDefault": false
+        },
+        {
+          "code": "7417-KAB SUMBA BARAT DAYA",
+          "name": "SUMBA BARAT DAYA (KAB)",
+          "ektp_name": "KABUPATEN SUMBA BARAT DAYA",
+          "isDefault": false
+        },
+        {
+          "code": "7416-KAB SUMBA TENGAH",
+          "name": "SUMBA TENGAH (KAB)",
+          "ektp_name": "KABUPATEN SUMBA TENGAH",
+          "isDefault": false
+        },
+        {
+          "code": "7411-KAB SUMBA TIMUR",
+          "name": "SUMBA TIMUR (KAB)",
+          "ektp_name": "KABUPATEN SUMBA TIMUR",
+          "isDefault": false
+        },
+        {
+          "code": "7402-KAB TIMORTENGAH SLTN",
+          "name": "TIMOR-TENGAH SELATAN (KAB)",
+          "ektp_name": "KABUPATEN TIMOR TENGAH SELATAN",
+          "isDefault": false
+        },
+        {
+          "code": "7403-KAB TIMORTENGAH UTR",
+          "name": "TIMOR-TENGAH UTARA (KAB)",
+          "ektp_name": "KABUPATEN TIMOR TENGAH UTARA",
+          "isDefault": false
+        },
+        {
+          "code": "7491-KUPANG",
+          "name": "KUPANG (KOTA)",
+          "ektp_name": "KOTA KUPANG",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "8200-PAPUA",
+      "name": "PAPUA",
+      "ektp_name": "PAPUA",
+      "isDefault": false,
+      "town": [
+        {
+          "code": "8228-KAB ASMAT",
+          "name": "ASMAT (KAB)",
+          "ektp_name": "KABUPATEN ASMAT",
+          "isDefault": false
+        },
+        {
+          "code": "8202-KAB BIAK NUMFOR",
+          "name": "BIAK NUMFOR (KAB)",
+          "ektp_name": "KABUPATEN BIAK NUMFOR",
+          "isDefault": false
+        },
+        {
+          "code": "8226-KAB BOVEN DIGOEL",
+          "name": "BOVEN DIGOEL (KAB)",
+          "ektp_name": "KABUPATEN BOVEN DIGOEL",
+          "isDefault": false
+        },
+        {
+          "code": "8240-KAB DEIYAI",
+          "name": "DEIYAI (KAB)",
+          "ektp_name": "KABUPATEN DEIYAI",
+          "isDefault": false
+        },
+        {
+          "code": "8233-KAB DOGIYAI",
+          "name": "DOGIYAI (KAB)",
+          "ektp_name": "KABUPATEN DOGIYAI",
+          "isDefault": false
+        },
+        {
+          "code": "8239-KAB INTAN JAYA",
+          "name": "INTAN JAYA (KAB)",
+          "ektp_name": "KABUPATEN INTAN JAYA",
+          "isDefault": false
+        },
+        {
+          "code": "8201-KAB JAYAPURA",
+          "name": "JAYAPURA (KAB)",
+          "ektp_name": "KABUPATEN JAYAPURA",
+          "isDefault": false
+        },
+        {
+          "code": "8213-KAB JAYAWIJAYA",
+          "name": "JAYAWIJAYA (KAB)",
+          "ektp_name": "KABUPATEN JAYAWIJAYA",
+          "isDefault": false
+        },
+        {
+          "code": "8218-KAB KEEROM",
+          "name": "KEEROM (KAB)",
+          "ektp_name": "KABUPATEN KEEROM",
+          "isDefault": false
+        },
+        {
+          "code": "8234-KAB LANNY JAYA",
+          "name": "LANNY JAYA (KAB)",
+          "ektp_name": "KABUPATEN LANNY JAYA",
+          "isDefault": false
+        },
+        {
+          "code": "8232-KAB MAMBERAMO RAYA",
+          "name": "MAMBERAMO RAYA (KAB)",
+          "ektp_name": "KABUPATEN MAMBERAMO RAYA",
+          "isDefault": false
+        },
+        {
+          "code": "8235-KAB MAMBERAMO TENGAH",
+          "name": "MAMBERAMO TENGAH (KAB)",
+          "ektp_name": "KABUPATEN MAMBERAMO TENGAH",
+          "isDefault": false
+        },
+        {
+          "code": "8227-KAB MAPPI",
+          "name": "MAPPI (KAB)",
+          "ektp_name": "KABUPATEN MAPPI",
+          "isDefault": false
+        },
+        {
+          "code": "8211-KAB MERAUKE",
+          "name": "MERAUKE (KAB)",
+          "ektp_name": "KABUPATEN MERAUKE",
+          "isDefault": false
+        },
+        {
+          "code": "8215-KAB MIMIKA",
+          "name": "MIMIKA (KAB)",
+          "ektp_name": "KABUPATEN MIMIKA",
+          "isDefault": false
+        },
+        {
+          "code": "8214-KAB NABIRE",
+          "name": "NABIRE (KAB)",
+          "ektp_name": "KABUPATEN NABIRE",
+          "isDefault": false
+        },
+        {
+          "code": "8236-KAB NDUGA",
+          "name": "NDUGA (KAB)",
+          "ektp_name": "KABUPATEN NDUGA",
+          "isDefault": false
+        },
+        {
+          "code": "8212-KAB PANIAI",
+          "name": "PANIAI (KAB)",
+          "ektp_name": "KABUPATEN PANIAI",
+          "isDefault": false
+        },
+        {
+          "code": "8221-KAB PEG BINTANG",
+          "name": "PEGUNUNGAN BINTANG (KAB)",
+          "ektp_name": "KABUPATEN PEGUNUNGAN BINTANG",
+          "isDefault": false
+        },
+        {
+          "code": "8238-KAB PUNCAK",
+          "name": "PUNCAK (KAB)",
+          "ektp_name": "KABUPATEN PUNCAK",
+          "isDefault": false
+        },
+        {
+          "code": "8216-KAB PUNCAK JAYA",
+          "name": "PUNCAK JAYA (KAB)",
+          "ektp_name": "KABUPATEN PUNCAK JAYA",
+          "isDefault": false
+        },
+        {
+          "code": "8217-KAB SARMI",
+          "name": "SARMI (KAB)",
+          "ektp_name": "KABUPATEN SARMI",
+          "isDefault": false
+        },
+        {
+          "code": "8231-KAB SUPIORI",
+          "name": "SUPIORI (KAB)",
+          "ektp_name": "KABUPATEN SUPIORI",
+          "isDefault": false
+        },
+        {
+          "code": "8223-KAB TOLIKARA",
+          "name": "TOLIKARA (KAB)",
+          "ektp_name": "KABUPATEN TOLIKARA",
+          "isDefault": false
+        },
+        {
+          "code": "8224-KAB WAROPEN",
+          "name": "WAROPEN (KAB)",
+          "ektp_name": "KABUPATEN WAROPEN",
+          "isDefault": false
+        },
+        {
+          "code": "8222-KAB YAHUKIMO",
+          "name": "YAHUKIMO (KAB)",
+          "ektp_name": "KABUPATEN YAHUKIMO",
+          "isDefault": false
+        },
+        {
+          "code": "8237-KAB YALIMO",
+          "name": "YALIMO (KAB)",
+          "ektp_name": "KABUPATEN YALIMO",
+          "isDefault": false
+        },
+        {
+          "code": "8210-KAB YAPEN_WAROPEN",
+          "name": "YAPEN-WAROPEN (KAB)",
+          "ektp_name": "KABUPATEN KEPULAUAN YAPEN",
+          "isDefault": false
+        },
+        {
+          "code": "8291-JAYAPURA",
+          "name": "JAYAPURA (KOTA)",
+          "ektp_name": "KOTA JAYAPURA",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "3500-RIAU",
+      "name": "RIAU",
+      "ektp_name": "RIAU",
+      "isDefault": false,
+      "town": [
+        {
+          "code": "3502-KAB BENGKALIS",
+          "name": "BENGKALIS (KAB)",
+          "ektp_name": "KABUPATEN BENGKALIS",
+          "isDefault": false
+        },
+        {
+          "code": "3505-KAB INDRAGIRI HILIR",
+          "name": "INDRAGIRI HILIR (KAB)",
+          "ektp_name": "KABUPATEN INDRAGIRI HILIR",
+          "isDefault": false
+        },
+        {
+          "code": "3504-KAB INDRAGIRI HULU",
+          "name": "INDRAGIRI HULU (KAB)",
+          "ektp_name": "KABUPATEN INDRAGIRI HULU",
+          "isDefault": false
+        },
+        {
+          "code": "3501-KAB KAMPAR",
+          "name": "KAMPAR (KAB)",
+          "ektp_name": "KABUPATEN KAMPAR",
+          "isDefault": false
+        },
+        {
+          "code": "3513-KAB KEP MERANTI",
+          "name": "KEPULAUAN MERANTI (KAB)",
+          "ektp_name": "KABUPATEN KEPULAUAN MERANTI",
+          "isDefault": false
+        },
+        {
+          "code": "3512-KAB KUANTAN SINGINGI",
+          "name": "KUANTAN SINGINGI (KAB)",
+          "ektp_name": "KABUPATEN KUANTAN SINGINGI",
+          "isDefault": false
+        },
+        {
+          "code": "3510-KAB PELALAWAN",
+          "name": "PELALAWAN (KAB)",
+          "ektp_name": "KABUPATEN PELALAWAN",
+          "isDefault": false
+        },
+        {
+          "code": "3509-KAB ROKAN HILIR",
+          "name": "ROKAN HILIR (KAB)",
+          "ektp_name": "KABUPATEN ROKAN HILIR",
+          "isDefault": false
+        },
+        {
+          "code": "3508-KAB ROKAN HULU",
+          "name": "ROKAN HULU (KAB)",
+          "ektp_name": "KABUPATEN ROKAN HULU",
+          "isDefault": false
+        },
+        {
+          "code": "3511-KAB SIAK",
+          "name": "SIAK (KAB)",
+          "ektp_name": "KABUPATEN SIAK",
+          "isDefault": false
+        },
+        {
+          "code": "3592-DUMAI",
+          "name": "DUMAI (KOTA)",
+          "ektp_name": "KOTA DUMAI",
+          "isDefault": false
+        },
+        {
+          "code": "3591-PEKANBARU",
+          "name": "PEKANBARU (KOTA)",
+          "ektp_name": "KOTA PEKANBARU",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "6400-SULAWESI BARAT",
+      "name": "SULAWESI BARAT",
+      "ektp_name": "SULAWESI BARAT",
+      "isDefault": false,
+      "town": [
+        {
+          "code": "6402-KAB MAJENE",
+          "name": "MAJENE (KAB)",
+          "ektp_name": "KABUPATEN MAJENE",
+          "isDefault": false
+        },
+        {
+          "code": "6403-KAB MAMASA",
+          "name": "MAMASA (KAB)",
+          "ektp_name": "KABUPATEN MAMASA",
+          "isDefault": false
+        },
+        {
+          "code": "6404-KAB MAMUJU UTARA",
+          "name": "MAMUJU UTARA (KAB)",
+          "ektp_name": "KABUPATEN MAMUJU UTARA",
+          "isDefault": false
+        },
+        {
+          "code": "6401-KAB POLEWALI MANDAR",
+          "name": "POLEWALI MANDAR (KAB)",
+          "ektp_name": "KABUPATEN POLEWALI MANDAR",
+          "isDefault": false
+        },
+        {
+          "code": "6491-MAMUJU",
+          "name": "MAMUJU (KOTA)",
+          "ektp_name": "KOTA MAMUJU",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "6100-SULAWESI SELATAN",
+      "name": "SULAWESI SELATAN",
+      "ektp_name": "SULAWESI SELATAN",
+      "isDefault": false,
+      "town": [
+        {
+          "code": "6112-KAB BANTAENG",
+          "name": "BANTAENG (KAB)",
+          "ektp_name": "KABUPATEN BANTAENG",
+          "isDefault": false
+        },
+        {
+          "code": "6116-KAB BARRU",
+          "name": "BARRU (KAB)",
+          "ektp_name": "KABUPATEN BARRU",
+          "isDefault": false
+        },
+        {
+          "code": "6105-KAB BONE",
+          "name": "BONE (KAB)",
+          "ektp_name": "KABUPATEN BONE",
+          "isDefault": false
+        },
+        {
+          "code": "6111-KAB BULUKUMBA",
+          "name": "BULUKUMBA (KAB)",
+          "ektp_name": "KABUPATEN BULUKUMBA",
+          "isDefault": false
+        },
+        {
+          "code": "6121-KAB ENREKANG",
+          "name": "ENREKANG (KAB)",
+          "ektp_name": "KABUPATEN ENREKANG",
+          "isDefault": false
+        },
+        {
+          "code": "6102-KAB GOWA",
+          "name": "GOWA (KAB)",
+          "ektp_name": "KABUPATEN GOWA",
+          "isDefault": false
+        },
+        {
+          "code": "6113-KAB JENEPONTO",
+          "name": "JENEPONTO (KAB)",
+          "ektp_name": "KABUPATEN JENEPONTO",
+          "isDefault": false
+        },
+        {
+          "code": "6109-KAB LUWU",
+          "name": "LUWU (KAB)",
+          "ektp_name": "KABUPATEN LUWU",
+          "isDefault": false
+        },
+        {
+          "code": "6122-KAB LUWU TMR DH SLTN",
+          "name": "LUWU TIMUR (D/H LUWU SELATAN) (KAB)",
+          "ektp_name": "KABUPATEN LUWU TIMUR",
+          "isDefault": false
+        },
+        {
+          "code": "6124-KAB LUWU UTARA",
+          "name": "LUWU UTARA (KAB)",
+          "ektp_name": "KABUPATEN LUWU UTARA",
+          "isDefault": false
+        },
+        {
+          "code": "6107-KAB MAROS",
+          "name": "MAROS (KAB)",
+          "ektp_name": "KABUPATEN MAROS",
+          "isDefault": false
+        },
+        {
+          "code": "6118-KAB PANGKAJENE KEP",
+          "name": "PANGKAJENE KEPULAUAN (KAB)",
+          "ektp_name": "KABUPATEN PANGKAJENE KEPULAUAN",
+          "isDefault": false
+        },
+        {
+          "code": "6101-KAB PINRANG",
+          "name": "PINRANG (KAB)",
+          "ektp_name": "KABUPATEN PINRANG",
+          "isDefault": false
+        },
+        {
+          "code": "6114-KAB SELAYAR",
+          "name": "SELAYAR (KAB)",
+          "ektp_name": "KABUPATEN KEPULAUAN SELAYAR",
+          "isDefault": false
+        },
+        {
+          "code": "6117-KAB SIDENRENG RAPANG",
+          "name": "SIDENRENG RAPPANG (KAB)",
+          "ektp_name": "KABUPATEN SIDENRENG RAPPANG",
+          "isDefault": false
+        },
+        {
+          "code": "6110-KAB SINJAI",
+          "name": "SINJAI (KAB)",
+          "ektp_name": "KABUPATEN SINJAI",
+          "isDefault": false
+        },
+        {
+          "code": "6119-KAB SOPPENG",
+          "name": "SOPPENG (D/H WATANSOPPENG) (KAB)",
+          "ektp_name": "KABUPATEN SOPPENG",
+          "isDefault": false
+        },
+        {
+          "code": "6115-KAB TAKALAR",
+          "name": "TAKALAR (KAB)",
+          "ektp_name": "KABUPATEN TAKALAR",
+          "isDefault": false
+        },
+        {
+          "code": "6106-KAB TANA TORAJA",
+          "name": "TANA TORAJA (KAB)",
+          "ektp_name": "KABUPATEN TANA TORAJA",
+          "isDefault": false
+        },
+        {
+          "code": "6125-KAB TORAJA UTARA",
+          "name": "TORAJA UTARA (KAB)",
+          "ektp_name": "KABUPATEN TORAJA UTARA",
+          "isDefault": false
+        },
+        {
+          "code": "6103-KAB WAJO",
+          "name": "WAJO (KAB)",
+          "ektp_name": "KABUPATEN WAJO",
+          "isDefault": false
+        },
+        {
+          "code": "6191-MAKASSAR",
+          "name": "MAKASSAR (KOTA)",
+          "ektp_name": "KOTA MAKASSAR",
+          "isDefault": false
+        },
+        {
+          "code": "6193-PALOPO",
+          "name": "PALOPO (KOTA)",
+          "ektp_name": "KOTA PALOPO",
+          "isDefault": false
+        },
+        {
+          "code": "6192-PARE_PARE",
+          "name": "PARE-PARE (KOTA)",
+          "ektp_name": "KOTA PARE PARE",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "6000-SULAWESI TENGAH",
+      "name": "SULAWESI TENGAH",
+      "ektp_name": "SULAWESI TENGAH",
+      "isDefault": false,
+      "town": [
+        {
+          "code": "6005-KAB BANGGAI KEP",
+          "name": "BANGGAI KEPULAUAN (KAB)",
+          "ektp_name": "KABUPATEN BANGGAI KEPULAUAN",
+          "isDefault": false
+        },
+        {
+          "code": "6007-KAB BUOL",
+          "name": "BUOL (KAB)",
+          "ektp_name": "KABUPATEN BUOL",
+          "isDefault": false
+        },
+        {
+          "code": "6001-KAB DONGGALA",
+          "name": "DONGGALA (KAB)",
+          "ektp_name": "KABUPATEN DONGGALA",
+          "isDefault": false
+        },
+        {
+          "code": "6006-KAB MOROWALI",
+          "name": "MOROWALI (KAB)",
+          "ektp_name": "KABUPATEN MOROWALI",
+          "isDefault": false
+        },
+        {
+          "code": "6009-KAB PARIGI MOUTONG",
+          "name": "PARIGI MOUTONG (KAB)",
+          "ektp_name": "KABUPATEN PARIGI MOUTONG",
+          "isDefault": false
+        },
+        {
+          "code": "6003-KAB PARIMO_BANGGAI",
+          "name": "PARIMO/BANGGAI (KAB)",
+          "ektp_name": "KABUPATEN BANGGAI",
+          "isDefault": false
+        },
+        {
+          "code": "6002-KAB POSO",
+          "name": "POSO (KAB)",
+          "ektp_name": "KABUPATEN POSO",
+          "isDefault": false
+        },
+        {
+          "code": "6010-KAB SIGI",
+          "name": "SIGI (KAB)",
+          "ektp_name": "KABUPATEN SIGI",
+          "isDefault": false
+        },
+        {
+          "code": "6008-KAB TOJO UNAUNA",
+          "name": "TOJO UNA-UNA (KAB)",
+          "ektp_name": "KABUPATEN TOJO UNA UNA",
+          "isDefault": false
+        },
+        {
+          "code": "6004-KAB TOLI_TOLI",
+          "name": "TOLI-TOLI (KAB)",
+          "ektp_name": "KABUPATEN TOLI TOLI",
+          "isDefault": false
+        },
+        {
+          "code": "6091-PALU",
+          "name": "PALU (KOTA)",
+          "ektp_name": "KOTA PALU",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "6900-SULAWESI TENGGARA",
+      "name": "SULAWESI TENGGARA",
+      "ektp_name": "SULAWESI TENGGARA",
+      "isDefault": false,
+      "town": [
+        {
+          "code": "6908-KAB BOMBANA",
+          "name": "BOMBANA (KAB)",
+          "ektp_name": "KABUPATEN BOMBANA",
+          "isDefault": false
+        },
+        {
+          "code": "6901-KAB BUTON",
+          "name": "BUTON (KAB)",
+          "ektp_name": "KABUPATEN BUTON",
+          "isDefault": false
+        },
+        {
+          "code": "6910-KAB BUTON UTARA",
+          "name": "BUTON UTARA (KAB)",
+          "ektp_name": "KABUPATEN BUTON UTARA",
+          "isDefault": false
+        },
+        {
+          "code": "6904-KAB KOLAKA",
+          "name": "KOLAKA (KAB)",
+          "ektp_name": "KABUPATEN KOLAKA",
+          "isDefault": false
+        },
+        {
+          "code": "6909-KAB KOLAKA UTARA",
+          "name": "KOLAKA UTARA (KAB)",
+          "ektp_name": "KABUPATEN KOLAKA UTARA",
+          "isDefault": false
+        },
+        {
+          "code": "6906-KAB KONAWE",
+          "name": "KONAWE (KAB)",
+          "ektp_name": "KABUPATEN KONAWE",
+          "isDefault": false
+        },
+        {
+          "code": "6907-KAB KONAWE SELATAN",
+          "name": "KONAWE SELATAN (KAB)",
+          "ektp_name": "KABUPATEN KONAWE SELATAN",
+          "isDefault": false
+        },
+        {
+          "code": "6911-KAB KONAWE UTARA",
+          "name": "KONAWE UTARA (KAB)",
+          "ektp_name": "KABUPATEN KONAWE UTARA",
+          "isDefault": false
+        },
+        {
+          "code": "6903-KAB MUNA",
+          "name": "MUNA (KAB)",
+          "ektp_name": "KABUPATEN MUNA",
+          "isDefault": false
+        },
+        {
+          "code": "6905-KAB WAKATOBI",
+          "name": "WAKATOBI (KAB)",
+          "ektp_name": "KABUPATEN WAKATOBI",
+          "isDefault": false
+        },
+        {
+          "code": "6990-BAU_BAU",
+          "name": "BAU-BAU (KOTA)",
+          "ektp_name": "KOTA BAU BAU",
+          "isDefault": false
+        },
+        {
+          "code": "6991-KENDARI",
+          "name": "KENDARI (KOTA)",
+          "ektp_name": "KOTA KENDARI",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "6200-SULAWESI UTARA",
+      "name": "SULAWESI UTARA",
+      "ektp_name": "SULAWESI UTARA",
+      "isDefault": false,
+      "town": [
+        {
+          "code": "6203-KAB BOLAANG MNGONDOW",
+          "name": "BOLAANG MONGONDOW (KAB)",
+          "ektp_name": "KABUPATEN BOLAANG MONGONDOW",
+          "isDefault": false
+        },
+        {
+          "code": "6212-KABBOLANGMGONDOWSLTN",
+          "name": "BOLAANG MONGONDOW SELATAN (KAB)",
+          "ektp_name": "KABUPATEN BOLAANG MONGONDOW SELATAN",
+          "isDefault": false
+        },
+        {
+          "code": "6213-KABBOLANGMNGONDOWTMR",
+          "name": "BOLAANG MONGONDOW TIMUR (KAB)",
+          "ektp_name": "KABUPATEN BOLAANG MONGONDOW TIMUR",
+          "isDefault": false
+        },
+        {
+          "code": "6210-KABBOLANGMNGONDOWUTR",
+          "name": "BOLAANG MONGONDOW UTARA (KAB)",
+          "ektp_name": "KABUPATEN BOLAANG MONGONDOW UTARA",
+          "isDefault": false
+        },
+        {
+          "code": "6204-KAB KEP SANGIHE",
+          "name": "KEPULAUAN SANGIHE (KAB)",
+          "ektp_name": "KABUPATEN KEPULAUAN SANGIHE",
+          "isDefault": false
+        },
+        {
+          "code": "6211-KAB KEP SITARO",
+          "name": "KEPULAUAN SITARO (KAB)",
+          "ektp_name": "KABUPATEN KEPULAUAN SITARO",
+          "isDefault": false
+        },
+        {
+          "code": "6205-KAB KEP TALAUD",
+          "name": "KEPULAUAN TALAUD (KAB)",
+          "ektp_name": "KABUPATEN KEPULAUAN TALAUD",
+          "isDefault": false
+        },
+        {
+          "code": "6202-KAB MINAHASA",
+          "name": "MINAHASA (KAB)",
+          "ektp_name": "KABUPATEN MINAHASA",
+          "isDefault": false
+        },
+        {
+          "code": "6206-KAB MINAHASA SELATAN",
+          "name": "MINAHASA SELATAN (KAB)",
+          "ektp_name": "KABUPATEN MINAHASA SELATAN",
+          "isDefault": false
+        },
+        {
+          "code": "6209-KAB MINAHASA TNGGARA",
+          "name": "MINAHASA TENGGARA (KAB)",
+          "ektp_name": "KABUPATEN MINAHASA TENGGARA",
+          "isDefault": false
+        },
+        {
+          "code": "6207-KAB MINAHASA UTARA",
+          "name": "MINAHASA UTARA (KAB)",
+          "ektp_name": "KABUPATEN MINAHASA UTARA",
+          "isDefault": false
+        },
+        {
+          "code": "6293-BITUNG",
+          "name": "BITUNG (KOTA)",
+          "ektp_name": "KOTA BITUNG",
+          "isDefault": false
+        },
+        {
+          "code": "6292-KOTAMOBAGU",
+          "name": "KOTAMOBAGU (KOTA)",
+          "ektp_name": "KOTA KOTAMOBAGU",
+          "isDefault": false
+        },
+        {
+          "code": "6291-MENADO",
+          "name": "MENADO (KOTA)",
+          "ektp_name": "KOTA MANADO",
+          "isDefault": false
+        },
+        {
+          "code": "6294-TOMOHON",
+          "name": "TOMOHON (KOTA)",
+          "ektp_name": "KOTA TOMOHON",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "3400-SUMATERA BARAT",
+      "name": "SUMATERA BARAT",
+      "ektp_name": "SUMATERA BARAT",
+      "isDefault": false,
+      "town": [
+        {
+          "code": "3401-KAB AGAM",
+          "name": "AGAM (KAB)",
+          "ektp_name": "KABUPATEN AGAM",
+          "isDefault": false
+        },
+        {
+          "code": "3411-KAB DHARMASRAYA",
+          "name": "DHARMASRAYA (KAB)",
+          "ektp_name": "KABUPATEN DHARMASRAYA",
+          "isDefault": false
+        },
+        {
+          "code": "3409-KAB KEP MENTAWAI",
+          "name": "KEPULAUAN MENTAWAI (KAB)",
+          "ektp_name": "KABUPATEN KEPULAUAN MENTAWAI",
+          "isDefault": false
+        },
+        {
+          "code": "3403-KAB LIMAPULUH KOTO",
+          "name": "LIMAPULUH KOTO (KAB)",
+          "ektp_name": "KABUPATEN LIMA PULUH KOTA",
+          "isDefault": false
+        },
+        {
+          "code": "3405-KAB PADANG PARIAMAN",
+          "name": "PADANG PARIAMAN (KAB)",
+          "ektp_name": "KABUPATEN PADANG PARIAMAN",
+          "isDefault": false
+        },
+        {
+          "code": "3402-KAB PASAMAN",
+          "name": "PASAMAN (KAB)",
+          "ektp_name": "KABUPATEN PASAMAN",
+          "isDefault": false
+        },
+        {
+          "code": "3410-KAB PASAMAN BARAT",
+          "name": "PASAMAN BARAT (KAB)",
+          "ektp_name": "KABUPATEN PASAMAN BARAT",
+          "isDefault": false
+        },
+        {
+          "code": "3406-KAB PESISIR SELATAN",
+          "name": "PESISIR SELATAN (KAB)",
+          "ektp_name": "KABUPATEN PESISIR SELATAN",
+          "isDefault": false
+        },
+        {
+          "code": "3408-KAB SAWAHLUNTO",
+          "name": "SAWAHLUNTO/SIJUNJUNG (KAB)",
+          "ektp_name": "KABUPATEN SAWAHLUNTO",
+          "isDefault": false
+        },
+        {
+          "code": "3412-KAB SOLOK",
+          "name": "SOLOK (KAB)",
+          "ektp_name": "KABUPATEN SOLOK",
+          "isDefault": false
+        },
+        {
+          "code": "3404-KAB SOLOK SELATAN",
+          "name": "SOLOK SELATAN (KAB)",
+          "ektp_name": "KABUPATEN SOLOK SELATAN",
+          "isDefault": false
+        },
+        {
+          "code": "3407-KAB TANAH DATAR",
+          "name": "TANAH DATAR (KAB)",
+          "ektp_name": "KABUPATEN TANAH DATAR",
+          "isDefault": false
+        },
+        {
+          "code": "3491-BUKITTINGGI",
+          "name": "BUKITTINGGI (KOTA)",
+          "ektp_name": "KOTA BUKITTINGGI",
+          "isDefault": false
+        },
+        {
+          "code": "3492-PADANG",
+          "name": "PADANG (KOTA)",
+          "ektp_name": "KOTA PADANG",
+          "isDefault": false
+        },
+        {
+          "code": "3494-PADANGPANJANG",
+          "name": "PADANGPANJANG (KOTA)",
+          "ektp_name": "KOTA PADANG PANJANG",
+          "isDefault": false
+        },
+        {
+          "code": "3497-PARIAMAN",
+          "name": "PARIAMAN (KOTA)",
+          "ektp_name": "KOTA PARIAMAN",
+          "isDefault": false
+        },
+        {
+          "code": "3496-PAYAKUMBUH",
+          "name": "PAYAKUMBUH (KOTA)",
+          "ektp_name": "KOTA PAYAKUMBUH",
+          "isDefault": false
+        },
+        {
+          "code": "3493-SAWAHLUNTO",
+          "name": "SAWAHLUNTO (KOTA)",
+          "ektp_name": "KOTA SAWAHLUNTO",
+          "isDefault": false
+        },
+        {
+          "code": "3495-SOLOK",
+          "name": "SOLOK (KOTA)",
+          "ektp_name": "KOTA SOLOK",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "3600-SUMATERA SELATAN",
+      "name": "SUMATERA SELATAN",
+      "ektp_name": "SUMATERA SELATAN",
+      "isDefault": false,
+      "town": [
+        {
+          "code": "3613-KAB BANYUASIN",
+          "name": "BANYUASIN (KAB)",
+          "ektp_name": "KABUPATEN BANYUASIN",
+          "isDefault": false
+        },
+        {
+          "code": "3617-KAB EMPAT LAWANG",
+          "name": "EMPAT LAWANG (KAB)",
+          "ektp_name": "KABUPATEN EMPAT LAWANG",
+          "isDefault": false
+        },
+        {
+          "code": "3609-KAB LAHAT",
+          "name": "LAHAT (KAB)",
+          "ektp_name": "KABUPATEN LAHAT",
+          "isDefault": false
+        },
+        {
+          "code": "3608-KAB MUARA ENIM",
+          "name": "LEMATANG ILIR OGAN TENGAH (MUARA ENIM) (KAB)",
+          "ektp_name": "KABUPATEN MUARA ENIM",
+          "isDefault": false
+        },
+        {
+          "code": "3606-KAB MUSI BANYUASIN",
+          "name": "MUSI BANYUASIN (KAB)",
+          "ektp_name": "KABUPATEN MUSI BANYUASIN",
+          "isDefault": false
+        },
+        {
+          "code": "3610-KAB MUSI RAWAS",
+          "name": "MUSI RAWAS (KAB)",
+          "ektp_name": "KABUPATEN MUSI RAWAS",
+          "isDefault": false
+        },
+        {
+          "code": "3616-KAB OGAN ILIR",
+          "name": "OGAN ILIR (KAB)",
+          "ektp_name": "KABUPATEN OGAN ILIR",
+          "isDefault": false
+        },
+        {
+          "code": "3614-OGANKOMERING ULUSLTN",
+          "name": "OGAN KOMEING ULU SELATAN (KAB)",
+          "ektp_name": "KABUPATEN OGAN KOMERING ULU SELATAN",
+          "isDefault": false
+        },
+        {
+          "code": "3615-OGAN KOMERING ULUTMR",
+          "name": "OGAN KOMEING ULU TIMUR (KAB)",
+          "ektp_name": "KABUPATEN OGAN KOMERING ULU TIMUR",
+          "isDefault": false
+        },
+        {
+          "code": "3611-OGANKOMERING ILIR",
+          "name": "OGAN KOMERING ILIR (KAB)",
+          "ektp_name": "KABUPATEN OGAN KOMERING ILIR",
+          "isDefault": false
+        },
+        {
+          "code": "3607-KAB OGANKOMERING ULU",
+          "name": "OGAN KOMERING ULU (KAB)",
+          "ektp_name": "KABUPATEN OGAN KOMERING ULU",
+          "isDefault": false
+        },
+        {
+          "code": "3693-LUBUKLINGGAU",
+          "name": "LUBUKLINGGAU (KOTA)",
+          "ektp_name": "KOTA LUBUK LINGGAU",
+          "isDefault": false
+        },
+        {
+          "code": "3697-PAGAR ALAM",
+          "name": "PAGAR ALAM (KOTA)",
+          "ektp_name": "KOTA PAGAR ALAM",
+          "isDefault": false
+        },
+        {
+          "code": "3691-PALEMBANG",
+          "name": "PALEMBANG (KOTA)",
+          "ektp_name": "KOTA PALEMBANG",
+          "isDefault": false
+        },
+        {
+          "code": "3694-PRABUMULIH",
+          "name": "PRABUMULIH (KOTA)",
+          "ektp_name": "KOTA PRABUMULIH",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "3300-SUMATERA UTARA",
+      "name": "SUMATERA UTARA",
+      "ektp_name": "SUMATERA UTARA",
+      "isDefault": false,
+      "town": [
+        {
+          "code": "3320-KAB ANGKOLA SIPIROK",
+          "name": "ANGKOLA SIPIROK (KAB)",
+          "ektp_name": "KABUPATEN ANGKOLA SIPIROK",
+          "isDefault": false
+        },
+        {
+          "code": "3306-KAB ASAHAN",
+          "name": "ASAHAN (KAB)",
+          "ektp_name": "KABUPATEN ASAHAN",
+          "isDefault": false
+        },
+        {
+          "code": "3321-KAB BATU BARA",
+          "name": "BATU BARA (KAB)",
+          "ektp_name": "KABUPATEN BATU BARA",
+          "isDefault": false
+        },
+        {
+          "code": "3307-KAB DAIRI",
+          "name": "DAIRI (KAB)",
+          "ektp_name": "KABUPATEN DAIRI",
+          "isDefault": false
+        },
+        {
+          "code": "3301-KAB DELI SERDANG",
+          "name": "DELI SERDANG (KAB)",
+          "ektp_name": "KABUPATEN DELI SERDANG",
+          "isDefault": false
+        },
+        {
+          "code": "3316-KABHUMBANGHASUNDUTAN",
+          "name": "HUMBANG HASUNDUTAN (KAB)",
+          "ektp_name": "KABUPATEN HUMBANG HASUNDUTAN",
+          "isDefault": false
+        },
+        {
+          "code": "3303-KAB KARO",
+          "name": "KARO (KAB)",
+          "ektp_name": "KABUPATEN KARO",
+          "isDefault": false
+        },
+        {
+          "code": "3305-KAB LABUHAN BATU",
+          "name": "LABUHAN BATU (KAB)",
+          "ektp_name": "KABUPATEN LABUHANBATU",
+          "isDefault": false
+        },
+        {
+          "code": "3324-KAB LABUHANBATU SLTN",
+          "name": "LABUHANBATU SELATAN (KAB)",
+          "ektp_name": "KABUPATEN LABUHANBATU SELATAN",
+          "isDefault": false
+        },
+        {
+          "code": "3325-KAB LABUHANBATU UTR",
+          "name": "LABUHANBATU UTARA (KAB)",
+          "ektp_name": "KABUPATEN LABUHANBATU UTARA",
+          "isDefault": false
+        },
+        {
+          "code": "3302-KAB LANGKAT",
+          "name": "LANGKAT (KAB)",
+          "ektp_name": "KABUPATEN LANGKAT",
+          "isDefault": false
+        },
+        {
+          "code": "3314-KAB MANDAILING NATAL",
+          "name": "MANDAILING NATAL (KAB)",
+          "ektp_name": "KABUPATEN MANDAILING NATAL",
+          "isDefault": false
+        },
+        {
+          "code": "3311-KAB NIAS",
+          "name": "NIAS (KAB)",
+          "ektp_name": "KABUPATEN NIAS",
+          "isDefault": false
+        },
+        {
+          "code": "3326-KAB NIAS BARAT",
+          "name": "NIAS BARAT (KAB)",
+          "ektp_name": "KABUPATEN NIAS BARAT",
+          "isDefault": false
+        },
+        {
+          "code": "3315-KAB NIAS SELATAN",
+          "name": "NIAS SELATAN (KAB)",
+          "ektp_name": "KABUPATEN NIAS SELATAN",
+          "isDefault": false
+        },
+        {
+          "code": "3327-KAB NIAS UTARA",
+          "name": "NIAS UTARA (KAB)",
+          "ektp_name": "KABUPATEN NIAS UTARA",
+          "isDefault": false
+        },
+        {
+          "code": "3322-KAB PADANG LAWAS",
+          "name": "PADANG LAWAS (KAB)",
+          "ektp_name": "KABUPATEN PADANG LAWAS",
+          "isDefault": false
+        },
+        {
+          "code": "3323-KAB PADANG LAWAS UTR",
+          "name": "PADANG LAWAS UTARA (KAB)",
+          "ektp_name": "KABUPATEN PADANG LAWAS UTARA",
+          "isDefault": false
+        },
+        {
+          "code": "3317-KAB PAKPAK BHARAT",
+          "name": "PAKPAK BHARAT (KAB)",
+          "ektp_name": "KABUPATEN PAKPAK BHARAT",
+          "isDefault": false
+        },
+        {
+          "code": "3318-KAB SAMOSIR",
+          "name": "SAMOSIR (KAB)",
+          "ektp_name": "KABUPATEN SAMOSIR",
+          "isDefault": false
+        },
+        {
+          "code": "3319-KAB SERDANG BEDAGAI",
+          "name": "SERDANG BEDAGAI (KAB)",
+          "ektp_name": "KABUPATEN SERDANG BEDAGAI",
+          "isDefault": false
+        },
+        {
+          "code": "3304-KAB SIMALUNGUN",
+          "name": "SIMALUNGUN (KAB)",
+          "ektp_name": "KABUPATEN SIMALUNGUN",
+          "isDefault": false
+        },
+        {
+          "code": "3310-KAB TAPANULI SELATAN",
+          "name": "TAPANULI SELATAN (KAB)",
+          "ektp_name": "KABUPATEN TAPANULI SELATAN",
+          "isDefault": false
+        },
+        {
+          "code": "3309-KAB TAPANULI TENGAH",
+          "name": "TAPANULI TENGAH (KAB)",
+          "ektp_name": "KABUPATEN TAPANULI TENGAH",
+          "isDefault": false
+        },
+        {
+          "code": "3308-KAB TAPANULI UTARA",
+          "name": "TAPANULI UTARA (KAB)",
+          "ektp_name": "KABUPATEN TAPANULI UTARA",
+          "isDefault": false
+        },
+        {
+          "code": "3313-KAB TOBA SAMOSIR",
+          "name": "TOBA SAMOSIR (KAB)",
+          "ektp_name": "KABUPATEN TOBA SAMOSIR",
+          "isDefault": false
+        },
+        {
+          "code": "3392-BINJAI",
+          "name": "BINJAI (KOTA)",
+          "ektp_name": "KOTA BINJAI",
+          "isDefault": false
+        },
+        {
+          "code": "3397-GUNUNG SITOLI",
+          "name": "GUNUNG SITOLI (KOTA)",
+          "ektp_name": "KOTA GUNUNGSITOLI",
+          "isDefault": false
+        },
+        {
+          "code": "3396-MEDAN",
+          "name": "MEDAN (KOTA)",
+          "ektp_name": "KOTA MEDAN",
+          "isDefault": false
+        },
+        {
+          "code": "3399-PADANG SIDEMPUAN",
+          "name": "PADANG SIDEMPUAN (KOTA)",
+          "ektp_name": "KOTA PADANGSIDIMPUAN",
+          "isDefault": false
+        },
+        {
+          "code": "3393-PEMATANG SIANTAR",
+          "name": "PEMATANGSIANTAR (KOTA)",
+          "ektp_name": "KOTA PEMATANG SIANTAR",
+          "isDefault": false
+        },
+        {
+          "code": "3395-SIBOLGA",
+          "name": "SIBOLGA (KOTA)",
+          "ektp_name": "KOTA SIBOLGA",
+          "isDefault": false
+        },
+        {
+          "code": "3394-TANJUNG BALAI",
+          "name": "TANJUNG BALAI (KOTA)",
+          "ektp_name": "KOTA TANJUNG BALAI",
+          "isDefault": false
+        },
+        {
+          "code": "3391-TEBING TINGGI",
+          "name": "TEBING TINGGI (KOTA)",
+          "ektp_name": "KOTA TEBING TINGGI",
+          "isDefault": false
+        }
+      ]
+    }
+  ]
+}
