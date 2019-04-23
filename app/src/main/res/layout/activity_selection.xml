@@ -82,5 +82,12 @@
             android:onClick="startSpinnerDemoActivity"
             android:text="Nice Spinner"
             android:textColor="@android:color/black" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startRecyclerViewDemoActivity"
+            android:text="Help Video"
+            android:textColor="@android:color/black" />
     </LinearLayout>
 </ScrollView>

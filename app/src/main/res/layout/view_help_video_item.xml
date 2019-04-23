@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/help_video_item_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="-6dp"
+    android:paddingBottom="43dp">
+
+    <ImageView
+        android:id="@+id/help_video_thumb"
+        android:layout_width="191dp"
+        android:layout_height="109dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/thumb2" />
+
+    <ImageView
+        android:id="@+id/help_video_icon_play"
+        android:layout_width="191dp"
+        android:layout_height="109dp"
+        android:scaleType="centerInside"
+        android:src="@mipmap/icon_play_video" />
+
+    <TextView
+        android:id="@+id/help_video_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_toEndOf="@+id/help_video_thumb"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="2dp" />
+
+    <TextView
+        android:id="@+id/help_video_item_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/help_video_item_title"
+        android:layout_below="@+id/help_video_item_title"
+        android:layout_marginTop="2dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" />
+
+</RelativeLayout>

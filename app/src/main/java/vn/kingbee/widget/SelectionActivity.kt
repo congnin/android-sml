@@ -13,6 +13,7 @@ import vn.kingbee.widget.edittext.FormatEditTextActivity
 import vn.kingbee.widget.keyboard.NumpadActivity
 import vn.kingbee.widget.pin.PinActivity
 import vn.kingbee.widget.progress.CircleProcessBarActivity
+import vn.kingbee.widget.recyclerview.HelpVideoDemo
 import vn.kingbee.widget.spinner.demo.SpinnerDemoActivity
 
 class SelectionActivity : AppCompatActivity() {
@@ -60,5 +61,9 @@ class SelectionActivity : AppCompatActivity() {
 
     fun startSpinnerDemoActivity(v: View) {
         startActivity(Intent(this@SelectionActivity, SpinnerDemoActivity::class.java))
+    }
+
+    fun startRecyclerViewDemoActivity(v: View) {
+        startActivity(Intent(this@SelectionActivity, HelpVideoDemo::class.java))
     }
 }

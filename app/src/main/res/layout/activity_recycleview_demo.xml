@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:paddingStart="37dp"
+    android:splitMotionEvents="false">
+
+    <TextView
+        android:id="@+id/help_video_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingMultiplier="1"
+        android:paddingTop="14dp"
+        android:textStyle="bold" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/help_video_list"
+        style="@style/StyleHelpScrollbar"
+        android:layout_marginTop="18dp"
+        android:paddingStart="5dp"
+        android:layout_below="@+id/help_video_title"
+        android:paddingBottom="15dp" />
+</RelativeLayout>
