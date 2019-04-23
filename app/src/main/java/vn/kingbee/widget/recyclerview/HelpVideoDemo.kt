@@ -16,7 +16,7 @@ import vn.kingbee.widget.recyclerview.help.HelpVideoResponse
 
 class HelpVideoDemo : BaseActivity(), HelpVideoAdapter.HelpVideoClickListener {
     override fun onVideoClick(path: String) {
-        Toast.makeText(this, "Fuck you", Toast.LENGTH_LONG).show()
+        Toast.makeText(this, path, Toast.LENGTH_LONG).show()
     }
 
     lateinit var mTvTitle: TextView
