@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:columnCount="2"
+    android:rowCount="3">
+
+    <TextView
+        android:id="@+id/tv_header"
+        android:layout_column="0"
+        tools:text="Name" />
+
+    <ImageButton
+        android:id="@+id/ib_error"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:layout_gravity="end|center"
+        android:background="@mipmap/ic_alert_error"
+        android:visibility="gone" />
+
+    <Space android:layout_height="7dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="2">
+
+        <vn.kingbee.widget.edittext.state.StateEditText
+            android:id="@+id/et_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:padding="16dp"
+            tools:text="Jakarta" />
+
+        <ImageView
+            android:id="@+id/ic_arrow_dropdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="25dp"
+            android:src="@mipmap/ic_arrow_dropdown"
+            android:visibility="gone" />
+    </FrameLayout>
+</GridLayout>
