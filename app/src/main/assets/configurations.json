@@ -1,0 +1,581 @@
+{
+  "data": {
+    "configurations": [
+      {
+        "key": "staff_login_timeout_minute",
+        "value": "720"
+      },
+      {
+        "key": "customer_session_timeout_minute",
+        "value": "60"
+      },
+      {
+        "key": "customer_screen_timeout_second",
+        "value": "2000"
+      },
+      {
+        "key": "card_dispense_attempts",
+        "value": "3"
+      },
+      {
+        "key": "otp_attempts",
+        "value": "3"
+      },
+      {
+        "key": "initial_deposit_ammount_rupiah",
+        "value": "500000"
+      },
+      {
+        "key": "default_language",
+        "value": "id_ID"
+      },
+      {
+        "key": "customer_screen_timeout_second",
+        "value": "2000"
+      },
+      {
+        "key": "customer_screen_timeout_second",
+        "value": "2000"
+      },
+      {
+        "key": "title_and_salutation",
+        "value": "SKED,MA,BA,SKG,MCS,BSC,SGZ,MAG,BCOMPSC,SPT,MHUT,LLB,SIP,MSI,MENGSC,SIN,MKOM,MBA,SEI,MTI,MTH,SE,MMSI,THM,SKOM,MPD,LLM,SKM,MAK,MPHARM,SKEP,MARS,MCOM,SH,MSN,MSPORT,SHI,MFARM,MMAR,SAB,MPSI,MPHIL,SAGR,MKN,PHD,ST,MMPD,DTH,STP,MT,EDD,SAGs,MHUM,MD,SPD,MH,DIPL-ING,SIK,MAB,DR,SPSI,MAP,DIPLOM-KAUFFRAU,SIKOM,AMDKG,DIPLOM-KAUFMANN,SSOS,AMDPRS,DIPLOM-WIRTSCHAFTSINGENIEUR,SHUT,AMDKL,AK,SPDI,AMDPAR,BKP,STHI,AMDLLAJ,APT,STH,AMDMBU,DRG,SSI,AMDMTRL,DRH,SS,AMDMTRU,NERS,SSTP,AMDMLOG,DRH,SFARM,AMDMIP,PSI,SSN,AMDMID,PHYSIO,SDS,AMDPJK,IR,SAP,AMDAKP,PEKSOS,SPAR,AMDOT,AMAPEL,SMB,AMDAPS,AMAPUST,SKH,AMDPOL,AMAPD,SARS,AMDRO,AMAPDSD,SKEL,AMD RMIK,AMAPKB,SPPA,SPA,AMDAK,SPPD,SPAN,AMDAK,SPPK,SPAND,AMDAA,SPPM,SPAK,AMDTK,SPPROS,SPB,AMDPEL,SPRAD,SPBA,AMDKOM,SPRKG,SPBM,AMDG,SPS,SPBP-RE,AMDFAR,SPTHT-KL,SPBS,AMDRAD,SPU,SPBTKV,AMDKA,SPGER,SPF,AMDKEB,SPGER,SPFK,AMDFT,SPGER,SPGK,AMDKEP,SPOK,SPJP,SPEM,SPONKRAD,SPKFR,SPKN,SPORT,SPKG,SPKO,SPOT,SPKGA,SPLP,SPP,SPKJ,SPM,SPPARK,SPKP,SPMK,SPPERIO,SPKK,SPOG,DRS,MM,MSC,MPA,MENG"
+      },
+      {
+        "key": "kofax.levenshtein_accuracy",
+        "value": "0.8"
+      },
+      {
+        "key": "otp.authentication.timeout",
+        "value": "1"
+      },
+      {
+        "key": "otp.threshold.pram",
+        "value": "5"
+      },
+      {
+        "key": "otp.syn.pram",
+        "value": "2"
+      },
+      {
+        "key": "interest.saving_account_tier_1",
+        "value": "10.00%"
+      },
+      {
+        "key": "interest.saving_account_tier_2",
+        "value": "10.25%"
+      },
+      {
+        "key": "interest.saving_account_tier_3",
+        "value": "11.00%"
+      },
+      {
+        "key": "interest.saving_account_tier_4",
+        "value": "12.00%"
+      },
+      {
+        "key": "email.welcome_pack.from_address",
+        "value": "Commonwealth Bank <noreply@commbank.co.id>"
+      },
+      {
+        "key": "email.welcome_pack.subject",
+        "value": "Selamat Datang di Commonwealth Bank"
+      },
+      {
+        "key": "email.welcome_pack.template",
+        "value": "template.email.welcome_pack"
+      },
+      {
+        "key": "edc.init_vector",
+        "value": "0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00"
+      },
+      {
+        "key": "edc.secret_key",
+        "value": "0x61,0x62,0x63,0x64,0x65,0x66,0x67,0x68,0x61,0x62,0x63,0x64,0x65,0x66,0x67,0x68"
+      },
+      {
+        "key": "edc.security_suffix",
+        "value": "111111111111"
+      },
+      {
+        "key": "usb.camera.preview.rotation",
+        "value": "0"
+      },
+      {
+        "key": "usb.camera.preview.image.scale",
+        "value": "3"
+      },
+      {
+        "key": "usb.camera.preview.width",
+        "value": "1280"
+      },
+      {
+        "key": "usb.camera.preview.height",
+        "value": "720"
+      },
+      {
+        "key": "usb.camera.brightness",
+        "value": "28"
+      },
+      {
+        "key": "usb.camera.contrast",
+        "value": "30"
+      },
+      {
+        "key": "usb.camera.gamma",
+        "value": "36"
+      },
+      {
+        "key": "usb.camera.hue",
+        "value": "50"
+      },
+      {
+        "key": "orc.vs.profile.setting",
+        "value": "_DocDimLarge_5.39_DocDimSmall_3.41_DoBinarization__DoSkewCorrectionPage__Do90DegreeRotation_4_DoBackgroundSmoothing__DoCropCorrection__DoScaleBWImageToDPI_600_DoEdgeCleanup__DoContourCleaning__LoadSetting_<Property Name=\"CBinarize.Wei_Green_To_Gray.Int\" Value=\"0\" />_LoadSetting_<Property Name=\"CBinarize.Contrast_Slider_Pos.Int\" Value=\"5\" />_LoadSetting_<Property Name=\"CBinarize.Cleanup_Slider_Pos.Int\" Value=\"5\" />_LoadSetting_<Property Name=\"CBinarize.Wei_Blue_To_Gray.Int\" Value=\"1\" />_LoadSetting_<Property Name=\"CBinarize.Wei_Red_To_Gray.Int\" Value=\"0\" />"
+      },
+      {
+        "key": "apim.bankstaff.validityperiod",
+        "value": "5600"
+      },
+      {
+        "key": "apim.customer.validityperiod",
+        "value": "3600"
+      },
+      {
+        "key": "usb.camera.crop.start.x",
+        "value": "0.4"
+      },
+      {
+        "key": "usb.camera.crop.start.y",
+        "value": "0.4"
+      },
+      {
+        "key": "usb.camera.crop.width",
+        "value": "0.1"
+      },
+      {
+        "key": "usb.camera.crop.height",
+        "value": "0.1"
+      },
+      {
+        "key": "email.irregular.from_address",
+        "value": "Commonwealth Bank <noreply@commbank.co.id>"
+      },
+      {
+        "key": "email.irregular.subject",
+        "value": "Selangkah Lagi Anda akan Menjadi Bagian dari Keluarga Commonwealth Bank"
+      },
+      {
+        "key": "email.irregular.template",
+        "value": "template.email.unauthorized_doc"
+      },
+      {
+        "key": "ektp.reader.timeout",
+        "value": "15"
+      },
+      {
+        "key": "periodic.checking.external.device",
+        "value": "300000"
+      },
+      {
+        "key": "apim.personalloan.web.validityperiod",
+        "value": "3600"
+      },
+      {
+        "key": "apim.personalloan.kiosk.validityperiod",
+        "value": "7200"
+      },
+      {
+        "key": "personalloan.application.validityperiod",
+        "value": "5"
+      },
+      {
+        "key": "personalloan.contract.penalty",
+        "value": "6%"
+      },
+      {
+        "key": "personalloan.contract.template",
+        "value": "template.html.loan_contract"
+      },
+      {
+        "key": "usb.camera.payslip.width",
+        "value": "1600"
+      },
+      {
+        "key": "usb.camera.payslip.height",
+        "value": "1200"
+      },
+      {
+        "key": "personalloan.income.amount.difference",
+        "value": "500000"
+      },
+      {
+        "key": "personalloan.income.month.difference",
+        "value": "2"
+      },
+      {
+        "key": "personalloan.time.caching",
+        "value": "3600"
+      },
+      {
+        "key": "personalloan.client.recaptcha.google",
+        "value": "6LfljzQUAAAAALQNhxS0pJFGN2yzNwDs6XeqyNjf"
+      },
+      {
+        "key": "personalloan.loansubmission.daysfrozenafterapproving",
+        "value": "7"
+      },
+      {
+        "key": "personalloan.loansubmission.daysfrozenafterrejecting",
+        "value": "90"
+      },
+      {
+        "key": "personalloan.interest.month",
+        "value": "0.0167"
+      },
+      {
+        "key": "personalloan.min_amount",
+        "value": "10000000"
+      },
+      {
+        "key": "personalloan.max_amount",
+        "value": "30000000"
+      },
+      {
+        "key": "personalloan.step_amount",
+        "value": "1000000"
+      },
+      {
+        "key": "personalloan.min_tenure",
+        "value": "12"
+      },
+      {
+        "key": "personalloan.max_tenure",
+        "value": "18"
+      },
+      {
+        "key": "personalloan.min_age",
+        "value": "21"
+      },
+      {
+        "key": "personalloan.penalty_fee",
+        "value": "0.06"
+      },
+      {
+        "key": "personalloan.min_income",
+        "value": "3500000"
+      },
+      {
+        "key": "personalloan.time.carousel",
+        "value": "5"
+      },
+      {
+        "key": "personalloan.email.rejection.template",
+        "value": "template.email.personalloan.rejection"
+      },
+      {
+        "key": "personalloan.email.rejection.from_address",
+        "value": "Commonwealth Bank <noreply@info.commbank.co.id>"
+      },
+      {
+        "key": "personalloan.email.rejection.subject",
+        "value": "Maaf, pinjaman Anda belum dapat kami setujui"
+      },
+      {
+        "key": "personalloan.loansubmission.maximumloanquotalimit",
+        "value": "5000"
+      },
+      {
+        "key": "personalloan.income.amount.percentage.difference",
+        "value": "10"
+      },
+      {
+        "key": "personalloan.company.searching.max_record",
+        "value": "10"
+      },
+      {
+        "key": "personalloan.email.welcome_pack.template",
+        "value": "template.personalloan.email.welcome_pack"
+      },
+      {
+        "key": "personalloan.email.welcome_pack.from_address",
+        "value": "Commonwealth Bank <noreply@info.commbank.co.id>"
+      },
+      {
+        "key": "personalloan.email.welcome_pack.subject",
+        "value": "Selamat! Pinjaman Anda Telah Disetujui"
+      },
+      {
+        "key": "personalloan.loancontract.file.name",
+        "value": "Kontrak Pinjaman.pdf"
+      },
+      {
+        "key": "personalloan.loan_information.cut_off_time",
+        "value": "10:00"
+      },
+      {
+        "key": "personalloan.google.analytics.id",
+        "value": "UA-110085138-1"
+      },
+      {
+        "key": "personalloan.decision.status.time.interval",
+        "value": "10"
+      },
+      {
+        "key": "personalloan.decision.status.max.interval",
+        "value": "120"
+      },
+      {
+        "key": "personalloan.decision.email.rejection.from_address",
+        "value": "Commonwealth Bank <noreply@info.commbank.co.id>"
+      },
+      {
+        "key": "personalloan.decision.email.rejection.subject",
+        "value": "Mohon Maaf. Aplikasi pinjaman KTA Tyme Digital Anda belum dapat disetujui"
+      },
+      {
+        "key": "personalloan.decision.email.dedup.rejection.from_address",
+        "value": "Commonwealth Bank <noreply@info.commbank.co.id>"
+      },
+      {
+        "key": "personalloan.decision.email.dedup.rejection.subject",
+        "value": "Sebagai Nasabah Commonwealth Bank, dapatkan fasilitas pinjaman Commonwealth KTA Anda sekarang"
+      },
+      {
+        "key": "personalloan.decision.email.approval.from_address",
+        "value": "Commonwealth Bank <noreply@info.commbank.co.id>"
+      },
+      {
+        "key": "personalloan.decision.email.approval.subject",
+        "value": "Selamat! Segera cairkan pinjaman KTA TymeDigital Anda"
+      },
+      {
+        "key": "onboarding.otp.activation.template.name",
+        "value": "otp_template.sms.activation"
+      },
+      {
+        "key": "personalloan.otp.verification.template.name",
+        "value": "otp_template.sms.verification"
+      },
+      {
+        "key": "personalloan.decision.kbij.credithistorysegmentation",
+        "value": "NON_SID"
+      },
+      {
+        "key": "personalloan.company.search.freetext",
+        "value": "N"
+      },
+      {
+        "key": "personalloan.KBIJ_check.enabled",
+        "value": "Y"
+      },
+      {
+        "key": "personalloan.debt.burden.ratio",
+        "value": "0.2"
+      },
+      {
+        "key": "personalloan.email.duplication.app.rejection.template",
+        "value": "template.personalloan.duplication.app.rejection"
+      },
+      {
+        "key": "personalloan.email.duplication.app.rejection.from_address",
+        "value": "Commonwealth Bank <noreply@info.commbank.co.id>"
+      },
+      {
+        "key": "personalloan.email.duplication.app.rejection.subject",
+        "value": "Mohon Maaf, Anda telah melakukan pengajuan pinjaman sebelumnya"
+      },
+      {
+        "key": "email.welcome_pack.mailto",
+        "value": "kartugpn@commbank.co.id"
+      },
+      {
+        "key": "product.feature.minimum.balance",
+        "value": "10.000"
+      },
+      {
+        "key": "product.feature.monthly.average.balance",
+        "value": "10.000"
+      },
+      {
+        "key": "product.feature.minimum.balance.fee",
+        "value": "19.000"
+      },
+      {
+        "key": "product.feature.monthly.admin.fee",
+        "value": "10.000"
+      },
+      {
+        "key": "minimum.size.image.quality",
+        "value": "10"
+      },
+      {
+        "key": "update_delete.image.job.scheduler",
+        "value": "14:15:00/4"
+      },
+      {
+        "key": "cf-ntb.feature.toggle.enable",
+        "value": "true"
+      },
+      {
+        "key": "servicing.card_linkage.aging",
+        "value": "18"
+      },
+      {
+        "key": "ektp_reader.device.error_list",
+        "value": "0x6281,0xC103,0xC104,0xC105,0xC10F,0xC110"
+      },
+      {
+        "key": "invalid.document.error_list",
+        "value": "0xC101,0xC107,0xC108,0xC109,0xC10A,0xC10B,0xC10C,0xC10D,0xC10E,0xC10A"
+      },
+      {
+        "key": "ektp_reader.device.error_list",
+        "value": "0x6281,0xC103,0xC104,0xC105,0xC10F,0xC110"
+      },
+      {
+        "key": "invalid.document.error_list",
+        "value": "0xC101,0xC107,0xC108,0xC109,0xC10A,0xC10B,0xC10C,0xC10D,0xC10E,0xC10A"
+      },
+      {
+        "key": "decision.dukcapil.accepted.max.age",
+        "value": "55"
+      },
+      {
+        "key": "personalloan.proxy.expense.percent.single",
+        "value": "0.1"
+      },
+      {
+        "key": "personalloan.proxy.expense.percent.single_parents",
+        "value": "0.1"
+      },
+      {
+        "key": "personalloan.proxy.expense.percent.married_with_single_income",
+        "value": "0.1"
+      },
+      {
+        "key": "personalloan.proxy.expense.onnumberofchildren",
+        "value": "1500000"
+      },
+      {
+        "key": "personalloan.decision.min.approval.ts.scoring",
+        "value": "400"
+      },
+      {
+        "key": "personalloan.decision.telkomsel.prefixes",
+        "value": "+62811,+62812,+62813,+62821,+62822,+62823,+62852,+62853,+62851"
+      },
+      {
+        "key": "decision.dukcapil.accepted.min.age",
+        "value": "21"
+      },
+      {
+        "key": "personalloan.decision.pefindo.maximum.hits",
+        "value": "10"
+      },
+      {
+        "key": "personalloan.decision.credit_bureau_type",
+        "value": "PEFINDO"
+      },
+      {
+        "key": "personalloan.decision.pefindo.credit_facility_type.commercial",
+        "value": "multipurpose,working_capital,working_capital_term_loan_cash_collateral,working_capital_od_cash_collateral"
+      },
+      {
+        "key": "personalloan.decision.pefindo.credit_facility_type.consumer",
+        "value": "credit_card,vehicle_loan,mortgage,personal_loan"
+      },
+      {
+        "key": "personalloan.decision.pefindo.reverse_match.single_word_name_checking",
+        "value": "{\n\t\"MMN_similarity_threshold_checking\": 80,\n\t\"MMN_rejected_names_checking\": \"Bunda,Mama,Mom,Ibu,Ladyy\",\n\t\"customer_full_name_point\": 1,\n\t\"date_of_birth_point\": 1,\n\t\"place_of_birth_point\": 1,\n\t\"MMN_point\": 1,\n\t\"MMN_1st_name_point\": 1,\n\t\"MMN_2nd_name_point\": 1,\n\t\"MMN_3rd_name_point\": 1,\n\t\"total_reverse_match_point\": 3\n}"
+      },
+      {
+        "key": "personalloan.decision.pefindo.reverse_match.two_word_name_checking",
+        "value": "{\n\t\"MMN_similarity_threshold_checking\": 80,\n\t\"MMN_rejected_names_checking\": \"Bunda,Mama,Mom,Ibu,Ladyy\",\n\t\"customer_initial_name_point\": 1,\n\t\"date_of_birth_point\": 1,\n\t\"place_of_birth_point\": 1,\n\t\"MMN_point\": 2,\n\t\"MMN_1st_name_point\": 1,\n\t\"MMN_2nd_name_point\": 1,\n\t\"MMN_3rd_name_point\": 1,\n\t\"total_reverse_match_point\": 4\n}"
+      },
+      {
+        "key": "personalloan.decision.pefindo.reverse_match.more_than_two_words_name_checking",
+        "value": "{\n\t\"customer_initial_name_point\": 1,\n\t\"date_of_birth_point\": 2,\n\t\"place_of_birth_point\": 1,\n\t\"MMN_rejected_names_checking\": \"Bunda,Mama,Mom,Ibu,Ladyy\",\n\t\"MMN_1st_name_point\": 1,\n\t\"MMN_2nd_name_point\": 1,\n\t\"MMN_3rd_name_point\": 1,\n\t\"total_reverse_match_point\": 3\n}"
+      },
+      {
+        "key": "personalloan.decision.pefindo.reverse_match_threshold",
+        "value": "10"
+      },
+      {
+        "key": "personalloan.approval.kiosk_location_url",
+        "value": "https://www.commbank.co.id/upublic/mod_home/default_content.aspx?code=TymeDigital"
+      },
+      {
+        "key": "personalloan.decision.recalculation.multiplier_max_principle_amount",
+        "value": "5"
+      },
+      {
+        "key": "personalloan.decision.recalculation.max_gap",
+        "value": "0.3"
+      },
+      {
+        "key": "personalloan.decision.proxy.income.credit_card_ratio",
+        "value": "0.75"
+      },
+      {
+        "key": "personalloan.decision.proxy.income.vehicle_ratio",
+        "value": "5.0"
+      },
+      {
+        "key": "personalloan.decision.proxy.income.mortgage_or_multipurpose_ratio",
+        "value": "0.28"
+      },
+      {
+        "key": "personalloan.decision.proxy.income.personal_loan_ratio",
+        "value": "0.2"
+      },
+      {
+        "key": "personalloan.decision.interest.rate.mapping",
+        "value": "[\n   {\n      \"flat_rate\":0.0167,\n      \"tenure\":12,\n      \"effective_rate\":0.3514103\n   },\n   {\n      \"flat_rate\":0.0167,\n      \"tenure\":18,\n      \"effective_rate\":0.3511388\n   }\n]"
+      },
+      {
+        "key": "personalloan.decision.pefindo.minimum_credit_card_outstanding_amount",
+        "value": "1000000"
+      },
+      {
+        "key": "personalloan.otp.verification.max.allowed.resend",
+        "value": "2"
+      },
+      {
+        "key": "personalloan.decision.pefindo.contractstatus.whitelist.open",
+        "value": "GrantedAndActivated,GrantedButNotActivated,Prolonged"
+      },
+      {
+        "key": "personalloan.decision.pefindo.contractstatus.whitelist.close",
+        "value": "SettledOnTime,SettledInAdvance,Settled"
+      },
+      {
+        "key": "ektp.validation.regex",
+        "value": "{\r\n    nik: \"^[0-9]{16}$\",\r\n    name: \"^(?!\\\\s*$)[\\\\sa-zA-Z ]{1,100}$\",\r\n    placeOfBirth: \"^(?!\\\\s*$)[\\\\sa-zA-Z0-9 ]{1,100}$\",\r\n    address: \"((?=^.{1,255}$)^([\\\\sa-zA-Z0-9#,.'()](?!.*?[^\\\\sa-zA-Z0-9\\\\-,.')(/#]).*?[\\\\sa-zA-Z0-9#,.'()])$)|(^[a-zA-Z0-9,.()'#]{1}$)\",\r\n    rtrw: \"((?=^.{1,20}$)^([\\\\sa-zA-Z0-9#,.'()](?!.*?[^\\\\sa-zA-Z0-9\\\\-,.')(/#]).*?[\\\\sa-zA-Z0-9#,.'()])$)|(^[a-zA-Z0-9,.()'#]{1}$)\",\r\n    ward: \"((?=^.{1,100}$)^([\\\\sa-zA-Z0-9#,.'()](?!.*?[^\\\\sa-zA-Z0-9\\\\-,.')(/#]).*?[\\\\sa-zA-Z0-9#,.'()])$)|(^[a-zA-Z0-9,.()'#]{1}$)\",\r\n    district: \"((?=^.{1,100}$)^([\\\\sa-zA-Z0-9#,.'()](?!.*?[^\\\\sa-zA-Z0-9\\\\-,.')(/#]).*?[\\\\sa-zA-Z0-9#,.'()])$)|(^[a-zA-Z0-9,.()'#]{1}$)\"\r\n}"
+      },
+      {
+        "key": "email.otp_max_attempt.from_address",
+        "value": "Commonwealth Bank <noreply@info.commbank.co.id>"
+      },
+      {
+        "key": "email.otp_max_attempt.subject",
+        "value": "Proses Link Kartu ATM Anda Tidak Berhasil"
+      },
+      {
+        "key": "email.pin_max_attempt.from_address",
+        "value": "Commonwealth Bank <noreply@info.commbank.co.id>"
+      },
+      {
+        "key": "email.pin_max_attempt.subject",
+        "value": "Proses Link Kartu ATM Anda Tidak Berhasil"
+      },
+      {
+        "key": "receive_atm_card_attempts",
+        "value": "3"
+      }
+    ]
+  },
+  "errors": [],
+  "warnings": [],
+  "success": true
+}

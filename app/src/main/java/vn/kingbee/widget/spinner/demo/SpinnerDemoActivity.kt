@@ -25,6 +25,7 @@ import vn.kingbee.widget.edittext.state.BeeInput
 import vn.kingbee.widget.recyclerview.help.HelpVideoResponse
 import vn.kingbee.widget.recyclerview.location.ProvinceListAdapter
 import vn.kingbee.widget.recyclerview.location.ProvinceListDialog
+import vn.kingbee.widget.recyclerview.location.TownListDialog
 import vn.kingbee.widget.spinner.nice.NiceSpinner
 import java.util.*
 import kotlin.collections.ArrayList
@@ -36,6 +37,7 @@ class SpinnerDemoActivity : BaseActivity() {
     lateinit var mTownSelection: BeeInput
     var provinceList: List<Province>? = null
     var provinceListDialog: ProvinceListDialog? = null
+    var townListDialog: TownListDialog? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -142,26 +144,28 @@ class SpinnerDemoActivity : BaseActivity() {
     }
 
     fun showTown(provinceName: String) {
-        if (StringUtils.isEmpty(provinceName) || provinceName.equals(
+        if (!StringUtils.isEmpty(provinceName) && provinceName.equals(
                 "Pilih provinsi", ignoreCase = true
             )
         ) {
-//            showTownListErrorDialog()
-        } else {
-            showTownList(provinceName)
+            val townList = getTownsByProvinceName(provinceName)
+            townListDialog = TownListDialog(
+                this@SpinnerDemoActivity,
+                townList,
+                object : TownListDialog.TownDialogListener {
+                    override fun onTownSelected(town: Town) {
+                        mTownSelection.setText(town.mName!!)
+                    }
+                })
+            townListDialog?.show()
         }
-    }
-
-    fun showTownList(provinceName: String) {
-
     }
 
     fun getTownsByProvinceName(provinceName: String): List<Town> {
-        if(provinceList.isNullOrEmpty()) {
+        if (provinceList.isNullOrEmpty()) {
             return emptyList()
         }
-//        return provinceList.filter { it.mName.equals(provinceName)}.flatMap { it.mTown }.
-        return null
+        return provinceList?.first { it.mName.equals(provinceName) }?.mTown!!
     }
 
     private fun getProvinceFromResource(): Observable<ProvinceResponse> {
