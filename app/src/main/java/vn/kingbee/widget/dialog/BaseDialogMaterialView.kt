@@ -11,11 +11,11 @@ const val NO_ANIMATION = -1
 abstract class BaseDialogMaterialView {
 
     protected var mMaterialDialog: Dialog? = null
-    protected var mDialogClickedListener: DialogClickedListener
+    protected var mDialogClickedListener: DialogClickedListener? = null
     private var mContext: Context? = null
     private var mView: View? = null
 
-    constructor(context: Context, buttonListener: DialogClickedListener) {
+    constructor(context: Context, buttonListener: DialogClickedListener?) {
         mContext = context
         mDialogClickedListener = buttonListener
         mMaterialDialog = Dialog(mContext!!, android.R.style.Theme_Translucent_NoTitleBar)
@@ -59,6 +59,6 @@ abstract class BaseDialogMaterialView {
     }
 
     fun getDialogClickedListener(): DialogClickedListener {
-        return mDialogClickedListener
+        return mDialogClickedListener!!
     }
 }

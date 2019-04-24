@@ -45,7 +45,7 @@ class HelpVideoViewHolder : BaseRecyclerViewAdapter.GenericViewHolder {
 
     private fun displayThumbBitmap(context: Context, item: HelpVideo, imageView: ImageView) {
         if (!StringUtils.isEmpty(item.thumb)) {
-            Timber.d("VIDEO", "VIDEO FORM RESOURCE")
+            Timber.d( "VIDEO FORM RESOURCE")
             val id = getResourceThumbnails(item.path!!)
             if (id != 0) {
                 //if sdcard not exist thumb, get from resource.

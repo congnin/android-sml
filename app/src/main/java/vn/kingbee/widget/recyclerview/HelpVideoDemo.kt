@@ -30,13 +30,11 @@ class HelpVideoDemo : BaseActivity(), HelpVideoAdapter.HelpVideoClickListener {
         mTvTitle = findViewById(R.id.help_video_title)
         helpVideoList.layoutManager = LinearLayoutManager(this)
 
-        getHelpVideoFromResource().subscribe({ helpInfo -> updateVideoList(helpInfo) },
-            { e ->
-//                getView().hideProgressDialog()
-                Timber.d("error load help video: " + e.message)
-            },
-            {  }
-        )
+        showProgressDialog()
+        getHelpVideoFromResource().subscribe({ helpInfo -> updateVideoList(helpInfo) }, { e ->
+            hideProgressDialog()
+            Timber.d("error load help video: " + e.message)
+        }, { hideProgressDialog() })
     }
 
     private fun getHelpVideoFromResource(): Observable<HelpVideoResponse> {

@@ -7,6 +7,7 @@ import com.google.gson.Gson
 import io.reactivex.Observable
 import timber.log.Timber
 import vn.kingbee.application.MyApp
+import vn.kingbee.model.ProvinceResponse
 import vn.kingbee.widget.recyclerview.help.HelpVideoResponse
 import java.io.*
 
@@ -15,6 +16,8 @@ class FileUtils {
         private val DIRECTORY_NAME = "android-widget"
         private val DIRECTORY_HELP_NAME = "/help/"
         private val FILE_HELP_VIDEO_NAME = "get_help_video.json"
+        private val DIRECTORY_MOCK = "/mock/"
+        private val FILE_PROVINCE_NAME = "province.json"
 
         fun concatDirectoryPath(parentDirectory: String, childDirectory: String): String? {
             if (parentDirectory.isEmpty() && childDirectory.isEmpty()) {
@@ -35,36 +38,30 @@ class FileUtils {
             return String.format("%s/%s", downloadDirectory, path)
         }
 
+        fun getProvinceFromResource(context: Context): Observable<ProvinceResponse> {
+            return Observable.fromCallable<ProvinceResponse> {
+                val rd = getInputStreamReaderFromAssets(context, FILE_PROVINCE_NAME)
+                Gson().fromJson(rd, ProvinceResponse::class.java)
+            }
+        }
+
         fun getHelpVideoFromResource(context: Context): Observable<HelpVideoResponse> {
             return Observable.fromCallable<HelpVideoResponse> {
-                val rd = getInputStreamReader(context, DIRECTORY_HELP_NAME, FILE_HELP_VIDEO_NAME)
+                val rd = getInputStreamReaderFromAssets(context, FILE_HELP_VIDEO_NAME)
                 Gson().fromJson(rd, HelpVideoResponse::class.java)
             }
         }
 
         @Throws(UnsupportedEncodingException::class)
-        fun getInputStreamReader(context: Context, directory: String, fileName: String): Reader {
-            val raw = getInputStream(context, directory, fileName)
+        fun getInputStreamReaderFromLocal(context: Context, directory: String, fileName: String): Reader {
+            val raw = getInputStreamFromLocal(directory + fileName)
             return BufferedReader(InputStreamReader(raw, "UTF-8"))
         }
 
-        private fun getInputStream(context: Context, path: String, fileName: String): InputStream {
-            var stream: InputStream? = null
-            try {
-                stream = getInputStreamFromLocal(path + fileName)
-            } catch (e: Exception) {
-                Timber.e(e, "EXCEPTION GET HELP INPUT STREAM LOCAL: " + e.message)
-            }
-
-            if (stream == null) {
-                try {
-                    stream = getInputStreamFromAssets(context, fileName)
-                } catch (e: IOException) {
-                    Timber.e(e, "EXCEPTION GET HELP INPUT STREAM ASSETS: " + e.message)
-                }
-
-            }
-            return stream!!
+        @Throws(UnsupportedEncodingException::class)
+        fun getInputStreamReaderFromAssets(context: Context, fileName: String): Reader {
+            val raw = getInputStreamFromAssets(context, fileName)
+            return BufferedReader(InputStreamReader(raw, "UTF-8"))
         }
 
         @Throws(IOException::class)

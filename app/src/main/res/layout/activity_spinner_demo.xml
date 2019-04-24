@@ -90,29 +90,32 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tinted_nice_spinner" />
 
-
     <vn.kingbee.widget.edittext.state.BeeInput
         android:id="@+id/ip_province"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="16dp"
         app:headerText="Provinsi"
+        app:inputText_drawableRight="@mipmap/ic_arrow_dropdown"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="50dp"
-        app:layout_constraintTop_toBottomOf="@+id/niceSpinnerXml"
-        app:inputText_drawableRight="@mipmap/ic_arrow_dropdown"/>
+        app:layout_constraintTop_toBottomOf="@+id/niceSpinnerXml" />
 
     <vn.kingbee.widget.edittext.state.BeeInput
         android:id="@+id/ip_town"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="16dp"
+        app:headerText="Kota"
+        app:inputText_drawableRight="@mipmap/ic_arrow_dropdown"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="30dp"
-        app:layout_constraintTop_toBottomOf="@+id/ip_province"
-        app:headerText="Kota"
-        app:inputText_drawableRight="@mipmap/ic_arrow_dropdown"/>
+        app:layout_constraintTop_toBottomOf="@+id/ip_province" />
 
 </android.support.constraint.ConstraintLayout>

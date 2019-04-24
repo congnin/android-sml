@@ -163,4 +163,5 @@
     <color name="shimmer_background_color">#b1b1b1</color>
     
     <color name="light_gray">#fff5f5f5</color>
+    <color name="sky_blue">#3eb5e5</color>
 </resources>
