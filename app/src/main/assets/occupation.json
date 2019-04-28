@@ -1,0 +1,412 @@
+{
+  "occupations": [
+    {
+      "code": "M01-KARYAWAN",
+      "name": "Karyawan, Pegawai, Pensiunan",
+      "eligibleForOnboarding": true,
+      "isDefault": false,
+      "jobTitles": [
+        {
+          "code": "SENIOR MANAJEMEN",
+          "name": "Swasta - Manajemen Senior/Pejabat Eksekutif Bank",
+          "eligibleForOnboarding": true,
+          "isDefault": false
+        },
+        {
+          "code": "MANAGER",
+          "name": "Swasta - Manajer",
+          "eligibleForOnboarding": true,
+          "isDefault": false
+        },
+        {
+          "code": "STAFF",
+          "name": "Swasta - Staf",
+          "eligibleForOnboarding": true,
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "M06-KARYAWAN BUMN",
+      "name": "Karyawan, Pegawai, Pensiunan",
+      "eligibleForOnboarding": true,
+      "isDefault": false,
+      "jobTitles": [
+        {
+          "code": "KARYAWAN BUMN/BUMD/BHMN",
+          "name": "BUMN",
+          "eligibleForOnboarding": true,
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "M07-PEGAWAI PEMERINTAH",
+      "name": "Karyawan, Pegawai, Pensiunan",
+      "eligibleForOnboarding": true,
+      "isDefault": false,
+      "jobTitles": [
+        {
+          "code": "PEGAWAI PEMERINTAH  ( HOfalseRER S/D GOL III)",
+          "name": "Pemerintah",
+          "eligibleForOnboarding": true,
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "M08-PEGAWAI NON GOLONGAN",
+      "name": "Karyawan, Pegawai, Pensiunan",
+      "eligibleForOnboarding": true,
+      "isDefault": false,
+      "jobTitles": [
+        {
+          "code": "PEGAWAI NON GOLONGAN  ( HONORER S/D GOL III)",
+          "name": "Pegawai Pemerintah Non Golongan",
+          "eligibleForOnboarding": true,
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "H13-KARYAWAN KPP BEACUKAI",
+      "name": "Karyawan, Pegawai, Pensiunan",
+      "isDefault": false,
+      "jobTitles": [
+        {
+          "code": "KARYAWAN KPP/BEACUKAI",
+          "name": "Pajak & Bea Cukai",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "L01-GURU_DOSEN_INSTRUKTUR",
+      "name": "Wirausaha & Profesional",
+      "eligibleForOnboarding": true,
+      "isDefault": false,
+      "jobTitles": [
+        {
+          "code": "GURU/DOSEN/INSTRUKTUR",
+          "name": "Guru",
+          "eligibleForOnboarding": true,
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "L02-DOKTER",
+      "name": "Wirausaha & Profesional",
+      "eligibleForOnboarding": true,
+      "isDefault": false,
+      "jobTitles": [
+        {
+          "code": "DOKTER",
+          "name": "Dokter",
+          "eligibleForOnboarding": true,
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "M02-WIRAUSAHA",
+      "name": "Wirausaha & Profesional",
+      "eligibleForOnboarding": true,
+      "isDefault": false,
+      "jobTitles": [
+        {
+          "code": "WIRAUSAHA",
+          "name": "Wirausaha",
+          "eligibleForOnboarding": true,
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "M11-WARTAWAN",
+      "name": "Wartawan, Sosial Seni Olahraga",
+      "eligibleForOnboarding": true,
+      "isDefault": false,
+      "jobTitles": [
+        {
+          "code": "WARTAWAN",
+          "name": "Wartawan",
+          "eligibleForOnboarding": true,
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "M12-SOSIAL SENI OLAHRAGA",
+      "name": "Wartawan, Sosial Seni Olahraga",
+      "eligibleForOnboarding": true,
+      "isDefault": false,
+      "jobTitles": [
+        {
+          "code": "SOSIAL SENI OLAHRAGA",
+          "name": "Pekerja Sosial, Seni, dan Olahraga",
+          "eligibleForOnboarding": true,
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "M05-PENSIUNAN",
+      "name": "Karyawan, Pegawai, Pensiunan",
+      "eligibleForOnboarding": true,
+      "isDefault": false,
+      "jobTitles": [
+        {
+          "code": "PENSIUNAN",
+          "name": "Pensiunan",
+          "eligibleForOnboarding": true,
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "M09-ANGGOTA MILITER",
+      "name": "Militer & Kepolisian",
+      "eligibleForOnboarding": true,
+      "isDefault": false,
+      "jobTitles": [
+        {
+          "code": "PERWIRA PERTAMA MILITER",
+          "name": "Perwira Pertama Militer",
+          "eligibleForOnboarding": true,
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "M10-ANGGOTA KEPOLISIAN",
+      "name": "Militer & Kepolisian",
+      "eligibleForOnboarding": true,
+      "isDefault": false,
+      "jobTitles": [
+        {
+          "code": "PERWIRA PERTAMA KEPOLISIAN",
+          "name": "Perwira Pertama Kepolisian",
+          "eligibleForOnboarding": true,
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "H04-PEJABAT MILITER",
+      "name": "Militer & Kepolisian",
+      "isDefault": false,
+      "jobTitles": [
+        {
+          "code": "PEJABAT MILITER",
+          "name": "Perwira Menengah/Tinggi Militer",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "H05-PEJABAT KEPOLISIAN",
+      "name": "Militer & Kepolisian",
+      "isDefault": false,
+      "jobTitles": [
+        {
+          "code": "PEJABAT KEPOLISIAN",
+          "name": "Perwira Menengah/Tinggi Kepolisian",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "M04-IBU RUMAH TANGGA",
+      "name": "Ibu Rumah Tangga",
+      "isDefault": false,
+      "jobTitles": [
+        {
+          "code": "IBU RUMAH TANGGA",
+          "name": "Ibu Rumah Tangga",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "M03-PELAJAR_MAHASISWA",
+      "name": "Pelajar",
+      "isDefault": false,
+      "jobTitles": [
+        {
+          "code": "PELAJAR_MAHASISWA",
+          "name": "Pelajar/Mahasiswa",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "M13-PENGANGGURAN",
+      "name": "Belum Bekerja",
+      "isDefault": false,
+      "jobTitles": [
+        {
+          "code": "PENGANGGURAN",
+          "name": "Belum Bekerja",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "H01-PEJABAT BUMN",
+      "name": "Pejabat Negara/BUMN/Non Golongan, Pekerja Hukum, Pengurus Parpol, Broker, Pemuka Agama, Anggota Legislatif",
+      "isDefault": false,
+      "jobTitles": [
+        {
+          "code": "PEJABAT BUMN",
+          "name": "Pejabat BUMN",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "H02-PEJABAT PEMERINTAH",
+      "name": "Pejabat Negara/BUMN/Non Golongan, Pekerja Hukum, Pengurus Parpol, Broker, Pemuka Agama, Anggota Legislatif",
+      "isDefault": false,
+      "jobTitles": [
+        {
+          "code": "PEJABAT PEMERINTAH",
+          "name": "Pejabat Pemerintah",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "H03-PEJABAT NON GOLONGAN",
+      "name": "Pejabat Negara/BUMN/Non Golongan, Pekerja Hukum, Pengurus Parpol, Broker, Pemuka Agama, Anggota Legislatif",
+      "isDefault": false,
+      "jobTitles": [
+        {
+          "code": "PEJABAT NON GOLONGAN",
+          "name": "Pejabat Non Golongan",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "H06-PENGACARA",
+      "name": "Pejabat Negara/BUMN/Non Golongan, Pekerja Hukum, Pengurus Parpol, Broker, Pemuka Agama, Anggota Legislatif",
+      "isDefault": false,
+      "jobTitles": [
+        {
+          "code": "PENGACARA",
+          "name": "Pengacara",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "H07-KEJAKSAAN",
+      "name": "Pejabat Negara/BUMN/Non Golongan, Pekerja Hukum, Pengurus Parpol, Broker, Pemuka Agama, Anggota Legislatif",
+      "isDefault": false,
+      "jobTitles": [
+        {
+          "code": "KEJAKSAAN",
+          "name": "Kejaksaan",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "H08-HAKIM",
+      "name": "Pejabat Negara/BUMN/Non Golongan, Pekerja Hukum, Pengurus Parpol, Broker, Pemuka Agama, Anggota Legislatif",
+      "isDefault": false,
+      "jobTitles": [
+        {
+          "code": "HAKIM",
+          "name": "Hakim",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "H09-NOTARIS",
+      "name": "Pejabat Negara/BUMN/Non Golongan, Pekerja Hukum, Pengurus Parpol, Broker, Pemuka Agama, Anggota Legislatif",
+      "isDefault": false,
+      "jobTitles": [
+        {
+          "code": "NOTARIS",
+          "name": "Notaris",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "H10-ANGGOTA LEGISLATIF",
+      "name": "Pejabat Negara/BUMN/Non Golongan, Pekerja Hukum, Pengurus Parpol, Broker, Pemuka Agama, Anggota Legislatif",
+      "isDefault": false,
+      "jobTitles": [
+        {
+          "code": "ANGGOTA LEGISLATIF",
+          "name": "Anggota Legislatif",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "H11-PENGURUS PARPOL",
+      "name": "Pejabat Negara/BUMN/Non Golongan, Pekerja Hukum, Pengurus Parpol, Broker, Pemuka Agama, Anggota Legislatif",
+      "isDefault": false,
+      "jobTitles": [
+        {
+          "code": "PENGURUS PARPOL",
+          "name": "Pengurus Parpol",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "H12-AUDITOR PENGAWAS",
+      "name": "Pejabat Negara/BUMN/Non Golongan, Pekerja Hukum, Pengurus Parpol, Broker, Pemuka Agama, Anggota Legislatif",
+      "isDefault": false,
+      "jobTitles": [
+        {
+          "code": "AUDITOR PENGAWAS",
+          "name": "Auditor Pengawas",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "H14-BROKER AGENT",
+      "name": "Pejabat Negara/BUMN/Non Golongan, Pekerja Hukum, Pengurus Parpol, Broker, Pemuka Agama, Anggota Legislatif",
+      "isDefault": false,
+      "jobTitles": [
+        {
+          "code": "BROKER AGEN",
+          "name": "Broker/Agen",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "H15-DUTA BESAR DIPLOMATIK",
+      "name": "Pejabat Negara/BUMN/Non Golongan, Pekerja Hukum, Pengurus Parpol, Broker, Pemuka Agama, Anggota Legislatif",
+      "isDefault": false,
+      "jobTitles": [
+        {
+          "code": "DUTA BESAR DIPLOMATIK",
+          "name": "Duta Besar Diplomatik",
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "code": "H16-PEMUKA AGAMA",
+      "name": "Pejabat Negara/BUMN/Non Golongan, Pekerja Hukum, Pengurus Parpol, Broker, Pemuka Agama, Anggota Legislatif",
+      "isDefault": false,
+      "jobTitles": [
+        {
+          "code": "PEMUKA AGAMA",
+          "name": "Pemuka Agama",
+          "isDefault": false
+        }
+      ]
+    }
+  ]
+}
