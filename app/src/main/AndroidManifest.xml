@@ -31,6 +31,7 @@
         <activity android:name=".keyboard.NumpadActivity" />
         <activity android:name=".camera.demo.CameraDemo1Activity" />
         <activity android:name=".animation.demo.ShimmerActivityDemo" />
+        <activity android:name=".animation.demo.DemoTypeActivity" />
         <activity android:name=".calendar.demo.DatePickerDemoActivity" />
         <activity android:name=".button.demo.ButtonDemoActivity" />
         <activity android:name=".spinner.demo.SpinnerDemoActivity" />
