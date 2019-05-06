@@ -9,6 +9,7 @@ import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import vn.kingbee.widget.R
 
+//https://github.com/sharish/ShimmerRecyclerView
 class ShimmerRecyclerView : RecyclerView {
     enum class LayoutMangerType {
         LINEAR_VERTICAL, LINEAR_HORIZONTAL, GRID
@@ -34,9 +35,7 @@ class ShimmerRecyclerView : RecyclerView {
     }
 
     constructor(context: Context, attrs: AttributeSet?, defStyle: Int) : super(
-        context,
-        attrs,
-        defStyle
+        context, attrs, defStyle
     ) {
         init(context, attrs)
     }
@@ -95,12 +94,12 @@ class ShimmerRecyclerView : RecyclerView {
             a.recycle()
         }
 
-        mShimmerAdapter!!.setShimmerAngle(mShimmerAngle)
-        mShimmerAdapter!!.setShimmerColor(mShimmerColor)
-        mShimmerAdapter!!.setShimmerMaskWidth(mShimmerMaskWidth)
-        mShimmerAdapter!!.setShimmerItemBackground(mShimmerItemBackground!!)
-        mShimmerAdapter!!.setShimmerDuration(mShimmerDuration)
-        mShimmerAdapter!!.setAnimationReversed(isAnimationReversed)
+        mShimmerAdapter?.setShimmerAngle(mShimmerAngle)
+        mShimmerAdapter?.setShimmerColor(mShimmerColor)
+        mShimmerAdapter?.setShimmerMaskWidth(mShimmerMaskWidth)
+        mShimmerAdapter?.setShimmerItemBackground(mShimmerItemBackground)
+        mShimmerAdapter?.setShimmerDuration(mShimmerDuration)
+        mShimmerAdapter?.setAnimationReversed(isAnimationReversed)
 
         showShimmerAdapter()
     }
@@ -219,12 +218,12 @@ class ShimmerRecyclerView : RecyclerView {
      */
     fun setDemoLayoutReference(mLayoutReference: Int) {
         this.mLayoutReference = mLayoutReference
-        mShimmerAdapter!!.setLayoutReference(getLayoutReference())
+        mShimmerAdapter?.setLayoutReference(getLayoutReference())
     }
 
     private fun initShimmerManager() {
         when (mLayoutMangerType) {
-            ShimmerRecyclerView.LayoutMangerType.LINEAR_VERTICAL -> mShimmerLayoutManager =
+            LayoutMangerType.LINEAR_VERTICAL -> mShimmerLayoutManager =
                 object : LinearLayoutManager(
                     context
                 ) {
@@ -232,7 +231,7 @@ class ShimmerRecyclerView : RecyclerView {
                         return mCanScroll
                     }
                 }
-            ShimmerRecyclerView.LayoutMangerType.LINEAR_HORIZONTAL -> mShimmerLayoutManager =
+            LayoutMangerType.LINEAR_HORIZONTAL -> mShimmerLayoutManager =
                 object : LinearLayoutManager(
                     context, LinearLayoutManager.HORIZONTAL, false
                 ) {
@@ -240,7 +239,7 @@ class ShimmerRecyclerView : RecyclerView {
                         return mCanScroll
                     }
                 }
-            ShimmerRecyclerView.LayoutMangerType.GRID -> mShimmerLayoutManager =
+            LayoutMangerType.GRID -> mShimmerLayoutManager =
                 object : GridLayoutManager(
                     context, mGridCount
                 ) {

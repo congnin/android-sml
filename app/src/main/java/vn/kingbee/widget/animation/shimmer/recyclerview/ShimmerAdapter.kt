@@ -53,7 +53,7 @@ class ShimmerAdapter : RecyclerView.Adapter<ShimmerViewHolder>() {
         this.mShimmerMaskWidth = maskWidth
     }
 
-    fun setShimmerItemBackground(shimmerItemBackground: Drawable) {
+    fun setShimmerItemBackground(shimmerItemBackground: Drawable?) {
         this.mShimmerItemBackground = shimmerItemBackground
     }
 
