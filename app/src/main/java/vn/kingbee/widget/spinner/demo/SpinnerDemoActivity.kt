@@ -26,6 +26,8 @@ import vn.kingbee.widget.recyclerview.help.HelpVideoResponse
 import vn.kingbee.widget.recyclerview.location.ProvinceListAdapter
 import vn.kingbee.widget.recyclerview.location.ProvinceListDialog
 import vn.kingbee.widget.recyclerview.location.TownListDialog
+import vn.kingbee.widget.spinner.MaterialSpinner
+import vn.kingbee.widget.spinner.PaymentNotificationOptionAdapter
 import vn.kingbee.widget.spinner.nice.NiceSpinner
 import java.util.*
 import kotlin.collections.ArrayList
@@ -38,6 +40,7 @@ class SpinnerDemoActivity : BaseActivity() {
     var provinceList: List<Province>? = null
     var provinceListDialog: ProvinceListDialog? = null
     var townListDialog: TownListDialog? = null
+    private var materialSpinner: MaterialSpinner? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,6 +51,7 @@ class SpinnerDemoActivity : BaseActivity() {
 
         mProvinceSelection = findViewById(R.id.ip_province)
         mTownSelection = findViewById(R.id.ip_town)
+        materialSpinner = findViewById(R.id.spPaymentNotificationMethod)
 
         initViews()
         addEvents()
@@ -130,6 +134,13 @@ class SpinnerDemoActivity : BaseActivity() {
                 Timber.d("error load province: %s", e.message)
             }, { hideProgressDialog() })
         }
+
+
+        val adapter = PaymentNotificationOptionAdapter(this)
+        materialSpinner?.setAdapter(adapter)
+        materialSpinner?.setOnItemClickListener(AdapterView.OnItemClickListener { parent, view, position, id ->
+
+        })
     }
 
     private fun getProvince(): Observable<List<Province>> {

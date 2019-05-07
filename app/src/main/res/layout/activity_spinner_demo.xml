@@ -118,4 +118,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ip_province" />
 
+    <vn.kingbee.widget.spinner.MaterialSpinner
+        android:id="@+id/spPaymentNotificationMethod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_20"
+        android:layout_marginEnd="@dimen/dimen_20"
+        android:layout_marginTop="@dimen/dimen_23"
+        app:spinnerEmptyErrorMessage="Please select an option"
+        app:spinnerFirstHint="Select an option"
+        app:spinnerSecondHint="Select an option"
+        app:spinnerSecondHintColor="@color/light_grey3"
+        app:spinnerTextColor="@color/light_black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ip_town"/>
+
 </android.support.constraint.ConstraintLayout>

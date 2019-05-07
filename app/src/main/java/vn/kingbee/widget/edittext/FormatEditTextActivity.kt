@@ -1,14 +1,30 @@
 package vn.kingbee.widget.edittext
 
 import android.os.Bundle
-import android.widget.AdapterView
+import android.text.Editable
+import android.text.TextWatcher
+import android.view.KeyEvent
+import android.view.View
+import android.widget.EditText
+import android.widget.ImageView
+import org.apache.commons.lang3.StringUtils
 import vn.kingbee.widget.BaseActivity
 import vn.kingbee.widget.R
-import vn.kingbee.widget.spinner.MaterialSpinner
-import vn.kingbee.widget.spinner.PaymentNotificationOptionAdapter
+import vn.kingbee.widget.button.fitbutton.FitButton
+import java.util.ArrayList
 
 class FormatEditTextActivity : BaseActivity() {
-    private var materialSpinner: MaterialSpinner? = null
+    lateinit var edtValue1: EditText
+    lateinit var edtValue2: EditText
+    lateinit var edtValue3: EditText
+    lateinit var edtValue4: EditText
+    lateinit var edtValue5: EditText
+    lateinit var edtValue6: EditText
+    lateinit var ivError: ImageView
+    lateinit var btValidation: FitButton
+
+    var lstEditTextParts: MutableList<EditText> = ArrayList()
+    var lstEditTextMaxLength: MutableList<Int> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,14 +35,131 @@ class FormatEditTextActivity : BaseActivity() {
     }
 
     private fun addViews() {
-        materialSpinner = findViewById(R.id.spPaymentNotificationMethod)
+        edtValue1 = findViewById(R.id.edt_number_1)
+        edtValue2 = findViewById(R.id.edt_number_2)
+        edtValue3 = findViewById(R.id.edt_number_3)
+        edtValue4 = findViewById(R.id.edt_number_4)
+        edtValue5 = findViewById(R.id.edt_number_5)
+        edtValue6 = findViewById(R.id.edt_number_6)
+        ivError = findViewById(R.id.iv_error)
+        btValidation = findViewById(R.id.bt_validate)
+
+        lstEditTextParts.add(edtValue1)
+        lstEditTextParts.add(edtValue2)
+        lstEditTextParts.add(edtValue3)
+        lstEditTextParts.add(edtValue4)
+        lstEditTextParts.add(edtValue5)
+        lstEditTextParts.add(edtValue6)
+
+        lstEditTextMaxLength.add(MAX_LENGTH_TEXT_2)
+        lstEditTextMaxLength.add(MAX_LENGTH_TEXT_3)
+        lstEditTextMaxLength.add(MAX_LENGTH_TEXT_3)
+        lstEditTextMaxLength.add(MAX_LENGTH_TEXT_1)
+        lstEditTextMaxLength.add(MAX_LENGTH_TEXT_3)
+        lstEditTextMaxLength.add(MAX_LENGTH_TEXT_3)
     }
 
     private fun addEvents() {
-        val adapter = PaymentNotificationOptionAdapter(this)
-        materialSpinner?.setAdapter(adapter)
-        materialSpinner?.setOnItemClickListener(AdapterView.OnItemClickListener { parent, view, position, id ->
+        for (i in lstEditTextParts.indices) {
+            val currentEditText = lstEditTextParts.get(i)
+            val maxLength = lstEditTextMaxLength.get(i)
+            //Set the behaviour for forward focusing
+            currentEditText.addTextChangedListener(
+                MyTextWatcher(
+                    i, maxLength, lstEditTextParts
+                )
+            )
+            //Set the behaviour for backward focusing
+            currentEditText.setOnKeyListener(
+                MyOnKeyListener(
+                    i, maxLength, lstEditTextParts
+                )
+            )
+            //Set the behaviour for losing focus
+            currentEditText.setOnFocusChangeListener { v, hasFocus ->
+                if (hasFocus) {
+                    //Set border to blue
+                    v.setBackgroundResource(R.drawable.edit_text_rounded_corner_input_bue)
+                    val pos = (v as EditText).text.length
+                    v.setSelection(pos)
+                } else {
+                    //Come back to gray border
+                    v.setBackgroundResource(R.drawable.edit_text_rounded_corner_input)
+                }
+            }
+        }
 
-        })
+        btValidation.setOnClickListener { }
+    }
+
+    internal class MyTextWatcher(currentIndex: Int,
+                                 maxLength: Int,
+                                 var lstEditTextWatcher: List<EditText>) : TextWatcher {
+        var currentIndex = 0
+        var maxLength = 0
+
+        init {
+            this.currentIndex = currentIndex
+            this.maxLength = maxLength
+        }
+
+        override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
+
+        override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {}
+
+        override fun afterTextChanged(s: Editable) {
+            if (s.length >= maxLength) {
+                if (currentIndex < lstEditTextWatcher.size - 1) {
+                    lstEditTextWatcher[currentIndex + 1].requestFocus()
+                }
+                s.delete(maxLength, s.length)
+            } else if (s.length == maxLength && currentIndex < lstEditTextWatcher.size - 1) {
+                lstEditTextWatcher[currentIndex + 1].requestFocus()
+            }
+            if (s.isEmpty() && currentIndex > 0) {
+                lstEditTextWatcher[currentIndex - 1].requestFocus()
+            }
+
+        }
+    }
+
+
+    /**
+     * Class for move the cursor when user click on the Delete key and the current text is empty (no changed text event)
+     */
+
+    internal class MyOnKeyListener(currentIndex: Int,
+                                   maxLength: Int,
+                                   var lstEditTextWatcher: List<EditText>) : View.OnKeyListener {
+        var currentIndex = 0
+        var maxLength = 0
+
+        init {
+            this.currentIndex = currentIndex
+            this.maxLength = maxLength
+        }
+
+        override fun onKey(v: View, keyCode: Int, event: KeyEvent): Boolean {
+            if (keyCode == KeyEvent.KEYCODE_DEL) {
+                val text = (v as EditText).text.toString()
+                if (StringUtils.isBlank(text) && currentIndex > 0) {
+                    val focusedEditText = lstEditTextWatcher[currentIndex - 1]
+                    focusedEditText.requestFocus()
+                    val pos = focusedEditText.text.length
+                    focusedEditText.setSelection(pos)
+                }
+            }
+            return false
+        }
+    }
+
+    enum class TypeErrorEnum {
+        ALL_EMPTY, INVALID
+    }
+
+    companion object {
+        private const val MAX_LENGTH_TEXT_1 = 1
+        private const val MAX_LENGTH_TEXT_2 = 2
+        private const val MAX_LENGTH_TEXT_3 = 3
     }
 }

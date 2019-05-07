@@ -70,5 +70,10 @@
 
         <include layout="@layout/layout_rect_buttons" />
 
+        <vn.kingbee.widget.button.CircleButton
+            android:id="@+id/btn_next"
+            style="@style/CircleButton.Next"
+            android:src="@mipmap/ic_next" />
+
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>

@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:orientation="vertical">
 
     <vn.kingbee.widget.edittext.FormatEditText
@@ -45,21 +44,120 @@
         app:enableMask="false"
         app:formatInput="#### #### #### ####" />
 
-    <vn.kingbee.widget.button.CircleButton
-        android:id="@+id/btn_next"
-        style="@style/CircleButton.Next"
-        android:src="@mipmap/ic_next" />
-
-    <vn.kingbee.widget.spinner.MaterialSpinner
-        android:id="@+id/spPaymentNotificationMethod"
-        android:layout_width="match_parent"
+    <RelativeLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/dimen_10"
-        android:layout_marginRight="@dimen/dimen_10"
-        android:layout_marginTop="@dimen/dimen_23"
-        app:spinnerEmptyErrorMessage="Please select an option"
-        app:spinnerFirstHint="Select an option"
-        app:spinnerSecondHint="Select an option"
-        app:spinnerSecondHintColor="@color/light_grey3"
-        app:spinnerTextColor="@color/light_black" />
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="28dp">
+
+        <LinearLayout
+            android:id="@+id/view_number_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edt_number_1"
+                android:layout_width="34dp"
+                android:layout_height="28dp"
+                android:background="@drawable/edit_text_rounded_corner_input"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLines="1"
+                android:textCursorDrawable="@null"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/edt_number_2"
+                android:layout_width="45dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/edit_text_rounded_corner_input"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLines="1"
+                android:textCursorDrawable="@null"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/edt_number_3"
+                android:layout_width="45dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/edit_text_rounded_corner_input"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLines="1"
+                android:textCursorDrawable="@null"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/edt_number_4"
+                android:layout_width="22dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/edit_text_rounded_corner_input"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLines="1"
+                android:textCursorDrawable="@null"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/edt_number_5"
+                android:layout_width="45dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/edit_text_rounded_corner_input"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLines="1"
+                android:textCursorDrawable="@null"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/edt_number_6"
+                android:layout_width="45dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/edit_text_rounded_corner_input"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLines="1"
+                android:textCursorDrawable="@null"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/view_number_container"
+            android:layout_alignParentTop="true"
+            android:src="@mipmap/ic_alert_error"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <vn.kingbee.widget.button.fitbutton.FitButton
+        android:id="@+id/bt_validate"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        app:fb_cornerRadius="24dp"
+        app:fb_shape="rectangle"
+        app:fb_rippleColor="#DCEDC8"
+        app:fb_textSize="18dp"
+        app:fb_fontFamilyRes="@font/share_tech_regular"
+        app:fb_textColor="#F5F5F5"
+        app:fb_text="Validate"
+        app:fb_backgroundColor="#4CAF50"/>
 </LinearLayout>
