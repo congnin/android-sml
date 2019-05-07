@@ -36,6 +36,7 @@
         <activity android:name=".button.demo.ButtonDemoActivity" />
         <activity android:name=".spinner.demo.SpinnerDemoActivity" />
         <activity android:name=".recyclerview.HelpVideoDemo" />
+        <activity android:name=".signature.SignatureDemoActivity" />
 
         <activity android:name="vn.kingbee.rxjava.RxJava2SelectionActivity" />
         <activity android:name="vn.kingbee.rxjava.OperatorsActivity" />

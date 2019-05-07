@@ -1,6 +1,7 @@
 package vn.kingbee.utils
 
 import android.content.Context
+import android.graphics.Bitmap
 import android.os.Environment
 import android.util.Log
 import com.google.gson.Gson
@@ -13,11 +14,11 @@ import java.io.*
 
 class FileUtils {
     companion object {
-        private val DIRECTORY_NAME = "android-widget"
-        private val DIRECTORY_HELP_NAME = "/help/"
-        private val FILE_HELP_VIDEO_NAME = "get_help_video.json"
-        private val DIRECTORY_MOCK = "/mock/"
-        private val FILE_PROVINCE_NAME = "province.json"
+        private const val DIRECTORY_NAME = "android-widget"
+        private const val DIRECTORY_HELP_NAME = "/help/"
+        private const val FILE_HELP_VIDEO_NAME = "get_help_video.json"
+        private const val DIRECTORY_MOCK = "/mock/"
+        private const val FILE_PROVINCE_NAME = "province.json"
 
         fun concatDirectoryPath(parentDirectory: String, childDirectory: String): String? {
             if (parentDirectory.isEmpty() && childDirectory.isEmpty()) {
@@ -90,7 +91,7 @@ class FileUtils {
             }
             if (!dirFile.exists()) {
                 dirFile.mkdirs()
-                Log.d("DIRECTORY", "CREATE DIRECTORY: " + dirFile.path)
+                Timber.d("CREATE DIRECTORY: %s", dirFile.path)
             }
             return dirFile
         }
@@ -106,6 +107,57 @@ class FileUtils {
                 mExternalStorageWriteable = false
             }
             return mExternalStorageWriteable
+        }
+
+        fun writeBitmapToFile(viewBoundariesImage: Bitmap,
+                              fileName: String,
+                              fileExtension: String): String? {
+            var out: FileOutputStream? = null
+            var fileDebug: String? = null
+            try {
+                fileDebug = getCacheFilePath(fileName, fileExtension)
+                val file = File(fileDebug)
+                if (file.exists()) {
+                    file.delete()
+                }
+                out = FileOutputStream(fileDebug)
+                viewBoundariesImage.compress(
+                    Bitmap.CompressFormat.JPEG,
+                    10,
+                    out
+                ) // bmp is your Bitmap instance
+            } catch (e: Exception) {
+                e.printStackTrace()
+            } finally {
+                try {
+                    out?.close()
+                } catch (e: IOException) {
+                    e.printStackTrace()
+                }
+
+            }
+            return fileDebug
+        }
+
+        fun getCacheFilePath(fileName: String, fileExtension: String): String {
+            val file = File(checkDirectory(), "$fileName.$fileExtension")
+            val parentFile = file.parentFile
+            if (!parentFile.exists()) {
+                parentFile.mkdirs()
+            }
+            return file.path
+        }
+
+        fun checkDirectory(): File? {
+            if (checkSDcard()) {
+                val dirFile = File(
+                    Environment.getExternalStorageDirectory(),
+                    DIRECTORY_NAME
+                )
+                dirFile.mkdirs()
+                return dirFile
+            }
+            return null
         }
     }
 }

@@ -14,6 +14,7 @@ import vn.kingbee.widget.keyboard.NumpadActivity
 import vn.kingbee.widget.pin.PinActivity
 import vn.kingbee.widget.progress.CircleProcessBarActivity
 import vn.kingbee.widget.recyclerview.HelpVideoDemo
+import vn.kingbee.widget.signature.SignatureDemoActivity
 import vn.kingbee.widget.spinner.demo.SpinnerDemoActivity
 
 class SelectionActivity : AppCompatActivity() {
@@ -65,5 +66,9 @@ class SelectionActivity : AppCompatActivity() {
 
     fun startRecyclerViewDemoActivity(v: View) {
         startActivity(Intent(this@SelectionActivity, HelpVideoDemo::class.java))
+    }
+
+    fun startSignatureDemoActivity(v: View) {
+        startActivity(Intent(this@SelectionActivity, SignatureDemoActivity::class.java))
     }
 }

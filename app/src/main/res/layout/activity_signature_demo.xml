@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_blue_blue_border">
+
+    <vn.kingbee.widget.signature.views.SignaturePad
+        android:id="@+id/view_signature"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <vn.kingbee.widget.button.fitbutton.FitButton
+        android:id="@+id/bt_next"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        app:fb_backgroundColor="#673AB7"
+        app:fb_cornerRadius="2dp"
+        app:fb_icon="@drawable/ic_timer"
+        app:fb_iconColor="#FFF"
+        app:fb_iconPosition="top"
+        app:fb_shape="square"
+        app:fb_text="Start"
+        app:fb_textColor="#FFF"
+        app:fb_textPaddingTop="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_blue_bottom_right_border"
+        android:drawableStart="@mipmap/ic_replay"
+        android:drawablePadding="8dp"
+        android:gravity="bottom"
+        android:paddingStart="8dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="19dp"
+        android:paddingBottom="19dp"
+        android:text="Repeat signature"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</android.support.constraint.ConstraintLayout>
