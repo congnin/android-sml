@@ -1,7 +1,6 @@
 package vn.kingbee.widget.spinner.demo
 
 import android.annotation.SuppressLint
-import android.app.PendingIntent.getActivity
 import vn.kingbee.widget.BaseActivity
 import android.widget.Toast
 import android.widget.AdapterView
@@ -13,7 +12,6 @@ import android.text.InputType
 import android.view.View
 import io.reactivex.Observable
 import org.apache.commons.lang3.StringUtils
-import org.apache.commons.lang3.text.WordUtils
 import timber.log.Timber
 import vn.kingbee.application.MyApp
 import vn.kingbee.model.Province
@@ -22,8 +20,6 @@ import vn.kingbee.model.Town
 import vn.kingbee.utils.FileUtils
 import vn.kingbee.widget.R
 import vn.kingbee.widget.edittext.state.BeeInput
-import vn.kingbee.widget.recyclerview.help.HelpVideoResponse
-import vn.kingbee.widget.recyclerview.location.ProvinceListAdapter
 import vn.kingbee.widget.recyclerview.location.ProvinceListDialog
 import vn.kingbee.widget.recyclerview.location.TownListDialog
 import vn.kingbee.widget.spinner.MaterialSpinner
@@ -155,7 +151,7 @@ class SpinnerDemoActivity : BaseActivity() {
     }
 
     fun showTown(provinceName: String) {
-        if (!StringUtils.isEmpty(provinceName) && provinceName.equals(
+        if (!StringUtils.isEmpty(provinceName) && !provinceName.equals(
                 "Pilih provinsi", ignoreCase = true
             )
         ) {
@@ -189,6 +185,7 @@ class SpinnerDemoActivity : BaseActivity() {
             object : ProvinceListDialog.ProvinceDialogListener {
                 override fun onProvinceSelected(province: Province) {
                     mProvinceSelection.setText(province.mName!!)
+                    mTownSelection.setText("")
                 }
 
             })
