@@ -2,6 +2,7 @@ package vn.kingbee.widget.button.demo
 
 import android.graphics.Color
 import android.os.Bundle
+import android.support.v4.content.ContextCompat
 import android.view.View
 import android.widget.Toast
 import vn.kingbee.widget.BaseActivity
@@ -26,7 +27,7 @@ class ButtonDemoActivity : BaseActivity() {
             .setDividerColor(Color.parseColor("#BCAAA4"))
             .setBorderColor(Color.parseColor("#FFF59D")).setButtonColor(Color.parseColor("#FF7043"))
             .setBorderWidth(2f).setRippleEnable(true)
-            .setRippleColor(resources.getColor(R.color.colorAccent)).setOnClickListener {
+            .setRippleColor(ContextCompat.getColor(this, R.color.colorAccent)).setOnClickListener {
                 changeButton()
                 Toast.makeText(
                     this, "Click on ${fitButton?.getText()}", Toast.LENGTH_SHORT
