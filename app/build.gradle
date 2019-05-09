@@ -26,6 +26,31 @@ android {
         }
     }
 
+    def dimensDefault = "default"
+
+    productFlavors {
+        flavorDimensions dimensDefault
+        dev {
+            dimension dimensDefault
+            applicationId globalConfiguration["androidApplicationId"] + ".dev"
+        }
+
+        sit {
+            dimension dimensDefault
+            applicationId globalConfiguration["androidApplicationId"] + ".sit"
+        }
+
+        preprod {
+            dimension dimensDefault
+            applicationId globalConfiguration["androidApplicationId"] + ".preprod"
+        }
+
+        prod {
+            dimension dimensDefault
+            applicationId globalConfiguration["androidApplicationId"]
+        }
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
