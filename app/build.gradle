@@ -4,16 +4,22 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 28
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+
+    compileSdkVersion globalConfiguration["androidCompileSdkVersion"]
     defaultConfig {
-        applicationId "vn.kingbee.widget"
-        minSdkVersion 21
-        targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        applicationId globalConfiguration["androidApplicationId"]
+        minSdkVersion globalConfiguration["androidMinSdkVersion"]
+        targetSdkVersion globalConfiguration["androidTargetSdkVersion"]
+        versionCode globalConfiguration["androidVersionCode"]
+        versionName globalConfiguration["androidVersionName"]
+        testInstrumentationRunner globalConfiguration["testInstrumentationRunner"]
     }
     buildTypes {
+        debug {
+            minifyEnabled false
+        }
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -28,29 +34,49 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
-    implementation 'com.android.support:design:28.0.0'
 
-    implementation 'com.jakewharton:butterknife:8.7.0'
-    kapt 'com.jakewharton:butterknife-compiler:8.7.0'
+    def presentationDependencies = rootProject.ext.presentationDependencies
+    def presentationTestDependencies = rootProject.ext.presentationTestDependencies
 
-    implementation 'com.jakewharton.timber:timber:4.7.1'
+    implementation project(':domain')
+    implementation project(':data')
+
+    //support kotlin
+    implementation presentationDependencies.kotlinStdlib
+    implementation presentationDependencies.kotlinReflect
+
+    /* Core android library */
+    implementation presentationDependencies.supportLibrary
+    implementation presentationDependencies.supportDesignLibrary
+    implementation presentationDependencies.playService
+    implementation presentationDependencies.cardView
+    implementation presentationDependencies.supportAnnotations
+    implementation presentationDependencies.multidex
+    implementation presentationDependencies.constraintLayout
+
+    /* Other library */
+    compileOnly presentationDependencies.javaxAnnotation
+    implementation presentationDependencies.butterKnife
+    kapt presentationDependencies.butterKnifeCompiler
+    implementation presentationDependencies.dagger
+    kapt presentationDependencies.daggerCompiler
+    implementation presentationDependencies.daggerAndroidSupport
+    kapt presentationDependencies.daggerAndroidProcessor
+    implementation presentationDependencies.okHttp
+    implementation presentationDependencies.okHttpInterceptor
+    implementation presentationDependencies.retrofit
+    implementation presentationDependencies.retrofitRxjava
+    implementation presentationDependencies.retrofitJsonConverter
+    implementation presentationDependencies.rxJava2
+    implementation presentationDependencies.rxAndroid2
+
+    implementation presentationDependencies.gson
+    implementation presentationDependencies.timber
+
     implementation 'net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:2.2.1'
     implementation(group: 'org.apache.commons', name: 'commons-lang3', version: '3.5')
 
-    implementation "io.reactivex.rxjava2:rxjava:2.2.8"
-    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
-
     implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
-
-    //Rxjava2
-    implementation 'io.reactivex.rxjava2:rxjava:2.2.8'
-    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
-
-    //gson
-    implementation 'com.google.code.gson:gson:2.8.5'
 
     implementation 'joda-time:joda-time:2.9.9'
 

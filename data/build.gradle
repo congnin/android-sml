@@ -1,17 +1,17 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 28
+    def globalConfiguration = rootProject.extensions.getByName("ext")
 
+    compileSdkVersion globalConfiguration["androidCompileSdkVersion"]
 
     defaultConfig {
-        minSdkVersion 19
-        targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
-
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
+        minSdkVersion globalConfiguration["androidMinSdkVersion"]
+        targetSdkVersion globalConfiguration["androidTargetSdkVersion"]
+        versionCode globalConfiguration["androidVersionCode"]
+        versionName globalConfiguration["androidVersionName"]
     }
 
     buildTypes {
@@ -24,10 +24,23 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':domain')
 
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation presentationDependencies.supportAnnotations
+
+    /* Other library */
+    implementation presentationDependencies.timber
+    compileOnly presentationDependencies.javaxAnnotation
+    implementation presentationDependencies.dagger
+    kapt presentationDependencies.daggerCompiler
+    implementation presentationDependencies.okHttp
+    implementation presentationDependencies.okHttpInterceptor
+    implementation presentationDependencies.retrofit
+    implementation presentationDependencies.retrofitRxjava
+    implementation presentationDependencies.retrofitJsonConverter
+    implementation presentationDependencies.gson
+    implementation presentationDependencies.rxJava2
+    implementation presentationDependencies.rxAndroid2
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
