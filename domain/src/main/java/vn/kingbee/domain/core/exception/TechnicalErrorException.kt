@@ -1,3 +1,3 @@
 package vn.kingbee.domain.core.exception
 
-class TechnicalErrorException : BaseException() {}
+class TechnicalErrorException : BaseException()
