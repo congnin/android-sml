@@ -1,5 +1,6 @@
 package vn.kingbee.widget.progress
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
@@ -11,6 +12,8 @@ import vn.kingbee.widget.R
 import io.reactivex.disposables.Disposable
 import java.util.concurrent.TimeUnit
 import io.reactivex.android.schedulers.AndroidSchedulers
+import vn.kingbee.widget.progress.demo.CircleProgressIndicatorDemo
+import vn.kingbee.widget.signature.SignatureDemoActivity
 
 class CircleProcessBarActivity : AppCompatActivity(), CountDownTimerCallback {
     val QUESTION_TIMEOUT = 30L
@@ -20,6 +23,7 @@ class CircleProcessBarActivity : AppCompatActivity(), CountDownTimerCallback {
     private var mCountDownTimerView: CountDownTimerView? = null
     private var btReset: Button? = null
     private var looper: Disposable? = null
+    private lateinit var btCircularProgressIndicator: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,6 +39,10 @@ class CircleProcessBarActivity : AppCompatActivity(), CountDownTimerCallback {
             resetCountdownTimer()
         }
 
+        btCircularProgressIndicator = findViewById(R.id.bt_circular_progress_indicator)
+        btCircularProgressIndicator.setOnClickListener {
+            startActivity(Intent(this@CircleProcessBarActivity, CircleProgressIndicatorDemo::class.java))
+        }
         addEvents()
     }
 

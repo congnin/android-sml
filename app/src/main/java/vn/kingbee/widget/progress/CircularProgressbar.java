@@ -60,11 +60,11 @@ public class CircularProgressbar extends View {
             try {
                 this.mMaxProgress = attributes.getFloat(R.styleable.CircularProgressbar_maxProgress, 100.0F);
                 this.mCurrentProgress = attributes.getFloat(R.styleable.CircularProgressbar_currentProgress, 0.0F);
-                this.mStartAngle = (float)attributes.getInteger(R.styleable.CircularProgressbar_startAngle, DEFAULT_START_ANGLE);
+                this.mStartAngle = (float)attributes.getInteger(R.styleable.CircularProgressIndicator_startAngle, DEFAULT_START_ANGLE);
                 this.mRotation = attributes.getInteger(R.styleable.CircularProgressbar_rotation, 0);
                 this.mInnerProgressbarColor = attributes.getColor(R.styleable.CircularProgressbar_innerProgressColor, 0);
-                this.mProgressbarColor = attributes.getColor(R.styleable.CircularProgressbar_progressColor, 0);
-                this.mProgressbarBackgroundColor = attributes.getColor(R.styleable.CircularProgressbar_progressBackgroundColor, 0);
+                this.mProgressbarColor = attributes.getColor(R.styleable.CircularProgressIndicator_progressColor, 0);
+                this.mProgressbarBackgroundColor = attributes.getColor(R.styleable.CircularProgressIndicator_progressBackgroundColor, 0);
                 this.mThickness = attributes.getDimensionPixelOffset(R.styleable.CircularProgressbar_progressbar_thickness, 2);
             } finally {
                 attributes.recycle();

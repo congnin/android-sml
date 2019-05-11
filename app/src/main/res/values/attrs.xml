@@ -14,7 +14,7 @@
 
     <attr name="circularProgressbarStyle" format="reference" />
     <declare-styleable name="CircularProgressbar">
-        <attr name="startAngle" format="integer" />
+        <!--<attr name="startAngle" format="integer" />-->
         <attr name="progressbar_thickness" format="float" type="dimen" />
         <attr name="rotation" format="enum">
             <enum name="clockwise" value="0" />
@@ -23,8 +23,8 @@
         <attr name="currentProgress" format="float" />
         <attr name="maxProgress" format="float" />
         <attr name="innerProgressColor" format="color" />
-        <attr name="progressColor" format="color" />
-        <attr name="progressBackgroundColor" format="color" />
+        <!--<attr name="progressColor" format="color" />-->
+        <!--<attr name="progressBackgroundColor" format="color" />-->
     </declare-styleable>
 
     <declare-styleable name="FormatEditTextStyle">

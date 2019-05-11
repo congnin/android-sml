@@ -26,6 +26,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".progress.CircleProcessBarActivity" />
+        <activity android:name=".progress.demo.CircleProgressIndicatorDemo" />
         <activity android:name=".edittext.FormatEditTextActivity" />
         <activity android:name=".pin.PinActivity" />
         <activity android:name=".keyboard.NumpadActivity" />
