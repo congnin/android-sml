@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import vn.kingbee.widget.BaseActivity
 import android.view.View
+import vn.kingbee.rxjava.search.SearchActivity
 import vn.kingbee.widget.R
 
 class RxJava2SelectionActivity : BaseActivity() {
@@ -38,6 +39,6 @@ class RxJava2SelectionActivity : BaseActivity() {
     }
 
     fun startSearchActivity(view: View) {
-//        startActivity(Intent(this@RxJava2SelectionActivity, SearchActivity::class.java))
+        startActivity(Intent(this@RxJava2SelectionActivity, SearchActivity::class.java))
     }
 }

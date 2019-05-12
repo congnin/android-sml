@@ -50,6 +50,7 @@
         <activity android:name="vn.kingbee.rxjava.operators.IntervalExampleActivity" />
         <activity android:name="vn.kingbee.rxjava.operators.SingleObserverExampleActivity" />
         <activity android:name="vn.kingbee.rxjava.operators.CompletableObserverExampleActivity" />
+        <activity android:name="vn.kingbee.rxjava.search.SearchActivity" />
     </application>
 
 </manifest>
