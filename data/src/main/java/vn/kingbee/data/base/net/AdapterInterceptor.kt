@@ -20,9 +20,9 @@ import okhttp3.internal.http.HttpEngine
 import java.nio.charset.UnsupportedCharsetException
 
 
-class AdapterInterceptor(private var myLogger: MyLogger, context: Context) : Interceptor {
+open class AdapterInterceptor(var myLogger: MyLogger, context: Context) : Interceptor {
     private var sessionToken = ""
-    private var mContext: Context = context
+    var mContext: Context = context
 
     @Volatile
     var level = Level.NONE
@@ -35,7 +35,7 @@ class AdapterInterceptor(private var myLogger: MyLogger, context: Context) : Int
     constructor(context: Context) : this(MyLogger.DEFAULT, context)
 
     @Throws(IOException::class)
-    override fun intercept(chain: Interceptor.Chain?): Response {
+    override fun intercept(chain: Interceptor.Chain): Response? {
         val cm = mContext.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         val netInfo = cm.activeNetworkInfo
 
@@ -47,9 +47,9 @@ class AdapterInterceptor(private var myLogger: MyLogger, context: Context) : Int
         val level = this.level
 
         val request =
-            chain?.request()?.newBuilder()?.addHeader(HEADER_SESSION_TOKEN, sessionToken)?.build()
+            chain.request()?.newBuilder()?.addHeader(HEADER_SESSION_TOKEN, sessionToken)?.build()
         if (level == Level.NONE) {
-            val response = chain?.proceed(request)
+            val response = chain.proceed(request)
             if (response != null) {
                 val headers = response.headers()
                 if (headers?.get(HEADER_SESSION_TOKEN) != null) {
@@ -69,7 +69,7 @@ class AdapterInterceptor(private var myLogger: MyLogger, context: Context) : Int
         val requestBody = request?.body()
         val hasRequestBody = requestBody != null
 
-        val connection = chain?.connection()
+        val connection = chain.connection()
         val protocol = if (connection != null) connection.protocol() else Protocol.HTTP_1_1
         var requestStartMessage = "--> " + request?.method() + ' ' + request?.url() + ' ' + protocol
         if (!logHeaders && hasRequestBody) {
@@ -132,7 +132,7 @@ class AdapterInterceptor(private var myLogger: MyLogger, context: Context) : Int
         val startNs = System.nanoTime()
         val response: Response?
         try {
-            response = chain?.proceed(request)
+            response = chain.proceed(request)
             if (response != null) {
                 val headers = response.headers()
                 if (headers?.get(HEADER_SESSION_TOKEN) != null) {

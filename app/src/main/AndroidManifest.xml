@@ -51,6 +51,8 @@
         <activity android:name="vn.kingbee.rxjava.operators.SingleObserverExampleActivity" />
         <activity android:name="vn.kingbee.rxjava.operators.CompletableObserverExampleActivity" />
         <activity android:name="vn.kingbee.rxjava.search.SearchActivity" />
+
+        <activity android:name="vn.kingbee.mock.MockOptionDialog" />
     </application>
 
 </manifest>
