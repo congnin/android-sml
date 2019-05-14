@@ -1,6 +1,7 @@
 package vn.kingbee.widget
 
 import android.content.Context
+import android.os.Bundle
 import android.support.annotation.StringRes
 import android.support.v7.app.AppCompatActivity
 import android.view.MotionEvent
@@ -12,6 +13,7 @@ import vn.kingbee.widget.dialog.loading.LoadingDialogMaterial
 abstract class BaseActivity : AppCompatActivity() {
 
     protected var loadingDialog: LoadingDialogMaterial? = null
+
     override fun dispatchTouchEvent(event: MotionEvent): Boolean {
         if (event.action == 0 && this.currentFocus != null) {
             val v = this.currentFocus

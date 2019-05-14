@@ -73,4 +73,8 @@
         <item name="android:scrollbarDefaultDelayBeforeFade">1000</item>
         <item name="android:smoothScrollbar">false</item>
     </style>
+
+    <style name="DatePicker" parent="@android:style/Theme.Holo.Light">
+        <item name="android:datePickerStyle">@android:style/Widget.Material.Light.DatePicker</item>
+    </style>
 </resources>

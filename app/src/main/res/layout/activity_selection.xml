@@ -68,7 +68,6 @@
             android:layout_height="wrap_content"
             android:onClick="startDatePickerDemoActivity"
             android:text="Date Picker"
-            android:visibility="gone"
             android:textColor="@android:color/black" />
 
         <Button

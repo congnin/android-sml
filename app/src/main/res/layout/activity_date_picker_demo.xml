@@ -11,7 +11,6 @@
         android:background="@drawable/green_vertical_line"
         android:orientation="horizontal"
         android:paddingStart="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
@@ -28,7 +27,18 @@
             android:layout_below="@id/calendar_dayOfWeekTextView"
             android:textSize="16sp" />
 
+        <TextView
+            android:id="@+id/tv_date"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="30dp"
+            android:layout_toLeftOf="@+id/iv_calendar"
+            android:textSize="14sp" />
+
         <ImageView
+            android:id="@+id/iv_calendar"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_alignParentEnd="true"
@@ -36,4 +46,13 @@
             android:layout_marginEnd="20dp"
             android:src="@mipmap/cal_icon" />
     </RelativeLayout>
+
+    <Button
+        app:layout_constraintTop_toBottomOf="@+id/calendarControl"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="startTOCDemoActivity"
+        android:text="Term Of Condition"
+        android:textColor="@android:color/black" />
 </android.support.constraint.ConstraintLayout>
