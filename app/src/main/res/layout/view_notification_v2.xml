@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="88dp"
+    android:layout_gravity="center"
+    android:layout_marginStart="3dp"
+    android:layout_marginEnd="3dp"
+    android:layout_marginBottom="3dp"
+    android:background="#FFCC00"
+    android:orientation="vertical"
+    tools:targetApi="lollipop">
+
+    <ImageView
+        android:id="@+id/img_notify_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_circle_info" />
+
+    <TextView
+        android:id="@+id/cbsa_btn_notify_dismiss"
+        style="@style/TextAppearance.HelveticaNeueBold"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:textSize="16sp"
+        tools:text="BLABLA" />
+
+    <TextView
+        android:id="@+id/cbsa_tv_notify_message"
+        style="@style/TextAppearance.HelveticaNeueBold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/cbsa_btn_notify_dismiss"
+        android:layout_toEndOf="@id/img_notify_icon"
+        android:textSize="16sp"
+        tools:text="Neue Regular 16 black" />
+</RelativeLayout>

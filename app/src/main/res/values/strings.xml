@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">android-widget</string>
+    <string name="SAMPLE_TEXT">This feature is under construction.</string>
+    <string name="TEXT_UNDER_HANDLE">We are currently experiencing technical difficulties. We apologise for the inconvenience.\nError code = %s</string>
 
     <string name="LBL_SECOND">second</string>
     <string name="LBL_SECONDS">seconds</string>
