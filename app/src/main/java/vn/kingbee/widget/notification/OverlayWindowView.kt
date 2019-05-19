@@ -1,11 +1,12 @@
 package vn.kingbee.widget.notification
 
+import android.app.Activity
 import android.content.Context
-import android.graphics.PixelFormat
 import android.os.Handler
 import android.support.annotation.LayoutRes
 import android.support.annotation.StyleRes
 import android.view.*
+import android.view.animation.AnimationUtils
 import android.widget.FrameLayout
 import vn.kingbee.widget.R
 
@@ -13,42 +14,20 @@ class OverlayWindowView<T>(context: Context) : FrameLayout(context) {
 
     private val mHandler = Handler()
 
-    private var styleAnimationResId: Int = 0
+    private var styleAnimationEnterResId: Int = 0
+    private var styleAnimationExitResId: Int = 0
     private var windowGravity: Int = 0
-    private var windowFlags: Int = 0
-    private var windowType: Int = 0
     private var windowHeight: Int = 0
     private var windowWidth: Int = 0
     private var autoDismissDuration: Long = 0
     private var enableAutoDismiss: Boolean = false
     private var marginTop: Int = 0
     private var viewHolder: OverlayViewHolder<T>? = null
-    private var data: T? = null // NOSONAR -> this field will use later
+    private var data: T? = null
+    lateinit var mWindow: Window
+    private var isAddToWindow = false
 
-    private var windowManager: WindowManager? = null
-    private var isShowing: Boolean = false
-
-    private val windowManger: ViewManager?
-        get() {
-            if (windowManager == null) {
-                windowManager = context.getSystemService(Context.WINDOW_SERVICE) as WindowManager
-            }
-            return windowManager
-        }
-
-    private val windowLayoutParams: ViewGroup.LayoutParams
-        get() {
-            val windowParams = WindowManager.LayoutParams()
-            windowParams.gravity = windowGravity
-            windowParams.height = windowHeight
-            windowParams.width = windowWidth
-            windowParams.format = PixelFormat.TRANSLUCENT
-            windowParams.flags = windowFlags
-            windowParams.type = windowType
-            windowParams.windowAnimations = styleAnimationResId
-            windowParams.y = marginTop
-            return windowParams
-        }
+    var isShowing: Boolean = false
 
     fun onUpdateData(data: T) {
         this.data = data
@@ -74,27 +53,42 @@ class OverlayWindowView<T>(context: Context) : FrameLayout(context) {
     }
 
     override fun onAttachedToWindow() {
-        isShowing = true
+        isAddToWindow = true
         super.onAttachedToWindow()
         resetAutoDismiss()
     }
 
     fun removeFromWindow() {
         if (windowToken != null) {
-            windowManger!!.removeView(this)
+            val animation = AnimationUtils.loadAnimation(context, styleAnimationExitResId)
+            this.startAnimation(animation)
+            (mWindow.decorView as ViewGroup).removeView(this)
         }
-        onCleanData()
-    }
-
-    private fun onCleanData() {
-        // Clean viewHolderData here
-        windowManager = null
     }
 
     fun show() {
-        if (!isShowing) {
-            windowManger!!.addView(this, windowLayoutParams)
+        if (!isShowing && isHostActivityRunning()) {
+            (mWindow.decorView as ViewGroup).addView(this, this.getWindowLayoutParams())
+            val animation = AnimationUtils.loadAnimation(context, styleAnimationEnterResId)
+            startAnimation(animation)
         }
+    }
+
+    private fun isHostActivityRunning(): Boolean {
+        var activity: Activity? = null
+        if (context is Activity) {
+            activity = context as Activity
+        } else if (context is ContextThemeWrapper) {
+            activity = (context as ContextThemeWrapper).baseContext as Activity
+        }
+
+        return activity != null && !activity.isFinishing
+    }
+
+    private fun getWindowLayoutParams(): LayoutParams {
+        val params = LayoutParams(windowWidth, windowHeight, windowGravity)
+        params.topMargin = this.marginTop
+        return params
     }
 
     fun dismiss() {
@@ -106,38 +100,38 @@ class OverlayWindowView<T>(context: Context) : FrameLayout(context) {
      * BUILDER CLASS
      * Gives us a builder utility class with a fluent API for easily configuring Notification views
      */
-    class Builder<T>(private val context: Context?) {
-
+    class Builder<T> {
+        lateinit var mWindow: Window
         private var callback: NotificationCallback? = null
         private var viewHolder: OverlayViewHolder<T>? = null
         private var viewHolderData: T? = null
 
         // Default values
-        private var styleAnimationResId = R.style.NotificationAnim
+        private var styleAnimationEnter: Int = R.anim.notification_enter
+        private var styleAnimationExit: Int = R.anim.notification_exit
         private var windowGravity = Gravity.TOP or Gravity.CENTER_HORIZONTAL
-        private var windowFlags = (WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
-                or WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON
-                or WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN
-                or WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL)
-        private var windowType = WindowManager.LayoutParams.TYPE_TOAST
         private var windowHeight = WindowManager.LayoutParams.WRAP_CONTENT
         private var windowWidth = WindowManager.LayoutParams.WRAP_CONTENT
         private var autoDismissDuration: Long = 5000
         private var enableAutoDismiss = true
         private var marginTop: Int = 0
 
+        constructor(window: Window) {
+            this.mWindow = window
+        }
+
         fun windowGravity(gravity: Int): Builder<T> {
             this.windowGravity = gravity
             return this
         }
 
-        fun animationStyle(@StyleRes styleAnimationResId: Int): Builder<T> {
-            this.styleAnimationResId = styleAnimationResId
+        fun animationEnter(@StyleRes styleAnimationResId: Int): Builder<T> {
+            this.styleAnimationEnter = styleAnimationResId
             return this
         }
 
-        fun windowFlags(windowFlags: Int): Builder<T> {
-            this.windowFlags = windowFlags
+        fun animationExit(@StyleRes styleAnimationResId: Int): Builder<T> {
+            this.styleAnimationExit = styleAnimationResId
             return this
         }
 
@@ -148,11 +142,6 @@ class OverlayWindowView<T>(context: Context) : FrameLayout(context) {
 
         fun windowHeight(windowHeight: Int): Builder<T> {
             this.windowHeight = windowHeight
-            return this
-        }
-
-        fun windowType(windowType: Int): Builder<T> {
-            this.windowType = windowType
             return this
         }
 
@@ -174,14 +163,13 @@ class OverlayWindowView<T>(context: Context) : FrameLayout(context) {
 
         fun build(): OverlayWindowView<T> {
             checkException()
-            val notificationView = OverlayWindowView<T>(context!!)
-            notificationView.windowManager = context.getSystemService(Context.WINDOW_SERVICE) as WindowManager
+            val notificationView = OverlayWindowView<T>(mWindow.context)
+            notificationView.mWindow = this.mWindow
             notificationView.windowGravity = windowGravity
-            notificationView.styleAnimationResId = styleAnimationResId
-            notificationView.windowFlags = windowFlags
+            notificationView.styleAnimationEnterResId = this.styleAnimationEnter
+            notificationView.styleAnimationExitResId = this.styleAnimationExit
             notificationView.windowWidth = windowWidth
             notificationView.windowHeight = windowHeight
-            notificationView.windowType = windowType
             notificationView.enableAutoDismiss = enableAutoDismiss
             notificationView.autoDismissDuration = autoDismissDuration
             notificationView.marginTop = marginTop
@@ -191,7 +179,10 @@ class OverlayWindowView<T>(context: Context) : FrameLayout(context) {
             return notificationView
         }
 
-        private fun initViewHolder(notificationView: OverlayWindowView<T>, viewHolder: OverlayViewHolder<T>, data: T?, callback: NotificationCallback?) {
+        private fun initViewHolder(notificationView: OverlayWindowView<T>,
+                                   viewHolder: OverlayViewHolder<T>,
+                                   data: T?,
+                                   callback: NotificationCallback?) {
             LayoutInflater.from(notificationView.context).inflate(viewHolder.layoutId, notificationView)
             viewHolder.initView(notificationView)
             viewHolder.updateData(data)
@@ -201,10 +192,9 @@ class OverlayWindowView<T>(context: Context) : FrameLayout(context) {
         }
 
         private fun checkException() {
-            if (context == null) {
+            if (this.mWindow == null) {
                 throw OverlayBuilderException("Context must not null")
-            }
-            if (viewHolder == null) {
+            } else if (this.viewHolder == null) {
                 throw OverlayBuilderException("View holder must not null")
             }
         }
@@ -220,7 +210,7 @@ class OverlayWindowView<T>(context: Context) : FrameLayout(context) {
             return this
         }
 
-        fun withCallback(callback: NotificationCallback): Builder<T> {
+        fun withCallback(callback: NotificationCallback?): Builder<T> {
             this.callback = callback
             return this
         }

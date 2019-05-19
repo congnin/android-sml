@@ -1,5 +1,8 @@
 package vn.kingbee.widget.notification
 
+import vn.kingbee.widget.notification.enums.NotificationType
+import vn.kingbee.widget.notification.enums.NotificationViewType
+
 /**
  * Notification manager with custom notification data T
  *
@@ -31,7 +34,7 @@ interface NotificationManager<T> {
      * @param type     [NotificationType]
      * @param callback [OverlayWindowView.NotificationCallback]
      */
-    fun show(msg: String, type: NotificationType, callback: OverlayWindowView.NotificationCallback)
+    fun show(msg: String, type: NotificationType, callback: OverlayWindowView.NotificationCallback?)
 
     /**
      * Show notification with msg, notification type [NotificationType], and view clicked callback [OverlayWindowView.NotificationCallback]
@@ -42,7 +45,7 @@ interface NotificationManager<T> {
      * @param viewType [NotificationViewType]
      * @param callback [OverlayWindowView.NotificationCallback]
      */
-    fun show(msg: String, type: NotificationType, viewType: NotificationViewType, callback: OverlayWindowView.NotificationCallback)
+    fun show(msg: String, type: NotificationType, viewType: NotificationViewType, callback: OverlayWindowView.NotificationCallback?)
 
 
     /**

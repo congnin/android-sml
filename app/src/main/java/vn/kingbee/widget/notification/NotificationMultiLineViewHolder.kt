@@ -5,31 +5,31 @@ import android.widget.ImageView
 import android.widget.TextView
 import vn.kingbee.widget.R
 
-class NotificationOneLineViewHolder : OverlayWindowView.OverlayViewHolder<NotificationManagerImpl.NotificationData>, View.OnClickListener {
+class NotificationMultiLineViewHolder : OverlayWindowView.OverlayViewHolder<NotificationManagerImpl.NotificationData>,
+    View.OnClickListener {
     private var notificationView: OverlayWindowView<NotificationManagerImpl.NotificationData>? = null
 
     lateinit var tvMessage: TextView
     lateinit var imgIcon: ImageView
-    lateinit var notifyDismiss: TextView
     private var notificationCallback: OverlayWindowView.NotificationCallback? = null
 
     override val layoutId: Int
-        get() = R.layout.view_notification_v2
+        get() = R.layout.view_notification_multi_line
 
     override fun initView(view: View) {
-        tvMessage = view.findViewById(R.id.tv_notify_message)
+        tvMessage = view.findViewById(R.id.tv_line_message)
         imgIcon = view.findViewById(R.id.img_notify_icon)
-        notifyDismiss = view.findViewById(R.id.btn_notify_dismiss)
+        val notifyDismiss = view.findViewById<TextView>(R.id.tv_notify_dismiss)
+        val notifyAdd = view.findViewById<TextView>(R.id.tv_notify_add)
 
         notifyDismiss.setOnClickListener(this)
+        notifyAdd.setOnClickListener(this)
     }
 
     override fun updateData(data: NotificationManagerImpl.NotificationData?) {
         if (data != null) {
             tvMessage.text = data.message
-            if (data.resIcon != 0) {
-                imgIcon.setImageResource(data.resIcon)
-            }
+            imgIcon.setImageResource(data.resIcon)
         }
     }
 
@@ -45,7 +45,7 @@ class NotificationOneLineViewHolder : OverlayWindowView.OverlayViewHolder<Notifi
         if (notificationCallback != null && v != null) {
             notificationCallback?.onViewClicked(v)
         }
-        if (notificationView != null && v != null && v.id == R.id.btn_notify_dismiss) {
+        if (notificationView != null && v != null && v.id == R.id.tv_notify_dismiss) {
             notificationView?.dismiss()
         }
     }

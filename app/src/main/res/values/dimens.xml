@@ -81,4 +81,77 @@
     <!--nice spinner-->
     <dimen name="three_grid_unit">24dp</dimen>
     <dimen name="one_and_a_half_grid_unit">12dp</dimen>
+
+
+    <!--For text sizes-->
+    <dimen name="text_size_heading_1">32sp</dimen>
+    <dimen name="text_size_heading_2">20sp</dimen>
+    <dimen name="text_size_heading_3">32sp</dimen>
+    <dimen name="text_size_product_benefit">16sp</dimen>
+    <dimen name="text_size_paragraph_1">16sp</dimen>
+    <dimen name="text_size_paragraph_2">14sp</dimen>
+
+    <!--Line spacing or leading-->
+    <dimen name="text_leading_40">40dp</dimen>
+    <dimen name="text_leading_30">30dp</dimen>
+    <dimen name="text_leading_20">20dp</dimen>
+    <dimen name="text_line_spacing_20">20dp</dimen>
+    <dimen name="text_line_spacing_15">15dp</dimen>
+    <dimen name="text_line_spacing_10">10dp</dimen>
+    <dimen name="text_line_spacing_5">5dp</dimen>
+    <dimen name="text_line_spacing_4">4dp</dimen>
+    <dimen name="text_line_spacing_3">3dp</dimen>
+    <dimen name="text_line_spacing_2">2dp</dimen>
+    <dimen name="text_line_spacing_1">1dp</dimen>
+
+    <!-- DEFAULT MARGIN-->
+    <dimen name="default_margin_xxsmall">1dp</dimen>
+    <dimen name="default_margin_xsmall">2dp</dimen>
+    <dimen name="default_margin_small">5dp</dimen>
+    <dimen name="default_margin_xnormal">8dp</dimen>
+    <dimen name="default_margin_normal">10dp</dimen>
+    <dimen name="default_margin_medium">15dp</dimen>
+    <dimen name="default_margin_large">20dp</dimen>
+    <dimen name="default_margin_xlarge">25dp</dimen>
+    <dimen name="default_margin_xxlarge">30dp</dimen>
+    <dimen name="default_margin_huge">40dp</dimen>
+    <dimen name="default_margin_xhuge">50dp</dimen>
+    <dimen name="default_margin_xxhuge">60dp</dimen>
+
+    <!-- DEFAULT PADDING-->
+    <dimen name="default_padding_xxsmall">1dp</dimen>
+    <dimen name="default_padding_xsmall">2dp</dimen>
+    <dimen name="default_padding_small">5dp</dimen>
+    <dimen name="default_padding_xnormal">8dp</dimen>
+    <dimen name="default_padding_normal">10dp</dimen>
+    <dimen name="default_padding_medium">15dp</dimen>
+    <dimen name="default_padding_large">20dp</dimen>
+    <dimen name="default_padding_xlarge">25dp</dimen>
+    <dimen name="default_padding_xxlarge">30dp</dimen>
+    <dimen name="default_padding_huge">40dp</dimen>
+
+    <!--DEFAULT FONT SIZE-->
+    <dimen name="font_size_small">14sp</dimen>
+    <dimen name="font_size_xsmall">16sp</dimen>
+    <dimen name="font_size_normal">18sp</dimen>
+    <dimen name="font_size_xnormal">20sp</dimen>
+    <dimen name="font_size_medium">24sp</dimen>
+    <dimen name="font_size_xmedium">26sp</dimen>
+    <dimen name="font_size_xxmedium">28sp</dimen>
+    <dimen name="font_size_large">30sp</dimen>
+    <dimen name="font_size_xlarge">32sp</dimen>
+    <dimen name="font_size_xxlarge">36sp</dimen>
+    <dimen name="font_size_huge">40sp</dimen>
+    <dimen name="font_size_xhuge">48sp</dimen>
+    <dimen name="font_size_dialog_title">30sp</dimen>
+
+    <!--DEFAULT RADIUS SIZE-->
+    <dimen name="radius_small">3dp</dimen>
+    <dimen name="radius_xsmall">4dp</dimen>
+    <dimen name="radius_xxsmall">5dp</dimen>
+    <dimen name="radius_xxxsmall">8dp</dimen>
+    <dimen name="radius_normal">10dp</dimen>
+    <dimen name="radius_medium">15dp</dimen>
+    <dimen name="radius_large">20dp</dimen>
+    <dimen name="radius_xlarge">40dp</dimen>
 </resources>

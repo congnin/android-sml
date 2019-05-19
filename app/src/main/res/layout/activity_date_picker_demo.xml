@@ -8,6 +8,7 @@
         android:id="@+id/calendarControl"
         android:layout_width="match_parent"
         android:layout_height="80dp"
+        android:layout_marginTop="80dp"
         android:background="@drawable/green_vertical_line"
         android:orientation="horizontal"
         android:paddingStart="30dp"
@@ -29,12 +30,12 @@
 
         <TextView
             android:id="@+id/tv_date"
-            android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginEnd="30dp"
             android:layout_toLeftOf="@+id/iv_calendar"
+            android:textColor="@color/black"
             android:textSize="14sp" />
 
         <ImageView
@@ -48,11 +49,39 @@
     </RelativeLayout>
 
     <Button
-        app:layout_constraintTop_toBottomOf="@+id/calendarControl"
-        android:layout_marginTop="15dp"
+        android:id="@+id/bt_term_and_condition"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:onClick="startTOCDemoActivity"
         android:text="Term Of Condition"
-        android:textColor="@android:color/black" />
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/calendarControl" />
+
+    <Button
+        android:id="@+id/bt_good_notification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Good Notification"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/bt_term_and_condition" />
+
+    <Button
+        android:id="@+id/bt_error_notification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Error Notification"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/bt_good_notification" />
+
+    <Button
+        android:id="@+id/bt_info_notification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Info Notification"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/bt_error_notification" />
 </android.support.constraint.ConstraintLayout>

@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="88dp"
+    android:layout_height="70dp"
     android:layout_gravity="center"
     android:layout_marginStart="3dp"
     android:layout_marginEnd="3dp"
@@ -16,13 +16,13 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_centerVertical="true"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:scaleType="fitXY"
         android:src="@drawable/ic_circle_info" />
 
     <TextView
-        android:id="@+id/cbsa_btn_notify_dismiss"
+        android:id="@+id/btn_notify_dismiss"
         style="@style/TextAppearance.HelveticaNeueBold"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
@@ -32,18 +32,18 @@
         android:focusable="true"
         android:focusableInTouchMode="true"
         android:gravity="center"
-        android:paddingLeft="30dp"
-        android:paddingRight="30dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
         android:textSize="16sp"
-        tools:text="BLABLA" />
+        android:text="Dismiss" />
 
     <TextView
-        android:id="@+id/cbsa_tv_notify_message"
+        android:id="@+id/tv_notify_message"
         style="@style/TextAppearance.HelveticaNeueBold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_toStartOf="@id/cbsa_btn_notify_dismiss"
+        android:layout_toStartOf="@id/btn_notify_dismiss"
         android:layout_toEndOf="@id/img_notify_icon"
         android:textSize="16sp"
         tools:text="Neue Regular 16 black" />

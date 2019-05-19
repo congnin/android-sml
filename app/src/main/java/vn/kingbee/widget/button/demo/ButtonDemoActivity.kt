@@ -9,13 +9,17 @@ import vn.kingbee.widget.BaseActivity
 import vn.kingbee.widget.R
 import vn.kingbee.widget.button.fitbutton.FitButton
 import vn.kingbee.widget.button.fitbutton.model.Shape
+import vn.kingbee.widget.notification.NotificationManager
+import vn.kingbee.widget.notification.NotificationManagerImpl
 
 class ButtonDemoActivity : BaseActivity() {
     private var fitButton: FitButton? = null
+    private var notificationManager: NotificationManager<*>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_button_demo)
+        notificationManager = NotificationManagerImpl(window)
         setupButton()
     }
 
@@ -27,7 +31,8 @@ class ButtonDemoActivity : BaseActivity() {
             .setDividerColor(Color.parseColor("#BCAAA4"))
             .setBorderColor(Color.parseColor("#FFF59D")).setButtonColor(Color.parseColor("#FF7043"))
             .setBorderWidth(2f).setRippleEnable(true)
-            .setRippleColor(ContextCompat.getColor(this, R.color.colorAccent)).setOnClickListener {
+            .setRippleColor(ContextCompat.getColor(this, R.color.colorAccent)).
+                setOnClickListener {
                 changeButton()
                 Toast.makeText(
                     this, "Click on ${fitButton?.getText()}", Toast.LENGTH_SHORT
