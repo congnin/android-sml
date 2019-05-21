@@ -1,4 +1,4 @@
-package vn.kingbee.widget.fragment
+package vn.kingbee.widget.base.fragment
 
 import android.support.annotation.StringRes
 

@@ -1,4 +1,4 @@
-package vn.kingbee.widget.fragment
+package vn.kingbee.widget.base.fragment
 
 interface CommonView {
     fun showServerGenericError(errorCode: String)

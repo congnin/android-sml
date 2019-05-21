@@ -11,6 +11,7 @@ import org.apache.commons.lang3.StringUtils
 import vn.kingbee.widget.BaseActivity
 import vn.kingbee.widget.R
 import vn.kingbee.widget.button.fitbutton.FitButton
+import vn.kingbee.widget.textview.showmore.ShowMoreTextView
 import java.util.ArrayList
 
 class FormatEditTextActivity : BaseActivity() {
@@ -22,6 +23,7 @@ class FormatEditTextActivity : BaseActivity() {
     lateinit var edtValue6: EditText
     lateinit var ivError: ImageView
     lateinit var btValidation: FitButton
+    lateinit var tvMore: ShowMoreTextView
 
     var lstEditTextParts: MutableList<EditText> = ArrayList()
     var lstEditTextMaxLength: MutableList<Int> = ArrayList()
@@ -57,6 +59,8 @@ class FormatEditTextActivity : BaseActivity() {
         lstEditTextMaxLength.add(MAX_LENGTH_TEXT_1)
         lstEditTextMaxLength.add(MAX_LENGTH_TEXT_3)
         lstEditTextMaxLength.add(MAX_LENGTH_TEXT_3)
+
+        tvMore = findViewById(R.id.text_view_show_more)
     }
 
     private fun addEvents() {
@@ -90,6 +94,13 @@ class FormatEditTextActivity : BaseActivity() {
         }
 
         btValidation.setOnClickListener { }
+
+        tvMore.text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+//        tvMore.setShowingLine(2);
+        tvMore.setShowingChar(30);
+
+        tvMore.addShowMoreText("Continue");
+        tvMore.addShowLessText("Less");
     }
 
     internal class MyTextWatcher(currentIndex: Int,

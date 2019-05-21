@@ -152,12 +152,20 @@
         android:layout_height="48dp"
         android:layout_margin="16dp"
         android:gravity="center"
+        app:fb_backgroundColor="#4CAF50"
         app:fb_cornerRadius="24dp"
-        app:fb_shape="rectangle"
-        app:fb_rippleColor="#DCEDC8"
-        app:fb_textSize="18dp"
         app:fb_fontFamilyRes="@font/share_tech_regular"
-        app:fb_textColor="#F5F5F5"
+        app:fb_rippleColor="#DCEDC8"
+        app:fb_shape="rectangle"
         app:fb_text="Validate"
-        app:fb_backgroundColor="#4CAF50"/>
+        app:fb_textColor="#F5F5F5"
+        app:fb_textSize="18dp" />
+
+    <vn.kingbee.widget.textview.showmore.ShowMoreTextView
+        android:id="@+id/text_view_show_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp" />
 </LinearLayout>

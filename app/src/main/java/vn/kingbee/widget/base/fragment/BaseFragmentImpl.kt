@@ -1,4 +1,4 @@
-package vn.kingbee.widget.fragment
+package vn.kingbee.widget.base.fragment
 
 import android.app.Dialog
 import android.os.Bundle
@@ -15,13 +15,16 @@ import android.view.LayoutInflater
 import android.widget.Toast
 import vn.kingbee.widget.R
 import android.support.annotation.LayoutRes
-
+import vn.kingbee.utils.CommonUtils
+import vn.kingbee.widget.base.presenter.BasePresenter
 
 abstract class BaseFragmentImpl : Fragment(), BaseView, DialogClickedListener {
 
     protected lateinit var handler: Handler
-    protected var loadingDialogMaterial: LoadingDialogMaterial? = null
+    protected var loadingDialog: LoadingDialogMaterial? = null
     private lateinit var mUnbinder: Unbinder
+
+    protected abstract fun getPresenter(): BasePresenter<*>?
 
     fun getTagName(): String? = this.tag
 
@@ -58,11 +61,32 @@ abstract class BaseFragmentImpl : Fragment(), BaseView, DialogClickedListener {
         //nothing
     }
 
+    override fun onResume() {
+        super.onResume()
+        if (getPresenter() != null) {
+            getPresenter()?.resume()
+        }
+    }
+
+    override fun onPause() {
+        super.onPause()
+        if (getPresenter() != null) {
+            getPresenter()?.pause()
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        if (getPresenter() != null) {
+            getPresenter()?.pause()
+        }
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         mUnbinder.unbind()
         handler.removeCallbacksAndMessages(null)
-        this.loadingDialogMaterial = null
+        this.loadingDialog = null
     }
 
     override fun showToastMessageUnderHandle(message: String) {
@@ -79,15 +103,25 @@ abstract class BaseFragmentImpl : Fragment(), BaseView, DialogClickedListener {
     }
 
     override fun showProgressDialog(stringResId: Int) {
-
+        showProgressDialog(getString(stringResId))
     }
 
     override fun showProgressDialog(message: String) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        if (loadingDialog != null && loadingDialog?.getDialog() != null && loadingDialog?.getDialog()?.isShowing!!) {
+            return
+        }
+        if (activity != null) {
+            loadingDialog = LoadingDialogMaterial(activity!!, null)
+            loadingDialog?.setMessage(message)
+            loadingDialog?.getDialog()?.show()
+        }
     }
 
     override fun hideProgressDialog() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        if (this.loadingDialog == null) {
+            return
+        }
+        this.loadingDialog?.getDialog()?.dismiss()
     }
 
     override fun showToastNoInternetError() {
@@ -103,39 +137,41 @@ abstract class BaseFragmentImpl : Fragment(), BaseView, DialogClickedListener {
     }
 
     override fun vibrate() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        if (activity != null) {
+            CommonUtils.vibrate(activity!!)
+        }
     }
 
     override fun goToNextScreen() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
     }
 
     override fun goToPreviousScreen() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
     }
 
     override fun showToastConnectionTimeout() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
     }
 
     override fun showFullScreenInBlackConnectionTimeoutError() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
     }
 
     override fun showFullScreenInWhiteConnectionTimeoutError() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
     }
 
     override fun showServerGenericError(errorCode: String) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
     }
 
     override fun showSessionTokenExpiredError() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
     }
 
     override fun onDialogClicked(dialog: Dialog, buttonType: ButtonType): Boolean {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return false
     }
 
     companion object {

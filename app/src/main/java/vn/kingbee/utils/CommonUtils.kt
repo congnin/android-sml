@@ -4,7 +4,10 @@ import android.app.Activity
 import android.content.Context
 import android.content.res.Resources
 import android.graphics.Rect
+import android.os.Build
 import android.os.SystemClock
+import android.os.VibrationEffect
+import android.os.Vibrator
 import android.util.TypedValue
 import android.view.MotionEvent
 import android.view.View
@@ -16,6 +19,7 @@ class CommonUtils {
 
     companion object {
         private const val EXPECT_DELAY_TIME_BETWEEN_CLICKS_DEFAULT: Long = 650
+        private const val PHONE_NUMBER_INCORRECT_VIBRATE_LENGTH = 500L
         private var lastClickTime: Long = 0
         fun isClickAvailable(): Boolean {
             return isClickAvailable(EXPECT_DELAY_TIME_BETWEEN_CLICKS_DEFAULT)
@@ -115,6 +119,15 @@ class CommonUtils {
 
         fun getDensity(): Float {
             return Resources.getSystem().displayMetrics.density
+        }
+
+        fun vibrate(activity: Activity) {
+            val v = activity.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+            if (Build.VERSION.SDK_INT >= 26) {
+                v.vibrate(VibrationEffect.createOneShot(PHONE_NUMBER_INCORRECT_VIBRATE_LENGTH, 10))
+            } else {
+                v.vibrate(PHONE_NUMBER_INCORRECT_VIBRATE_LENGTH)
+            }
         }
     }
 }
