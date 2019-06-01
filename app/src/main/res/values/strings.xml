@@ -20,4 +20,6 @@
         <item>Chinese</item>
         <item>Math</item>
     </string-array>
+
+    <string name="toast_message">Toast message</string>
 </resources>

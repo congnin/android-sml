@@ -180,4 +180,11 @@
     
     <color name="light_gray">#fff5f5f5</color>
     <color name="sky_blue">#3eb5e5</color>
+
+    <color name="defaultTextColor">#FFFFFF</color>
+    <color name="errorColor">#D50000</color>
+    <color name="infoColor">#3F51B5</color>
+    <color name="successColor">#388E3C</color>
+    <color name="warningColor">#FFA900</color>
+    <color name="normalColor">#353A3E</color>
 </resources>

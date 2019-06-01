@@ -16,6 +16,7 @@ import vn.kingbee.widget.progress.CircleProcessBarActivity
 import vn.kingbee.widget.recyclerview.HelpVideoDemo
 import vn.kingbee.widget.signature.SignatureDemoActivity
 import vn.kingbee.widget.spinner.demo.SpinnerDemoActivity
+import vn.kingbee.widget.toasty.ToastyDemoActivity
 
 class SelectionActivity : AppCompatActivity() {
 
@@ -70,5 +71,9 @@ class SelectionActivity : AppCompatActivity() {
 
     fun startSignatureDemoActivity(v: View) {
         startActivity(Intent(this@SelectionActivity, SignatureDemoActivity::class.java))
+    }
+
+    fun startToastyDemoActivity(v: View) {
+        startActivity(Intent(this@SelectionActivity, ToastyDemoActivity::class.java))
     }
 }
