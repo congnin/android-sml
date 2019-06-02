@@ -2,10 +2,8 @@ package vn.kingbee.widget.animation.demo
 
 import vn.kingbee.widget.animation.shimmer.demo.utils.BaseUtils
 import vn.kingbee.widget.animation.shimmer.demo.adapters.CardAdapter
-import androidx.recyclerview.widget.RecyclerView
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import vn.kingbee.widget.BaseActivity
 import vn.kingbee.widget.R
 import vn.kingbee.widget.animation.shimmer.recyclerview.ShimmerRecyclerView
 
