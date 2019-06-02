@@ -10,6 +10,7 @@ import vn.kingbee.widget.button.demo.ButtonDemoActivity
 import vn.kingbee.widget.calendar.demo.DatePickerDemoActivity
 import vn.kingbee.widget.camera.demo.CameraDemo1Activity
 import vn.kingbee.widget.edittext.FormatEditTextActivity
+import vn.kingbee.widget.imageview.SwitchIconDemoActivity
 import vn.kingbee.widget.keyboard.NumpadActivity
 import vn.kingbee.widget.navigationview.ArcNavigationViewDemoActivity
 import vn.kingbee.widget.pin.PinActivity
@@ -80,5 +81,8 @@ class SelectionActivity : AppCompatActivity() {
 
     fun startArcNavigationViewDemoActivity(v: View) {
         startActivity(Intent(this@SelectionActivity, ArcNavigationViewDemoActivity::class.java))
+    }
+    fun startSwitchIconViewDemoActivity(v: View) {
+        startActivity(Intent(this@SelectionActivity, SwitchIconDemoActivity::class.java))
     }
 }

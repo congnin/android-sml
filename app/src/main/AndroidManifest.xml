@@ -43,6 +43,7 @@
         <activity
             android:name=".navigationview.ArcNavigationViewDemoActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".imageview.SwitchIconDemoActivity" />
 
         <activity android:name="vn.kingbee.rxjava.RxJava2SelectionActivity" />
         <activity android:name="vn.kingbee.rxjava.OperatorsActivity" />
