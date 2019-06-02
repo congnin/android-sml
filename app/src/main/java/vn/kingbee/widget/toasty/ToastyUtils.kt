@@ -1,15 +1,15 @@
 package vn.kingbee.widget.toasty
 
-import android.support.v4.content.ContextCompat
-import android.support.v7.content.res.AppCompatResources
+import androidx.core.content.ContextCompat
+import androidx.appcompat.content.res.AppCompatResources
 import android.graphics.drawable.Drawable
 import android.os.Build
 import android.content.Context
 import android.graphics.drawable.NinePatchDrawable
 import android.graphics.PorterDuff
-import android.support.annotation.ColorInt
-import android.support.annotation.ColorRes
-import android.support.annotation.DrawableRes
+import androidx.annotation.ColorInt
+import androidx.annotation.ColorRes
+import androidx.annotation.DrawableRes
 import android.view.View
 import vn.kingbee.widget.R
 

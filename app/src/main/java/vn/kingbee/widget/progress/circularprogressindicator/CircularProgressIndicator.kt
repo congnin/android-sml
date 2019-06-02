@@ -18,10 +18,10 @@ import android.graphics.RectF
 import android.graphics.Shader
 import android.graphics.SweepGradient
 import android.os.Build
-import android.support.annotation.ColorInt
-import android.support.annotation.Dimension
-import android.support.annotation.IntDef
-import android.support.annotation.IntRange
+import androidx.annotation.ColorInt
+import androidx.annotation.Dimension
+import androidx.annotation.IntDef
+import androidx.annotation.IntRange
 import android.text.TextPaint
 import android.util.AttributeSet
 import android.util.DisplayMetrics

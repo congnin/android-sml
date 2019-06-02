@@ -1,9 +1,9 @@
 package vn.kingbee.widget.animation.shimmer.demo.utils
 
-import android.support.v7.widget.RecyclerView
-import android.support.annotation.StringRes
-import android.support.annotation.LayoutRes
-import android.support.annotation.StyleRes
+import androidx.recyclerview.widget.RecyclerView
+import androidx.annotation.StringRes
+import androidx.annotation.LayoutRes
+import androidx.annotation.StyleRes
 
 
 class DemoConfiguration {
@@ -16,7 +16,7 @@ class DemoConfiguration {
     @StringRes
     var titleResource: Int = 0
 
-    var layoutManager: RecyclerView.LayoutManager? = null
+    var layoutManager: androidx.recyclerview.widget.RecyclerView.LayoutManager? = null
 
-    var itemDecoration: RecyclerView.ItemDecoration? = null
+    var itemDecoration: androidx.recyclerview.widget.RecyclerView.ItemDecoration? = null
 }

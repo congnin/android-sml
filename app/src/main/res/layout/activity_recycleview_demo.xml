@@ -14,7 +14,7 @@
         android:paddingTop="14dp"
         android:textStyle="bold" />
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/help_video_list"
         style="@style/StyleHelpScrollbar"
         android:layout_marginTop="18dp"

@@ -3,8 +3,8 @@ package vn.kingbee.widget.recyclerview.location
 import android.app.Dialog
 import android.content.Context
 import android.os.Bundle
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import android.view.View
 import android.view.Window
 import android.widget.ImageView
@@ -41,14 +41,14 @@ class ProvinceListDialog : Dialog, ProvinceListAdapter.ProvinceListAdapterListen
         setContentView(R.layout.view_province_list)
 
         val provinceListView =
-            findViewById<View>(R.id.recycler_view_location_list_dialog_province) as RecyclerView
+            findViewById<View>(R.id.recycler_view_location_list_dialog_province) as androidx.recyclerview.widget.RecyclerView
         val dismissIcon = findViewById<View>(R.id.icon_dismiss_dialog) as ImageView
 
         provinceListAdapter = ProvinceListAdapter(context, mItems, this)
         provinceListView.adapter = this.provinceListAdapter
 
         dismissIcon.setOnClickListener { view -> this.dismiss() }
-        provinceListView.layoutManager = LinearLayoutManager(context)
+        provinceListView.layoutManager = androidx.recyclerview.widget.LinearLayoutManager(context)
     }
 
     override fun onProvinceClick(province: Province) {

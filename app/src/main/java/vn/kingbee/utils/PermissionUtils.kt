@@ -3,9 +3,9 @@ package vn.kingbee.utils
 import android.content.Context
 import android.os.Build
 import android.content.pm.PackageManager
-import android.support.v4.app.ActivityCompat
+import androidx.core.app.ActivityCompat
 import android.app.Activity
-import android.support.v4.content.ContextCompat
+import androidx.core.content.ContextCompat
 
 class PermissionUtils {
     companion object {

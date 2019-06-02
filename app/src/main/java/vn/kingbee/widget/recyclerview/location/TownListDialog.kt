@@ -3,8 +3,8 @@ package vn.kingbee.widget.recyclerview.location
 import android.app.Dialog
 import android.content.Context
 import android.os.Bundle
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import android.view.View
 import android.view.Window
 import android.widget.ImageView
@@ -40,14 +40,14 @@ class TownListDialog : Dialog, TownListAdapter.TownListAdapterListener {
         setContentView(R.layout.view_province_list)
 
         val townListView =
-            findViewById<View>(R.id.recycler_view_location_list_dialog_province) as RecyclerView
+            findViewById<View>(R.id.recycler_view_location_list_dialog_province) as androidx.recyclerview.widget.RecyclerView
         val dismissIcon = findViewById<View>(R.id.icon_dismiss_dialog) as ImageView
 
         townListAdapter = TownListAdapter(context, mItems, this)
         townListView.adapter = this.townListAdapter
 
         dismissIcon.setOnClickListener { view -> this.dismiss() }
-        townListView.layoutManager = LinearLayoutManager(context)
+        townListView.layoutManager = androidx.recyclerview.widget.LinearLayoutManager(context)
     }
 
     override fun onTownClick(town: Town) {

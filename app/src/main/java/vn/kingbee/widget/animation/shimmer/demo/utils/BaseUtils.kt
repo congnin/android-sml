@@ -2,10 +2,10 @@ package vn.kingbee.widget.animation.shimmer.demo.utils
 
 import android.content.Context
 import vn.kingbee.widget.animation.shimmer.demo.models.ItemCard
-import android.support.annotation.StringRes
+import androidx.annotation.StringRes
 import android.content.res.Resources
-import android.support.v7.widget.GridLayoutManager
-import android.support.v7.widget.LinearLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import vn.kingbee.widget.R
 import vn.kingbee.widget.animation.shimmer.demo.utils.view.CardPaddingItemDecoration
 import java.util.*
@@ -125,21 +125,21 @@ class BaseUtils {
                     demoConfiguration = DemoConfiguration()
                     demoConfiguration.styleResource = R.style.AppTheme
                     demoConfiguration.layoutResource = R.layout.activity_list
-                    demoConfiguration.layoutManager = LinearLayoutManager(context)
+                    demoConfiguration.layoutManager = androidx.recyclerview.widget.LinearLayoutManager(context)
                     demoConfiguration.titleResource = R.string.ab_list_title
                 }
                 TYPE_GRID -> {
                     demoConfiguration = DemoConfiguration()
                     demoConfiguration.styleResource = R.style.AppThemeGrid
                     demoConfiguration.layoutResource = R.layout.activity_grid
-                    demoConfiguration.layoutManager = GridLayoutManager(context, 2)
+                    demoConfiguration.layoutManager = androidx.recyclerview.widget.GridLayoutManager(context, 2)
                     demoConfiguration.titleResource = R.string.ab_grid_title
                 }
                 TYPE_SECOND_LIST -> {
                     demoConfiguration = DemoConfiguration()
                     demoConfiguration.styleResource = R.style.AppTheme
                     demoConfiguration.layoutResource = R.layout.activity_second_list
-                    demoConfiguration.layoutManager = LinearLayoutManager(context)
+                    demoConfiguration.layoutManager = androidx.recyclerview.widget.LinearLayoutManager(context)
                     demoConfiguration.titleResource = R.string.ab_list_title
                     demoConfiguration.itemDecoration = CardPaddingItemDecoration(context)
                 }
@@ -147,7 +147,7 @@ class BaseUtils {
                     demoConfiguration = DemoConfiguration()
                     demoConfiguration.styleResource = R.style.AppThemeGrid
                     demoConfiguration.layoutResource = R.layout.activity_second_grid
-                    demoConfiguration.layoutManager = GridLayoutManager(context, 2)
+                    demoConfiguration.layoutManager = androidx.recyclerview.widget.GridLayoutManager(context, 2)
                     demoConfiguration.titleResource = R.string.ab_grid_title
                 }
                 else -> demoConfiguration = null

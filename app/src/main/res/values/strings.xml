@@ -29,4 +29,8 @@
     <string name="sync">Sync</string>
     <string name="alarm">Alarm</string>
     <string name="camera">Camera</string>
+
+    <string name="counter_mode">Counter Mode:</string>
+    <string name="counter_mode_increase">Increase</string>
+    <string name="counter_mode_decrease">Decrease</string>
 </resources>

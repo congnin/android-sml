@@ -1,6 +1,6 @@
 package vn.kingbee.widget.toasty
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.text.Spannable
 import android.graphics.Typeface.BOLD_ITALIC
 import android.text.style.StyleSpan

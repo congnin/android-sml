@@ -1,13 +1,13 @@
 package vn.kingbee.widget.animation.shimmer.demo.adapters
 
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.ViewGroup
 import vn.kingbee.widget.animation.shimmer.demo.models.ItemCard
 import vn.kingbee.widget.animation.shimmer.demo.utils.BaseUtils
 import vn.kingbee.widget.animation.shimmer.demo.viewholders.ItemHolder
 
 
-class CardAdapter : RecyclerView.Adapter<ItemHolder>() {
+class CardAdapter : androidx.recyclerview.widget.RecyclerView.Adapter<ItemHolder>() {
     private var mCards: List<ItemCard> = ArrayList()
     private var mType = BaseUtils.TYPE_LIST
 

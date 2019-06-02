@@ -1,7 +1,7 @@
 package vn.kingbee.widget.notification
 
 import android.os.Handler
-import android.support.annotation.DrawableRes
+import androidx.annotation.DrawableRes
 import android.view.View
 import android.view.Window
 import vn.kingbee.widget.R

@@ -1,14 +1,14 @@
 package vn.kingbee.widget.recyclerview.base
 
 import android.content.Context
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.View
 import butterknife.ButterKnife
 import android.view.LayoutInflater
 import android.view.ViewGroup
 
 abstract class BaseRecyclerViewAdapter<T> :
-    RecyclerView.Adapter<BaseRecyclerViewAdapter.GenericViewHolder> {
+    androidx.recyclerview.widget.RecyclerView.Adapter<BaseRecyclerViewAdapter.GenericViewHolder> {
 
     protected var inflater: LayoutInflater? = null
 
@@ -176,7 +176,7 @@ abstract class BaseRecyclerViewAdapter<T> :
         }
     }
 
-    abstract class GenericViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    abstract class GenericViewHolder(itemView: View) : androidx.recyclerview.widget.RecyclerView.ViewHolder(itemView) {
         init {
             ButterKnife.bind(this@GenericViewHolder, itemView)
         }

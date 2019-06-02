@@ -1,11 +1,11 @@
 package vn.kingbee.widget.animation.shimmer.recyclerview
 
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.ViewGroup
 
-class ShimmerAdapter : RecyclerView.Adapter<ShimmerViewHolder>() {
+class ShimmerAdapter : androidx.recyclerview.widget.RecyclerView.Adapter<ShimmerViewHolder>() {
     private var mItemCount: Int = 0
     private var mLayoutReference: Int = 0
     private var mShimmerAngle: Int = 0

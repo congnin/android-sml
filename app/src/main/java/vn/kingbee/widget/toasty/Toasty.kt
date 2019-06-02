@@ -7,7 +7,7 @@ import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.annotation.SuppressLint
 import android.content.Context
-import android.support.annotation.*
+import androidx.annotation.*
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView

@@ -2,7 +2,7 @@ package vn.kingbee.widget.edittext.material
 
 import android.content.Context
 import vn.kingbee.widget.edittext.material.base.BaseMaterialEditText
-import android.support.design.widget.TextInputLayout
+import com.google.android.material.textfield.TextInputLayout
 import android.util.AttributeSet
 import android.view.View
 import android.widget.EditText

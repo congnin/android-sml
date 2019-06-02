@@ -1,7 +1,7 @@
 package vn.kingbee.widget.spinner
 
 import android.content.Context
-import android.support.v7.widget.ListPopupWindow
+import androidx.appcompat.widget.ListPopupWindow
 import android.util.AttributeSet
 import android.view.Gravity
 import android.view.View
@@ -9,8 +9,8 @@ import android.widget.LinearLayout
 import android.widget.ListAdapter
 import android.widget.TextView
 import vn.kingbee.widget.R
-import android.support.v4.view.ViewCompat
-import android.support.v4.content.ContextCompat
+import androidx.core.view.ViewCompat
+import androidx.core.content.ContextCompat
 import vn.kingbee.utils.StringUtils
 import android.widget.AdapterView
 import vn.kingbee.utils.CommonUtils

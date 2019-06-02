@@ -1,6 +1,6 @@
 package vn.kingbee.widget.animation.shimmer.demo.viewholders
 
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import vn.kingbee.widget.animation.shimmer.demo.models.ItemCard
 import android.view.LayoutInflater
 import android.view.View
@@ -14,7 +14,7 @@ import vn.kingbee.widget.animation.shimmer.demo.utils.BaseUtils.Companion.TYPE_L
 import vn.kingbee.widget.animation.shimmer.demo.utils.BaseUtils.Companion.TYPE_SECOND_GRID
 import vn.kingbee.widget.animation.shimmer.demo.utils.BaseUtils.Companion.TYPE_SECOND_LIST
 
-class ItemHolder : RecyclerView.ViewHolder {
+class ItemHolder : androidx.recyclerview.widget.RecyclerView.ViewHolder {
     private var mTitleView: TextView
     private var mDescView: TextView
     private var mThumbnailView: ImageView

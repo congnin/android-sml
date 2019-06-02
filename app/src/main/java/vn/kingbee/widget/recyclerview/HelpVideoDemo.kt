@@ -1,8 +1,8 @@
 package vn.kingbee.widget.recyclerview
 
 import android.os.Bundle
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import android.widget.TextView
 import android.widget.Toast
 import io.reactivex.Observable
@@ -20,7 +20,7 @@ class HelpVideoDemo : BaseActivity(), HelpVideoAdapter.HelpVideoClickListener {
     }
 
     lateinit var mTvTitle: TextView
-    lateinit var helpVideoList: RecyclerView
+    lateinit var helpVideoList: androidx.recyclerview.widget.RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,7 +28,7 @@ class HelpVideoDemo : BaseActivity(), HelpVideoAdapter.HelpVideoClickListener {
 
         helpVideoList = findViewById(R.id.help_video_list)
         mTvTitle = findViewById(R.id.help_video_title)
-        helpVideoList.layoutManager = LinearLayoutManager(this)
+        helpVideoList.layoutManager = androidx.recyclerview.widget.LinearLayoutManager(this)
 
         showProgressDialog()
         getHelpVideoFromResource().subscribe({ helpInfo -> updateVideoList(helpInfo) }, { e ->

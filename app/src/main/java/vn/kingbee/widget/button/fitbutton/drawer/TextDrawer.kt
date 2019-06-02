@@ -1,7 +1,7 @@
 package vn.kingbee.widget.button.fitbutton.drawer
 
 import android.graphics.Typeface
-import android.support.v4.content.res.ResourcesCompat
+import androidx.core.content.res.ResourcesCompat
 import android.text.TextUtils
 import android.view.View
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT

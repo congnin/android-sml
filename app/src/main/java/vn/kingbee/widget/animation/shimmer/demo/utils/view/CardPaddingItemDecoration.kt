@@ -2,12 +2,12 @@ package vn.kingbee.widget.animation.shimmer.demo.utils.view
 
 import android.content.Context
 import android.graphics.Rect
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.util.TypedValue
 import android.view.View
 
 
-class CardPaddingItemDecoration : RecyclerView.ItemDecoration {
+class CardPaddingItemDecoration : androidx.recyclerview.widget.RecyclerView.ItemDecoration {
     private val paddingBetweenItems: Int
 
     constructor(context: Context) {
@@ -18,8 +18,8 @@ class CardPaddingItemDecoration : RecyclerView.ItemDecoration {
 
     override fun getItemOffsets(outRect: Rect,
                                 view: View,
-                                parent: RecyclerView,
-                                state: RecyclerView.State) {
+                                parent: androidx.recyclerview.widget.RecyclerView,
+                                state: androidx.recyclerview.widget.RecyclerView.State) {
         outRect.set(0, 0, 0, paddingBetweenItems)
     }
 }

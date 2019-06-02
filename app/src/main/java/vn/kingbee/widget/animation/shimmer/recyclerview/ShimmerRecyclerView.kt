@@ -1,21 +1,21 @@
 package vn.kingbee.widget.animation.shimmer.recyclerview
 
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.os.Build
-import android.support.v7.widget.GridLayoutManager
-import android.support.v7.widget.LinearLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import vn.kingbee.widget.R
 
 //https://github.com/sharish/ShimmerRecyclerView
-class ShimmerRecyclerView : RecyclerView {
+class ShimmerRecyclerView : androidx.recyclerview.widget.RecyclerView {
     enum class LayoutMangerType {
         LINEAR_VERTICAL, LINEAR_HORIZONTAL, GRID
     }
 
-    private var mActualAdapter: RecyclerView.Adapter<*>? = null
+    private var mActualAdapter: androidx.recyclerview.widget.RecyclerView.Adapter<*>? = null
     private var mShimmerAdapter: ShimmerAdapter? = null
 
     private var mShimmerLayoutManager: LayoutManager? = null
@@ -183,7 +183,7 @@ class ShimmerRecyclerView : RecyclerView {
         super.setLayoutManager(manager)
     }
 
-    override fun setAdapter(adapter: RecyclerView.Adapter<*>?) {
+    override fun setAdapter(adapter: androidx.recyclerview.widget.RecyclerView.Adapter<*>?) {
         if (adapter == null) {
             mActualAdapter = null
         } else if (adapter !== mShimmerAdapter) {
@@ -198,11 +198,11 @@ class ShimmerRecyclerView : RecyclerView {
      *
      * @return The actual adapter
      */
-    fun getActualAdapter(): RecyclerView.Adapter<*>? {
+    fun getActualAdapter(): androidx.recyclerview.widget.RecyclerView.Adapter<*>? {
         return mActualAdapter
     }
 
-    fun getShimmerAdapter(): RecyclerView.Adapter<*>? {
+    fun getShimmerAdapter(): androidx.recyclerview.widget.RecyclerView.Adapter<*>? {
         return mShimmerAdapter
     }
 
@@ -224,7 +224,7 @@ class ShimmerRecyclerView : RecyclerView {
     private fun initShimmerManager() {
         when (mLayoutMangerType) {
             LayoutMangerType.LINEAR_VERTICAL -> mShimmerLayoutManager =
-                object : LinearLayoutManager(
+                object : androidx.recyclerview.widget.LinearLayoutManager(
                     context
                 ) {
                     override fun canScrollVertically(): Boolean {
@@ -232,15 +232,15 @@ class ShimmerRecyclerView : RecyclerView {
                     }
                 }
             LayoutMangerType.LINEAR_HORIZONTAL -> mShimmerLayoutManager =
-                object : LinearLayoutManager(
-                    context, LinearLayoutManager.HORIZONTAL, false
+                object : androidx.recyclerview.widget.LinearLayoutManager(
+                    context, androidx.recyclerview.widget.LinearLayoutManager.HORIZONTAL, false
                 ) {
                     override fun canScrollHorizontally(): Boolean {
                         return mCanScroll
                     }
                 }
             LayoutMangerType.GRID -> mShimmerLayoutManager =
-                object : GridLayoutManager(
+                object : androidx.recyclerview.widget.GridLayoutManager(
                     context, mGridCount
                 ) {
                     override fun canScrollVertically(): Boolean {

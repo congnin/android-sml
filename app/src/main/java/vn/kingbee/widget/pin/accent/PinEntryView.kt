@@ -2,7 +2,7 @@ package vn.kingbee.widget.pin.accent
 
 import android.content.Context
 import android.os.Build
-import android.support.v4.content.ContextCompat
+import androidx.core.content.ContextCompat
 import android.text.InputType
 import android.util.AttributeSet
 import android.util.TypedValue

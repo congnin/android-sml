@@ -1,7 +1,7 @@
 package vn.kingbee.widget.animation.shimmer.recyclerview
 
 import android.annotation.SuppressLint
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.os.Build
 import android.graphics.drawable.Drawable
 import vn.kingbee.widget.animation.shimmer.ShimmerLayout
@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import android.view.LayoutInflater
 import vn.kingbee.widget.R
 
-class ShimmerViewHolder : RecyclerView.ViewHolder {
+class ShimmerViewHolder : androidx.recyclerview.widget.RecyclerView.ViewHolder {
     private var mShimmerLayout: ShimmerLayout
 
     constructor(inflater: LayoutInflater, parent: ViewGroup, innerViewResId: Int)

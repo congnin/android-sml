@@ -3,8 +3,8 @@ package vn.kingbee.widget.imageview
 import android.animation.ArgbEvaluator
 import android.content.Context
 import android.graphics.*
-import android.support.annotation.FloatRange
-import android.support.v7.widget.AppCompatImageView
+import androidx.annotation.FloatRange
+import androidx.appcompat.widget.AppCompatImageView
 import android.util.AttributeSet
 import android.view.View
 import android.os.Parcel

@@ -3,21 +3,20 @@ package vn.kingbee.widget.navigationview
 import android.content.Context
 import android.graphics.drawable.ColorDrawable
 import android.os.Build
-import android.support.design.internal.ScrimInsetsFrameLayout
-import android.support.design.widget.NavigationView
-import android.support.v4.view.ViewCompat
+import com.google.android.material.navigation.NavigationView
+import androidx.core.view.ViewCompat
 import android.util.AttributeSet
 import android.view.View
 import android.text.TextUtils
 import android.widget.TextView
 import android.view.Gravity
 import android.view.ViewGroup
-import android.support.v4.widget.DrawerLayout
 import android.annotation.SuppressLint
 import android.graphics.*
-import android.support.design.internal.NavigationMenuView
-import android.support.annotation.RequiresApi
+import androidx.annotation.RequiresApi
 import android.view.ViewOutlineProvider
+import com.google.android.material.internal.NavigationMenuView
+import com.google.android.material.internal.ScrimInsetsFrameLayout
 import vn.kingbee.utils.CommonUtils
 
 @SuppressLint("ObsoleteSdkInt")
@@ -77,7 +76,7 @@ class ArcNavigationView : NavigationView {
         arcPath = Path()
 
         val arcWidth = settings.arcWidth
-        val layoutParams = layoutParams as DrawerLayout.LayoutParams
+        val layoutParams = layoutParams as androidx.drawerlayout.widget.DrawerLayout.LayoutParams
         if (settings.cropInside) {
             if (layoutParams.gravity == Gravity.START || layoutParams.gravity == Gravity.LEFT) {
                 arcPath.moveTo(width!!.toFloat(), 0F)
@@ -194,7 +193,7 @@ class ArcNavigationView : NavigationView {
     private fun adjustChildViews(container: ViewGroup) {
         val containerChildCount = container.childCount
         val pathMeasure = PathMeasure(arcPath, false)
-        val layoutParams = layoutParams as DrawerLayout.LayoutParams
+        val layoutParams = layoutParams as androidx.drawerlayout.widget.DrawerLayout.LayoutParams
 
         for (i in 0 until containerChildCount) {
             val child = container.getChildAt(i)

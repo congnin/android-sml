@@ -1,7 +1,7 @@
 package vn.kingbee.widget.calendar.datepicker
 
 import android.app.Dialog
-import android.support.v4.app.DialogFragment
+import androidx.fragment.app.DialogFragment
 import butterknife.Unbinder
 import android.widget.Button
 import butterknife.BindView
@@ -18,7 +18,7 @@ import io.reactivex.Observable
 import java.util.*
 import butterknife.OnClick
 
-class DatePickerFragment : DialogFragment() {
+class DatePickerFragment : androidx.fragment.app.DialogFragment() {
     @BindView(R.id.date_picker)
     lateinit var datePicker: DatePicker
 

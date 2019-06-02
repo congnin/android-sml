@@ -4,7 +4,7 @@ import android.content.Context
 import android.os.Bundle
 import android.os.SystemClock
 import android.os.Vibrator
-import android.support.v4.app.DialogFragment
+import androidx.fragment.app.DialogFragment
 import android.text.format.DateUtils
 import android.view.*
 import android.view.animation.AlphaAnimation
@@ -17,7 +17,7 @@ import java.text.DateFormatSymbols
 import java.text.SimpleDateFormat
 import java.util.*
 
-class DatePickerDialog : DialogFragment(), View.OnClickListener, DatePickerController {
+class DatePickerDialog : androidx.fragment.app.DialogFragment(), View.OnClickListener, DatePickerController {
 
     private var mMaxYear = MAX_YEAR
     private var mMinYear = MIN_YEAR

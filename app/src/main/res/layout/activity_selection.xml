@@ -114,5 +114,11 @@
             android:onClick="startSwitchIconViewDemoActivity"
             android:text="Switch Icon"
             android:textColor="@android:color/black" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startCounterFabActivity"
+            android:text="Switch Icon"
+            android:textColor="@android:color/black" />
     </LinearLayout>
 </ScrollView>

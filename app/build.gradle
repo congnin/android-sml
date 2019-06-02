@@ -78,6 +78,7 @@ dependencies {
     implementation presentationDependencies.supportAnnotations
     implementation presentationDependencies.multidex
     implementation presentationDependencies.constraintLayout
+    implementation presentationDependencies.ktxCore
 
     /* Other library */
     compileOnly presentationDependencies.javaxAnnotation

@@ -3,8 +3,8 @@ package vn.kingbee.widget.notification
 import android.app.Activity
 import android.content.Context
 import android.os.Handler
-import android.support.annotation.LayoutRes
-import android.support.annotation.StyleRes
+import androidx.annotation.LayoutRes
+import androidx.annotation.StyleRes
 import android.view.*
 import android.view.animation.AnimationUtils
 import android.widget.FrameLayout

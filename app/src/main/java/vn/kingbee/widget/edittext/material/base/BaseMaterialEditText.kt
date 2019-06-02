@@ -7,12 +7,12 @@ import android.view.View
 import android.widget.FrameLayout
 import vn.kingbee.widget.edittext.material.validation.BaseValidationRule
 import android.view.LayoutInflater
-import android.support.v4.content.ContextCompat
+import androidx.core.content.ContextCompat
 import android.view.inputmethod.EditorInfo
 import android.text.method.DigitsKeyListener
 import android.util.TypedValue
-import android.support.annotation.StringRes
-import android.support.design.widget.TextInputLayout
+import androidx.annotation.StringRes
+import com.google.android.material.textfield.TextInputLayout
 import android.widget.EditText
 import android.app.Activity
 import vn.kingbee.utils.CommonUtils

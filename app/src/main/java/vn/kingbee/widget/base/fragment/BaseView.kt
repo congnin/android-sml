@@ -1,6 +1,6 @@
 package vn.kingbee.widget.base.fragment
 
-import android.support.annotation.StringRes
+import androidx.annotation.StringRes
 
 interface BaseView : CommonView {
     fun viewLoaded()

@@ -1,11 +1,12 @@
 package vn.kingbee.widget
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import vn.kingbee.rxjava.RxJava2SelectionActivity
 import vn.kingbee.widget.animation.demo.ShimmerActivityDemo
+import vn.kingbee.widget.button.counterfab.CounterFabExample
 import vn.kingbee.widget.button.demo.ButtonDemoActivity
 import vn.kingbee.widget.calendar.demo.DatePickerDemoActivity
 import vn.kingbee.widget.camera.demo.CameraDemo1Activity
@@ -84,5 +85,8 @@ class SelectionActivity : AppCompatActivity() {
     }
     fun startSwitchIconViewDemoActivity(v: View) {
         startActivity(Intent(this@SelectionActivity, SwitchIconDemoActivity::class.java))
+    }
+    fun startCounterFabActivity(v: View) {
+        startActivity(Intent(this@SelectionActivity, CounterFabExample::class.java))
     }
 }

@@ -2,9 +2,9 @@ package vn.kingbee.widget.animation.demo
 
 import vn.kingbee.widget.animation.shimmer.demo.utils.BaseUtils
 import vn.kingbee.widget.animation.shimmer.demo.adapters.CardAdapter
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import vn.kingbee.widget.BaseActivity
 import vn.kingbee.widget.R
 import vn.kingbee.widget.animation.shimmer.recyclerview.ShimmerRecyclerView
@@ -23,7 +23,7 @@ class DemoTypeActivity : AppCompatActivity() {
 
         val type = getType()
 
-        val layoutManager: RecyclerView.LayoutManager?
+        val layoutManager: androidx.recyclerview.widget.RecyclerView.LayoutManager?
 
         val demoConfiguration = BaseUtils.getDemoConfiguration(type, this)
         setTheme(demoConfiguration!!.styleResource)

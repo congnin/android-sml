@@ -3,7 +3,7 @@ package vn.kingbee.widget.base.fragment
 import android.app.Dialog
 import android.os.Bundle
 import android.os.Handler
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import android.view.View
 import butterknife.ButterKnife
 import butterknife.Unbinder
@@ -14,11 +14,11 @@ import android.view.ViewGroup
 import android.view.LayoutInflater
 import android.widget.Toast
 import vn.kingbee.widget.R
-import android.support.annotation.LayoutRes
+import androidx.annotation.LayoutRes
 import vn.kingbee.utils.CommonUtils
 import vn.kingbee.widget.base.presenter.BasePresenter
 
-abstract class BaseFragmentImpl : Fragment(), BaseView, DialogClickedListener {
+abstract class BaseFragmentImpl : androidx.fragment.app.Fragment(), BaseView, DialogClickedListener {
 
     protected lateinit var handler: Handler
     protected var loadingDialog: LoadingDialogMaterial? = null
@@ -30,7 +30,7 @@ abstract class BaseFragmentImpl : Fragment(), BaseView, DialogClickedListener {
 
     fun getTagFromClassName(): String? = this.javaClass.simpleName
 
-    fun getInstance(): Fragment = this
+    fun getInstance(): androidx.fragment.app.Fragment = this
 
     fun needIdleTimeout(): Boolean = true
 
