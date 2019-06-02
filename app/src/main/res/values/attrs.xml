@@ -115,4 +115,12 @@
         <attr name="shimmer_demo_mask_width" format="float|reference" />
         <attr name="shimmer_demo_reverse_animation" format="boolean|reference" />
     </declare-styleable>
+
+    <declare-styleable name="ArcDrawer">
+        <attr name="arc_width" format="dimension"/>
+        <attr name="arc_cropDirection" format="enum">
+            <enum name="cropInside" value="0"/>
+            <enum name="cropOutside" value="1"/>
+        </attr>
+    </declare-styleable>
 </resources>

@@ -95,6 +95,11 @@ class CommonUtils {
             ).toInt()
         }
 
+        fun dpToPx(context: Context, dp: Int): Float {
+            val r = context.resources
+            return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp.toFloat(), r.displayMetrics)
+        }
+
         fun isEmpty(listData: List<*>?): Boolean {
             return listData == null || listData.isEmpty()
         }

@@ -40,6 +40,9 @@
         <activity android:name=".signature.SignatureDemoActivity" />
         <activity android:name=".toc.TOCDemo" />
         <activity android:name=".toasty.ToastyDemoActivity" />
+        <activity
+            android:name=".navigationview.ArcNavigationViewDemoActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <activity android:name="vn.kingbee.rxjava.RxJava2SelectionActivity" />
         <activity android:name="vn.kingbee.rxjava.OperatorsActivity" />

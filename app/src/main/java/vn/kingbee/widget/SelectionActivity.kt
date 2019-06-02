@@ -11,6 +11,7 @@ import vn.kingbee.widget.calendar.demo.DatePickerDemoActivity
 import vn.kingbee.widget.camera.demo.CameraDemo1Activity
 import vn.kingbee.widget.edittext.FormatEditTextActivity
 import vn.kingbee.widget.keyboard.NumpadActivity
+import vn.kingbee.widget.navigationview.ArcNavigationViewDemoActivity
 import vn.kingbee.widget.pin.PinActivity
 import vn.kingbee.widget.progress.CircleProcessBarActivity
 import vn.kingbee.widget.recyclerview.HelpVideoDemo
@@ -75,5 +76,9 @@ class SelectionActivity : AppCompatActivity() {
 
     fun startToastyDemoActivity(v: View) {
         startActivity(Intent(this@SelectionActivity, ToastyDemoActivity::class.java))
+    }
+
+    fun startArcNavigationViewDemoActivity(v: View) {
+        startActivity(Intent(this@SelectionActivity, ArcNavigationViewDemoActivity::class.java))
     }
 }
