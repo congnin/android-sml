@@ -13,6 +13,10 @@ import vn.kingbee.widget.R
 import vn.kingbee.widget.button.fitbutton.FitButton
 import vn.kingbee.widget.textview.showmore.ShowMoreTextView
 import java.util.ArrayList
+import org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+import vn.kingbee.widget.BuildConfig
+import vn.kingbee.widget.textview.fading.FadingTextView
+import java.util.concurrent.TimeUnit
 
 class FormatEditTextActivity : BaseActivity() {
     lateinit var edtValue1: EditText
@@ -27,6 +31,7 @@ class FormatEditTextActivity : BaseActivity() {
 
     var lstEditTextParts: MutableList<EditText> = ArrayList()
     var lstEditTextMaxLength: MutableList<Int> = ArrayList()
+    var jokes = intArrayOf(R.array.examples_1, R.array.examples_2, R.array.examples_3)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -61,6 +66,32 @@ class FormatEditTextActivity : BaseActivity() {
         lstEditTextMaxLength.add(MAX_LENGTH_TEXT_3)
 
         tvMore = findViewById(R.id.text_view_show_more)
+
+
+        //FadingTextView related code
+        val fadingTextView = findViewById<FadingTextView>(R.id.fadingTextView)
+        fadingTextView.setTimeout(2, TimeUnit.SECONDS)
+        //Setting up the timeout seek bar
+        val seekBar = findViewById<DiscreteSeekBar>(R.id.timeout_bar)
+        seekBar.setOnProgressChangeListener(object : DiscreteSeekBar.OnProgressChangeListener {
+            override fun onProgressChanged(seekBar: DiscreteSeekBar, value: Int, fromUser: Boolean) {
+                fadingTextView.setTimeout(value.toLong(), TimeUnit.SECONDS)
+                fadingTextView.forceRefresh()
+            }
+
+            override fun onStartTrackingTouch(seekBar: DiscreteSeekBar) {
+
+            }
+
+            override fun onStopTrackingTouch(seekBar: DiscreteSeekBar) {
+
+            }
+        })
+
+        //Show jokes if the app is in production
+        if (BuildConfig.DEBUG) {
+//            fadingTextView.setTexts(jokes[(0..2).random()])
+        }
     }
 
     private fun addEvents() {
