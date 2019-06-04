@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">android-widget</string>
     <string name="SAMPLE_TEXT">This feature is under construction.</string>
     <string name="TEXT_UNDER_HANDLE">We are currently experiencing technical difficulties. We apologise for the inconvenience.\nError code = %s</string>
@@ -62,4 +62,10 @@
         <item>Kanga who?</item>
         <item>Actually, it’s kangaroo!</item>
     </string-array>
+
+    <string name="OK">OK</string>
+    <string name="cancel" tools:ignore="ButtonCase">CANCEL</string>
+
+    <string name="otp_input_error_max_invalid_dialog_title">Limited times\ntry input OTP there 3 times.</string>
+    <string name="otp_input_error_max_invalid_dialog_message">Unfortunely you input wrong reach max times and be block now <b>Call BEEBank 15000 30</b>.</string>
 </resources>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dialog_2nd"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginStart="50dp"
+    android:layout_marginEnd="50dp"
+    android:background="@drawable/dialog_border_square"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    tools:ignore="SpUsage">
+
+    <vn.kingbee.widget.textview.SATextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:breakStrategy="simple"
+        style="@style/Font.RobotoMedium"
+        android:textColor="@color/black_087"
+        android:textSize="@dimen/text_size_20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <vn.kingbee.widget.textview.SATextView
+        android:id="@+id/tvMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="64dp"
+        android:breakStrategy="simple"
+        android:textColor="@color/black_054"
+        android:textSize="@dimen/text_size_15"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <vn.kingbee.widget.textview.SATextView
+        android:id="@+id/tvCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="64dp"
+        android:textColor="@color/black_054"
+        android:textSize="@dimen/text_size_15"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/tvMessage" />
+
+    <Button
+        android:id="@+id/btn_cancel_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="10dp"
+        android:background="@null"
+        style="@style/Font.RobotoMedium"
+        android:gravity="center"
+        android:text="@string/cancel"
+        android:textColor="@color/c_red"
+        android:textSize="@dimen/text_size_16"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_ok_dialog"
+        app:layout_constraintTop_toBottomOf="@+id/tvCode" />
+
+    <Button
+        android:id="@+id/btn_ok_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="8dp"
+        android:background="@null"
+        style="@style/Font.RobotoMedium"
+        android:gravity="center"
+        android:text="@string/OK"
+        android:textColor="@color/cbsa_color_blue"
+        android:textSize="@dimen/text_size_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCode" />
+</androidx.constraintlayout.widget.ConstraintLayout>

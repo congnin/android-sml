@@ -1,5 +1,6 @@
 package vn.kingbee.widget.edittext
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -15,6 +16,7 @@ import vn.kingbee.widget.textview.showmore.ShowMoreTextView
 import java.util.ArrayList
 import org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
 import vn.kingbee.widget.BuildConfig
+import vn.kingbee.widget.dialog.common.CommonDialog
 import vn.kingbee.widget.textview.fading.FadingTextView
 import java.util.concurrent.TimeUnit
 
@@ -124,7 +126,21 @@ class FormatEditTextActivity : BaseActivity() {
             }
         }
 
-        btValidation.setOnClickListener { }
+        btValidation.setOnClickListener {
+            CommonDialog(this,
+                R.string.otp_input_error_max_invalid_dialog_title,
+                R.string.otp_input_error_max_invalid_dialog_message)
+                .setCode("4F35#")
+                .showNegativeButton()
+                .setNegativeButtonString(R.string.cancel)
+                .setClickListener(object : CommonDialog.ClickListener {
+                    override fun onClickPositive() {
+                        super.onClickPositive()
+                        finish()
+                    }
+                })
+                .showDialog()
+        }
 
         tvMore.text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
 //        tvMore.setShowingLine(2);

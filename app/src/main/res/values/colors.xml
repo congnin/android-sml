@@ -187,4 +187,7 @@
     <color name="successColor">#388E3C</color>
     <color name="warningColor">#FFA900</color>
     <color name="normalColor">#353A3E</color>
+
+    <color name="black_087">#de000000</color>
+    <color name="black_054">#8a000000</color>
 </resources>
