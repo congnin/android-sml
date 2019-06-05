@@ -68,4 +68,6 @@
 
     <string name="otp_input_error_max_invalid_dialog_title">Limited times\ntry input OTP there 3 times.</string>
     <string name="otp_input_error_max_invalid_dialog_message">Unfortunely you input wrong reach max times and be block now <b>Call BEEBank 15000 30</b>.</string>
+
+    <string name="cd_item_delete_button">Delete item</string>
 </resources>

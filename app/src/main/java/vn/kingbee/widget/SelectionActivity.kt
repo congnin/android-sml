@@ -17,6 +17,7 @@ import vn.kingbee.widget.navigationview.ArcNavigationViewDemoActivity
 import vn.kingbee.widget.pin.PinActivity
 import vn.kingbee.widget.progress.CircleProcessBarActivity
 import vn.kingbee.widget.recyclerview.HelpVideoDemo
+import vn.kingbee.widget.recyclerview.alphabet.demo.IndexFastScrollExample
 import vn.kingbee.widget.signature.SignatureDemoActivity
 import vn.kingbee.widget.spinner.demo.SpinnerDemoActivity
 import vn.kingbee.widget.toasty.ToastyDemoActivity
@@ -88,5 +89,8 @@ class SelectionActivity : AppCompatActivity() {
     }
     fun startCounterFabActivity(v: View) {
         startActivity(Intent(this@SelectionActivity, CounterFabExample::class.java))
+    }
+    fun startAlphabetActivity(v: View) {
+        startActivity(Intent(this@SelectionActivity, IndexFastScrollExample::class.java))
     }
 }
