@@ -12,7 +12,7 @@ import androidx.annotation.ColorInt
 import androidx.recyclerview.widget.RecyclerView
 import vn.kingbee.widget.R
 
-
+//https://github.com/myinnos/AlphabetIndex-Fast-Scroll-RecyclerView
 class IndexFastScrollRecyclerView : RecyclerView {
 
     private var mScroller: IndexFastScrollRecyclerSection? = null
