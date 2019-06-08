@@ -48,6 +48,10 @@
             android:name=".button.counterfab.CounterFabExample"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".recyclerview.alphabet.demo.IndexFastScrollExample" />
+        <activity android:name=".constraintlayout.ConstraintSetExampleActivity" />
+        <activity
+            android:name=".constraintlayout.MainConstraintActivity"
+            android:configChanges="orientation|screenSize" />
 
         <activity android:name="vn.kingbee.rxjava.RxJava2SelectionActivity" />
         <activity android:name="vn.kingbee.rxjava.OperatorsActivity" />
