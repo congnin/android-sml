@@ -30,6 +30,13 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="startMotionLayout"
+            android:text="Motion Layout"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:onClick="startCircleProcessBarActivity"
             android:text="Circle Process Bar"
             android:textColor="@android:color/black" />

@@ -10,10 +10,11 @@ import vn.kingbee.widget.button.counterfab.CounterFabExample
 import vn.kingbee.widget.button.demo.ButtonDemoActivity
 import vn.kingbee.widget.calendar.demo.DatePickerDemoActivity
 import vn.kingbee.widget.camera.demo.CameraDemo1Activity
-import vn.kingbee.widget.constraintlayout.MainConstraintActivity
+import vn.kingbee.widget.layout.constraintlayout.MainConstraintActivity
 import vn.kingbee.widget.edittext.FormatEditTextActivity
 import vn.kingbee.widget.imageview.SwitchIconDemoActivity
 import vn.kingbee.widget.keyboard.NumpadActivity
+import vn.kingbee.widget.layout.motion.MainMotionActivity
 import vn.kingbee.widget.navigationview.ArcNavigationViewDemoActivity
 import vn.kingbee.widget.pin.PinActivity
 import vn.kingbee.widget.progress.CircleProcessBarActivity
@@ -100,5 +101,9 @@ class SelectionActivity : AppCompatActivity() {
 
     fun startConstraintActivity(v: View) {
         startActivity(Intent(this@SelectionActivity, MainConstraintActivity::class.java))
+    }
+
+    fun startMotionLayout(v: View) {
+        startActivity(Intent(this@SelectionActivity, MainMotionActivity::class.java))
     }
 }

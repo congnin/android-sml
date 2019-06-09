@@ -48,10 +48,17 @@
             android:name=".button.counterfab.CounterFabExample"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".recyclerview.alphabet.demo.IndexFastScrollExample" />
-        <activity android:name=".constraintlayout.ConstraintSetExampleActivity" />
+        <activity android:name="vn.kingbee.widget.layout.constraintlayout.ConstraintSetExampleActivity" />
         <activity
-            android:name=".constraintlayout.MainConstraintActivity"
+            android:name="vn.kingbee.widget.layout.constraintlayout.MainConstraintActivity"
             android:configChanges="orientation|screenSize" />
+        <activity android:name=".layout.motion.MainMotionActivity" />
+        <activity android:name=".layout.motion.DemoActivity" />
+        <activity android:name=".layout.motion.viewpagerdemo.ViewPagerActivity" />
+        <activity android:name=".layout.motion.viewpagerdemo.ViewPagerActivity2" />
+        <activity android:name=".layout.motion.fragmentsdemo.FragmentExampleActivity" />
+        <activity android:name=".layout.motion.fragmentsdemo.FragmentExample2Activity" />
+        <activity android:name=".layout.motion.youtubedemo.YouTubeDemoActivity" />
 
         <activity android:name="vn.kingbee.rxjava.RxJava2SelectionActivity" />
         <activity android:name="vn.kingbee.rxjava.OperatorsActivity" />

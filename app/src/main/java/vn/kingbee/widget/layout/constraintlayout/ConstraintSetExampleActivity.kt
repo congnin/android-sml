@@ -1,4 +1,4 @@
-package vn.kingbee.widget.constraintlayout
+package vn.kingbee.widget.layout.constraintlayout
 
 import android.os.Bundle
 import android.transition.TransitionManager
