@@ -77,23 +77,23 @@ class FragmentExample2Activity: AppCompatActivity(), View.OnClickListener, Motio
     }
 
     override fun onClick(view: View?) {
-        if (view?.id == R.id.toggle) {
-            val transaction = supportFragmentManager.beginTransaction()
-            fragment = if (fragment == null || fragment is MainFragment) {
-                last = 1f
-                transaction
-                    .setCustomAnimations(R.animator.show, 0)
-                SecondFragment.newInstance()
-            } else {
-                transaction
-                    .setCustomAnimations(0, R.animator.hide)
-                MainFragment.newInstance()
-            }.also {
-                transaction
-                    .replace(R.id.container, it)
-                    .commitNow()
-            }
-        }
+//        if (view?.id == R.id.toggle) {
+//            val transaction = supportFragmentManager.beginTransaction()
+//            fragment = if (fragment == null || fragment is MainFragment) {
+//                last = 1f
+//                transaction
+//                    .setCustomAnimations(R.animator.show, 0)
+//                SecondFragment.newInstance()
+//            } else {
+//                transaction
+//                    .setCustomAnimations(0, R.animator.hide)
+//                MainFragment.newInstance()
+//            }.also {
+//                transaction
+//                    .replace(R.id.container, it)
+//                    .commitNow()
+//            }
+//        }
     }
 
 }

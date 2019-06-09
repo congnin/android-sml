@@ -14,6 +14,7 @@ import vn.kingbee.widget.layout.motion.viewpagerdemo.ViewPagerActivity
 import vn.kingbee.widget.layout.motion.viewpagerdemo.ViewPagerActivity2
 import vn.kingbee.widget.layout.motion.youtubedemo.YouTubeDemoActivity
 
+//https://github.com/googlesamples/android-ConstraintLayoutExamples
 class MainMotionActivity : AppCompatActivity(), CompoundButton.OnCheckedChangeListener {
     private lateinit var recyclerView: RecyclerView
     private lateinit var viewAdapter: RecyclerView.Adapter<*>
