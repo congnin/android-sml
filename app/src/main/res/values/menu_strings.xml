@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_label_message_customer_contact_centre">For assistance, please call our Customer Contact Centre</string>
+    <string name="menu_contact_label_tab_how_to_contact_us">How to contact us</string>
+    <string name="menu_contact_label_tab_give_us_feedback">Give us feedback</string>
+    <string name="menu_help_label_tab_faqs">FAQs</string>
+    <string name="menu_help_label_tab_video">Helpful videos</string>
+</resources>

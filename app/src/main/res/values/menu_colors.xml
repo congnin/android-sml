@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="menu_tab_color_selected">@color/cbsa_color_yellow</color>
+    <color name="menu_color_background">#fdfdfe</color>
+    <color name="menu_tab_color_background">#f7f7f7</color>
+    <color name="menu_tab_color_divider">#EAEAEA</color>
+    <color name="menu_tab_color_focused">#FFFFDF3A</color>
+</resources>

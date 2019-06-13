@@ -162,4 +162,5 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="app_bar_height">180dp</dimen>
     <dimen name="text_margin">16dp</dimen>
+    <dimen name="mas_head_toolbar_header_height">75dp</dimen>
 </resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/menu_color_background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_view_tab_custom_height"
+        android:background="@color/menu_tab_color_background"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/menu_view_tab_host_margin_left"
+        tools:ignore="RtlSymmetry">
+
+        <!--First divider -> other divider is available in custom child tab view @see menu_view_tab_pager_custom -->
+        <View
+            android:id="@+id/firstDivider"
+            style="@style/MenuTabDivider"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="false" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/firstDivider"
+            android:background="@color/menu_tab_color_divider"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@android:color/transparent"
+            app:tabMaxWidth="@dimen/menu_tab_view_max_width"
+            app:tabMode="fixed"
+            app:tabPaddingEnd="0dp"
+            app:tabPaddingStart="0dp"
+            app:tabTextAppearance="@style/AccountCustomTabText"
+            app:tabTextColor="#FF393536" />
+
+        <TextView
+            android:id="@+id/tvVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="30dp"
+            android:textAppearance="@style/TextAppearance.HelveticaNeue"
+            android:textColor="@color/black"
+            tools:text="Version 1.0" />
+    </RelativeLayout>
+
+    <!--Pager content-->
+    <vn.kingbee.widget.viewpager.NoSwipeViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

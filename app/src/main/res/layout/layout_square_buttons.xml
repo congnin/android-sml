@@ -15,6 +15,7 @@
         android:orientation="horizontal">
 
         <vn.kingbee.widget.button.fitbutton.FitButton
+            android:id="@+id/btnContact"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_margin="16dp"

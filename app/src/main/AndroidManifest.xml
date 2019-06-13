@@ -34,7 +34,8 @@
         <activity android:name=".animation.demo.ShimmerActivityDemo" />
         <activity android:name=".animation.demo.DemoTypeActivity" />
         <activity android:name=".calendar.demo.DatePickerDemoActivity" />
-        <activity android:name=".button.demo.ButtonDemoActivity" />
+        <activity android:name=".button.demo.ButtonDemoActivity"
+            android:screenOrientation="landscape"/>
         <activity android:name=".spinner.demo.SpinnerDemoActivity" />
         <activity android:name=".recyclerview.HelpVideoDemo" />
         <activity android:name=".signature.SignatureDemoActivity" />

@@ -196,4 +196,11 @@
     <color name="cerulean_blue">#137AE2</color>
     <color name="brown">#643A07</color>
     <color name="contentBackground">#FFF</color>
+
+    <color name="right_dialog_color_blue">@color/cbsa_color_blue</color>
+    <color name="right_dialog_btn_positive_focus">#FFFFDF3A</color>
+    <color name="right_dialog_btn_positive">@color/cbsa_color_yellow</color>
+    <color name="right_dialog_btn_negative">#FFF</color>
+    <color name="right_dialog_ripple_gray">#F2F2F2</color>
+    <color name="right_dialog_ripple_yellow">@color/cbsa_color_yellow</color>
 </resources>

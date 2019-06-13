@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/containerFooter"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/menu_view_footer_height"
+    android:layout_alignParentBottom="true"
+    android:background="#FFD3D2D2"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/menu_view_footer_container_call_center_margin_bottom"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvCallCenter"
+            style="@style/TextAppearance.HelveticaNeue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/menu_view_footer_margin_content_left"
+            android:textColor="@color/c_black"
+            tools:text="0860 999 119" />
+
+        <TextView
+            android:id="@+id/tvCallCenterMessage"
+            style="@style/TextAppearance.HelveticaNeue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/default_padding_xsmall"
+            android:layout_marginStart="@dimen/menu_view_footer_margin_content_left"
+            android:text="@string/menu_label_message_customer_contact_centre" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btnDone"
+        style="@style/TextAppearance.HelveticaNeue"
+        android:elevation="@dimen/menu_view_footer_btn_elevation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/menu_view_footer_margin_btn_right"
+        android:layout_marginTop="@dimen/menu_view_footer_btn_margin_top"
+        android:textColor="@drawable/secondary_text_style"
+        android:background="@drawable/rightdialog_selector_btn_positive"
+        android:clickable="true"
+        android:text="CLOSE"
+        tools:ignore="RtlHardcoded,UnusedAttribute" />
+</RelativeLayout>

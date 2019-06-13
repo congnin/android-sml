@@ -9,11 +9,13 @@ import vn.kingbee.widget.BaseActivity
 import vn.kingbee.widget.R
 import vn.kingbee.widget.button.fitbutton.FitButton
 import vn.kingbee.widget.button.fitbutton.model.Shape
+import vn.kingbee.widget.dialog.ext.demo.ContactDialogFragment
 import vn.kingbee.widget.notification.NotificationManager
 import vn.kingbee.widget.notification.NotificationManagerImpl
 
 class ButtonDemoActivity : BaseActivity() {
     private var fitButton: FitButton? = null
+    lateinit var btContact: FitButton
     private var notificationManager: NotificationManager<*>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,6 +27,7 @@ class ButtonDemoActivity : BaseActivity() {
 
     private fun setupButton() {
         fitButton = findViewById(R.id.fbtn)
+        btContact = findViewById(R.id.btnContact)
         fitButton!!.setTextFont(R.font.share_tech_regular).setWidth(200).setHeight(70)
             .setTextSize(20f).setIconMarginStart(16f).setIconMarginEnd(12f)
             .setTextColor(Color.parseColor("#F5F5F5")).setIconColor(Color.parseColor("#FFFFFF"))
@@ -38,6 +41,11 @@ class ButtonDemoActivity : BaseActivity() {
                     this, "Click on ${fitButton?.getText()}", Toast.LENGTH_SHORT
                 ).show()
             }
+
+        btContact.setOnClickListener {
+            val mContactDialogFragment = ContactDialogFragment.newInstance()
+            mContactDialogFragment.show(supportFragmentManager, ContactDialogFragment.TAG_NAME)
+        }
     }
 
     private fun changeButton() {
