@@ -104,4 +104,23 @@
         <item name="android:includeFontPadding">false</item>
         <item name="android:paddingTop">@dimen/dimen_1</item>
     </style>
+
+    <style name="TextAppearance.Heading1" parent="TextAppearance.HelveticaNeue">
+        <item name="android:textSize">@dimen/text_size_heading_1</item>
+        <item name="android:lineSpacingMultiplier">@dimen/text_line_spacing_multiplier_1_2</item>
+    </style>
+
+    <style name="TextAppearance.Heading2" parent="TextAppearance.HelveticaNeue">
+        <item name="android:textSize">@dimen/text_size_heading_2</item>
+        <item name="android:lineSpacingMultiplier">@dimen/text_line_spacing_multiplier_1_2</item>
+    </style>
+
+    <style name="TextAppearance.Paragraph1" parent="TextAppearance.HelveticaNeue">
+        <item name="android:textSize">@dimen/text_size_paragraph_1</item>
+        <item name="android:lineSpacingMultiplier">@dimen/text_line_spacing_multiplier_1_2</item>
+    </style>
+
+    <style name="TextAppearance.Paragraph1.Bold" parent="TextAppearance.Paragraph1">
+        <item name="fontPath">fonts/HelveticaNeue-Bold.ttf</item>
+    </style>
 </resources>

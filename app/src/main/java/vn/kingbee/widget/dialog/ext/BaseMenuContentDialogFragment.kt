@@ -99,7 +99,6 @@ abstract class BaseMenuContentDialogFragment : CustomWindowDialogFragment() {
                 object : AnimatorListenerAdapter() {
                     override fun onAnimationEnd(animation: Animator) {
                         super.onAnimationEnd(animation)
-                        Timber.d("Animation", "onAnimationEnd: ")
                         dismiss()
                     }
                 })

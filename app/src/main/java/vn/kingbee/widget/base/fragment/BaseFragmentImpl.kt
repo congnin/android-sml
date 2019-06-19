@@ -18,7 +18,7 @@ import androidx.annotation.LayoutRes
 import vn.kingbee.utils.CommonUtils
 import vn.kingbee.widget.base.presenter.BasePresenter
 
-abstract class BaseFragmentImpl : androidx.fragment.app.Fragment(), BaseView, DialogClickedListener {
+abstract class BaseFragmentImpl : Fragment(), BaseView, DialogClickedListener {
 
     protected lateinit var handler: Handler
     protected var loadingDialog: LoadingDialogMaterial? = null
@@ -30,7 +30,7 @@ abstract class BaseFragmentImpl : androidx.fragment.app.Fragment(), BaseView, Di
 
     fun getTagFromClassName(): String? = this.javaClass.simpleName
 
-    fun getInstance(): androidx.fragment.app.Fragment = this
+    fun getInstance(): Fragment = this
 
     fun needIdleTimeout(): Boolean = true
 

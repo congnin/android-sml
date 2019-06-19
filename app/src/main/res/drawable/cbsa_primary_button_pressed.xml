@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Drop Shadow Stack -->
+    <item>
+        <shape>
+            <padding
+                android:bottom="@dimen/cbsa_secondary_button_shadow_offset"
+                android:left="0dp"
+                android:right="@dimen/cbsa_secondary_button_shadow_offset"
+                android:top="0dp"/>
+            <solid android:color="@color/cbsa_color_transparent"/>
+            <corners android:radius="@dimen/radius_xsmall"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <padding
+                android:bottom="@dimen/cbsa_secondary_button_shadow_offset"
+                android:left="0dp"
+                android:right="@dimen/cbsa_secondary_button_shadow_offset"
+                android:top="0dp"/>
+            <solid android:color="@color/cbsa_color_transparent"/>
+            <corners android:radius="@dimen/radius_xsmall"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <padding
+                android:bottom="@dimen/cbsa_secondary_button_shadow_offset"
+                android:left="0dp"
+                android:right="@dimen/cbsa_secondary_button_shadow_offset"
+                android:top="0dp"/>
+            <solid android:color="@color/cbsa_color_transparent"/>
+            <corners android:radius="@dimen/radius_xsmall"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <padding
+                android:bottom="@dimen/cbsa_secondary_button_shadow_offset"
+                android:left="0dp"
+                android:right="@dimen/cbsa_secondary_button_shadow_offset"
+                android:top="0dp"/>
+            <solid android:color="@color/cbsa_color_transparent"/>
+            <corners android:radius="@dimen/radius_xsmall"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <padding
+                android:bottom="@dimen/cbsa_secondary_button_shadow_offset"
+                android:left="0dp"
+                android:right="@dimen/cbsa_secondary_button_shadow_offset"
+                android:top="0dp"/>
+            <solid android:color="@color/cbsa_color_transparent"/>
+            <corners android:radius="@dimen/radius_xsmall"/>
+        </shape>
+    </item>
+    <!--Background-->
+    <item>
+        <shape>
+            <stroke
+                android:width="0dp"
+                android:color="@color/cbsa_secondary_color_grey"/>
+            <solid android:color="@color/cbsa_color_yellow_50"/>
+            <corners android:radius="@dimen/radius_xsmall"/>
+        </shape>
+    </item>
+</layer-list>

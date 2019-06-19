@@ -1,0 +1,373 @@
+{
+  "title": "Frequently asked questions",
+  "categories": [
+    {
+      "categoryid": "C000001",
+      "categoryname": "General",
+      "faqs": [
+        {
+          "question": "What is Money Transfer?",
+          "answer": "Money Transfer is a remittance product that lets you use any participating Pick n Pay or Boxer till to send or collect money to or from family and friends.<br><br>Money Transfer is only available to South African citizens who hold a green bar-coded ID book or an ID card."
+        },
+        {
+          "question": "How does Money Transfer work?",
+          "answer": "Once you have registered on the Kiosk, you can go to any till at a Pick n Pay or Boxer store with your Smart Shopper or Boxer Money Services card to send money.<br><br>Money Transfer is so simple, you only need one card to send money.<br>You can use your Smart Shopper card in Boxer stores and your Boxer Money Transfer card in Pick n Pay stores.<br><br><b>How it works:</b><br>- Tell the cashier that you want to transfer  money.<br>- Let the cashier swipe your Smart Shopper or Boxer Money Services card.<br>- The cashier will ask you to confirm your cellphone number.<br>- You tell the cashier how much you want to transfer, and pay the amount plus the fee.<br>- You will get a till slip confirming that you have sent money using Money Transfer. Always keep your till slip safe, and do not let the cashier write down your Money Transfer code.<br>- You will also get an SMS with a Money Transfer code. You must send or share this code with the person you want to give  the money to.<br>- That person needs to  go to a Pick n Pay or Boxer store till that is most convenient to them.<br>- They must read out the Money Transfer code to the cashier.<br>- The cashier will confirm the amount and give them the money that you sent.<br><br>For terms and conditions, ask a store assistant for a Money Transfer brochure."
+        },
+        {
+          "question": "How do I get started?",
+          "answer": "For us to help you transfer money, you have to register with us.<br><br>You only need to register once. To register you will need:<br>- A Smart Shopper card from Pick n Pay, or a Money Services card from Boxer<br>-  green bar-coded South African ID book or a South African ID card<br>- your own active South African cellphone<br><br>We will also ask you to scan your fingerprints so that no one else can access your money transfer profile.<br><br>To register, follow the step-by-step instructions on the kiosk. The instruction videos will help to show you what to do."
+        },
+        {
+          "question": "Why do I need to register?",
+          "answer": "You need to register for Money Transfer so that you can send money at a Pick n Pay or Boxer store.<br>When you register for Money Transfer you create a Money Transfer profile using your ID, Smart Shopper or Boxer Money Services card and your cellphone number.<br>You only need to register for Money Transfer once.<br><br>After registering for Money Transfer:<br>-          you will recieve two SMS's telling you that your registration was successful or unsuccessful. If you do not recieve these SMS's in 15 minutes after registration, please call the contact centre on  0860 999 119<br>-         you will use your Smart Shopper or Boxer Money Services card and cellphone to send money from any Pick n Pay or Boxer till point, so you can leave your ID at home where it’s safe<br>-          you can see any codes that have not been collected by going to a kiosk at participating Pick n Pay and Boxer stores<br>-          you can resend any codes that you have lost to your cellphone number.<br>You can also:<br>-          Change your cellphone number linked to your Money Transfer profile<br>-          Change your Smart Shopper or Boxer Money Services card linked to your Money Transfer profile"
+        },
+        {
+          "question": "Is my information secure?",
+          "answer": "Yes. We keep all your details safe and secure and are not allowed to give them to anyone without your permission."
+        }
+      ]
+    },
+    {
+      "categoryid": "C000002",
+      "categoryname": "Pricing",
+      "faqs": [
+        {
+          "question": "How much does it cost to register to send money?",
+          "answer": "Nothing. It is free to register with Money Transfer. You will only pay when you want to send money."
+        },
+        {
+          "question": "How much will sending money cost me?",
+          "answer": "The cost to send money will be R9.90 and will be told to you each time before you transfer money.<br><br>It will cost you nothing to register."
+        }
+      ]
+    },
+    {
+      "categoryid": "C000003",
+      "categoryname": "Limits",
+      "faqs": [
+        {
+          "question": "What are the Money Transfer limits?",
+          "answer": "With Money Transfer, you can send up to R5000 in a day, and up to R15000 in a month. When you log in to the kiosk, you can see how much money you have already sent, and how much money you can still send today or in this month."
+        },
+        {
+          "question": "Can I increase my limits?",
+          "answer": "No."
+        }
+      ]
+    },
+    {
+      "categoryid": "C000004",
+      "categoryname": "Registering for Money Transfer",
+      "faqs": [
+        {
+          "question": "What do I need to register?",
+          "answer": "You only need 3 things to register for Money Transfer:<br>1. Your ID book or ID card<br>2. Your Smart shopper or Boxer Money Services card<br>3. Your cellphone<br><br>When you register, you link your Cellphone number, Smart Shopper or Boxer Money Services card and Identification to your Money Transfer profile.<br>This means that after registering, you will never have to bring your ID with you to send money, you just swipe your Smart Shopper or Boxer Money Services card, and your Money Transfer code will always go to your cellphone number.<br><br>Plus it makes sending money so much faster!<br><br><b>Important!</b><br>You can change the Smart Shopper or Boxer Money Services card you have linked to your profile at any time.<br>Your Smart shopper card can only be linked to one profile at a time."
+        },
+        {
+          "question": "Why do I need my cellphone to register?",
+          "answer": "When you want to send money using Money Transfer, we send a code in an SMS to <b>your</b> cellphone number. This code can be used by your friend or family member to collect their money, so it is very important that you give us your own cellphone number so that you can decide who you want to send this code to."
+        },
+        {
+          "question": "I do not have an ID book or ID card with me today.",
+          "answer": "No problem, bring your ID card or Book the next time you visit a Pick n Pay or Boxer store.<br>If you are not a South African citizen or do not have a South African ID with you, we will not be  able to register you for Money Transfer."
+        },
+        {
+          "question": "My ID book won’t scan",
+          "answer": "Please make sure you have a valid green barcoded South African ID book.<br>Please make sure that you place the ID book as shown in the video.<br><br><u>Watch the video on how to scan your ID book</u><br><br><b>Important:</b><br>-          Slide your ID book into the tray so that the sides of your ID book are held down by the tray.<br>-          Please make sure your ID book is visible on the screen and that your fingers are not covering any details on your ID book.<br>-          Do not move your ID book until the scan is completed."
+        },
+        {
+          "question": "My ID card won’t scan",
+          "answer": "Please make sure you have a valid South African ID card.<br>Please make sure that you place the ID card as shown in the video.<br><br><u>Watch the video on how to scan your ID card</u><br><br><b>Important:</b><br>-          Please make sure your ID card is visible on the screen and that your fingers are not covering any details on your ID card.<br>-          Do not move your ID card until the scan is completed.<br>-          Turn your ID card over when asked to scan the other side of your card."
+        },
+        {
+          "question": "My ID is already registered / registered to someone else.",
+          "answer": "Please use your own ID to register for Money Transfer.<br>Please call the Money Transfer Customer Contact Centre on 0860 999 119"
+        },
+        {
+          "question": "My Smart Shopper card or Boxer Money Services card won’t scan",
+          "answer": "The Kiosk wants to scan the barcode of your Smart Shopper or Boxer Money Services card when it is in the tray.<br>If it is not scanning, try lifting the card up inside the tray, so that the barcode is clearly visible on the kiosk screen in front of you.<br>The kiosk will automatically scan the barcode when it when it is in focus.<br><br><u>Watch the video on how to scan your Smart Shopper and Boxer Money Services card.</u><br><br><b>Important:</b><br>Please make sure your fingers are not covering the barcode on the Smart Shopper or Boxer Money Services card"
+        },
+        {
+          "question": "I do not have a Smart Shopper or Boxer Money Services card.",
+          "answer": "No problem, ask a Pick n Pay or Boxer store representative for a brand new card. You can register your card with the store after you register for Money Transfer.<br><br>Money Transfer is so simple, you only need one card to send money.<br>You can use your Smart Shopper card in Boxer stores and your Boxer Money Transfer card in Pick n Pay stores."
+        },
+        {
+          "question": "Can I link more than one Smart Shopper or Boxer Money Services card to my profile?",
+          "answer": "No, only one Smart Shopper card OR one Boxer Money Services card can be linked to your Money Transfer profile. Once you are registered, you will have the option to change the Smart Shopper or Boxer Money Services card linked to the profile."
+        },
+        {
+          "question": "My Smart shopper or Boxer Money Transfer card is already registered",
+          "answer": "Please use your own Smart Shopper or Boxer Money Services card to register for Money Transfer. <br>If your card has already been registered, please register using a new Smart Shopper or Boxer Money Services card.<br><br>If a family member or friend has registered for Money Transfer with your card they can always update their Money Transfer profile with a new card at a kiosk."
+        },
+        {
+          "question": "My cellphone number isn't working at registration",
+          "answer": "Please make sure that you are using a 10 digit South African cell phone number, and that you have entered your number correctly. Please do not ask someone else or a store employee to allow you to register with their number because they will receive your codes every time you send money."
+        },
+        {
+          "question": "My Cellphone number is already registered",
+          "answer": "Please call the Money Transfer Customer Contact Centre on 0860 999 119."
+        },
+        {
+          "question": "What is a security code?",
+          "answer": "A security code is a once off code that we send to your cellphone number in an SMS. The code is 4 digits, and is used to link your cellphone number to your Money Transfer profile. This is not the same as your Money Transfer code that you receive after you go to  a Pick n Pay or a Boxer till to send money."
+        },
+        {
+          "question": "What if I didn’t get an SMS with a security code?",
+          "answer": "If you do not get an SMS with a security code after 20 seconds and you have captured the correct cellphone number, press the “Resend code” button on the screen. We will then send you a <b>new</b> code. <br><br>If you still don’t get an SMS with a security code, please check to see if you have entered the correct cellphone number. If you would like to change your number, press “change number” and follow the instructions."
+        },
+        {
+          "question": "Why do you need to scan my fingerprints?",
+          "answer": "We scan your fingerprints for security, so that you are the only person that can access your information, and any codes that have not been collected."
+        },
+        {
+          "question": "What if I don’t have an index finger?",
+          "answer": "Please talk to one of our service area assistants who will assist you."
+        },
+        {
+          "question": "My fingerprints won't scan",
+          "answer": "Please ensure your fingers are clean before scanning.<br><br>If you have tried to scan your fingerprints 3 times and you are still unsuccessful, please talk to a service area a assistant or call our Money Transfer Customer Contact Centre on 0860 999 119"
+        },
+        {
+          "question": "Why do you take a picture?",
+          "answer": "We need to take a photograph of your face for regulatory purposes so that we can see who you are. That is why it is very important that we can see your whole face in the picture, don’t worry, we won’t share it with anyone."
+        }
+      ]
+    },
+    {
+      "categoryid": "C000005",
+      "categoryname": "Send money",
+      "faqs": [
+        {
+          "question": "What is a Money Transfer code?",
+          "answer": "A Money Transfer code is the code that we send to you in an SMS when you deposit money at the till.<br>The SMS also shows you how much money the code is worth.<br>The code is 8 digits and is made up of numbers and letters.<br>You have to send this code to the person you want to collect the money. <br><br>Remember only to share this code with the person you want to collect the money. Anyone else who knows this code can use it at any Pick n Pay or Boxer till to collect the money. This is why it is very important to use your own cellphone number when you register for Money Transfer."
+        },
+        {
+          "question": "What is an expired Money Transfer code?",
+          "answer": "If you have sent a money transfer code, but no one has collected the money after 3 years, you will no longer be able to use that code to collect money. Don’t worry, we will let you know before the code expires."
+        },
+        {
+          "question": "How long do Money Transfer codes last?",
+          "answer": "If no one uses the Money Transfer code to collect money, it can last up to 3 years. The code can only be used once to collect money."
+        },
+        {
+          "question": "How do I send money?",
+          "answer": "Watch the “How to” video on the left to see how to send money.<br><br>Once you have registered, you can go to any till at a Pick n Pay or Boxer store with your Smart Shopper or Boxer Money Services card to transfer money.<br><br>- Tell the cashier that you want to transfer  money.<br>- Let the cashier swipe your Smart Shopper or Boxer Money Services card.<br>- The cashier will will ask you to confirm your cellphone number.<br>- You will need to tell the till operator how much you want to transfer, and pay the amount plus the fee.<br>- You will get an SMS with a Money Transfer code. You must send or share this code with the person you want to give the money to.<br>- You will also get a till slip confirming that you have sent money using Money Transfer. Please keep your till slip when sending money."
+        },
+        {
+          "question": "What must the person receiving money do?",
+          "answer": "Watch the “How to” video on the left to see what the person receiving the money must do.<br><br>You must tell the person you want to send the money to, to go to a Pick n Pay or Boxer store most convenient to them, and follow the instructions of the. <br><br>They read out the Money Transfer code to the cashier.<br><br>The cashier will confirm the amount give them the money that you sent, as long as they have told the cashier the correct Money Transfer code."
+        },
+        {
+          "question": "What happens if I don't receive an SMS with my Money Transfer code?",
+          "answer": "Please make sure you get a till slip from the cashier when you send or collect a Money Transfer code.<br><br>If you have a till slip confirming that you have been sent a Money Transfer code, but have not received an SMS, please log onto the kiosk and check your Money Transfer code history to see if the code is there.<br><br>If the code is there and it has not been collected, simply press the resend button. <br><br>If the code is not there, please call the Money Transfer Customer Contact Centre on 0860 999 119, you will need your till slip as a reference."
+        },
+        {
+          "question": "The value of the money transfer code is not the same amount I gave the cashier.?",
+          "answer": "It costs R9.90 to send money using Money Transfer. Please check if this cost has been debited from the amount shown in your SMS. <br>If it is more or less, please call the Money Transfer Customer Contact Centre on 0860 999 119"
+        }
+      ]
+    },
+    {
+      "categoryid": "C000006",
+      "categoryname": "Servicing",
+      "faqs": [
+        {
+          "question": "Why do I need my fingerprints?",
+          "answer": "We use your ID number and your fingerprints to log in, so that you are the only person that can access your information, and any codes that have not been collected."
+        },
+        {
+          "question": "Can I resend a Money Transfer code?",
+          "answer": "Yes. Use one of the kiosks at any participating Pick n Pay or Boxer stores to log on to your Money Transfer profile and select the option to resend a code to your cellphone number. This option is available after you select “view statement”"
+        },
+        {
+          "question": "My cellphone has been lost or stolen, how do I change the cellphone number linked to my profile?",
+          "answer": "Use one of the kiosks at any participating Pick n Pay or Boxer store to log on to your Money Transfer profile by typing in your ID and scanning one of the fingerprints you scanned when you registered.<br><br>Select the option to change cellphone number.<br><br>Follow the instructions to change your cellphone number."
+        },
+        {
+          "question": "My Smart Shopper or Boxer Money Services card has been lost or stolen, how do I link a new card to my profile?",
+          "answer": "Smart Shopper cards can only be replaced at Pick n Pay stores and Boxer Money Services cards can only be replaced at Boxer stores.<br><br>To link a new card to your profile, use one of the kiosks at any participating Pick n Pay or Boxer stores to log on to your Money Transfer profile by typing in your ID and scanning one of the fingerprints you scanned when you registered.<br><br>Select the option to change Smart Shopper or Boxer Money Services card.<br><br>Follow the instructions to change your Smart Shopper or Boxer Money Services card."
+        },
+        {
+          "question": "What happens if I lose my ID book or ID card and it is replaced with a new one?",
+          "answer": "Because your identity is always confirmed with your ID number together with your fingerprints, you never have to scan your replacement ID card or book, although you will have to if your name changes.<br><br>It is important that you remember your ID Number."
+        },
+        {
+          "question": "What happens if I have sent the Money Transfer code to the wrong person?",
+          "answer": "If you have sent the code to the wrong person, that person can still use the code.<br><br>If you know the person, contact them and ask them not to use the code, then send the code to the correct person.<br><br>If you do not know the person, check if the code has been used.<br>To do this, go to your nearest Pick n Pay or Boxer  Kiosk and type in your ID Number and scan one of the fingerprints that you scanned when you registered.<br><br>If it is still not collected, you can:<br>1.      Use the Money Transfer code to collect the money at a Pick n Pay or Boxer till and begin a new transaction, or <br>2.      Contact the person you meant to send the code to, provide them with the code, and ask them to collect the money as soon as possible"
+        },
+        {
+          "question": "What happens if I lose a code that has been sent to me?",
+          "answer": "If you lose a code that has been sent to you, you need to re-send the code.  <br><br>To do this, you must go back to a Kiosk and type in your ID Number and scan one of the fingerprints that you scanned when you registered.  <br><br>You will then be able to see the details of all the codes that you have sent which have not been collected (and all your other codes).  <br><br>You can then choose the code that you want to re-send, press that code on the Kiosk screen and the code will be re-sent to your cellphone.  To ensure that the code is kept secure it will not be displayed at the Kiosk.<br><br>You can also call the Money Transfer Customer Contact Centre on 0860 999 119 to assist you with resending a code."
+        },
+        {
+          "question": "What happens if your system is unavailable or doesn’t work?",
+          "answer": "Our system may experience technical issues from time to time for reasons beyond our control."
+        },
+        {
+          "question": "What happens if I don’t use Money Transfer for 365 Days?",
+          "answer": "If you don’t use Money Transfer for 365 days, you will have to confirm that all your personal information is still correct before you can use Money Transfer again. <br><br>To do this, you should go a Kiosk and type in your ID Number and scan one of the fingerprints you scanned when you registered."
+        },
+        {
+          "question": " How do I deal with a dispute / problem?",
+          "answer": "If you have a problem, you can call the Customer Care Centre on 0860 999 119 and they will assist you."
+        }
+      ]
+    }
+  ],
+  "config": [
+    {
+      "screenname": "default_screen",
+      "activeconfig": [
+        {
+          "categoryid": "C000001",
+          "positions": []
+        },
+        {
+          "categoryid": "C000002",
+          "positions": []
+        },
+        {
+          "categoryid": "C000003",
+          "positions": []
+        },
+        {
+          "categoryid": "C000004",
+          "positions": []
+        },
+        {
+          "categoryid": "C000005",
+          "positions": []
+        },
+        {
+          "categoryid": "C000006",
+          "positions": []
+        }
+      ]
+    },
+    {
+      "screenname": "home_screen",
+      "activeconfig": [
+        {
+          "categoryid": "C000001",
+          "positions": [
+            2
+          ]
+        },
+        {
+          "categoryid": "C000002",
+          "positions": []
+        },
+        {
+          "categoryid": "C000003",
+          "positions": []
+        },
+        {
+          "categoryid": "C000004",
+          "positions": []
+        },
+        {
+          "categoryid": "C000005",
+          "positions": []
+        },
+        {
+          "categoryid": "C000006",
+          "positions": []
+        }
+      ]
+    },
+    {
+      "screenname": "login_screen",
+      "activeconfig": [
+        {
+          "categoryid": "C000001",
+          "positions": []
+        },
+        {
+          "categoryid": "C000002",
+          "positions": []
+        },
+        {
+          "categoryid": "C000003",
+          "positions": []
+        },
+        {
+          "categoryid": "C000004",
+          "positions": []
+        },
+        {
+          "categoryid": "C000005",
+          "positions": []
+        },
+        {
+          "categoryid": "C000006",
+          "positions": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "screenname": "login_finger_screen",
+      "activeconfig": [
+        {
+          "categoryid": "C000001",
+          "positions": []
+        },
+        {
+          "categoryid": "C000002",
+          "positions": []
+        },
+        {
+          "categoryid": "C000003",
+          "positions": []
+        },
+        {
+          "categoryid": "C000004",
+          "positions": []
+        },
+        {
+          "categoryid": "C000005",
+          "positions": []
+        },
+        {
+          "categoryid": "C000006",
+          "positions": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "screenname": "login_id_cellphone_screen",
+      "activeconfig": [
+        {
+          "categoryid": "C000001",
+          "positions": []
+        },
+        {
+          "categoryid": "C000002",
+          "positions": []
+        },
+        {
+          "categoryid": "C000003",
+          "positions": []
+        },
+        {
+          "categoryid": "C000004",
+          "positions": [
+            10,
+            11
+          ]
+        },
+        {
+          "categoryid": "C000005",
+          "positions": []
+        },
+        {
+          "categoryid": "C000006",
+          "positions": []
+        }
+      ]
+    }
+  ]
+}

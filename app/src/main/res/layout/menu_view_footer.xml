@@ -36,10 +36,8 @@
 
     <TextView
         android:id="@+id/btnDone"
-        style="@style/TextAppearance.HelveticaNeue"
+        style="@style/Button.Primary"
         android:elevation="@dimen/menu_view_footer_btn_elevation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_marginRight="@dimen/menu_view_footer_margin_btn_right"
         android:layout_marginTop="@dimen/menu_view_footer_btn_margin_top"

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/help_item_answer_description"
+    style="@style/TextAppearance.Paragraph1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/default_margin_xxlarge"
+    android:lineSpacingMultiplier="1"
+    android:paddingBottom="@dimen/default_padding_large"
+    android:paddingStart="@dimen/help_item_padding_left"
+    android:paddingEnd="@dimen/help_item_description_margin_right" />

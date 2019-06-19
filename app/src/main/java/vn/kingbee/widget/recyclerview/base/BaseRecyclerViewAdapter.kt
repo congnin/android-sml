@@ -8,53 +8,53 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 
 abstract class BaseRecyclerViewAdapter<T> :
-    androidx.recyclerview.widget.RecyclerView.Adapter<BaseRecyclerViewAdapter.GenericViewHolder> {
+    RecyclerView.Adapter<BaseRecyclerViewAdapter.GenericViewHolder> {
 
     protected var inflater: LayoutInflater? = null
 
     protected var context: Context? = null
 
-    protected var itemList: List<T>? = null
+    var items: List<T>? = null
 
     private var mIsShowFooter = false
 
     constructor(context: Context, items: List<T>) {
         // Cache the LayoutInflate to avoid asking for a new one each time.
         this.inflater = LayoutInflater.from(context)
-        this.itemList = items
+        this.items = items
         this.context = context
     }
 
     fun append(items: List<T>?) {
-        if (itemList != null && items != null) {
-            (itemList as ArrayList).addAll(items)
+        if (items != null && items != null) {
+            (items as ArrayList).addAll(items)
             notifyItemRangeInserted(this.itemCount, items.size)
         }
     }
 
     fun append(from: Int, items: List<T>?) {
-        if (itemList != null && items != null) {
-            (itemList as ArrayList).addAll(items)
-            notifyItemRangeInserted(from, itemList?.size!!)
+        if (items != null && items != null) {
+            (items as ArrayList).addAll(items)
+            notifyItemRangeInserted(from, items?.size!!)
         }
     }
 
     fun append(item: T?) {
-        if (itemList != null && item != null) {
-            (itemList as ArrayList).add(item)
+        if (items != null && item != null) {
+            (items as ArrayList).add(item)
             notifyItemInserted(this.itemCount - 1)
         }
     }
 
     fun removeSelectedItem(position: Int) {
-        if (itemList == null || itemList!!.size <= position) {
+        if (items == null || items!!.size <= position) {
             return
         }
-        (itemList as ArrayList).removeAt(getItemPositionWithoutHeader(position))
+        (items as ArrayList).removeAt(getItemPositionWithoutHeader(position))
         this.notifyItemRemoved(position)
         // this line is very important to update all the views belows
         // the item removed will adjust accordingly
-        this.notifyItemRangeChanged(position, itemList!!.size)
+        this.notifyItemRangeChanged(position, items!!.size)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GenericViewHolder {
@@ -110,8 +110,8 @@ abstract class BaseRecyclerViewAdapter<T> :
 
     fun getItemCountReal(): Int {
         var size = 0
-        if (itemList != null) {
-            size = itemList!!.size
+        if (items != null) {
+            size = items!!.size
         }
         return size
     }
@@ -134,15 +134,15 @@ abstract class BaseRecyclerViewAdapter<T> :
         // from header to current item.
         // so: only get without header.
         val pos = getItemPositionWithoutHeader(position)
-        return if (pos >= 0 && itemList != null && itemList!!.size > pos) {
-            itemList!!.get(pos)
+        return if (pos >= 0 && items != null && items!!.size > pos) {
+            items!!.get(pos)
         } else null
     }
 
     fun setItem(position: Int, t: T) {
         val pos = getItemPositionWithoutHeader(position)
-        if (pos >= 0 && itemList != null && itemList!!.size > pos) {
-            (itemList!! as ArrayList)[pos] = t
+        if (pos >= 0 && items != null && items!!.size > pos) {
+            (items!! as ArrayList)[pos] = t
         }
     }
 
@@ -185,8 +185,8 @@ abstract class BaseRecyclerViewAdapter<T> :
     }
 
     object ViewType {
-        val TYPE_HEADER = 0x01
-        val TYPE_CONTENT = 0x02
-        val TYPE_FOOTER = 0x03
+        const val TYPE_HEADER = 0x01
+        const val TYPE_CONTENT = 0x02
+        const val TYPE_FOOTER = 0x03
     }
 }

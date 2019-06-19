@@ -9,6 +9,7 @@ import io.reactivex.Observable
 import timber.log.Timber
 import vn.kingbee.application.MyApp
 import vn.kingbee.model.ProvinceResponse
+import vn.kingbee.widget.dialog.ext.help.model.HelpResponse
 import vn.kingbee.widget.recyclerview.help.HelpVideoResponse
 import java.io.*
 
@@ -16,6 +17,7 @@ class FileUtils {
     companion object {
         private const val DIRECTORY_NAME = "android-widget"
         private const val DIRECTORY_HELP_NAME = "/help/"
+        private const val FILE_HELP_FAQ_NAME = "get_help_faq.json"
         private const val FILE_HELP_VIDEO_NAME = "get_help_video.json"
         private const val DIRECTORY_MOCK = "/mock/"
         private const val FILE_PROVINCE_NAME = "province.json"
@@ -50,6 +52,13 @@ class FileUtils {
             return Observable.fromCallable<HelpVideoResponse> {
                 val rd = getInputStreamReaderFromAssets(context, FILE_HELP_VIDEO_NAME)
                 Gson().fromJson(rd, HelpVideoResponse::class.java)
+            }
+        }
+
+        fun getHelpFaqFromResource(context: Context): Observable<HelpResponse> {
+            return Observable.fromCallable<HelpResponse> {
+                val rd = getInputStreamReaderFromAssets(context, FILE_HELP_FAQ_NAME)
+                Gson().fromJson(rd, HelpResponse::class.java)
             }
         }
 

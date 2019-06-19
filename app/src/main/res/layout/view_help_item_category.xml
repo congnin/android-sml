@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/help_item_category_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingEnd="@dimen/default_padding_medium">
+
+    <View
+        android:id="@+id/help_item_category_view_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/help_category_view_top_height"
+        android:soundEffectsEnabled="false"
+        android:clickable="true" />
+
+    <View
+        android:id="@+id/help_item_line_top"
+        style="@style/StyleHelpDivider"
+        android:layout_below="@+id/help_item_category_view_top"
+        android:layout_marginBottom="@dimen/help_category_padding_top"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/help_item_category_title"
+        style="@style/TextAppearance.Heading2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/help_item_line_top"
+        android:layout_toLeftOf="@+id/help_item_category_arrow"
+        android:lineSpacingMultiplier="0.8"/>
+
+    <ImageView
+        android:id="@+id/help_item_category_arrow"
+        style="@style/StyleHelpArrow"
+        android:layout_alignTop="@+id/help_item_category_title"
+        android:layout_below="@+id/help_item_line_top" />
+
+    <View
+        android:id="@+id/help_item_category_view_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/help_category_view_bottom_height"
+        android:layout_below="@+id/help_item_category_title" />
+</RelativeLayout>

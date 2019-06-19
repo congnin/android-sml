@@ -163,4 +163,27 @@
     <dimen name="app_bar_height">180dp</dimen>
     <dimen name="text_margin">16dp</dimen>
     <dimen name="mas_head_toolbar_header_height">75dp</dimen>
+
+    <dimen name="cbsa_secondary_button_outline_size">1dp</dimen>
+    <dimen name="cbsa_secondary_button_shadow_offset">1dp</dimen>
+    <dimen name="card_button_min_height">50dp</dimen>
+    <dimen name="card_button_min_width">190dp</dimen>
+
+    <!-- HELP -->
+    <dimen name="help_content_padding_left">37dp</dimen>
+    <dimen name="help_list_padding_bottom">@dimen/default_padding_medium</dimen>
+    <dimen name="help_category_padding_top">@dimen/default_padding_normal</dimen>
+    <dimen name="help_category_view_top_height">5dp</dimen>
+    <dimen name="help_category_view_bottom_height">10dp</dimen>
+    <dimen name="help_item_description_margin_right">30dp</dimen>
+    <dimen name="help_item_arrow_height">19dp</dimen>
+    <dimen name="help_item_arrow_margin_left">21dp</dimen>
+    <dimen name="help_item_padding_left">@dimen/default_padding_xsmall</dimen>
+    <dimen name="help_video_list_margin_top">18dp</dimen>
+    <dimen name="help_video_list_title_padding_top">14dp</dimen>
+    <dimen name="help_video_item_height">109dp</dimen>
+    <dimen name="help_video_item_width">191dp</dimen>
+    <dimen name="help_video_item_margin_left">-6dp</dimen>
+    <dimen name="help_video_item_padding_top">43dp</dimen>
+    <dimen name="help_video_item_title_padding_top">2dp</dimen>
 </resources>

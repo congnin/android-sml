@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:splitMotionEvents="false">
+
+    <TextView
+        android:id="@+id/help_faq_title"
+        style="@style/TextAppearance.Heading1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingMultiplier="1.1"
+        android:textStyle="bold"
+        android:paddingStart="@dimen/help_content_padding_left"
+        android:paddingTop="@dimen/default_padding_medium" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/help_list"
+        style="@style/StyleHelpScrollbar"
+        android:layout_below="@+id/help_faq_title"
+        android:paddingBottom="@dimen/help_list_padding_bottom"
+        android:paddingLeft="@dimen/help_content_padding_left"/>
+</RelativeLayout>

@@ -13,9 +13,9 @@
         <item name="android:windowFullscreen">true</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="AppThemeGrid" parent="Theme.AppCompat.DayNight.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimaryGrid</item>
@@ -102,5 +102,45 @@
         <item name="android:textSize">14sp</item>
         <item name="android:textStyle">normal</item>
         <item name="android:textColor">@drawable/custom_tab_indicator_text</item>
+    </style>
+
+    <style name="Button.Primary" parent="Button.Without.Icon">
+        <item name="android:background">@drawable/primary_button_style</item>
+        <item name="android:textColor">@drawable/secondary_text_style</item>
+        <item name="android:minWidth">0dp</item>
+    </style>
+
+    <style name="Button.Without.Icon" parent="Card.Button">
+        <item name="android:textAppearance">@style/TextAppearance.HelveticaNeueBold</item>
+        <item name="android:textSize">@dimen/text_size_paragraph_1</item>
+        <item name="android:paddingLeft">@dimen/default_margin_xxlarge</item>
+        <item name="android:paddingRight">@dimen/default_margin_xxlarge</item>
+    </style>
+
+    <style name="Card.Button" parent="android:Widget.Button">
+        <item name="android:minWidth">@dimen/card_button_min_width</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">@dimen/card_button_min_height</item>
+    </style>
+
+    <item name="text_line_spacing_multiplier_1_2" format="float" type="dimen">1.2</item>
+
+    <style name="StyleHelpArrow">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/help_item_arrow_height</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginLeft">@dimen/help_item_arrow_margin_left</item>
+        <item name="android:layout_marginRight">@dimen/help_item_arrow_margin_left</item>
+        <item name="android:layout_marginTop">@dimen/default_padding_normal</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:src">@mipmap/icon_arrow_close</item>
+    </style>
+
+    <style name="StyleHelpDivider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/container_box_border</item>
+        <item name="android:clickable">true</item>
     </style>
 </resources>
