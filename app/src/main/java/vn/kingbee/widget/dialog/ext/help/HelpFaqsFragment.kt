@@ -20,9 +20,7 @@ import vn.kingbee.widget.dialog.ext.help.adapter.HelpAdapter
 import vn.kingbee.widget.dialog.ext.help.model.HelpResponse
 
 class HelpFaqsFragment: BaseFragmentImpl() {
-    override fun getPresenter(): BasePresenter<*>? {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
+    override fun getPresenter(): BasePresenter<*>? = null
 
     @BindView(R.id.help_faq_title)
     lateinit var mTvTitle: TextView

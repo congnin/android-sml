@@ -65,6 +65,7 @@ dependencies {
 
     implementation project(':domain')
     implementation project(':data')
+    implementation project(':achilles')
 
     //support kotlin
     implementation presentationDependencies.kotlinStdlib

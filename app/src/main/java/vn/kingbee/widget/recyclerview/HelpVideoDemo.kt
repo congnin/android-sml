@@ -20,7 +20,7 @@ class HelpVideoDemo : BaseActivity(), HelpVideoAdapter.HelpVideoClickListener {
     }
 
     lateinit var mTvTitle: TextView
-    lateinit var helpVideoList: androidx.recyclerview.widget.RecyclerView
+    lateinit var helpVideoList: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
