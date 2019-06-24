@@ -5,6 +5,8 @@ import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.List;
 
 import vn.kingbee.widget.R;
@@ -30,8 +32,9 @@ public class HelpAdapter extends BaseRecyclerViewAdapter<HelpFAQ> implements Hel
         mListener = listener;
     }
 
+    @NotNull
     @Override
-    public GenericViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public GenericViewHolder onCreateViewHolder(@NotNull ViewGroup parent, int viewType) {
         if (viewType == TYPE_ITEM_CATEGORY) {
             View view = getInflater().inflate(R.layout.view_help_item_category, parent, false);
             return new HelpCategoryViewHolder(view, this);
@@ -42,19 +45,22 @@ public class HelpAdapter extends BaseRecyclerViewAdapter<HelpFAQ> implements Hel
         return super.onCreateViewHolder(parent, viewType);
     }
 
+    @NotNull
     @Override
-    public HelpQuestionViewHolder onCreateContentHolder(ViewGroup parent) {
+    public HelpQuestionViewHolder onCreateContentHolder(@NotNull ViewGroup parent) {
         View view = getInflater().inflate(R.layout.view_help_item, parent, false);
         return new HelpQuestionViewHolder(view, this);
     }
 
+    @NotNull
     @Override
-    public GenericViewHolder onCreateFooterHolder(ViewGroup parent) {
+    public GenericViewHolder onCreateFooterHolder(@NotNull ViewGroup parent) {
         throw new UnsupportedOperationException();
     }
 
+    @NotNull
     @Override
-    public GenericViewHolder onCreateHeaderHolder(ViewGroup parent) {
+    public GenericViewHolder onCreateHeaderHolder(@NotNull ViewGroup parent) {
         throw new UnsupportedOperationException();
     }
 
