@@ -80,7 +80,7 @@ public class HelpAdapter extends BaseRecyclerViewAdapter<HelpFAQ> implements Hel
         }
     }
 
-    interface OnExpandItemListener {
+    public interface OnExpandItemListener {
         void onExpandItem(int pos);
     }
 }

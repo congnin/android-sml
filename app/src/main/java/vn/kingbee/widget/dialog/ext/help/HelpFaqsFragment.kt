@@ -67,7 +67,7 @@ class HelpFaqsFragment: BaseFragmentImpl() {
             .subscribe({ helpResponse -> updateContent(helpResponse) },
                 { e ->
                     hideProgressDialog()
-                    Timber.d("error load help: " + e.message)
+                    Timber.d("error load help: %s", e.message)
                 },
                 { hideProgressDialog() }))
     }
@@ -95,7 +95,7 @@ class HelpFaqsFragment: BaseFragmentImpl() {
     }
 
     private fun getHelpScreenMode(): String {
-        return (arguments?.getSerializable(EX_HELP_TYPE) as HelpMode).name
+        return "default_screen"
     }
 
     companion object {
