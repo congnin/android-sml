@@ -278,4 +278,8 @@
     <color name="cbsa_text_color_black_30">#4D393536</color>
 
     <color name="container_box_border">#979797</color>
+
+    <color name="cbsa_color_white_step_indicator">#ffffff</color>
+    <color name="cbsa_color_yellow_step_indicator">#FFCC00</color>
+    <color name="cbsa_color_dark_blue_step_indicator">#6b757d</color>
 </resources>

@@ -1,18 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center">
+    android:orientation="vertical">
+
+    <vn.kingbee.widget.indicator.HorizontalIndicator
+        android:id="@+id/fragment_horizontal_pager_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/step_horizontal_indicator_margin_top"
+        app:hi_itemHeight="@dimen/step_horizontal_indicator_height"
+        app:hi_itemWidth="@dimen/step_horizontal_indicator_width"
+        app:hi_progressAnimateDuration="@integer/step_horizontal_indicator_animation_duration"
+        app:hi_progressDrawable="@drawable/bg_step_indicator"
+        app:hi_titleContentList="@array/arr_progress_tracker"
+        app:hi_titleFontStyleBold="fonts/HelveticaNeue_Medium.ttf"
+        app:hi_titleFontStyleNormal="fonts/HelveticaNeue_Light.ttf"
+        app:hi_titleMarginBottom="@dimen/default_margin_normal"
+        app:hi_titleTextColor="@color/cbsa_color_black"
+        app:hi_titleTextSize="@dimen/font_size_small" />
 
     <LinearLayout
         android:id="@+id/button1"
-        android:orientation="vertical"
         android:layout_width="80dp"
         android:layout_height="80dp"
+        android:layout_below="@+id/fragment_horizontal_pager_indicator"
+        android:layout_toStartOf="@+id/button2"
         android:background="?selectableItemBackgroundBorderless"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="vertical">
 
         <vn.kingbee.widget.imageview.SwitchIconView
             android:id="@+id/switchIconView1"
@@ -26,24 +44,26 @@
             app:si_enabled="false"
             app:si_no_dash="true"
             app:si_tint_color="#ff3c00"
-            app:srcCompat="@drawable/ic_cloud"/>
+            app:srcCompat="@drawable/ic_cloud" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/sync"/>
+            android:text="@string/sync" />
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/button2"
-        android:orientation="vertical"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginLeft="24dp"
+        android:layout_below="@+id/fragment_horizontal_pager_indicator"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="24dp"
         android:background="?selectableItemBackgroundBorderless"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="vertical">
 
         <vn.kingbee.widget.imageview.SwitchIconView
             android:id="@+id/switchIconView2"
@@ -53,23 +73,25 @@
             android:padding="8dp"
             android:scaleType="fitXY"
             app:si_tint_color="#7956f9"
-            app:srcCompat="@drawable/ic_timer"/>
+            app:srcCompat="@drawable/ic_timer" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/alarm"/>
+            android:text="@string/alarm" />
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/button3"
-        android:orientation="vertical"
         android:layout_width="80dp"
         android:layout_height="80dp"
+        android:layout_below="@+id/fragment_horizontal_pager_indicator"
         android:layout_marginStart="24dp"
+        android:layout_toEndOf="@+id/button2"
         android:background="?selectableItemBackgroundBorderless"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="vertical">
 
         <vn.kingbee.widget.imageview.SwitchIconView
             android:id="@+id/switchIconView3"
@@ -81,14 +103,37 @@
             app:si_disabled_color="#dadada"
             app:si_enabled="false"
             app:si_tint_color="#ffb700"
-            app:srcCompat="@drawable/ic_menu_camera"/>
+            app:srcCompat="@drawable/ic_menu_camera" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/camera"/>
+            android:text="@string/camera" />
 
     </LinearLayout>
 
-</LinearLayout>
+    <vn.kingbee.widget.button.CircleButton
+        android:id="@+id/fragment_horizontal_pager_back_button"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="30dp"
+        android:background="@mipmap/icon_back"
+        android:gravity="center"
+        app:cb_color="@color/cbsa_color_dark_grey"
+        app:cb_pressedRingWidth="9dp" />
+
+    <vn.kingbee.widget.button.CircleButton
+        android:id="@+id/fragment_horizontal_pager_next_button"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/bg_circle_button_select_style"
+        android:gravity="center"
+        app:cb_color="@color/cbsa_color_yellow"
+        app:cb_disable_color="@color/cbsa_color_grey"
+        app:cb_pressedRingWidth="9dp" />
+</RelativeLayout>

@@ -186,4 +186,9 @@
     <dimen name="help_video_item_margin_left">-6dp</dimen>
     <dimen name="help_video_item_padding_top">43dp</dimen>
     <dimen name="help_video_item_title_padding_top">2dp</dimen>
+
+    <!--INDICATOR-->
+    <dimen name="step_horizontal_indicator_height">5dp</dimen>
+    <dimen name="step_horizontal_indicator_width">100dp</dimen>
+    <dimen name="step_horizontal_indicator_margin_top">44dp</dimen>
 </resources>

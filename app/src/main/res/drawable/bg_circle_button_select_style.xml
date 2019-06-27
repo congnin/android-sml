@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@mipmap/icon_next_press" android:state_activated="true" android:state_pressed="true" />
+    <!--enable -->
+    <item android:drawable="@mipmap/icon_next_active" android:state_activated="true" android:state_pressed="false" />
+    <!--unactive -->
+    <item android:drawable="@mipmap/icon_next_unactive" android:state_activated="false" />
+    <!-- default -->
+    <item android:drawable="@mipmap/icon_next_active" />
+</selector>

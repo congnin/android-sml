@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape>
+            <gradient
+                android:startColor="@color/cbsa_color_dark_blue_step_indicator"
+                android:endColor="@color/cbsa_color_dark_blue_step_indicator"
+                android:angle="270"
+                />
+        </shape>
+    </item>
+
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape>
+                <gradient
+                    android:startColor="@color/cbsa_color_white_step_indicator"
+                    android:endColor="@color/cbsa_color_white_step_indicator"
+                    android:angle="270"
+                    />
+            </shape>
+        </clip>
+    </item>
+
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <gradient
+                    android:startColor="@color/cbsa_color_yellow_step_indicator"
+                    android:endColor="@color/cbsa_color_yellow_step_indicator"
+                    android:angle="270" />
+            </shape>
+        </clip>
+    </item>
+
+</layer-list>

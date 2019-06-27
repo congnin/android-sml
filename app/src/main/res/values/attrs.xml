@@ -167,4 +167,25 @@
         <attr name="setIndexBarTextColorRes" format="color" />
         <attr name="setIndexBarHighlightTextColorRes" format="color" />
     </declare-styleable>
+
+    <declare-styleable name="AnimateHorizontalProgressBar">
+        <attr name="ahp_progressColor" format="color|reference" />
+        <attr name="ahp_secondaryProgressColor" format="color|reference" />
+        <attr name="ahp_backgroundColor" format="color|reference" />
+        <attr name="ahp_cornerRadius" format="dimension|reference" />
+        <attr name="ahp_duration" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="HorizontalIndicator">
+        <attr name="hi_itemWidth" format="dimension" />
+        <attr name="hi_itemHeight" format="dimension" />
+        <attr name="hi_progressDrawable" format="reference" />
+        <attr name="hi_progressAnimateDuration" format="integer" />
+        <attr name="hi_titleMarginBottom" format="dimension" />
+        <attr name="hi_titleContentList" format="reference" />
+        <attr name="hi_titleTextSize" format="dimension" />
+        <attr name="hi_titleFontStyleNormal" format="string" />
+        <attr name="hi_titleFontStyleBold" format="string" />
+        <attr name="hi_titleTextColor" format="color" />
+    </declare-styleable>
 </resources>

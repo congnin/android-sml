@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="arr_progress_tracker">
+        <item>@string/LBL_STEP_IDENTITY</item>
+        <item>@string/LBL_STEP_FINGERPRINTS</item>
+        <item>@string/LBL_STEP_CELLPHONE</item>
+        <item>@string/LBL_STEP_VERIFY</item>
+        <item>@string/LBL_STEP_ADDRESS</item>
+        <item>@string/LBL_STEP_SECURITY</item>
+        <item>@string/LBL_STEP_CARD</item>
+    </string-array>
+
+    <!--PROGRESS TRACKER-->
+    <string name="LBL_STEP_IDENTITY">Identity</string>
+    <string name="LBL_STEP_FINGERPRINTS">Fingerprints</string>
+    <string name="LBL_STEP_CELLPHONE">Cellphone</string>
+    <string name="LBL_STEP_VERIFY">Verify</string>
+    <string name="LBL_STEP_ADDRESS">Address</string>
+    <string name="LBL_STEP_SECURITY">Security</string>
+    <string name="LBL_STEP_CARD">Card</string>
+</resources>
