@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import vn.kingbee.widget.R
-import vn.kingbee.widget.button.CircleButton
+import vn.kingbee.widget.button.CircleButtonV2
 import vn.kingbee.widget.indicator.HorizontalIndicator
 
 class SwitchIconDemoActivity : AppCompatActivity() {
@@ -16,8 +16,8 @@ class SwitchIconDemoActivity : AppCompatActivity() {
     lateinit var button2: View
     lateinit var button3: View
 
-    lateinit var btnBack: CircleButton
-    lateinit var btnNext: CircleButton
+    lateinit var btnBack: CircleButtonV2
+    lateinit var btnNext: CircleButtonV2
     lateinit var stepIndicator: HorizontalIndicator
 
     override fun onCreate(savedInstanceState: Bundle?) {

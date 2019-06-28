@@ -42,11 +42,7 @@ class CircleButton : ImageView, View.OnClickListener {
         init(context, attrs)
     }
 
-    constructor(context: Context, attrs: AttributeSet?, defStyle: Int) : super(
-        context,
-        attrs,
-        defStyle
-    ) {
+    constructor(context: Context, attrs: AttributeSet?, defStyle: Int) : super(context, attrs, defStyle) {
         init(context, attrs)
     }
 
@@ -118,9 +114,7 @@ class CircleButton : ImageView, View.OnClickListener {
         mFocusPaint?.style = Paint.Style.STROKE
 
         mPressedRingWidth = TypedValue.applyDimension(
-            TypedValue.COMPLEX_UNIT_DIP, DEFAULT_PRESSED_RING_WIDTH_DIP.toFloat(), resources
-                .displayMetrics
-        ).toInt()
+            TypedValue.COMPLEX_UNIT_DIP, DEFAULT_PRESSED_RING_WIDTH_DIP.toFloat(), resources.displayMetrics).toInt()
 
         val color = Color.BLACK
         if (attrs != null) {
@@ -128,10 +122,7 @@ class CircleButton : ImageView, View.OnClickListener {
             mEnableColor = array.getColor(R.styleable.CircleButton_cb_color, color)
             mDisableColor = array.getColor(R.styleable.CircleButton_cb_disable_color, Color.GRAY)
             mPressedRingWidth =
-                array.getDimension(
-                    R.styleable.CircleButton_cb_pressedRingWidth,
-                    mPressedRingWidth.toFloat()
-                ).toInt()
+                array.getDimension(R.styleable.CircleButton_cb_pressedRingWidth, mPressedRingWidth.toFloat()).toInt()
             array.recycle()
         }
 

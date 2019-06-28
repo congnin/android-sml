@@ -191,4 +191,11 @@
     <dimen name="step_horizontal_indicator_height">5dp</dimen>
     <dimen name="step_horizontal_indicator_width">100dp</dimen>
     <dimen name="step_horizontal_indicator_margin_top">44dp</dimen>
+
+    <dimen name="circle_button_back_height">80dp</dimen>
+    <dimen name="circle_button_back_width">80dp</dimen>
+    <dimen name="circle_button_next_height">90dp</dimen>
+    <dimen name="circle_button_next_width">90dp</dimen>
+    <dimen name="circle_ring_width_normal">9dp</dimen>
+    <dimen name="circle_ring_width_small">4dp</dimen>
 </resources>

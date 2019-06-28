@@ -113,7 +113,7 @@
 
     </LinearLayout>
 
-    <vn.kingbee.widget.button.CircleButton
+    <vn.kingbee.widget.button.CircleButtonV2
         android:id="@+id/fragment_horizontal_pager_back_button"
         android:layout_width="80dp"
         android:layout_height="80dp"
@@ -124,7 +124,7 @@
         app:cb_color="@color/cbsa_color_dark_grey"
         app:cb_pressedRingWidth="9dp" />
 
-    <vn.kingbee.widget.button.CircleButton
+    <vn.kingbee.widget.button.CircleButtonV2
         android:id="@+id/fragment_horizontal_pager_next_button"
         android:layout_width="80dp"
         android:layout_height="80dp"
