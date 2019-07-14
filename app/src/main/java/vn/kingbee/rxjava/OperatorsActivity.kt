@@ -119,7 +119,7 @@ class OperatorsActivity : BaseActivity() {
     }
 
     fun startThrottleFirstActivity(view: View) {
-//        startActivity(Intent(this@OperatorsActivity, ThrottleFirstExampleActivity::class.java))
+        startActivity(Intent(this@OperatorsActivity, ThrottleFirstExampleActivity::class.java))
     }
 
     fun startThrottleLastActivity(view: View) {

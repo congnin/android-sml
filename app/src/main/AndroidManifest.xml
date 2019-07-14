@@ -81,6 +81,7 @@
         <activity android:name="vn.kingbee.rxjava.operators.IntervalExampleActivity" />
         <activity android:name="vn.kingbee.rxjava.operators.SingleObserverExampleActivity" />
         <activity android:name="vn.kingbee.rxjava.operators.CompletableObserverExampleActivity" />
+        <activity android:name="vn.kingbee.rxjava.operators.ThrottleFirstExampleActivity" />
         <activity android:name="vn.kingbee.rxjava.search.SearchActivity" />
 
         <activity android:name="vn.kingbee.mock.MockOptionDialog" />
