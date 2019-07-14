@@ -23,6 +23,7 @@ import vn.kingbee.widget.recyclerview.alphabet.demo.IndexFastScrollExample
 import vn.kingbee.widget.signature.SignatureDemoActivity
 import vn.kingbee.widget.spinner.demo.SpinnerDemoActivity
 import vn.kingbee.widget.toasty.ToastyDemoActivity
+import vn.kingbee.widget.viewpager.viewpager2.*
 
 class SelectionActivity : AppCompatActivity() {
 
@@ -105,5 +106,9 @@ class SelectionActivity : AppCompatActivity() {
 
     fun startMotionLayout(v: View) {
         startActivity(Intent(this@SelectionActivity, MainMotionActivity::class.java))
+    }
+
+    fun startViewPager2(v: View) {
+        startActivity(Intent(this@SelectionActivity, BrowseActivity::class.java))
     }
 }

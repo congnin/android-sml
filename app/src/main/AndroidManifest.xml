@@ -61,6 +61,15 @@
         <activity android:name=".layout.motion.fragmentsdemo.FragmentExample2Activity" />
         <activity android:name=".layout.motion.youtubedemo.YouTubeDemoActivity" />
 
+        <activity android:name=".viewpager.viewpager2.CardViewActivity" />
+        <activity android:name=".viewpager.viewpager2.PageTransformerActivity"/>
+        <activity android:name=".viewpager.viewpager2.CardFragmentActivity" />
+        <activity android:name=".viewpager.viewpager2.CardViewTabLayoutActivity" />
+        <activity android:name=".viewpager.viewpager2.FakeDragActivity" />
+        <activity android:name=".viewpager.viewpager2.BrowseActivity" />
+        <activity android:name=".viewpager.viewpager2.MutableCollectionFragmentActivity" />
+        <activity android:name=".viewpager.viewpager2.MutableCollectionViewActivity" />
+
         <activity android:name="vn.kingbee.rxjava.RxJava2SelectionActivity" />
         <activity android:name="vn.kingbee.rxjava.OperatorsActivity" />
         <activity android:name="vn.kingbee.rxjava.operators.SimpleExampleActivity" />

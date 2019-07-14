@@ -61,7 +61,7 @@ abstract class CustomWindowDialogFragment : DialogFragment() {
         super.onStart()
         // Default dialog layout param will wrap_content
         // So just reset it when fragment start to show when onStart()
-        val window = dialog.window
+        val window = dialog?.window
         if (window != null) {
             window.setLayout(windowWidth, windowHeight)
         }

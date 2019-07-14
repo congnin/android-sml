@@ -13,7 +13,7 @@ ext {
 
     materialVersion = "1.0.0"
     appCompatVersion = "1.0.2"
-    ktxCoreVersion = "1.0.1"
+    ktxCoreVersion = "1.2.0-alpha01"
 
     //Libraries
     daggerVersion = '2.14.1'
@@ -56,7 +56,7 @@ ext {
             kotlinStdlib          : "org.jetbrains.kotlin:kotlin-stdlib:${kotlin_version}",
             kotlinReflect         : "org.jetbrains.kotlin:kotlin-reflect:${kotlin_version}",
             supportLibrary        : "androidx.appcompat:appcompat:${materialVersion}",
-            supportDesignLibrary  : "com.google.android.material:material:${materialVersion}",
+            supportDesignLibrary  : "com.google.android.material:material:1.1.0-alpha08",
             supportAnnotations    : "androidx.annotation:annotation:${materialVersion}",
             playService           : dependencies.create("com.google.android.gms:play-services-vision:${playServiceVersion}") {
                 exclude module: 'support-annotations'

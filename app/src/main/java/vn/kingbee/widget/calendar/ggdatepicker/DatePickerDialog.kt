@@ -212,7 +212,7 @@ class DatePickerDialog : androidx.fragment.app.DialogFragment(), View.OnClickLis
     override fun onCreateView(layoutInflater: LayoutInflater,
                               parent: ViewGroup?,
                               bundle: Bundle?): View? {
-        dialog.window!!.requestFeature(Window.FEATURE_NO_TITLE)
+        dialog?.window!!.requestFeature(Window.FEATURE_NO_TITLE)
 
         val view = layoutInflater.inflate(R.layout.date_picker_dialog, null)
 

@@ -34,7 +34,7 @@ abstract class BaseMenuContentDialogFragment : CustomWindowDialogFragment() {
         if (rootView != null) {
             mUnbinder = ButterKnife.bind(this, rootView)
             initUI()
-            dialog.setOnDismissListener { }
+            dialog?.setOnDismissListener { }
             rootView.animate().translationY(0F).setDuration(getDurationIn().toLong()).start()
         }
         return rootView
@@ -116,6 +116,6 @@ abstract class BaseMenuContentDialogFragment : CustomWindowDialogFragment() {
     }
 
     fun isShowing(): Boolean {
-        return dialog != null && dialog.isShowing
+        return dialog != null && dialog!!.isShowing
     }
 }
