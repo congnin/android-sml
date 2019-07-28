@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import vn.kingbee.movie.ui.MainActivity
 import vn.kingbee.rxjava.RxJava2SelectionActivity
 import vn.kingbee.widget.animation.demo.ShimmerActivityDemo
 import vn.kingbee.widget.button.counterfab.CounterFabExample
@@ -110,5 +111,9 @@ class SelectionActivity : AppCompatActivity() {
 
     fun startViewPager2(v: View) {
         startActivity(Intent(this@SelectionActivity, BrowseActivity::class.java))
+    }
+
+    fun startMovie(v: View) {
+        startActivity(Intent(this@SelectionActivity, MainActivity::class.java))
     }
 }

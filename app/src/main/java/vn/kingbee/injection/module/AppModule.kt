@@ -1,5 +1,6 @@
 package vn.kingbee.injection.module
 
+import android.app.Application
 import android.content.Context
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
@@ -10,9 +11,17 @@ import javax.inject.Singleton
 
 @Module
 class AppModule {
+    private val application: Application
+
+    constructor(application: MyApp) {
+        this.application = application
+    }
+
     @Provides
     @Singleton
-    fun provideApplicationContext(app: MyApp): Context = app
+    fun providesApplication(): Application {
+        return application
+    }
 
     @Provides
     @Singleton

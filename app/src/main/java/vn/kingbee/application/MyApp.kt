@@ -3,10 +3,18 @@ package vn.kingbee.application
 import android.app.Application
 import android.content.Context
 import timber.log.Timber
+import vn.kingbee.movie.network.NetworkComponent
 import vn.kingbee.utils.FontHelper
 import vn.kingbee.widget.BuildConfig
+import vn.kingbee.movie.network.NetworkModule
+import vn.kingbee.injection.module.AppModule
+import vn.kingbee.movie.network.DaggerNetworkComponent
+
 
 class MyApp : Application() {
+
+    lateinit var networkComponent: NetworkComponent
+
     override fun onCreate() {
         super.onCreate()
         if (!BuildConfig.DEBUG) {
@@ -16,6 +24,10 @@ class MyApp : Application() {
         }
 
         ContextSingleton.setContext(this)
+        networkComponent = DaggerNetworkComponent.builder()
+            .appModule(AppModule(this))
+            .networkModule(NetworkModule())
+            .build()
 
         // setup font family
         FontHelper.initializeFontConfig()

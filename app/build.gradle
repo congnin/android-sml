@@ -15,6 +15,11 @@ android {
         versionName globalConfiguration["androidVersionName"]
         testInstrumentationRunner globalConfiguration["testInstrumentationRunner"]
     }
+
+    def STRING = "String"
+    def UNDEFINED = '"UNDEFINED"'
+    def THE_MOVIE_DB_API_KEY = "THE_MOVIE_DB_API_KEY"
+
     buildTypes {
         debug {
             minifyEnabled false
@@ -54,6 +59,10 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes.each {
+        it.buildConfigField STRING, THE_MOVIE_DB_API_KEY, '"3cc91d496a0b7cf338fafae2c567ffd7"'
     }
 }
 
@@ -115,4 +124,5 @@ dependencies {
 
     implementation 'androidx.viewpager2:viewpager2:1.0.0-alpha06'
     implementation 'androidx.fragment:fragment-ktx:1.2.0-alpha01'
+    debugImplementation 'com.amitshekhar.android:debug-db:1.0.6'
 }
