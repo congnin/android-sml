@@ -18,7 +18,7 @@ import vn.kingbee.movie.model.Movie
 import vn.kingbee.movie.util.CursorRecyclerViewAdapter
 import vn.kingbee.widget.R
 
-class MoviesAdapter : CursorRecyclerViewAdapter<MoviesAdapter.MovieGridItemViewHolder> {
+class MoviesAdapter : CursorRecyclerViewAdapter<MovieGridItemViewHolder> {
 
     private val context: Context
     private var onItemClickListener: OnItemClickListener? = null
@@ -60,25 +60,6 @@ class MoviesAdapter : CursorRecyclerViewAdapter<MoviesAdapter.MovieGridItemViewH
             cursor.moveToNext()
         }
         return Movie.fromCursor(cursor)
-    }
-
-    inner class MovieGridItemViewHolder : RecyclerView.ViewHolder, View.OnClickListener {
-        @BindView(R.id.image_movie_poster)
-        lateinit var moviePoster: ImageView
-
-        private var onItemClickListener: OnItemClickListener? = null
-
-        constructor(itemView: View, onItemClickListener: OnItemClickListener?) : super(itemView) {
-            ButterKnife.bind(this, itemView)
-            this.onItemClickListener = onItemClickListener
-            itemView.setOnClickListener(this)
-        }
-
-        override fun onClick(v: View?) {
-            if (onItemClickListener != null && v != null) {
-                onItemClickListener?.onItemClick(v, adapterPosition)
-            }
-        }
     }
 
     interface OnItemClickListener {

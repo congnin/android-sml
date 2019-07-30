@@ -136,7 +136,7 @@ class Movie : Parcelable {
 
     companion object {
 
-        @SuppressLint("ParcelCreator")
+        @JvmField
         val CREATOR: Parcelable.Creator<Movie> = object : Parcelable.Creator<Movie> {
             override fun createFromParcel(source: Parcel): Movie {
                 return Movie(source)

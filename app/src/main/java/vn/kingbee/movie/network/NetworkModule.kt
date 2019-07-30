@@ -3,12 +3,9 @@ package vn.kingbee.movie.network
 import android.app.Application
 import android.content.SharedPreferences
 import android.preference.PreferenceManager
-import com.google.gson.Gson
-import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
 import okhttp3.Cache
-import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -20,6 +17,7 @@ import vn.kingbee.movie.model.SortHelper
 import vn.kingbee.widget.BuildConfig
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
+import vn.kingbee.movie.data.FavoritesService
 
 @Module
 class NetworkModule {
@@ -83,6 +81,12 @@ class NetworkModule {
     fun providesMoviesService(application: Application, theMovieDbService: TheMovieDbService,
                               sortHelper: SortHelper): MoviesService {
         return MoviesService(application.applicationContext, theMovieDbService, sortHelper)
+    }
+
+    @Provides
+    @Singleton
+    fun providesFavoritesService(application: Application): FavoritesService {
+        return FavoritesService(application.applicationContext)
     }
 
     companion object {

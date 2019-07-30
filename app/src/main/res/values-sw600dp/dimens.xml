@@ -28,4 +28,10 @@
     <dimen name="minimum_margin_sides">48dip</dimen>
     <dimen name="minimum_margin_top_bottom">24dip</dimen>
     <dimen name="picker_dimen">400dip</dimen>
+
+    <!--movie-->
+    <dimen name="movie_detail_content_width">@dimen/match_parent</dimen>
+    <dimen name="movie_detail_content_margin_left_right">32dp</dimen>
+    <dimen name="movie_detail_cards_margin_left_right">16dp</dimen>
+    <dimen name="movie_detail_content_overlay">96dp</dimen>
 </resources>

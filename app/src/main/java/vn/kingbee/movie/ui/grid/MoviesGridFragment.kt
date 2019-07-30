@@ -11,17 +11,26 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
+import android.view.View
 import androidx.appcompat.widget.SearchView
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.google.android.material.snackbar.Snackbar
+import io.reactivex.Observer
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.Disposable
+import io.reactivex.functions.Consumer
+import io.reactivex.schedulers.Schedulers
 import timber.log.Timber
 import vn.kingbee.application.MyApp
 import vn.kingbee.movie.api.TheMovieDbService
 import vn.kingbee.movie.data.MoviesService
+import vn.kingbee.movie.model.Movie
 import vn.kingbee.movie.model.SortHelper
 import vn.kingbee.movie.ui.EndlessRecyclerViewOnScrollListener
 import vn.kingbee.movie.ui.SortingDialogFragment
+import vn.kingbee.rxjava.search.RxSearchObservable
 import vn.kingbee.widget.R
+import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
 class MoviesGridFragment : AbstractMoviesGridFragment() {
@@ -102,8 +111,7 @@ class MoviesGridFragment : AbstractMoviesGridFragment() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        val id = item.itemId
-        return when (id) {
+        return when (item.itemId) {
             R.id.action_show_sort_by_dialog -> {
                 showSortByDialog()
                 true
@@ -116,10 +124,6 @@ class MoviesGridFragment : AbstractMoviesGridFragment() {
 
     override fun onCursorLoaded(data: Cursor?) {
         getAdapter()?.changeCursor(data)
-        if (data != null && data.moveToFirst()) {
-            val tempt = data.getString(data.getColumnIndex("original_title"))
-            Timber.d("$LOG_TAG $tempt")
-        }
         if (data == null || data.count == 0) {
             refreshMovies()
         }
@@ -142,11 +146,53 @@ class MoviesGridFragment : AbstractMoviesGridFragment() {
     private fun setupSearchView() {
         if (searchView == null) {
             Timber.e("$LOG_TAG SearchView is not initialized")
-            return
-        }
-        val searchManager = activity?.getSystemService(Context.SEARCH_SERVICE) as SearchManager
-        searchView?.setSearchableInfo(searchManager.getSearchableInfo(activity?.componentName))
+        } else {
+            val searchManager = activity?.getSystemService(Context.SEARCH_SERVICE) as SearchManager
+            searchView?.setSearchableInfo(searchManager.getSearchableInfo(activity?.componentName))
 
+            RxSearchObservable.fromView(searchView!!)
+                .debounce(SEARCH_QUERY_DELAY_MILLIS, TimeUnit.MILLISECONDS)
+                .filter { it.isNotEmpty() }
+                .doOnNext { query -> Timber.d("Search: $query") }
+                .distinctUntilChanged()
+                .switchMap { query -> theMovieDbService.searchMovies(query, null) }
+                .map { response -> response.results }
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(object : Observer<List<Movie>?> {
+                    override fun onComplete() {
+                        //do nothing
+                    }
+
+                    override fun onSubscribe(d: Disposable) {
+                        //do nothing
+                    }
+
+                    override fun onNext(t: List<Movie>) {
+                        val adapter = MoviesSearchAdapter(context!!, t)
+                        adapter.setOnItemClickListener(object : MoviesAdapter.OnItemClickListener {
+                            override fun onItemClick(itemView: View, position: Int) {
+                                getOnItemSelectedListener()?.onItemSelected(adapter.getItem(position)!!)
+                            }
+                        })
+                        recyclerView.adapter = adapter
+                        updateGridLayout()
+                    }
+
+                    override fun onError(e: Throwable) {
+                        Timber.e("$LOG_TAG Error: $e")
+                    }
+
+                })
+            searchView?.setOnSearchClickListener { view ->
+                recyclerView.adapter = null
+                if (endlessRecyclerViewOnScrollListener != null) {
+                    recyclerView.removeOnScrollListener(endlessRecyclerViewOnScrollListener!!)
+                }
+                updateGridLayout()
+                swipeRefreshLayout.isEnabled = false
+            }
+        }
 
     }
 
@@ -162,7 +208,7 @@ class MoviesGridFragment : AbstractMoviesGridFragment() {
 
     companion object {
         private const val LOG_TAG = "MoviesGridFragment"
-        private const val SEARCH_QUERY_DELAY_MILLIS = 400
+        private const val SEARCH_QUERY_DELAY_MILLIS = 400L
 
         fun create(): MoviesGridFragment = MoviesGridFragment()
     }

@@ -122,7 +122,11 @@ dependencies {
 
     implementation "com.airbnb.android:lottie:2.5.1"
 
-    implementation 'androidx.viewpager2:viewpager2:1.0.0-alpha06'
+    implementation 'androidx.viewpager2:viewpager2:1.0.0-beta02'
     implementation 'androidx.fragment:fragment-ktx:1.2.0-alpha01'
     debugImplementation 'com.amitshekhar.android:debug-db:1.0.6'
+
+    implementation 'com.trello.rxlifecycle3:rxlifecycle:3.0.0'
+    implementation 'com.trello.rxlifecycle3:rxlifecycle-android:3.0.0'
+    implementation 'com.trello.rxlifecycle3:rxlifecycle-components:3.0.0'
 }

@@ -17,8 +17,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning"
         tools:targetApi="m">
         <activity android:name=".SelectionActivity">
@@ -94,6 +94,15 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity
+            android:name="vn.kingbee.movie.ui.detail.MovieDetailActivity"
+            android:parentActivityName="vn.kingbee.movie.ui.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="vn.kingbee.movie.ui.MainActivity" />
         </activity>
 
         <provider

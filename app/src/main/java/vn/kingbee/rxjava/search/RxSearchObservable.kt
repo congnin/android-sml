@@ -25,4 +25,23 @@ object RxSearchObservable {
 
         return subject
     }
+
+    fun fromView(searchView: androidx.appcompat.widget.SearchView) : Observable<String> {
+
+        val subject = PublishSubject.create<String>()
+
+        searchView.setOnQueryTextListener(object : androidx.appcompat.widget.SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(s: String): Boolean {
+                subject.onNext(s)
+                return true
+            }
+
+            override fun onQueryTextChange(text: String): Boolean {
+                subject.onNext(text)
+                return true
+            }
+        })
+
+        return subject
+    }
 }
