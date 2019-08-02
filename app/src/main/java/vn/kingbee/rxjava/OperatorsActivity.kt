@@ -107,7 +107,7 @@ class OperatorsActivity : BaseActivity() {
     }
 
     fun startPublishSubjectActivity(view: View) {
-//        startActivity(Intent(this@OperatorsActivity, PublishSubjectExampleActivity::class.java))
+        startActivity(Intent(this@OperatorsActivity, PublishSubjectExampleActivity::class.java))
     }
 
     fun startBehaviorSubjectActivity(view: View) {

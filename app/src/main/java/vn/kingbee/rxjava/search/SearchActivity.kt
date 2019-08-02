@@ -1,5 +1,6 @@
 package vn.kingbee.rxjava.search
 
+import android.annotation.SuppressLint
 import vn.kingbee.widget.BaseActivity
 import android.os.Bundle
 import android.widget.SearchView
@@ -25,18 +26,17 @@ class SearchActivity : BaseActivity() {
         setUpSearchObservable()
     }
 
+    @SuppressLint("CheckResult")
     private fun setUpSearchObservable() {
         RxSearchObservable.fromView(searchView).debounce(300, TimeUnit.MILLISECONDS)
-            .filter(object : Predicate<String> {
-                override fun test(t: String): Boolean {
-                    if (t.isEmpty()) {
-                        textViewResult.text = ""
-                        return false
-                    } else {
-                        return true
-                    }
+            .filter { t ->
+                if (t.isEmpty()) {
+                    textViewResult.text = ""
+                    false
+                } else {
+                    true
                 }
-            }).distinctUntilChanged().switchMap { query -> dataFromNetwork(query) }
+            }.distinctUntilChanged().switchMap { query -> dataFromNetwork(query) }
             .subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
             .subscribe { result -> textViewResult.text = result }
     }

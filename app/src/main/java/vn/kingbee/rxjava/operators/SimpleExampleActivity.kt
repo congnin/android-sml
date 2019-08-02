@@ -9,6 +9,7 @@ import io.reactivex.Observable
 import io.reactivex.Observer
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
+import io.reactivex.functions.BiFunction
 import io.reactivex.schedulers.Schedulers
 import timber.log.Timber
 import vn.kingbee.application.AppConstant
@@ -36,7 +37,13 @@ class SimpleExampleActivity : BaseActivity() {
             .observeOn(AndroidSchedulers.mainThread()).subscribe(getObserver())
     }
 
-    private fun getObservable(): Observable<String> = Observable.just("Cricket", "Football")
+    private fun getObservable(): Observable<String> =
+        Observable.fromArray("janishar ali anwar then flattens the emissions from all of those into a single Observable")
+            .flatMap { word -> Observable.fromArray(word.split(" ")) }
+            .zipWith(Observable.range(1, Integer.MAX_VALUE),
+                BiFunction { s: List<String>, count: Int ->
+                    "%2d. %s".format(count, s)
+                })
 
     private fun getObserver(): Observer<String> {
         return object : Observer<String> {
