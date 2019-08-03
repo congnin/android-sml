@@ -4,6 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import vn.kingbee.widget.BaseActivity
 import android.view.View
+import vn.kingbee.application.MyApp
+import vn.kingbee.rxjava.rxbus.RxBusActivity
 import vn.kingbee.rxjava.search.SearchActivity
 import vn.kingbee.widget.R
 
@@ -26,8 +28,8 @@ class RxJava2SelectionActivity : BaseActivity() {
     }
 
     fun startRxBusActivity(view: View) {
-//        (application as MyApplication).sendAutoEvent()
-//        startActivity(Intent(this@RxJava2SelectionActivity, RxBusActivity::class.java))
+        MyApp.getInstance().sendAutoEvent()
+        startActivity(Intent(this@RxJava2SelectionActivity, RxBusActivity::class.java))
     }
 
     fun startPaginationActivity(view: View) {

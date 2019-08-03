@@ -1,7 +1,10 @@
 package vn.kingbee.application
 
+import android.annotation.SuppressLint
 import android.app.Application
 import android.content.Context
+import io.reactivex.Observable
+import io.reactivex.functions.Consumer
 import timber.log.Timber
 import vn.kingbee.movie.network.NetworkComponent
 import vn.kingbee.utils.FontHelper
@@ -9,11 +12,15 @@ import vn.kingbee.widget.BuildConfig
 import vn.kingbee.movie.network.NetworkModule
 import vn.kingbee.injection.module.AppModule
 import vn.kingbee.movie.network.DaggerNetworkComponent
+import vn.kingbee.rxjava.model.Events
+import vn.kingbee.rxjava.rxbus.RxBus
+import java.util.concurrent.TimeUnit
 
 
 class MyApp : Application() {
 
     lateinit var networkComponent: NetworkComponent
+    lateinit var bus: RxBus
 
     override fun onCreate() {
         super.onCreate()
@@ -31,6 +38,14 @@ class MyApp : Application() {
 
         // setup font family
         FontHelper.initializeFontConfig()
+
+        bus = RxBus()
+    }
+
+    @SuppressLint("CheckResult")
+    fun sendAutoEvent() {
+        Observable.timer(2, TimeUnit.SECONDS)
+            .subscribe { bus.send(Events.AutoEvent()) }
     }
 
     private class NotLoggingTree : Timber.Tree() {

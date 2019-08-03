@@ -70,13 +70,11 @@
         <activity android:name=".viewpager.viewpager2.MutableCollectionFragmentActivity" />
         <activity android:name=".viewpager.viewpager2.MutableCollectionViewActivity" />
 
-        <activity android:name="vn.kingbee.rxjava.RxJava2SelectionActivity" />
-        <activity android:name="vn.kingbee.rxjava.OperatorsActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name="vn.kingbee.rxjava.RxJava2SelectionActivity" >
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        </activity>
+        <activity android:name="vn.kingbee.rxjava.OperatorsActivity">
+
         </activity>
         <activity android:name="vn.kingbee.rxjava.operators.SimpleExampleActivity" />
         <activity android:name="vn.kingbee.rxjava.operators.MapExampleActivity" />
@@ -90,6 +88,13 @@
         <activity android:name="vn.kingbee.rxjava.operators.ThrottleFirstExampleActivity" />
         <activity android:name="vn.kingbee.rxjava.operators.PublishSubjectExampleActivity" />
         <activity android:name="vn.kingbee.rxjava.search.SearchActivity" />
+        <activity android:name="vn.kingbee.rxjava.rxbus.RxBusActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <activity android:name="vn.kingbee.mock.MockOptionDialog" />
         <activity

@@ -1,8 +1,9 @@
 package vn.kingbee.rxjava.model
 
-class Event private constructor() {
+object Events {
 
     class TapEvent
 
     class AutoEvent
+
 }
