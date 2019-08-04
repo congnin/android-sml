@@ -1,4 +1,4 @@
-package vn.kingbee.job
+package vn.kingbee.working.job
 
 import android.app.NotificationChannel
 import android.app.NotificationManager

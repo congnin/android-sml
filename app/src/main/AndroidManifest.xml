@@ -10,6 +10,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-feature android:name="android.hardware.camera2.full" />
+
     <application
         android:name="vn.kingbee.application.MyApp"
         android:allowBackup="true"
@@ -21,9 +22,12 @@
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning"
         tools:targetApi="m">
-        <activity android:name=".SelectionActivity">
+        <receiver
+            android:name="vn.kingbee.working.alarm.AlarmReceiver"
+            android:enabled="true"
+            android:exported="true"></receiver>
 
-        </activity>
+        <activity android:name=".SelectionActivity"></activity>
         <activity android:name=".progress.CircleProcessBarActivity" />
         <activity android:name=".progress.demo.CircleProgressIndicatorDemo" />
         <activity android:name=".edittext.FormatEditTextActivity" />
@@ -49,9 +53,9 @@
             android:name=".button.counterfab.CounterFabExample"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".recyclerview.alphabet.demo.IndexFastScrollExample" />
-        <activity android:name="vn.kingbee.widget.layout.constraintlayout.ConstraintSetExampleActivity" />
+        <activity android:name=".layout.constraintlayout.ConstraintSetExampleActivity" />
         <activity
-            android:name="vn.kingbee.widget.layout.constraintlayout.MainConstraintActivity"
+            android:name=".layout.constraintlayout.MainConstraintActivity"
             android:configChanges="orientation|screenSize" />
         <activity android:name=".layout.motion.MainMotionActivity" />
         <activity android:name=".layout.motion.DemoActivity" />
@@ -60,7 +64,6 @@
         <activity android:name=".layout.motion.fragmentsdemo.FragmentExampleActivity" />
         <activity android:name=".layout.motion.fragmentsdemo.FragmentExample2Activity" />
         <activity android:name=".layout.motion.youtubedemo.YouTubeDemoActivity" />
-
         <activity android:name=".viewpager.viewpager2.CardViewActivity" />
         <activity android:name=".viewpager.viewpager2.PageTransformerActivity" />
         <activity android:name=".viewpager.viewpager2.CardFragmentActivity" />
@@ -69,13 +72,8 @@
         <activity android:name=".viewpager.viewpager2.BrowseActivity" />
         <activity android:name=".viewpager.viewpager2.MutableCollectionFragmentActivity" />
         <activity android:name=".viewpager.viewpager2.MutableCollectionViewActivity" />
-
-        <activity android:name="vn.kingbee.rxjava.RxJava2SelectionActivity" >
-
-        </activity>
-        <activity android:name="vn.kingbee.rxjava.OperatorsActivity">
-
-        </activity>
+        <activity android:name="vn.kingbee.rxjava.RxJava2SelectionActivity"></activity>
+        <activity android:name="vn.kingbee.rxjava.OperatorsActivity"></activity>
         <activity android:name="vn.kingbee.rxjava.operators.SimpleExampleActivity" />
         <activity android:name="vn.kingbee.rxjava.operators.MapExampleActivity" />
         <activity android:name="vn.kingbee.rxjava.operators.ZipExampleActivity" />
@@ -89,16 +87,11 @@
         <activity android:name="vn.kingbee.rxjava.operators.PublishSubjectExampleActivity" />
         <activity android:name="vn.kingbee.rxjava.search.SearchActivity" />
         <activity android:name="vn.kingbee.rxjava.rxbus.RxBusActivity" />
-
-
         <activity android:name="vn.kingbee.mock.MockOptionDialog" />
         <activity
             android:name="vn.kingbee.movie.ui.MainActivity"
             android:label="Popular movies"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
-
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name="vn.kingbee.movie.ui.detail.MovieDetailActivity"
             android:parentActivityName="vn.kingbee.movie.ui.MainActivity"
@@ -113,9 +106,12 @@
             android:authorities="vn.kingbee.movie"
             android:exported="false" />
 
-        <service android:name="vn.kingbee.job.NotificationJobService"
+        <service
+            android:name="vn.kingbee.working.job.NotificationJobService"
             android:permission="android.permission.BIND_JOB_SERVICE" />
-        <activity android:name="vn.kingbee.job.JobDemo" >
+
+        <activity android:name="vn.kingbee.working.job.JobDemo" />
+        <activity android:name="vn.kingbee.working.alarm.AlarmDemo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
