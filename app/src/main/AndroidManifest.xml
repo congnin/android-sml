@@ -88,13 +88,8 @@
         <activity android:name="vn.kingbee.rxjava.operators.ThrottleFirstExampleActivity" />
         <activity android:name="vn.kingbee.rxjava.operators.PublishSubjectExampleActivity" />
         <activity android:name="vn.kingbee.rxjava.search.SearchActivity" />
-        <activity android:name="vn.kingbee.rxjava.rxbus.RxBusActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name="vn.kingbee.rxjava.rxbus.RxBusActivity" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
 
         <activity android:name="vn.kingbee.mock.MockOptionDialog" />
         <activity
@@ -117,6 +112,16 @@
             android:name="vn.kingbee.movie.data.MoviesProvider"
             android:authorities="vn.kingbee.movie"
             android:exported="false" />
+
+        <service android:name="vn.kingbee.job.NotificationJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <activity android:name="vn.kingbee.job.JobDemo" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
