@@ -1,0 +1,24 @@
+{
+  "data": {
+    "kiosks": [
+      {
+        "trackingStatusEnabled": true,
+        "msisdn": "R52K112G8VH",
+        "type": "Kiosk-PTBC",
+        "edcIpAddress": null,
+        "edcPort": 0,
+        "minimumCardAmount": 0,
+        "maximumCardAmount": 0,
+        "remainingCardAmount": 0,
+        "terminalID": "1032050",
+        "commissionDate": 1520874000000,
+        "decommissionDate": null,
+        "location": "INDO",
+        "branchCode": "118"
+      }
+    ]
+  },
+  "errors": [],
+  "warnings": [],
+  "success": true
+}

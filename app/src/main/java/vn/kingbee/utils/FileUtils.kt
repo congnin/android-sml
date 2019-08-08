@@ -8,6 +8,7 @@ import com.google.gson.Gson
 import io.reactivex.Observable
 import timber.log.Timber
 import vn.kingbee.application.MyApp
+import vn.kingbee.ektpreader.EKTPReaderRepositoryMock
 import vn.kingbee.model.ProvinceResponse
 import vn.kingbee.widget.dialog.ext.help.model.HelpResponse
 import vn.kingbee.widget.recyclerview.help.HelpVideoResponse
@@ -21,6 +22,7 @@ class FileUtils {
         private const val FILE_HELP_VIDEO_NAME = "get_help_video.json"
         private const val DIRECTORY_MOCK = "/mock/"
         private const val FILE_PROVINCE_NAME = "province.json"
+        private const val FILE_MOCK_EKTP = "mock_ektp.json"
 
         fun concatDirectoryPath(parentDirectory: String, childDirectory: String): String? {
             if (parentDirectory.isEmpty() && childDirectory.isEmpty()) {
@@ -59,6 +61,13 @@ class FileUtils {
             return Observable.fromCallable<HelpResponse> {
                 val rd = getInputStreamReaderFromAssets(context, FILE_HELP_FAQ_NAME)
                 Gson().fromJson(rd, HelpResponse::class.java)
+            }
+        }
+
+        fun getMockEKTPFromResource(context: Context): Observable<EKTPReaderRepositoryMock.MockEktp> {
+            return Observable.fromCallable {
+                val rd = getInputStreamReaderFromAssets(context, FILE_MOCK_EKTP)
+                Gson().fromJson(rd, EKTPReaderRepositoryMock.MockEktp::class.java)
             }
         }
 
@@ -118,9 +127,11 @@ class FileUtils {
             return mExternalStorageWriteable
         }
 
-        fun writeBitmapToFile(viewBoundariesImage: Bitmap,
-                              fileName: String,
-                              fileExtension: String): String? {
+        fun writeBitmapToFile(
+            viewBoundariesImage: Bitmap,
+            fileName: String,
+            fileExtension: String
+        ): String? {
             var out: FileOutputStream? = null
             var fileDebug: String? = null
             try {
