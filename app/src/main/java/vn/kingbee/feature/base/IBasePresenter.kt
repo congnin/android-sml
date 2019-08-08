@@ -13,5 +13,5 @@ interface IBasePresenter<ViewType> {
 
     fun updateUI()
 
-    fun destroy(viewHashCode: Long)
+    fun destroy(viewHashCode: Int)
 }

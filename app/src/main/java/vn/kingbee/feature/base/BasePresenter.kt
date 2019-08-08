@@ -38,22 +38,54 @@ class BasePresenter<T : BaseFragmentBehavior> : IBasePresenter<T> {
     }
 
     override fun resume() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        //do nothing
     }
 
     override fun pause() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        //do nothing
     }
 
     override fun destroy() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        destroyAllSubscription()
+
+        val previousView = mView
+        if (previousView == mView) {
+            this.mView = null
+        } else {
+            throw IllegalStateException("Unexpected view! previousView = $previousView, view to unbind = $mView")
+        }
     }
 
     override fun updateUI() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        if (mView != null && mView?.get() != null) {
+            mView!!.get()?.viewLoaded()
+        }
     }
 
-    override fun destroy(viewHashCode: Long) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    override fun destroy(viewHashCode: Int) {
+        if (viewHashCode == mViewHashCode) {
+            destroy()
+        }
+    }
+
+    protected fun addOneSubscription(d: Disposable) {
+        if (this.subscriptions == null) {
+            this.subscriptions = HashSet()
+        }
+
+        (this.subscriptions as HashSet).add(d)
+    }
+
+    protected fun destroyAllSubscription() {
+        if (this.subscriptions != null) {
+            val iterator = subscriptions?.iterator()
+
+            while (iterator != null && iterator.hasNext()) {
+                val subscription = iterator.next()
+                if (!subscription.isDisposed) {
+                    subscription.dispose()
+                }
+            }
+        }
     }
 }
