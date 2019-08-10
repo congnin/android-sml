@@ -80,33 +80,33 @@ class BeeInput : GridLayout {
 
     protected fun bindData(header: String?, input: String?) {
         if (header != null && !header.isEmpty()) {
-            mTvHeader!!.text = header
+            mTvHeader.text = header
         }
         if (input != null && !input.isEmpty()) {
-            mEtInput!!.setText(input)
+            mEtInput.setText(input)
         }
     }
 
     fun setOnFocusChangedListener(listener: View.OnFocusChangeListener) {
-        mEtInput!!.onFocusChangeListener = listener
+        mEtInput.onFocusChangeListener = listener
     }
 
     protected fun setDrawableRight(drawableRight: Drawable) {
-        mEtInput!!.setCompoundDrawablesWithIntrinsicBounds(null, null, drawableRight, null)
+        mEtInput.setCompoundDrawablesWithIntrinsicBounds(null, null, drawableRight, null)
     }
 
     fun setInputType(inputType: Int) {
-        mEtInput!!.inputType = inputType
+        mEtInput.inputType = inputType
     }
 
     protected fun setInputMaxLength(maxLength: Int) {
-        mEtInput!!.filters = arrayOf<InputFilter>(InputFilter.LengthFilter(maxLength))
+        mEtInput.filters = arrayOf<InputFilter>(InputFilter.LengthFilter(maxLength))
     }
 
     fun updateView(action: ViewAction, message: CharSequence) {
         when (action) {
             ViewAction.DATA -> {
-                mEtInput!!.setText(message)
+                mEtInput.setText(message)
                 setErrorStatus(false)
             }
 
@@ -117,25 +117,25 @@ class BeeInput : GridLayout {
     }
 
     private fun setErrorStatus(isShow: Boolean) {
-        mIbError!!.visibility = if (isShow) View.VISIBLE else View.GONE
-        mEtInput!!.setError(isShow)
+        mIbError.visibility = if (isShow) View.VISIBLE else View.GONE
+        mEtInput.setError(isShow)
     }
 
     private fun setError(message: CharSequence) {
         setErrorStatus(true)
-        mIbError!!.tag = message
+        mIbError.tag = message
     }
 
     fun setOnErrorListener(listener: View.OnClickListener) {
-        mIbError!!.setOnClickListener(listener)
+        mIbError.setOnClickListener(listener)
     }
 
     fun getText(): String {
-        return mEtInput!!.text.toString()
+        return mEtInput.text.toString()
     }
 
     fun setText(text: String) {
-        mEtInput!!.setText(text)
+        mEtInput.setText(text)
     }
 
     fun getInput(): EditText? {

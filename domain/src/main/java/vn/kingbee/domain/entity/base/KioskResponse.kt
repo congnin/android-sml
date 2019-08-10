@@ -1,4 +1,4 @@
-package vn.kingbee.domain.base
+package vn.kingbee.domain.entity.base
 
 import com.google.gson.annotations.SerializedName
 

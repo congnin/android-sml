@@ -1,4 +1,4 @@
-package vn.kingbee.domain.setting.entity.kiosk
+package vn.kingbee.domain.entity.kiosk
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName

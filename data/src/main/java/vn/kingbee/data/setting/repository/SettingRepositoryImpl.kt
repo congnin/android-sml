@@ -2,14 +2,14 @@ package vn.kingbee.data.setting.repository
 
 import io.reactivex.Observable
 import vn.kingbee.data.setting.service.SettingService
-import vn.kingbee.domain.setting.entity.configuration.ConfigInfo
-import vn.kingbee.domain.setting.entity.kiosk.KioskDataResponse
-import vn.kingbee.domain.setting.entity.lov.LOV
+import vn.kingbee.domain.entity.configuration.ConfigInfo
+import vn.kingbee.domain.entity.kiosk.KioskDataResponse
+import vn.kingbee.domain.entity.lov.LOV
 import vn.kingbee.domain.setting.repository.SettingRepository
 
 class SettingRepositoryImpl : SettingRepository {
 
-    lateinit var settingService: SettingService
+    private var settingService: SettingService
 
     constructor(settingService: SettingService) {
         this.settingService = settingService

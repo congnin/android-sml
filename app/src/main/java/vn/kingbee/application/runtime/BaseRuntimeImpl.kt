@@ -6,9 +6,9 @@ import com.google.gson.Gson
 import timber.log.Timber
 
 open class BaseRuntimeImpl {
-    lateinit var sharedPreferences: SharedPreferences
+    protected var sharedPreferences: SharedPreferences
 
-    lateinit var gson: Gson
+    protected var gson: Gson
 
     constructor(sharedPreferences: SharedPreferences, gson: Gson) {
         this.sharedPreferences = sharedPreferences

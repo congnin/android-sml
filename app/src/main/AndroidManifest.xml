@@ -25,7 +25,7 @@
         <receiver
             android:name="vn.kingbee.working.alarm.AlarmReceiver"
             android:enabled="true"
-            android:exported="true"></receiver>
+            android:exported="true"/>
 
         <activity android:name=".SelectionActivity"></activity>
         <activity android:name=".progress.CircleProcessBarActivity" />
@@ -101,6 +101,14 @@
                 android:value="vn.kingbee.movie.ui.MainActivity" />
         </activity>
 
+        <activity android:name="vn.kingbee.feature.splash.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <provider
             android:name="vn.kingbee.movie.data.MoviesProvider"
             android:authorities="vn.kingbee.movie"
@@ -112,11 +120,7 @@
 
         <activity android:name="vn.kingbee.working.job.JobDemo" />
         <activity android:name="vn.kingbee.working.alarm.AlarmDemo">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

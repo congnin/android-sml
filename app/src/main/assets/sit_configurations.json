@@ -1,0 +1,48 @@
+{
+  "tokenConfigurations" : [
+    {
+      "name": "SCOPE",
+      "value": "SANDBOX",
+      "isEncrypt": false
+    },
+    {
+      "name": "GRANT_TYPE",
+      "value": "client_credentials",
+      "isEncrypt": false
+    },
+    {
+      "name": "CONSUMER_KEY_APIM",
+      "value": "O74ZeaEDiaq83_Y5RN8ikNiwco72wm5ihpR5NKltWrE=",
+      "isEncrypt": true
+    },
+    {
+      "name": "CONSUMER_SECRET_APIM",
+      "value": "XqrQNOyawCf6PmKe7nCHQAzGiMEEoLKLvfkVthX47HA=",
+      "isEncrypt": true
+    },
+    {
+      "name": "CONTEXT_PATH_MAPPING_APIM",
+      "value": "kiosk/1.0.0/",
+      "isEncrypt": false
+    }
+  ],
+  "edcConfiguration": {
+    "ip": "10.214.1.140",
+    "port": "7703",
+    "timeout": "10000",
+    "iv": "0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00",
+    "sk": "0x61,0x62,0x63,0x64,0x65,0x66,0x67,0x68,0x61,0x62,0x63,0x64,0x65,0x66,0x67,0x68",
+    "securitySuffix": "111111111111"
+  },
+  "usbCameraConfiguration" : {
+    "rotation" : "180",
+    "scaleImage" : "3",
+    "previewWidth":"3264",
+    "previewHeight":"2448",
+    "brightness":"28",
+    "contrast":"30",
+    "gamma":"36",
+    "hue":"50"
+  },
+  "vsProfileSetting": "_DocDimLarge_5.39_DocDimSmall_3.41_DoBinarization__DoSkewCorrectionPage__Do90DegreeRotation_4_DoBackgroundSmoothing__DoCropCorrection__DoScaleBWImageToDPI_300_DoEdgeCleanup__DoContourCleaning__LoadSetting_<Property Name=\"CBinarize.Wei_Green_To_Gray.Int\" Value=\"0\" />_LoadSetting_<Property Name=\"CBinarize.Contrast_Slider_Pos.Int\" Value=\"5\" />_LoadSetting_<Property Name=\"CBinarize.Cleanup_Slider_Pos.Int\" Value=\"5\" />_LoadSetting_<Property Name=\"CBinarize.Wei_Blue_To_Gray.Int\" Value=\"1\" />_LoadSetting_<Property Name=\"CBinarize.Wei_Red_To_Gray.Int\" Value=\"0\" />"
+}

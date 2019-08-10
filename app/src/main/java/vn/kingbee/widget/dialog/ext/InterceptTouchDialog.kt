@@ -33,7 +33,7 @@ class InterceptTouchDialog(activity: Activity, theme: Int) : Dialog(activity, th
                 val isTouchInsideEditTextField = UIUtils.isTouchInsideEditText(event, v)
                 if (event.action == MotionEvent.ACTION_DOWN && isAfterDispatch &&
                     beforeDispatch && !isTouchInsideEditTextField) {
-                    UIUtils.hideKeyboard(ownerActivity, v)
+                    UIUtils.hideKeyboard(ownerActivity!!, v)
                 }
             }
             return false

@@ -35,4 +35,5 @@ dependencies {
     implementation presentationDependencies.rxAndroid2
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation(group: 'org.apache.commons', name: 'commons-lang3', version: '3.5')
 }

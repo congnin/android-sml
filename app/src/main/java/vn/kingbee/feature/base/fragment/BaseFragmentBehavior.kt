@@ -1,4 +1,4 @@
-package vn.kingbee.feature.base
+package vn.kingbee.feature.base.fragment
 
 interface BaseFragmentBehavior {
     fun showProgressDialog()

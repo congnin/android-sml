@@ -1,4 +1,4 @@
 package vn.kingbee.application.appbus
 
-class AppBusImpl {
+class AppBusImpl : AppBus {
 }

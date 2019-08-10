@@ -6,6 +6,8 @@ import android.content.Context
 import io.reactivex.Observable
 import io.reactivex.functions.Consumer
 import timber.log.Timber
+import vn.kingbee.injection.component.AppComponent
+import vn.kingbee.injection.component.DaggerAppComponent
 import vn.kingbee.movie.network.NetworkComponent
 import vn.kingbee.utils.FontHelper
 import vn.kingbee.widget.BuildConfig
@@ -20,6 +22,7 @@ import java.util.concurrent.TimeUnit
 class MyApp : Application() {
 
     lateinit var networkComponent: NetworkComponent
+    lateinit var appComponent: AppComponent
     lateinit var bus: RxBus
 
     override fun onCreate() {
@@ -34,6 +37,10 @@ class MyApp : Application() {
         networkComponent = DaggerNetworkComponent.builder()
             .appModule(AppModule(this))
             .networkModule(NetworkModule())
+            .build()
+
+        appComponent = DaggerAppComponent.builder()
+            .appModule(AppModule(this))
             .build()
 
         // setup font family

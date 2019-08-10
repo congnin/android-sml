@@ -60,12 +60,6 @@ class NetworkModule {
 
     @Provides
     @Singleton
-    fun providesSharedPreferences(application: Application): SharedPreferences {
-        return PreferenceManager.getDefaultSharedPreferences(application)
-    }
-
-    @Provides
-    @Singleton
     fun providesSortHelper(sharedPreferences: SharedPreferences): SortHelper {
         return SortHelper(sharedPreferences)
     }

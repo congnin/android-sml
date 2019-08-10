@@ -1,4 +1,4 @@
-package vn.kingbee.feature.base
+package vn.kingbee.feature.base.presenter
 
 interface IBasePresenter<ViewType> {
     fun setView(view: ViewType)
