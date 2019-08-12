@@ -18,17 +18,17 @@ class AccessTokenRequest {
     @SerializedName("Authorization")
     var authorization: String? = null
 
-    constructor(scope: String, grantType: String, msisdn: String) {
+    constructor(scope: String?, grantType: String?, msisdn: String?) {
         this.scope = scope
         this.grantType = grantType
         this.msisdn = msisdn
     }
 
-    constructor(token: String) {
+    constructor(token: String?) {
         this.token = token
     }
 
-    constructor(scope: String, grantType: String) {
+    constructor(scope: String?, grantType: String?) {
         this.scope = scope
         this.grantType = grantType
     }

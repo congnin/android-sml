@@ -1,5 +1,3 @@
 package vn.kingbee.application.appbus
 
-interface AppBus {
-
-}
+interface AppBus

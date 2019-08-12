@@ -18,6 +18,7 @@ import vn.kingbee.widget.BuildConfig
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 import vn.kingbee.movie.data.FavoritesService
+import javax.inject.Named
 
 @Module
 class NetworkModule {
@@ -30,6 +31,7 @@ class NetworkModule {
 
     @Provides
     @Singleton
+    @Named("Normal")
     fun providesOkHttpClient(cache: Cache): OkHttpClient {
 
         val builder = OkHttpClient.Builder()
@@ -49,7 +51,8 @@ class NetworkModule {
 
     @Provides
     @Singleton
-    fun providesRetrofit(okHttpClient: OkHttpClient): Retrofit {
+    @Named("Movie")
+    fun providesRetrofit(@Named("Normal") okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
@@ -66,7 +69,7 @@ class NetworkModule {
 
     @Provides
     @Singleton
-    fun providesTheMovieDbService(retrofit: Retrofit): TheMovieDbService {
+    fun providesTheMovieDbService(@Named("Movie") retrofit: Retrofit): TheMovieDbService {
         return retrofit.create(TheMovieDbService::class.java)
     }
 
@@ -85,6 +88,7 @@ class NetworkModule {
 
     companion object {
         private const val BASE_URL = "http://api.themoviedb.org/3/"
+        const val BASE_KIOSK_URL = "https://10.224.19.61:8243/kiosk/1.0.0/"
         private const val CACHE_SIZE = (10 * 1024 * 1024).toLong()    // 10 MB
         private const val CONNECT_TIMEOUT = 15L
         private const val WRITE_TIMEOUT = 60L

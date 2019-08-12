@@ -1,9 +1,11 @@
 package vn.kingbee.feature.base.presenter
 
-interface IBasePresenter<ViewType> {
-    fun setView(view: ViewType)
+import vn.kingbee.feature.base.fragment.BaseFragmentBehavior
 
-    fun getView(): ViewType?
+interface IBasePresenter<V> {
+    fun setView(view: V)
+
+    fun getView(): V?
 
     fun resume()
 

@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.app.Application
 import android.content.Context
 import io.reactivex.Observable
-import io.reactivex.functions.Consumer
 import timber.log.Timber
 import vn.kingbee.injection.component.AppComponent
 import vn.kingbee.injection.component.DaggerAppComponent
@@ -18,11 +17,10 @@ import vn.kingbee.rxjava.model.Events
 import vn.kingbee.rxjava.rxbus.RxBus
 import java.util.concurrent.TimeUnit
 
-
 class MyApp : Application() {
 
     lateinit var networkComponent: NetworkComponent
-    lateinit var appComponent: AppComponent
+    lateinit var mAppComponent: AppComponent
     lateinit var bus: RxBus
 
     override fun onCreate() {
@@ -34,14 +32,17 @@ class MyApp : Application() {
         }
 
         ContextSingleton.setContext(this)
+
         networkComponent = DaggerNetworkComponent.builder()
             .appModule(AppModule(this))
             .networkModule(NetworkModule())
             .build()
 
-        appComponent = DaggerAppComponent.builder()
+        mAppComponent = DaggerAppComponent.builder()
             .appModule(AppModule(this))
             .build()
+
+        mAppComponent.inject(this)
 
         // setup font family
         FontHelper.initializeFontConfig()

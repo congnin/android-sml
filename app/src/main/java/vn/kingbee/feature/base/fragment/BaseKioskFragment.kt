@@ -1,6 +1,5 @@
 package vn.kingbee.feature.base.fragment
 
-import android.app.Dialog
 import androidx.fragment.app.Fragment
 
 interface BaseKioskFragment {

@@ -5,6 +5,7 @@ import vn.kingbee.application.appbus.AppBus
 import vn.kingbee.application.runtime.Runtime
 import vn.kingbee.feature.base.fragment.BaseFragmentBehavior
 import java.lang.ref.WeakReference
+import javax.inject.Inject
 
 open class BaseKioskPresenter<T : BaseFragmentBehavior> : IBasePresenter<T> {
     protected var runtime: Runtime

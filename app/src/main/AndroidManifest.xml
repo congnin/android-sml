@@ -91,7 +91,9 @@
         <activity
             android:name="vn.kingbee.movie.ui.MainActivity"
             android:label="Popular movies"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
         <activity
             android:name="vn.kingbee.movie.ui.detail.MovieDetailActivity"
             android:parentActivityName="vn.kingbee.movie.ui.MainActivity"

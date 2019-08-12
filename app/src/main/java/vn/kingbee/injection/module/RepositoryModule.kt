@@ -8,16 +8,15 @@ import vn.kingbee.data.setting.service.SettingService
 import vn.kingbee.data.token.repository.TokenRepositoryImpl
 import vn.kingbee.data.token.service.TokenService
 import vn.kingbee.domain.setting.repository.SettingRepository
-import vn.kingbee.domain.setting.usecase.SettingUseCase
-import vn.kingbee.domain.setting.usecase.SettingUseCaseImpl
 import vn.kingbee.domain.token.repository.TokenRepository
+import javax.inject.Named
 import javax.inject.Singleton
 
 @Module
 class RepositoryModule {
     @Provides
     @Singleton
-    fun provideSettingService(retrofit: Retrofit): SettingService {
+    fun provideSettingService(@Named("Kiosk") retrofit: Retrofit): SettingService {
         return retrofit.create(SettingService::class.java)
     }
 
@@ -29,7 +28,7 @@ class RepositoryModule {
 
     @Provides
     @Singleton
-    fun provideTokenService(retrofit: Retrofit): TokenService {
+    fun provideTokenService(@Named("Kiosk") retrofit: Retrofit): TokenService {
         return retrofit.create(TokenService::class.java)
     }
 
