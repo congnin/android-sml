@@ -8,21 +8,18 @@ import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
 import vn.kingbee.application.MyApp
-import vn.kingbee.application.appbus.AppBus
+import vn.kingbee.domain.dataprocess.AppBus
 import vn.kingbee.application.appbus.AppBusImpl
-import vn.kingbee.application.runtime.Runtime
+import vn.kingbee.domain.dataprocess.Runtime
 import vn.kingbee.application.runtime.RuntimeImpl
 import vn.kingbee.utils.security.ObscuredSharedPreferences
-import vn.kingbee.widget.R
 import javax.inject.Singleton
-import android.preference.PreferenceManager
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import timber.log.Timber
-import vn.kingbee.movie.network.NetworkModule
 import vn.kingbee.movie.network.NetworkModule.Companion.BASE_KIOSK_URL
 import vn.kingbee.widget.BuildConfig
 import java.security.cert.CertificateException
@@ -67,7 +64,6 @@ class AppModule(private val myApp: MyApp) {
     fun provideApplicationBus(): AppBus {
         return AppBusImpl()
     }
-
 
     @Provides
     @Singleton

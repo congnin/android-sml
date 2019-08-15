@@ -6,7 +6,7 @@ import vn.kingbee.domain.entity.kiosk.KioskDataResponse
 import vn.kingbee.domain.entity.lov.LOV
 
 interface SettingRepository {
-    fun getLOVs(): Observable<LOV>
+    fun getLOVs(msisdn: String?, authorization: String?): Observable<LOV>
 
     fun getConfigInfo(): Observable<ConfigInfo>
 

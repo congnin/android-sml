@@ -1,7 +1,9 @@
 package vn.kingbee.utils
 
 import android.annotation.SuppressLint
+import android.app.Application
 import android.os.Build
+import android.provider.Settings
 import android.util.Base64
 import timber.log.Timber
 import java.io.File
@@ -135,5 +137,34 @@ object SystemUtil {
     fun base64Decode(input: String): ByteArray {
         val base64EncodeStr = input.replace("\\_".toRegex(), "+")
         return Base64.decode(base64EncodeStr, Base64.DEFAULT)
+    }
+
+    @SuppressLint("PrivateApi", "HardwareIds")
+    fun getSerialNumber(application: Application): String {
+        var serialNumber = ""
+        try {
+            val cl = Class.forName("android.os.SystemProperties")
+            val getMethod = cl.getMethod("get", String::class.java)
+
+            serialNumber = getMethod.invoke(cl, "gsm.sn1") as String
+            if (serialNumber.isEmpty()) {
+                serialNumber = getMethod.invoke(cl, "ril.serialnumber") as String
+            }
+            if (serialNumber.isEmpty()) {
+                serialNumber = getMethod.invoke(cl, "ro.serialno") as String
+            }
+            if (serialNumber.isEmpty()) {
+                serialNumber = getMethod.invoke(cl, "sys.serialnumber") as String
+            }
+            if (serialNumber.isEmpty()) {
+                serialNumber = Settings.Secure.getString(application.contentResolver, Settings.Secure.ANDROID_ID)
+            }
+            if (serialNumber.isEmpty()) {
+                serialNumber = Build.SERIAL
+            }
+        } catch (e: Exception) {
+            Timber.e("Get SerialNumber Error: ${e.printStackTrace()}")
+        }
+        return serialNumber
     }
 }

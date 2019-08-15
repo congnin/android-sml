@@ -2,6 +2,7 @@ package vn.kingbee.injection.module
 
 import dagger.Module
 import dagger.Provides
+import vn.kingbee.domain.dataprocess.DataProcessingRepository
 import vn.kingbee.domain.setting.repository.SettingRepository
 import vn.kingbee.domain.setting.usecase.SettingUseCase
 import vn.kingbee.domain.setting.usecase.SettingUseCaseImpl
@@ -14,8 +15,9 @@ import javax.inject.Singleton
 class UseCaseModule {
     @Provides
     @Singleton
-    fun provideSettingUseCase(repository: SettingRepository): SettingUseCase {
-        return SettingUseCaseImpl(repository)
+    fun provideSettingUseCase(repository: SettingRepository,
+                              dataProcessingRepository: DataProcessingRepository): SettingUseCase {
+        return SettingUseCaseImpl(repository, dataProcessingRepository)
     }
 
     @Provides

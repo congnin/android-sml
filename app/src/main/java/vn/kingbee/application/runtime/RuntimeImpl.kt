@@ -3,8 +3,10 @@ package vn.kingbee.application.runtime
 import android.content.SharedPreferences
 import android.text.TextUtils
 import com.google.gson.Gson
+import vn.kingbee.domain.dataprocess.Runtime
 import vn.kingbee.domain.entity.base.KioskConfiguration
 import vn.kingbee.domain.entity.lov.LOV
+import vn.kingbee.domain.entity.token.AccessTokenResponse
 import vn.kingbee.utils.security.SecurityUtil
 
 class RuntimeImpl : Runtime, BaseRuntimeImpl {
@@ -36,7 +38,30 @@ class RuntimeImpl : Runtime, BaseRuntimeImpl {
         }
     }
 
+    override fun getAppToken(): AccessTokenResponse? {
+        val jsonAppToken = sharedPreferences.getString(PREF_APP_TOKEN, "")
+        return if (TextUtils.isEmpty(jsonAppToken)) {
+            null
+        } else gson.fromJson(jsonAppToken, AccessTokenResponse::class.java)
+    }
+
+    override fun setAppToken(accessTokenResponse: AccessTokenResponse?) {
+        val tokenEncode = "Bearer " + accessTokenResponse?.accessToken
+        accessTokenResponse?.accessToken = tokenEncode
+        val data = gson.toJson(accessTokenResponse)
+        sharedPreferences.edit().putString(PREF_APP_TOKEN, data).apply()
+    }
+
     companion object {
         private val PREF_KIOSK_CONFIGURATION_DATA = SecurityUtil.sha256("PREF_KIOSK_CONFIGURATION_DATA")
+        private val PREF_STAFF_INFO = SecurityUtil.sha256("PREF_STAFF_INFO")
+
+        private val PREF_STAFF_ACCESS_TOKEN = SecurityUtil.sha256("PREF_STAFF_ACCESS_TOKEN")
+
+        private val PREF_SELECT_ENVIRONMENT = SecurityUtil.sha256("PREF_SELECT_ENVIRONMENT")
+
+        private val PREF_SELECT_SKIP_STORY = SecurityUtil.sha256("PREF_SELECT_SKIP_STORY")
+
+        private val PREF_APP_TOKEN = SecurityUtil.sha256("PREF_APP_TOKEN")
     }
 }

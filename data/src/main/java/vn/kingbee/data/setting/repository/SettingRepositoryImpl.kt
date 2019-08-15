@@ -15,8 +15,8 @@ class SettingRepositoryImpl : SettingRepository {
         this.settingService = settingService
     }
 
-    override fun getLOVs(): Observable<LOV> {
-        return settingService.getLOVs().map { response -> response.data }
+    override fun getLOVs(msisdn: String?, authorization: String?): Observable<LOV> {
+        return settingService.getLOVs(msisdn, authorization).map { response -> response.data }
     }
 
     override fun getConfigInfo(): Observable<ConfigInfo> {

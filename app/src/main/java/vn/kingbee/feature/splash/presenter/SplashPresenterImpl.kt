@@ -5,11 +5,9 @@ import io.reactivex.Observer
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
-import org.reactivestreams.Subscriber
-import timber.log.Timber
 import vn.kingbee.application.MyApp
-import vn.kingbee.application.appbus.AppBus
-import vn.kingbee.application.runtime.Runtime
+import vn.kingbee.domain.dataprocess.AppBus
+import vn.kingbee.domain.dataprocess.Runtime
 import vn.kingbee.domain.entity.lov.LOV
 import vn.kingbee.domain.entity.token.AccessTokenRequest
 import vn.kingbee.domain.entity.token.AccessTokenResponse
@@ -19,13 +17,9 @@ import vn.kingbee.feature.base.presenter.BaseKioskPresenter
 import vn.kingbee.feature.splash.view.SplashView
 import vn.kingbee.utils.FileUtils
 import vn.kingbee.utils.SystemUtil
-import java.io.UnsupportedEncodingException
-import java.security.GeneralSecurityException
 import javax.inject.Inject
 const val AUTHOR = "Basic V0haOEgzV2ZIV2thSTRFYTdwTHlGSG0zVDBzYTplY0Y2c25LMTAwbkpLM05velF1dFFIV3JpaGdh"
 class SplashPresenterImpl : BaseKioskPresenter<SplashView>, SplashPresenter {
-
-
 
     private var mSettingUseCase: SettingUseCase
     private var mTokenUseCase: TokenUseCase
@@ -35,8 +29,7 @@ class SplashPresenterImpl : BaseKioskPresenter<SplashView>, SplashPresenter {
         runtime: Runtime,
         appBus: AppBus,
         settingUseCase: SettingUseCase,
-        tokenUseCase: TokenUseCase
-    ) : super(runtime, appBus) {
+        tokenUseCase: TokenUseCase) : super(runtime, appBus) {
         this.mSettingUseCase = settingUseCase
         this.mTokenUseCase = tokenUseCase
     }
@@ -79,10 +72,7 @@ class SplashPresenterImpl : BaseKioskPresenter<SplashView>, SplashPresenter {
             return
         }
 
-        val accessTokenRequest = AccessTokenRequest(
-            tokenConfigs["SCOPE"],
-            tokenConfigs["GRANT_TYPE"]
-        )
+        val accessTokenRequest = AccessTokenRequest(tokenConfigs["SCOPE"], tokenConfigs["GRANT_TYPE"])
 
         accessTokenRequest.authorization = AUTHOR
         mTokenUseCase.getToken(accessTokenRequest)
@@ -98,6 +88,7 @@ class SplashPresenterImpl : BaseKioskPresenter<SplashView>, SplashPresenter {
                 }
 
                 override fun onNext(t: AccessTokenResponse) {
+                    runtime.setAppToken(t)
                     getAllLovs()
                 }
 
@@ -113,6 +104,8 @@ class SplashPresenterImpl : BaseKioskPresenter<SplashView>, SplashPresenter {
 
     @SuppressLint("CheckResult")
     override fun loadKioskConfiguration() {
+        val msisdn = SystemUtil.getSerialNumber(MyApp.getInstance())
+        appBus.setMsisdn(msisdn)
         FileUtils.getEnvConfigurationFromResource(MyApp.getInstance())
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
