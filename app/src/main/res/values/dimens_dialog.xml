@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="ksk_dialog_height">645dp</dimen>
+    <dimen name="ksk_dialog_width">660dp</dimen>
+
+    <!--DEFAULT DIALOG-->
+    <dimen name="ksk_image_width">200dp</dimen>
+    <dimen name="ksk_image_height">200dp</dimen>
+    <dimen name="ksk_dialog_single_button_width">230dp</dimen>
+    <dimen name="ksk_dialog_double_button_width">185dp</dimen>
+    <dimen name="ksk_dialog_button_container_height">69dp</dimen>
+    <dimen name="ksk_dialog_button_height">86dp</dimen>
+    <dimen name="ksk_dialog_double_button_height">64dp</dimen>
+    <dimen name="ksk_dialog_error_height">600dp</dimen>
+    <dimen name="ksk_dialog_error_width">435dp</dimen>
+    <dimen name="ksk_dialog_double_button_content_height">455dp</dimen>
+    <dimen name="ksk_dialog_single_button_content_height">450dp</dimen>
+    <dimen name="ksk_dialog_thank_you_button_content_height">130dp</dimen>
+    <dimen name="ksk_dialog_thank_you_extra_spacing">5dp</dimen>
+    <dimen name="ksk_dialog_image_margin_bottom">20dp</dimen>
+    <dimen name="ksk_dialog_phone_margin_top">30dp</dimen>
+    <dimen name="ksk_dialog_image_height">105dp</dimen>
+    <dimen name="ksk_dialog_content_padding">20dp</dimen>
+    <dimen name="ksk_dialog_content_margin_top">20dp</dimen>
+    <dimen name="ksk_dialog_exit_height">470dp</dimen>
+    <dimen name="ksk_dialog_exit_width">770dp</dimen>
+    <dimen name="ksk_dialog_notification_button_width">170dp</dimen>
+    <dimen name="ksk_dialog_notification_button_height">55dp</dimen>
+    <dimen name="ksk_dialog_notification_icon_width">70dp</dimen>
+    <dimen name="ksk_dialog_notification_icon_height">70dp</dimen>
+    <dimen name="ksk_dialog_notification_icon_margin_top">80dp</dimen>
+    <dimen name="ksk_dialog_notification_icon_margin_bottom">52dp</dimen>
+
+    <dimen name="ptbc_dialog_common_error_api_error_code_margin_left">29dp</dimen>
+    <dimen name="ptbc_dialog_common_error_api_error_code_margin_bottom">26dp</dimen>
+
+
+    <dimen name="timeout_dialog_content_height">200dp</dimen>
+    <dimen name="timeout_dialog_progress_bar_size">120dp</dimen>
+
+
+    <dimen name="card_button_width">200dp</dimen>
+    <dimen name="card_button_height">70dp</dimen>
+
+
+    <dimen name="default_notification_popup_width">770dp</dimen>
+    <dimen name="default_notification_popup_height">475dp</dimen>
+
+    <!--Exit On Boarding-->
+    <dimen name="exit_on_boarding_dialog_height">470dp</dimen>
+    <dimen name="exit_on_boarding_dialog_width">770dp</dimen>
+    <dimen name="exit_on_boarding_header_width">475dp</dimen>
+    <dimen name="exit_on_boarding_header_height">40dp</dimen>
+    <dimen name="exit_on_boarding_header_margin_left">147.5dp</dimen>
+    <dimen name="exit_on_boarding_header_margin_top">57dp</dimen>
+    <dimen name="exit_on_boarding_caption_width">568dp</dimen>
+    <dimen name="exit_on_boarding_caption_height">90dp</dimen>
+    <dimen name="exit_on_boarding_caption_margin_left">100dp</dimen>
+    <dimen name="exit_on_boarding_caption_margin_top">117dp</dimen>
+    <item name="exit_on_boarding_caption_line_spacing_multiplier" format="float" type="dimen">1.2</item>
+    <dimen name="exit_on_boarding_icon_margin_left">348dp</dimen>
+    <dimen name="exit_on_boarding_icon_margin_top">230dp</dimen>
+    <dimen name="exit_on_boarding_no_width">268dp</dimen>
+    <dimen name="exit_on_boarding_no_height">50dp</dimen>
+    <dimen name="exit_on_boarding_no_margin_left">100dp</dimen>
+    <dimen name="exit_on_boarding_no_margin_top">364dp</dimen>
+    <dimen name="exit_on_boarding_yes_width">268dp</dimen>
+    <dimen name="exit_on_boarding_yes_height">50dp</dimen>
+    <dimen name="exit_on_boarding_yes_margin_left">400dp</dimen>
+    <dimen name="exit_on_boarding_yes_margin_top">364dp</dimen>
+
+    <!--Timeout dialog-->
+    <dimen name="timeout_time_counter">107dp</dimen>
+    <dimen name="timeout_height_default">18dp</dimen>
+    <dimen name="timeout_padding_vertical">100dp</dimen>
+
+    <!--Session Expire dialog-->
+    <dimen name="session_expire_padding">100dp</dimen>
+    <dimen name="notification_dialog_icon_margin_top">200dp</dimen>
+
+    <!--BizLoan Category Item dialog-->
+    <dimen name="bizloan_category_dialog_height">768dp</dimen>
+    <dimen name="bizloan_category_dialog_width">1024dp</dimen>
+    <dimen name="bizloan_category_dialog_content_height">518dp</dimen>
+    <dimen name="bizloan_category_dialog_content_width">818dp</dimen>
+
+
+</resources>

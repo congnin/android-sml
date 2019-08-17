@@ -199,4 +199,7 @@
 
     <dimen name="spacer_large">20dp</dimen>
     <dimen name="spacer_small">5dp</dimen>
+
+    <dimen name="default_loading_height">100dp</dimen>
+    <dimen name="default_loading_width">100dp</dimen>
 </resources>

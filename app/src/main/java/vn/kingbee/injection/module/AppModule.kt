@@ -20,6 +20,9 @@ import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import timber.log.Timber
+import vn.kingbee.application.AppConstant
+import vn.kingbee.feature.service.TimeoutProcessingService
+import vn.kingbee.feature.service.TimeoutProcessingServiceImpl
 import vn.kingbee.movie.network.NetworkModule.Companion.BASE_KIOSK_URL
 import vn.kingbee.widget.BuildConfig
 import java.security.cert.CertificateException
@@ -121,4 +124,10 @@ class AppModule(private val myApp: MyApp) {
             .client(okHttpClient)
             .build()
     }
+
+    @Provides
+    @Singleton
+    fun provideTimeoutProcessingService(): TimeoutProcessingService = TimeoutProcessingServiceImpl.Builder()
+        .timeCountDown(AppConstant.APP_TIMEOUT)
+        .build()
 }

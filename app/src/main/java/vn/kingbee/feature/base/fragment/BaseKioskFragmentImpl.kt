@@ -8,14 +8,21 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import butterknife.ButterKnife
 import butterknife.Unbinder
+import com.afollestad.materialdialogs.MaterialDialog
+import vn.kingbee.feature.service.TimeoutProcessingService
 import vn.kingbee.utils.UIUtils
-import vn.kingbee.widget.dialog.loading.LoadingDialogMaterial
+import vn.kingbee.widget.R
+import vn.kingbee.widget.dialog.big.timeout.ProgressCircleView
+import javax.inject.Inject
 
 abstract class BaseKioskFragmentImpl : Fragment(), BaseKioskFragment, BaseFragmentBehavior {
     lateinit var mHandler: Handler
     lateinit var unbinder: Unbinder
     protected var isVisibleToUser = false
-    protected var loadingDialog: LoadingDialogMaterial? = null
+    protected var mProgressDialog: Dialog? = null
+
+    @Inject
+    lateinit var timeoutProcessingService: TimeoutProcessingService
 
     override fun getTagName(): String = if (tag != null) tag!! else ""
 
@@ -37,10 +44,10 @@ abstract class BaseKioskFragmentImpl : Fragment(), BaseKioskFragment, BaseFragme
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         unbinder = ButterKnife.bind(this, view)
-
-        if (loadingDialog == null) {
-            loadingDialog = LoadingDialogMaterial(context!!, null)
+        if (mProgressDialog == null) {
+            mProgressDialog = getProgressDialog()
         }
+
         onScreenVisible()
     }
 
@@ -78,19 +85,37 @@ abstract class BaseKioskFragmentImpl : Fragment(), BaseKioskFragment, BaseFragme
 
     }
 
+    override fun getProgressDialog(): Dialog {
+        val builder = MaterialDialog.Builder(context!!)
+            .customView(R.layout.view_circle_loading, false)
+        val materialDialog = builder.build()
+
+        ProgressCircleView(materialDialog)
+        materialDialog.setCancelable(false)
+        return materialDialog
+    }
+
     override fun showProgressDialog() {
-        if (loadingDialog != null && !loadingDialog?.getDialog()?.isShowing!!) {
-            loadingDialog?.getDialog()?.show()
+        if (mProgressDialog != null) {
+            mProgressDialog?.show()
         }
     }
 
     override fun hideProgressDialog() {
-        if (loadingDialog != null && loadingDialog?.getDialog() != null && loadingDialog?.getDialog()?.isShowing!!) {
-            loadingDialog?.getDialog()?.hide()
+        if (mProgressDialog != null) {
+            mProgressDialog?.hide()
         }
     }
 
-    fun onScreenVisible() {
+    protected fun onScreenVisible() {
         //do nothing
+    }
+
+    protected fun startTimeoutService() {
+        timeoutProcessingService.start()
+    }
+
+    protected fun stopTimeoutService() {
+        timeoutProcessingService.stop()
     }
 }

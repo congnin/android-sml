@@ -12,22 +12,32 @@ class SettingUseCaseImpl : SettingUseCase {
     private var settingRepository: SettingRepository
     private var dataProcessingRepository: DataProcessingRepository
 
-    constructor(settingRepository: SettingRepository,
-                dataProcessingRepository: DataProcessingRepository) {
+    constructor(
+        settingRepository: SettingRepository,
+        dataProcessingRepository: DataProcessingRepository
+    ) {
         this.settingRepository = settingRepository
         this.dataProcessingRepository = dataProcessingRepository
     }
 
     override fun getLOVs(): Observable<LOV> {
-        return settingRepository.getLOVs(dataProcessingRepository.getMsisdn(),
-            dataProcessingRepository.getAccessToken())
+        return settingRepository.getLOVs(
+            dataProcessingRepository.getMsisdn(),
+            dataProcessingRepository.getAccessToken()
+        )
     }
 
     override fun getConfigInfo(): Observable<ConfigInfo> {
-        return settingRepository.getConfigInfo()
+        return settingRepository.getConfigInfo(
+            dataProcessingRepository.getMsisdn(),
+            dataProcessingRepository.getAccessToken()
+        )
     }
 
-    override fun getKioskConfigInfo(deviceId: String): Observable<List<KioskDataResponse>> {
-        return settingRepository.getKioskConfigInfo(deviceId)
+    override fun getKioskConfigInfo(): Observable<KioskDataResponse> {
+        return settingRepository.getKioskConfigInfo(
+            dataProcessingRepository.getMsisdn(),
+            dataProcessingRepository.getAccessToken()
+        ).map { if (it.isNotEmpty()) it[0] else KioskDataResponse() }
     }
 }

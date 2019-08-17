@@ -10,5 +10,5 @@ interface SettingUseCase {
 
     fun getConfigInfo(): Observable<ConfigInfo>
 
-    fun getKioskConfigInfo(deviceId: String): Observable<List<KioskDataResponse>>
+    fun getKioskConfigInfo(): Observable<KioskDataResponse>
 }

@@ -222,4 +222,20 @@ The lake was formed about 2 million years ago and is a part of the Lake Tahoe Ba
     <string name="title_notifications">Notifications</string>
     <string name="asterisk">*</string>
     <string name="sharp">#</string>
+
+    <string name="exit_on_boarding_header">Are you sure you want to leave?</string>
+    <string name="exit_on_boarding_caption">If you press the \"Yes\" button then you agree to end this process. You must repeat from the beginning if you want to continue the process.</string>
+
+    <string name="error_http">Http error</string>
+    <string name="error_network">Network error</string>
+    <string name="error_un_expected">Unexpected error</string>
+    <string name="text_yes">Yes</string>
+    <string name="text_no">No</string>
+    <string name="string_i_see">I see</string>
+    <string name="text_exit">Exit</string>
+    <string name="text_continue">Continue</string>
+    <string name="string_return_to_front_page">Return to front page</string>
+    <string name="masthead_title_button_exit">Exit</string>
+    <string name="exit_on_boarding_no_btn">No</string>
+    <string name="exit_on_boarding_yes_btn">Yes</string>
 </resources>

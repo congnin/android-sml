@@ -129,4 +129,7 @@ dependencies {
     implementation 'com.trello.rxlifecycle3:rxlifecycle:3.0.0'
     implementation 'com.trello.rxlifecycle3:rxlifecycle-android:3.0.0'
     implementation 'com.trello.rxlifecycle3:rxlifecycle-components:3.0.0'
+
+    implementation 'com.afollestad.material-dialogs:core:0.8.5.9'
+    implementation 'com.github.jakob-grabner:Circle-Progress-View:1.4'
 }

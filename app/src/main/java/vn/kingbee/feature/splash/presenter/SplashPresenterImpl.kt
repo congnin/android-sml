@@ -4,10 +4,14 @@ import android.annotation.SuppressLint
 import io.reactivex.Observer
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
+import io.reactivex.observers.DisposableObserver
 import io.reactivex.schedulers.Schedulers
 import vn.kingbee.application.MyApp
 import vn.kingbee.domain.dataprocess.AppBus
 import vn.kingbee.domain.dataprocess.Runtime
+import vn.kingbee.domain.entity.configuration.ConfigInfo
+import vn.kingbee.domain.entity.kiosk.KioskConfigDataResponse
+import vn.kingbee.domain.entity.kiosk.KioskDataResponse
 import vn.kingbee.domain.entity.lov.LOV
 import vn.kingbee.domain.entity.token.AccessTokenRequest
 import vn.kingbee.domain.entity.token.AccessTokenResponse
@@ -18,7 +22,7 @@ import vn.kingbee.feature.splash.view.SplashView
 import vn.kingbee.utils.FileUtils
 import vn.kingbee.utils.SystemUtil
 import javax.inject.Inject
-const val AUTHOR = "Basic V0haOEgzV2ZIV2thSTRFYTdwTHlGSG0zVDBzYTplY0Y2c25LMTAwbkpLM05velF1dFFIV3JpaGdh"
+
 class SplashPresenterImpl : BaseKioskPresenter<SplashView>, SplashPresenter {
 
     private var mSettingUseCase: SettingUseCase
@@ -39,26 +43,24 @@ class SplashPresenterImpl : BaseKioskPresenter<SplashView>, SplashPresenter {
     }
 
     override fun getAllLovs() {
-        mSettingUseCase.getLOVs()
+        val disposable = mSettingUseCase.getLOVs()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
-            .subscribe(object : Observer<LOV> {
+            .subscribeWith(object : DisposableObserver<LOV>() {
                 override fun onComplete() {
-                    //do nothing
-                }
-
-                override fun onSubscribe(d: Disposable) {
-                    //do nothing
+                    getView()?.hideProgressDialog()
                 }
 
                 override fun onNext(t: LOV) {
-                    getView()?.hideProgressDialog()
+                    getSettingConfig()
                 }
 
                 override fun onError(e: Throwable) {
                     //do nothing
                 }
             })
+
+        addOneSubscription(disposable)
     }
 
     override fun generateAppToken() {
@@ -74,16 +76,12 @@ class SplashPresenterImpl : BaseKioskPresenter<SplashView>, SplashPresenter {
 
         val accessTokenRequest = AccessTokenRequest(tokenConfigs["SCOPE"], tokenConfigs["GRANT_TYPE"])
 
-        accessTokenRequest.authorization = AUTHOR
-        mTokenUseCase.getToken(accessTokenRequest)
+        accessTokenRequest.authorization = AUTHORIZATION
+        val disposable = mTokenUseCase.getToken(accessTokenRequest)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
-            .subscribe(object : Observer<AccessTokenResponse> {
+            .subscribeWith(object : DisposableObserver<AccessTokenResponse>() {
                 override fun onComplete() {
-                    //do nothing
-                }
-
-                override fun onSubscribe(d: Disposable) {
                     //do nothing
                 }
 
@@ -96,10 +94,29 @@ class SplashPresenterImpl : BaseKioskPresenter<SplashView>, SplashPresenter {
                     //do nothing
                 }
             })
+        addOneSubscription(disposable)
     }
 
     override fun getSettingConfig() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        val disposable = mSettingUseCase.getConfigInfo()
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribeWith(object : DisposableObserver<ConfigInfo>() {
+                override fun onComplete() {
+                    //do nothing
+                }
+
+                override fun onNext(t: ConfigInfo) {
+                    runtime.setConfiguration(t)
+
+                    getKioskSettingConfig()
+                }
+
+                override fun onError(e: Throwable) {
+                }
+
+            })
+        addOneSubscription(disposable)
     }
 
     @SuppressLint("CheckResult")
@@ -117,10 +134,27 @@ class SplashPresenterImpl : BaseKioskPresenter<SplashView>, SplashPresenter {
     }
 
     override fun getKioskSettingConfig() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        val disposable = mSettingUseCase.getKioskConfigInfo()
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribeWith(object : DisposableObserver<KioskDataResponse>() {
+                override fun onComplete() {
+                    getView()?.hideProgressDialog()
+                }
+
+                override fun onNext(t: KioskDataResponse) {
+                }
+
+                override fun onError(e: Throwable) {
+                }
+
+            })
+        addOneSubscription(disposable)
     }
 
     companion object {
         private const val BASIC = "Basic"
+
+        const val AUTHORIZATION = "Basic V0haOEgzV2ZIV2thSTRFYTdwTHlGSG0zVDBzYTplY0Y2c25LMTAwbkpLM05velF1dFFIV3JpaGdh"
     }
 }

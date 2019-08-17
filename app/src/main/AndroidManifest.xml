@@ -1,126 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="vn.kingbee.widget">
+          xmlns:tools="http://schemas.android.com/tools"
+          package="vn.kingbee.widget">
 
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
-    <uses-feature android:name="android.hardware.camera2.full" />
+    <uses-feature android:name="android.hardware.camera2.full"/>
 
     <application
-        android:name="vn.kingbee.application.MyApp"
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:usesCleartextTraffic="true"
-        tools:ignore="GoogleAppIndexingWarning"
-        tools:targetApi="m">
+            android:name="vn.kingbee.application.MyApp"
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme"
+            android:usesCleartextTraffic="true"
+            tools:ignore="GoogleAppIndexingWarning"
+            tools:targetApi="m">
         <receiver
-            android:name="vn.kingbee.working.alarm.AlarmReceiver"
-            android:enabled="true"
-            android:exported="true"/>
+                android:name="vn.kingbee.working.alarm.AlarmReceiver"
+                android:enabled="true"
+                android:exported="true"/>
 
         <activity android:name=".SelectionActivity"></activity>
-        <activity android:name=".progress.CircleProcessBarActivity" />
-        <activity android:name=".progress.demo.CircleProgressIndicatorDemo" />
-        <activity android:name=".edittext.FormatEditTextActivity" />
-        <activity android:name=".pin.PinActivity" />
-        <activity android:name=".keyboard.NumpadActivity" />
-        <activity android:name=".camera.demo.CameraDemo1Activity" />
-        <activity android:name=".animation.demo.ShimmerActivityDemo" />
-        <activity android:name=".animation.demo.DemoTypeActivity" />
-        <activity android:name=".calendar.demo.DatePickerDemoActivity" />
+        <activity android:name=".progress.CircleProcessBarActivity"/>
+        <activity android:name=".progress.demo.CircleProgressIndicatorDemo"/>
+        <activity android:name=".edittext.FormatEditTextActivity"/>
+        <activity android:name=".pin.PinActivity"/>
+        <activity android:name=".keyboard.NumpadActivity"/>
+        <activity android:name=".camera.demo.CameraDemo1Activity"/>
+        <activity android:name=".animation.demo.ShimmerActivityDemo"/>
+        <activity android:name=".animation.demo.DemoTypeActivity"/>
+        <activity android:name=".calendar.demo.DatePickerDemoActivity"/>
         <activity
-            android:name=".button.demo.ButtonDemoActivity"
-            android:screenOrientation="landscape" />
-        <activity android:name=".spinner.demo.SpinnerDemoActivity" />
-        <activity android:name=".recyclerview.HelpVideoDemo" />
-        <activity android:name=".signature.SignatureDemoActivity" />
-        <activity android:name=".toc.TOCDemo" />
-        <activity android:name=".toasty.ToastyDemoActivity" />
+                android:name=".button.demo.ButtonDemoActivity"
+                android:screenOrientation="landscape"/>
+        <activity android:name=".spinner.demo.SpinnerDemoActivity"/>
+        <activity android:name=".recyclerview.HelpVideoDemo"/>
+        <activity android:name=".signature.SignatureDemoActivity"/>
+        <activity android:name=".toc.TOCDemo"/>
+        <activity android:name=".toasty.ToastyDemoActivity"/>
         <activity
-            android:name=".navigationview.ArcNavigationViewDemoActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".imageview.SwitchIconDemoActivity" />
+                android:name=".navigationview.ArcNavigationViewDemoActivity"
+                android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".imageview.SwitchIconDemoActivity"/>
         <activity
-            android:name=".button.counterfab.CounterFabExample"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".recyclerview.alphabet.demo.IndexFastScrollExample" />
-        <activity android:name=".layout.constraintlayout.ConstraintSetExampleActivity" />
+                android:name=".button.counterfab.CounterFabExample"
+                android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".recyclerview.alphabet.demo.IndexFastScrollExample"/>
+        <activity android:name=".layout.constraintlayout.ConstraintSetExampleActivity"/>
         <activity
-            android:name=".layout.constraintlayout.MainConstraintActivity"
-            android:configChanges="orientation|screenSize" />
-        <activity android:name=".layout.motion.MainMotionActivity" />
-        <activity android:name=".layout.motion.DemoActivity" />
-        <activity android:name=".layout.motion.viewpagerdemo.ViewPagerActivity" />
-        <activity android:name=".layout.motion.viewpagerdemo.ViewPagerActivity2" />
-        <activity android:name=".layout.motion.fragmentsdemo.FragmentExampleActivity" />
-        <activity android:name=".layout.motion.fragmentsdemo.FragmentExample2Activity" />
-        <activity android:name=".layout.motion.youtubedemo.YouTubeDemoActivity" />
-        <activity android:name=".viewpager.viewpager2.CardViewActivity" />
-        <activity android:name=".viewpager.viewpager2.PageTransformerActivity" />
-        <activity android:name=".viewpager.viewpager2.CardFragmentActivity" />
-        <activity android:name=".viewpager.viewpager2.CardViewTabLayoutActivity" />
-        <activity android:name=".viewpager.viewpager2.FakeDragActivity" />
-        <activity android:name=".viewpager.viewpager2.BrowseActivity" />
-        <activity android:name=".viewpager.viewpager2.MutableCollectionFragmentActivity" />
-        <activity android:name=".viewpager.viewpager2.MutableCollectionViewActivity" />
+                android:name=".layout.constraintlayout.MainConstraintActivity"
+                android:configChanges="orientation|screenSize"/>
+        <activity android:name=".layout.motion.MainMotionActivity"/>
+        <activity android:name=".layout.motion.DemoActivity"/>
+        <activity android:name=".layout.motion.viewpagerdemo.ViewPagerActivity"/>
+        <activity android:name=".layout.motion.viewpagerdemo.ViewPagerActivity2"/>
+        <activity android:name=".layout.motion.fragmentsdemo.FragmentExampleActivity"/>
+        <activity android:name=".layout.motion.fragmentsdemo.FragmentExample2Activity"/>
+        <activity android:name=".layout.motion.youtubedemo.YouTubeDemoActivity"/>
+        <activity android:name=".viewpager.viewpager2.CardViewActivity"/>
+        <activity android:name=".viewpager.viewpager2.PageTransformerActivity"/>
+        <activity android:name=".viewpager.viewpager2.CardFragmentActivity"/>
+        <activity android:name=".viewpager.viewpager2.CardViewTabLayoutActivity"/>
+        <activity android:name=".viewpager.viewpager2.FakeDragActivity"/>
+        <activity android:name=".viewpager.viewpager2.BrowseActivity"/>
+        <activity android:name=".viewpager.viewpager2.MutableCollectionFragmentActivity"/>
+        <activity android:name=".viewpager.viewpager2.MutableCollectionViewActivity"/>
         <activity android:name="vn.kingbee.rxjava.RxJava2SelectionActivity"></activity>
         <activity android:name="vn.kingbee.rxjava.OperatorsActivity"></activity>
-        <activity android:name="vn.kingbee.rxjava.operators.SimpleExampleActivity" />
-        <activity android:name="vn.kingbee.rxjava.operators.MapExampleActivity" />
-        <activity android:name="vn.kingbee.rxjava.operators.ZipExampleActivity" />
-        <activity android:name="vn.kingbee.rxjava.operators.DisposableExampleActivity" />
-        <activity android:name="vn.kingbee.rxjava.operators.TakeExampleActivity" />
-        <activity android:name="vn.kingbee.rxjava.operators.TimerExampleActivity" />
-        <activity android:name="vn.kingbee.rxjava.operators.IntervalExampleActivity" />
-        <activity android:name="vn.kingbee.rxjava.operators.SingleObserverExampleActivity" />
-        <activity android:name="vn.kingbee.rxjava.operators.CompletableObserverExampleActivity" />
-        <activity android:name="vn.kingbee.rxjava.operators.ThrottleFirstExampleActivity" />
-        <activity android:name="vn.kingbee.rxjava.operators.PublishSubjectExampleActivity" />
-        <activity android:name="vn.kingbee.rxjava.search.SearchActivity" />
-        <activity android:name="vn.kingbee.rxjava.rxbus.RxBusActivity" />
-        <activity android:name="vn.kingbee.mock.MockOptionDialog" />
+        <activity android:name="vn.kingbee.rxjava.operators.SimpleExampleActivity"/>
+        <activity android:name="vn.kingbee.rxjava.operators.MapExampleActivity"/>
+        <activity android:name="vn.kingbee.rxjava.operators.ZipExampleActivity"/>
+        <activity android:name="vn.kingbee.rxjava.operators.DisposableExampleActivity"/>
+        <activity android:name="vn.kingbee.rxjava.operators.TakeExampleActivity"/>
+        <activity android:name="vn.kingbee.rxjava.operators.TimerExampleActivity"/>
+        <activity android:name="vn.kingbee.rxjava.operators.IntervalExampleActivity"/>
+        <activity android:name="vn.kingbee.rxjava.operators.SingleObserverExampleActivity"/>
+        <activity android:name="vn.kingbee.rxjava.operators.CompletableObserverExampleActivity"/>
+        <activity android:name="vn.kingbee.rxjava.operators.ThrottleFirstExampleActivity"/>
+        <activity android:name="vn.kingbee.rxjava.operators.PublishSubjectExampleActivity"/>
+        <activity android:name="vn.kingbee.rxjava.search.SearchActivity"/>
+        <activity android:name="vn.kingbee.rxjava.rxbus.RxBusActivity"/>
+        <activity android:name="vn.kingbee.mock.MockOptionDialog"/>
         <activity
-            android:name="vn.kingbee.movie.ui.MainActivity"
-            android:label="Popular movies"
-            android:theme="@style/AppTheme.NoActionBar">
+                android:name="vn.kingbee.movie.ui.MainActivity"
+                android:label="Popular movies"
+                android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
         <activity
-            android:name="vn.kingbee.movie.ui.detail.MovieDetailActivity"
-            android:parentActivityName="vn.kingbee.movie.ui.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+                android:name="vn.kingbee.movie.ui.detail.MovieDetailActivity"
+                android:parentActivityName="vn.kingbee.movie.ui.MainActivity"
+                android:theme="@style/AppTheme.NoActionBar">
             <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="vn.kingbee.movie.ui.MainActivity" />
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="vn.kingbee.movie.ui.MainActivity"/>
         </activity>
 
-        <activity android:name="vn.kingbee.feature.splash.SplashActivity">
+        <activity android:name="vn.kingbee.feature.splash.SplashActivity"
+                  android:theme="@style/AppTheme.NoActionBar"
+                  android:screenOrientation="landscape">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
 
         <provider
-            android:name="vn.kingbee.movie.data.MoviesProvider"
-            android:authorities="vn.kingbee.movie"
-            android:exported="false" />
+                android:name="vn.kingbee.movie.data.MoviesProvider"
+                android:authorities="vn.kingbee.movie"
+                android:exported="false"/>
 
         <service
-            android:name="vn.kingbee.working.job.NotificationJobService"
-            android:permission="android.permission.BIND_JOB_SERVICE" />
+                android:name="vn.kingbee.working.job.NotificationJobService"
+                android:permission="android.permission.BIND_JOB_SERVICE"/>
 
-        <activity android:name="vn.kingbee.working.job.JobDemo" />
+        <activity android:name="vn.kingbee.working.job.JobDemo"/>
         <activity android:name="vn.kingbee.working.alarm.AlarmDemo">
 
         </activity>

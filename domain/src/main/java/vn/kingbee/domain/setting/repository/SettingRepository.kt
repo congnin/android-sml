@@ -8,7 +8,8 @@ import vn.kingbee.domain.entity.lov.LOV
 interface SettingRepository {
     fun getLOVs(msisdn: String?, authorization: String?): Observable<LOV>
 
-    fun getConfigInfo(): Observable<ConfigInfo>
+    fun getConfigInfo(msisdn: String?, authorization: String?): Observable<ConfigInfo>
 
-    fun getKioskConfigInfo(deviceId: String):Observable<List<KioskDataResponse>>
+    fun getKioskConfigInfo(msisdn: String?,
+                           authorization: String?):Observable<List<KioskDataResponse>>
 }

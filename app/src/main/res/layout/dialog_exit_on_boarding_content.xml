@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/exit_on_boarding_dialog_width"
+    android:layout_height="@dimen/exit_on_boarding_dialog_height"
+    android:background="@drawable/dialog_rounded_gray_style">
+
+    <LinearLayout
+        android:layout_width="@dimen/exit_on_boarding_dialog_width"
+        android:layout_height="@dimen/exit_on_boarding_dialog_height"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/text_exit_on_boarding_header"
+                style="@style/TextAppearance.HelveticaNeueBold"
+                android:layout_width="@dimen/exit_on_boarding_header_width"
+                android:layout_height="@dimen/exit_on_boarding_header_height"
+                android:layout_marginLeft="@dimen/exit_on_boarding_header_margin_left"
+                android:layout_marginTop="@dimen/exit_on_boarding_header_margin_top"
+                android:gravity="center_horizontal"
+                android:textColor="@color/cbsa_color_white"
+                android:textSize="30sp"
+                android:text="@string/exit_on_boarding_header"/>
+
+            <TextView
+                android:id="@+id/text_exit_on_boarding_caption"
+                style="@style/TextAppearance.HelveticaNeueBold"
+                android:layout_width="@dimen/exit_on_boarding_caption_width"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/exit_on_boarding_caption_margin_left"
+                android:layout_marginTop="@dimen/exit_on_boarding_caption_margin_top"
+                android:lineSpacingMultiplier="@dimen/exit_on_boarding_caption_line_spacing_multiplier"
+                android:gravity="center_horizontal"
+                android:textColor="@color/cbsa_color_white"
+                android:textSize="20sp"
+                android:text="@string/exit_on_boarding_caption"/>
+
+            <ImageView
+                android:id="@+id/icon_exit_on_boarding_symbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/exit_on_boarding_icon_margin_left"
+                android:layout_marginTop="@dimen/exit_on_boarding_icon_margin_top"
+                android:src="@mipmap/ic_cba_diamond" />
+
+            <Button
+                android:id="@+id/btn_exit_on_boarding_no"
+                android:layout_width="@dimen/exit_on_boarding_no_width"
+                android:layout_height="@dimen/exit_on_boarding_no_height"
+                android:layout_marginLeft="@dimen/exit_on_boarding_no_margin_left"
+                android:layout_marginTop="@dimen/exit_on_boarding_no_margin_top"
+                android:background="@drawable/button_select_normal"
+                android:textAppearance="@style/TextAppearance.HelveticaNeueBold"
+                android:text="@string/exit_on_boarding_no_btn"/>
+
+            <Button
+                android:id="@+id/btn_exit_on_boarding_yes"
+                android:layout_width="@dimen/exit_on_boarding_yes_width"
+                android:layout_height="@dimen/exit_on_boarding_yes_height"
+                android:layout_marginLeft="@dimen/exit_on_boarding_yes_margin_left"
+                android:layout_marginTop="@dimen/exit_on_boarding_yes_margin_top"
+                android:background="@drawable/button_select_yellow"
+                android:textAppearance="@style/TextAppearance.HelveticaNeueBold"
+                android:text="@string/exit_on_boarding_yes_btn"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

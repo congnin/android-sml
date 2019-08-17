@@ -12,13 +12,22 @@ import vn.kingbee.domain.entity.lov.LOV
 
 interface SettingService {
     @GET("settings/lovs")
-    fun getLOVs(@Header(HeaderBuilder.MSISDN_HEADER_KEY) msisdn: String?,
-                @Header(HeaderBuilder.AUTHORIZATION_KEY) authorization: String?)
+    fun getLOVs(
+        @Header(HeaderBuilder.MSISDN_HEADER_KEY) msisdn: String?,
+        @Header(HeaderBuilder.AUTHORIZATION_KEY) authorization: String?
+    )
             : Observable<KioskResponse<LOV>>
 
     @GET("settings/configurations")
-    fun getConfigInfo(): Observable<KioskResponse<ConfigInfo>>
+    fun getConfigInfo(
+        @Header(HeaderBuilder.MSISDN_HEADER_KEY) msisdn: String?,
+        @Header(HeaderBuilder.AUTHORIZATION_KEY) authorization: String?
+    ): Observable<KioskResponse<ConfigInfo>>
 
     @GET("settings/kiosks/{deviceId}")
-    fun getKioskConfig(@Path("deviceId") deviceId: String): Observable<KioskResponse<KioskConfigDataResponse>>
+    fun getKioskConfig(
+        @Path("deviceId") deviceId: String?,
+        @Header(HeaderBuilder.MSISDN_HEADER_KEY) msisdn: String?,
+        @Header(HeaderBuilder.AUTHORIZATION_KEY) authorization: String?
+    ): Observable<KioskResponse<KioskConfigDataResponse>>
 }

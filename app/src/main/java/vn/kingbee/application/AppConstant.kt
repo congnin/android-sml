@@ -13,6 +13,7 @@ import java.io.File
 object AppConstant {
 
     const val LINE_SEPARATOR = "\n"
+    const val APP_TIMEOUT = 60 * 1000L
 }
 
 object Named {

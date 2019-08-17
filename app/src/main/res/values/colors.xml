@@ -148,6 +148,7 @@
     <color name="cbsa_color_yellow">#FFFFCC00</color>
     <color name="cbsa_color_blue">#FF107BBF</color>
     <color name="cba_dusk">#61818f</color>
+    <color name="ptbc_gray_border">#dedede</color>
 
     <color name="light_black_2">#B3000000</color>
     <color name="light_black_1">#231F20</color>

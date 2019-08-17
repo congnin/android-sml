@@ -1,7 +1,5 @@
 package vn.kingbee.feature.base.presenter
 
-import vn.kingbee.feature.base.fragment.BaseFragmentBehavior
-
 interface IBasePresenter<V> {
     fun setView(view: V)
 

@@ -19,12 +19,12 @@ class SettingRepositoryImpl : SettingRepository {
         return settingService.getLOVs(msisdn, authorization).map { response -> response.data }
     }
 
-    override fun getConfigInfo(): Observable<ConfigInfo> {
-        return settingService.getConfigInfo().map { response -> response.data }
+    override fun getConfigInfo(msisdn: String?, authorization: String?): Observable<ConfigInfo> {
+        return settingService.getConfigInfo(msisdn, authorization).map { response -> response.data }
     }
 
-    override fun getKioskConfigInfo(deviceId: String): Observable<List<KioskDataResponse>> {
-        return settingService.getKioskConfig(deviceId)
+    override fun getKioskConfigInfo(msisdn: String?, authorization: String?): Observable<List<KioskDataResponse>> {
+        return settingService.getKioskConfig(msisdn, msisdn, authorization)
             .map { response -> response.data }
             .map { it.kiosks }
     }

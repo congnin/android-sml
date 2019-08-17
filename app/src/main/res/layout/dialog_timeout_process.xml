@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:CircleProgressView="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_rounded_gray_style"
+        android:columnCount="2">
+
+    <TextView
+            android:id="@+id/tv_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="2"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="150dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="@dimen/exit_on_boarding_header_margin_top"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textAppearance="@style/TextAppearance.HelveticaNeueBold"
+            android:text="Do you want to continue this process?"
+            android:textColor="@color/cbsa_color_white"/>
+
+    <TextView
+            android:id="@+id/tv_description"
+            android:layout_columnSpan="2"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="27dp"
+            android:gravity="center_horizontal"
+            android:lineSpacingMultiplier="@dimen/exit_on_boarding_caption_line_spacing_multiplier"
+            android:textSize="25sp"
+            android:textAppearance="@style/TextAppearance.HelveticaNeueBold"
+            android:text="Your process will end in time:"
+            android:textColor="@color/cbsa_color_white"/>
+
+    <FrameLayout
+            android:layout_width="@dimen/timeout_time_counter"
+            android:layout_height="@dimen/timeout_time_counter"
+            android:layout_columnSpan="2"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/timeout_height_default">
+
+        <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/timeout_height_default"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+            <TextView
+                    android:id="@+id/tv_numberCounter"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/c_white"
+                    android:textSize="@dimen/font_size_xhuge"
+                    tools:text="17"/>
+
+            <TextView
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="seconds"
+                    android:textColor="@color/c_white"
+                    android:textSize="@dimen/font_size_small"/>
+        </GridLayout>
+
+        <at.grabner.circleprogress.CircleProgressView
+                android:id="@+id/timeProgress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                CircleProgressView:cpv_barColor="@color/sky_blue"
+                CircleProgressView:cpv_barWidth="3dp"
+                CircleProgressView:cpv_innerContourSize="0dp"
+                CircleProgressView:cpv_maxValue="@integer/time_countdown_dialog"
+                CircleProgressView:cpv_outerContourSize="0dp"
+                CircleProgressView:cpv_rimColor="@color/c_white"
+                CircleProgressView:cpv_rimWidth="3dp"
+                CircleProgressView:cpv_seekMode="false"
+                CircleProgressView:cpv_spinColor="@color/c_white"
+                CircleProgressView:cpv_textColor="@color/c_transparent"
+                CircleProgressView:cpv_textMode="Value"
+                CircleProgressView:cpv_textScale="0"
+                CircleProgressView:cpv_textTypeface="@style/TextAppearance.HelveticaNeue"/>
+
+    </FrameLayout>
+
+    <Space
+            android:layout_height="55dp"
+            android:layout_columnSpan="2"/>
+
+    <Button
+            android:id="@+id/btn_exit"
+            android:layout_width="@dimen/exit_on_boarding_no_width"
+            android:layout_height="@dimen/exit_on_boarding_no_height"
+            android:layout_marginStart="@dimen/timeout_padding_vertical"
+            android:background="@drawable/button_select_normal"
+            android:text="Skip"
+            android:textAppearance="@style/TextAppearance.HelveticaNeueBold"/>
+
+    <Button
+            android:id="@+id/btn_yes"
+            android:layout_width="@dimen/exit_on_boarding_yes_width"
+            android:layout_height="@dimen/exit_on_boarding_yes_height"
+            android:layout_column="1"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/timeout_padding_vertical"
+            android:background="@drawable/button_select_yellow"
+            android:text="OK"
+            android:textAppearance="@style/TextAppearance.HelveticaNeueBold"/>
+
+    <Space
+            android:layout_height="55dp"
+            android:layout_columnSpan="2"/>
+</GridLayout>
