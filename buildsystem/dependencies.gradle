@@ -16,7 +16,7 @@ ext {
     ktxCoreVersion = "1.2.0-alpha01"
 
     //Libraries
-    daggerVersion = '2.14.1'
+    daggerVersion = '2.21'
     butterKnifeVersion = '10.1.0'
     butterKnifeCompiler = '10.1.0'
     recyclerViewVersion = '23.4.0'

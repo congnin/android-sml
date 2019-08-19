@@ -3,6 +3,10 @@ package vn.kingbee.application
 import android.annotation.SuppressLint
 import android.app.Application
 import android.content.Context
+import androidx.fragment.app.Fragment
+import dagger.android.AndroidInjector
+import dagger.android.DispatchingAndroidInjector
+import dagger.android.support.HasSupportFragmentInjector
 import io.reactivex.Observable
 import timber.log.Timber
 import vn.kingbee.injection.component.AppComponent
@@ -10,14 +14,16 @@ import vn.kingbee.injection.component.DaggerAppComponent
 import vn.kingbee.movie.network.NetworkComponent
 import vn.kingbee.utils.FontHelper
 import vn.kingbee.widget.BuildConfig
-import vn.kingbee.movie.network.NetworkModule
-import vn.kingbee.injection.module.AppModule
 import vn.kingbee.movie.network.DaggerNetworkComponent
 import vn.kingbee.rxjava.model.Events
 import vn.kingbee.rxjava.rxbus.RxBus
 import java.util.concurrent.TimeUnit
+import javax.inject.Inject
 
-class MyApp : Application() {
+class MyApp : Application(), HasSupportFragmentInjector {
+
+    @Inject
+    lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Fragment>
 
     lateinit var networkComponent: NetworkComponent
     lateinit var mAppComponent: AppComponent
@@ -34,12 +40,11 @@ class MyApp : Application() {
         ContextSingleton.setContext(this)
 
         networkComponent = DaggerNetworkComponent.builder()
-            .appModule(AppModule(this))
-            .networkModule(NetworkModule())
+            .application(this)
             .build()
 
         mAppComponent = DaggerAppComponent.builder()
-            .appModule(AppModule(this))
+            .application(this)
             .build()
 
         mAppComponent.inject(this)
@@ -49,6 +54,8 @@ class MyApp : Application() {
 
         bus = RxBus()
     }
+
+    override fun supportFragmentInjector(): AndroidInjector<Fragment> = dispatchingAndroidInjector
 
     @SuppressLint("CheckResult")
     fun sendAutoEvent() {

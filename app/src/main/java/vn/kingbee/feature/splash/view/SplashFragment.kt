@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import butterknife.OnClick
 import vn.kingbee.application.MyApp
 import vn.kingbee.feature.base.fragment.BaseKioskFragmentImpl
+import vn.kingbee.feature.service.TimeoutProcessingService
 import vn.kingbee.feature.splash.SplashActivity
 import vn.kingbee.feature.splash.presenter.SplashPresenter
 import vn.kingbee.widget.R
@@ -21,10 +22,17 @@ class SplashFragment : BaseKioskFragmentImpl(), SplashView, SplashActivity.UserI
     @Inject
     lateinit var presenter: SplashPresenter
 
+    @Inject
+    lateinit var mTimeoutProcessingService: TimeoutProcessingService
+
     protected var timeOutProcessDialog: TimeOutProcessDialog? = null
 
     override fun setupFragmentComponent() {
-        MyApp.getInstance().mAppComponent.inject(this)
+//        MyApp.getInstance().mAppComponent.inject(this)
+    }
+
+    override fun getTimeoutProcessingService(): TimeoutProcessingService {
+        return mTimeoutProcessingService
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -40,7 +48,7 @@ class SplashFragment : BaseKioskFragmentImpl(), SplashView, SplashActivity.UserI
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        presenter.setView(this)
+//        presenter.setView(this)
 
         setupTimeoutDialog()
         setupTimeoutService()
@@ -53,12 +61,12 @@ class SplashFragment : BaseKioskFragmentImpl(), SplashView, SplashActivity.UserI
 
     override fun onResume() {
         super.onResume()
-        timeoutProcessingService.start()
+        startTimeoutService()
     }
 
     override fun onPause() {
         super.onPause()
-        timeoutProcessingService.start()
+        stopTimeoutService()
     }
 
     @OnClick(R.id.layout_container)
@@ -67,11 +75,11 @@ class SplashFragment : BaseKioskFragmentImpl(), SplashView, SplashActivity.UserI
     }
 
     override fun onUserInteraction() {
-        timeoutProcessingService.start()
+        startTimeoutService()
     }
 
     private fun setupTimeoutService() {
-        timeoutProcessingService.registerAction(object : TimerTask() {
+        getTimeoutProcessingService().registerAction(object : TimerTask() {
             override fun run() {
                 if (this@SplashFragment.activity!!.hasWindowFocus()) {
                     timeOutProcessDialog?.show()
@@ -93,7 +101,7 @@ class SplashFragment : BaseKioskFragmentImpl(), SplashView, SplashActivity.UserI
 
     private fun returnAppAndResetTimeout(dialog: Dialog) {
         dialog.dismiss()
-        timeoutProcessingService.start()
+        startTimeoutService()
     }
 
     companion object {

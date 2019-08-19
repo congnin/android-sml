@@ -21,9 +21,6 @@ abstract class BaseKioskFragmentImpl : Fragment(), BaseKioskFragment, BaseFragme
     protected var isVisibleToUser = false
     protected var mProgressDialog: Dialog? = null
 
-    @Inject
-    lateinit var timeoutProcessingService: TimeoutProcessingService
-
     override fun getTagName(): String = if (tag != null) tag!! else ""
 
     override fun getTagFromClassName(): String = javaClass.simpleName
@@ -111,11 +108,13 @@ abstract class BaseKioskFragmentImpl : Fragment(), BaseKioskFragment, BaseFragme
         //do nothing
     }
 
+    abstract fun getTimeoutProcessingService(): TimeoutProcessingService
+
     protected fun startTimeoutService() {
-        timeoutProcessingService.start()
+        getTimeoutProcessingService().start()
     }
 
     protected fun stopTimeoutService() {
-        timeoutProcessingService.stop()
+        getTimeoutProcessingService().stop()
     }
 }

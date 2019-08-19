@@ -32,10 +32,12 @@ class SplashPresenterImpl : BaseKioskPresenter<SplashView>, SplashPresenter {
     constructor(
         runtime: Runtime,
         appBus: AppBus,
+        view: SplashView,
         settingUseCase: SettingUseCase,
         tokenUseCase: TokenUseCase) : super(runtime, appBus) {
         this.mSettingUseCase = settingUseCase
         this.mTokenUseCase = tokenUseCase
+        setView(view)
     }
 
     override fun onScreenClicked() {

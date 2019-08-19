@@ -7,8 +7,8 @@ import vn.kingbee.widget.R
 import vn.kingbee.widget.dialog.big.base.DialogInfo
 
 class DialogExitOnBoardingView {
-    internal var exitOnBoardingNoBtn: Button
-    internal var exitOnBoardingYesBtn: Button
+    lateinit var exitOnBoardingNoBtn: Button
+    lateinit var exitOnBoardingYesBtn: Button
 
     internal var mMaterialDialog: MaterialDialog
     internal var mDialogInfo: DialogInfo

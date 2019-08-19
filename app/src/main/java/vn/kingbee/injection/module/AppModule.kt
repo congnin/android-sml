@@ -31,21 +31,27 @@ import javax.inject.Named
 import javax.net.ssl.*
 
 @Module
-class AppModule(private val myApp: MyApp) {
+class AppModule {
 
     @Provides
     @Singleton
-    fun providesApplication(): Application {
-        return myApp
+    fun providesApplication(app: MyApp): Application {
+        return app
     }
 
     @Provides
     @Singleton
-    fun provideObscuredSharedPreferences(): SharedPreferences {
+    fun providesContext(app: MyApp): Context {
+        return app
+    }
+
+    @Provides
+    @Singleton
+    fun provideObscuredSharedPreferences(context: Context): SharedPreferences {
         return ObscuredSharedPreferences(
-            myApp,
-            myApp.getSharedPreferences(
-                myApp.getString(vn.kingbee.widget.R.string.app_name), Context.MODE_PRIVATE
+            context,
+            context.getSharedPreferences(
+                context.getString(vn.kingbee.widget.R.string.app_name), Context.MODE_PRIVATE
             )
         )
     }
@@ -124,10 +130,4 @@ class AppModule(private val myApp: MyApp) {
             .client(okHttpClient)
             .build()
     }
-
-    @Provides
-    @Singleton
-    fun provideTimeoutProcessingService(): TimeoutProcessingService = TimeoutProcessingServiceImpl.Builder()
-        .timeCountDown(AppConstant.APP_TIMEOUT)
-        .build()
 }
