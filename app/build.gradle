@@ -64,6 +64,21 @@ android {
     buildTypes.each {
         it.buildConfigField STRING, THE_MOVIE_DB_API_KEY, '"3cc91d496a0b7cf338fafae2c567ffd7"'
     }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = [
+                    '../libs'
+            ]
+
+            res.srcDirs = [
+                    'src/main/res/base',
+                    'src/main/res/widget',
+                    'src/main/res/movie',
+                    'src/main/res/constrainlayout'
+            ]
+        }
+    }
 }
 
 dependencies {

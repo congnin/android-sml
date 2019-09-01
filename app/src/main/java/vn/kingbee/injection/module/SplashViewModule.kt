@@ -12,9 +12,9 @@ import vn.kingbee.injection.scope.PerView
 abstract class SplashViewModule {
     @PerView
     @Binds
-    internal abstract fun provideView(view: SplashFragment): SplashView
+    abstract fun provideView(view: SplashFragment): SplashView
 
     @PerView
     @Binds
-    internal abstract fun providePresenter(presenter: SplashPresenterImpl): SplashPresenter
+    abstract fun providePresenter(presenter: SplashPresenterImpl): SplashPresenter
 }

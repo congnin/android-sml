@@ -27,7 +27,12 @@
                 android:enabled="true"
                 android:exported="true"/>
 
-        <activity android:name=".SelectionActivity"></activity>
+        <activity android:name=".SelectionActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
         <activity android:name=".progress.CircleProcessBarActivity"/>
         <activity android:name=".progress.demo.CircleProgressIndicatorDemo"/>
         <activity android:name=".edittext.FormatEditTextActivity"/>
@@ -72,8 +77,8 @@
         <activity android:name=".viewpager.viewpager2.BrowseActivity"/>
         <activity android:name=".viewpager.viewpager2.MutableCollectionFragmentActivity"/>
         <activity android:name=".viewpager.viewpager2.MutableCollectionViewActivity"/>
-        <activity android:name="vn.kingbee.rxjava.RxJava2SelectionActivity"></activity>
-        <activity android:name="vn.kingbee.rxjava.OperatorsActivity"></activity>
+        <activity android:name="vn.kingbee.rxjava.RxJava2SelectionActivity"/>
+        <activity android:name="vn.kingbee.rxjava.OperatorsActivity"/>
         <activity android:name="vn.kingbee.rxjava.operators.SimpleExampleActivity"/>
         <activity android:name="vn.kingbee.rxjava.operators.MapExampleActivity"/>
         <activity android:name="vn.kingbee.rxjava.operators.ZipExampleActivity"/>
@@ -106,10 +111,7 @@
         <activity android:name="vn.kingbee.feature.splash.SplashActivity"
                   android:theme="@style/AppTheme.NoActionBar"
                   android:screenOrientation="landscape">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
+
         </activity>
 
         <provider

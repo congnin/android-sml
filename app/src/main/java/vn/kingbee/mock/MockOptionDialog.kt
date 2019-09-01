@@ -17,6 +17,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.SpinnerAdapter
 import kotlinx.android.synthetic.main.activity_mock_option_dialog.*
 import vn.kingbee.utils.PermissionUtils
 import vn.kingbee.widget.R
@@ -42,7 +43,7 @@ class MockOptionDialog : AppCompatActivity() {
 
         functionSelections.addAll(MockAssetManager.getMockOptions().keys)
         spinnerFunctions.adapter = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line,
-            functionSelections)
+            functionSelections) as SpinnerAdapter
         spinnerCaseSelection.adapter = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line,
             caseSelections)
         spinnerFunctions.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {

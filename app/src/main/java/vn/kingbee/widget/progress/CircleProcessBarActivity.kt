@@ -13,7 +13,6 @@ import io.reactivex.disposables.Disposable
 import java.util.concurrent.TimeUnit
 import io.reactivex.android.schedulers.AndroidSchedulers
 import vn.kingbee.widget.progress.demo.CircleProgressIndicatorDemo
-import vn.kingbee.widget.signature.SignatureDemoActivity
 
 class CircleProcessBarActivity : AppCompatActivity(), CountDownTimerCallback {
     val QUESTION_TIMEOUT = 30L
