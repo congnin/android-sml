@@ -28,10 +28,7 @@
                 android:exported="true"/>
 
         <activity android:name=".SelectionActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
+
         </activity>
         <activity android:name=".progress.CircleProcessBarActivity"/>
         <activity android:name=".progress.demo.CircleProgressIndicatorDemo"/>
@@ -91,7 +88,12 @@
         <activity android:name="vn.kingbee.rxjava.operators.ThrottleFirstExampleActivity"/>
         <activity android:name="vn.kingbee.rxjava.operators.PublishSubjectExampleActivity"/>
         <activity android:name="vn.kingbee.rxjava.search.SearchActivity"/>
-        <activity android:name="vn.kingbee.rxjava.rxbus.RxBusActivity"/>
+        <activity android:name="vn.kingbee.rxjava.rxbus.RxBusActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
         <activity android:name="vn.kingbee.mock.MockOptionDialog"/>
         <activity
                 android:name="vn.kingbee.movie.ui.MainActivity"

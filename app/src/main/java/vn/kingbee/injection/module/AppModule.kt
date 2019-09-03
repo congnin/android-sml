@@ -24,6 +24,8 @@ import vn.kingbee.application.AppConstant
 import vn.kingbee.feature.service.TimeoutProcessingService
 import vn.kingbee.feature.service.TimeoutProcessingServiceImpl
 import vn.kingbee.movie.network.NetworkModule.Companion.BASE_KIOSK_URL
+import vn.kingbee.rxjava.rxbus.RxBus
+import vn.kingbee.rxjava.rxbus.RxBusImpl
 import vn.kingbee.widget.BuildConfig
 import java.security.cert.CertificateException
 import java.security.cert.X509Certificate
@@ -129,5 +131,11 @@ class AppModule {
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .client(okHttpClient)
             .build()
+    }
+
+    @Provides
+    @Singleton
+    fun provideRxBus(): RxBus {
+        return RxBusImpl()
     }
 }

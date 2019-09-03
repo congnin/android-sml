@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!--Use transparent color to reused background color of toolbar-->
+    <solid android:color="@color/cbsa_color_transparent" />
+</shape>

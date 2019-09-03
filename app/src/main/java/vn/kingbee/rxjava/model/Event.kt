@@ -6,4 +6,5 @@ object Events {
 
     class AutoEvent
 
+    class ImeiNotInWhiteListEvent
 }

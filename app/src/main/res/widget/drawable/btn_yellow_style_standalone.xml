@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@color/cbsa_color_yellow_down"
+        android:state_enabled="true"
+        android:state_pressed="true"/>
+    <item android:drawable="@color/cbsa_color_yellow_down"
+        android:state_enabled="true"
+        android:state_focused="true"/>
+
+    <item android:drawable="@drawable/btn_transparent_state_disable_standalone"
+        android:state_enabled="false"/>
+    <item android:drawable="@color/cbsa_color_yellow"/>
+</selector>

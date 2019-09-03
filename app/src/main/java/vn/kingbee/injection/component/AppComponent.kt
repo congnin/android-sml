@@ -8,6 +8,7 @@ import vn.kingbee.domain.dataprocess.Runtime
 import vn.kingbee.feature.splash.view.SplashFragment
 import vn.kingbee.injection.module.*
 import vn.kingbee.movie.network.NetworkModule
+import vn.kingbee.rxjava.rxbus.RxBus
 import javax.inject.Singleton
 
 @Singleton
@@ -32,6 +33,8 @@ interface AppComponent {
     }
 
     fun runtime(): Runtime
+
+    fun rxBus(): RxBus
 
     fun inject(application: MyApp)
 

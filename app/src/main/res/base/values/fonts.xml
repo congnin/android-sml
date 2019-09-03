@@ -123,4 +123,9 @@
     <style name="TextAppearance.Paragraph1.Bold" parent="TextAppearance.Paragraph1">
         <item name="fontPath">fonts/HelveticaNeue-Bold.ttf</item>
     </style>
+
+    <style name="CBSATextAppearance.Paragraph2" parent="TextAppearance.HelveticaNeue">
+        <item name="android:textSize">@dimen/cbsa_text_size_paragraph_2</item>
+        <item name="android:lineSpacingMultiplier">@dimen/cbsa_text_line_spacing_multiplier_1_2</item>
+    </style>
 </resources>

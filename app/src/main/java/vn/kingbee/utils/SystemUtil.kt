@@ -1,11 +1,14 @@
 package vn.kingbee.utils
 
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.app.Application
+import android.content.Context
 import android.os.Build
 import android.provider.Settings
 import android.util.Base64
 import timber.log.Timber
+import vn.kingbee.widget.R
 import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
@@ -99,7 +102,7 @@ object SystemUtil {
             }
 
         } catch (e: Exception) {
-            Timber.e(e.message)
+            Timber.e(e)
         } finally {
             fos.flush()
             fos.close()
@@ -166,5 +169,9 @@ object SystemUtil {
             Timber.e("Get SerialNumber Error: ${e.printStackTrace()}")
         }
         return serialNumber
+    }
+
+    fun overridePendingTransactionOnPressed(context: Context) {
+        (context as Activity).overridePendingTransition(R.anim.anim_activity_previous, R.anim.anim_activity_previous_release)
     }
 }

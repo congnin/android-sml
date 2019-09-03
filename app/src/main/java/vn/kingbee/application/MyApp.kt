@@ -52,14 +52,14 @@ class MyApp : Application(), HasSupportFragmentInjector {
         // setup font family
         FontHelper.initializeFontConfig()
 
-        bus = RxBus()
+        bus = mAppComponent.rxBus()
     }
 
     override fun supportFragmentInjector(): AndroidInjector<Fragment> = dispatchingAndroidInjector
 
     @SuppressLint("CheckResult")
     fun sendAutoEvent() {
-        Observable.timer(2, TimeUnit.SECONDS)
+        Observable.timer(5, TimeUnit.SECONDS)
             .subscribe { bus.send(Events.AutoEvent()) }
     }
 

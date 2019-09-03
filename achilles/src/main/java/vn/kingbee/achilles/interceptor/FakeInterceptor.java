@@ -48,8 +48,8 @@ public class FakeInterceptor implements Interceptor, MockUserInteractCallback {
 
                 try {
                     response = this.contentRepository.getDataResponse(chain.request(), apiFileName, objectSync.getResponseApiName());
-                } catch (JSONException var8) {
-                    Timber.tag(TAG).i(var8.getMessage(), new Object[0]);
+                } catch (JSONException e) {
+                    Timber.tag(TAG).i(e.getMessage(), new Object[0]);
                 }
 
                 OkHttpLogUtils.Companion.logResponse(response);
@@ -59,8 +59,8 @@ public class FakeInterceptor implements Interceptor, MockUserInteractCallback {
 
                 try {
                     response = this.contentRepository.getScenarioResponse(chain.request(), apiFileName);
-                } catch (JSONException var9) {
-                    Timber.tag(TAG).i(var9.getMessage(), new Object[0]);
+                } catch (JSONException e) {
+                    Timber.tag(TAG).i(e.getMessage(), new Object[0]);
                 }
 
                 OkHttpLogUtils.Companion.logResponse(response);
@@ -78,7 +78,7 @@ public class FakeInterceptor implements Interceptor, MockUserInteractCallback {
 
         try {
             this.mockController.notifyPrepareApi(apiFileName, sessionId, listResult);
-            objectSync.wait(2000L);
+            objectSync.wait(2 * ONE_SECOND);
             Timber.d(TAG, "2 Start check user interact or not");
             if (this.isUserInteract()) {
                 objectSync.wait();
@@ -108,7 +108,7 @@ public class FakeInterceptor implements Interceptor, MockUserInteractCallback {
 
     public void delayThreadFromEndpointConfig(EndpointElement endpointElement) {
         try {
-            Thread.sleep(1000L * (long) endpointElement.getDelay());
+            Thread.sleep(ONE_SECOND * (long) endpointElement.getDelay());
         } catch (Exception var3) {
             Timber.tag(TAG).e(var3.getMessage(), new Object[0]);
         }
@@ -121,10 +121,10 @@ public class FakeInterceptor implements Interceptor, MockUserInteractCallback {
     }
 
     public void onUserStartInteract(String sessionId) {
-        Timber.d("onUserStartInteract: " + sessionId);
+        Timber.d("onUserStartInteract: %s", sessionId);
         if (sessionId != null) {
             synchronized (objectSync) {
-                Timber.d("onUserStartInteract running: " + sessionId);
+                Timber.d("onUserStartInteract running: %s", sessionId);
                 if (sessionId.equals(objectSync.getSessionId())) {
                     objectSync.setUserInteract(true);
                     this.stopWaiting();
@@ -134,10 +134,10 @@ public class FakeInterceptor implements Interceptor, MockUserInteractCallback {
     }
 
     public void onUserEndInteract(String responseApiName, String sessionId) {
-        Timber.d("onUserEndInteract: " + sessionId);
+        Timber.d("onUserEndInteract: %s", sessionId);
         if (sessionId != null) {
             synchronized (objectSync) {
-                Timber.d("onUserEndInteract running: " + sessionId);
+                Timber.d("onUserEndInteract running: %s", sessionId);
                 if (sessionId.equals(objectSync.getSessionId())) {
                     objectSync.setResponseApiName(responseApiName);
                     objectSync.setUserInteract(false);

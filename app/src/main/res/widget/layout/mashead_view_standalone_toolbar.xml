@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vn.kingbee.widget.toolbarview.RelativeInterceptTouchEvent
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/containerToolbarView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cbsa_primary_color_black"
+    tools:ignore="RtlHardcoded">
+
+    <!--Profile area-->
+    <LinearLayout
+        android:id="@+id/containerAvatar"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:background="@drawable/mashead_selector_action_button"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/mas_head_button_left_margin"
+        android:paddingRight="@dimen/mas_head_button_right_margin">
+
+        <vn.kingbee.widget.imageview.circle.AvatarImageView
+            android:id="@+id/imgAvatar"
+            style="@style/Masthead.Button.Avatar.Tiny"
+            android:layout_marginRight="@dimen/default_margin_normal"
+            android:src="@drawable/avatar_solid_color" />
+
+        <TextView
+            android:id="@+id/tvProfileName"
+            style="@style/Mashead.TextView.White"
+            android:ellipsize="end"
+            android:gravity="left|center"
+            android:maxWidth="@dimen/mas_head_max_width_avatar_area"
+            android:maxLines="1"
+            android:textColor="@color/cbsa_selector_avatar_user_name"
+            tools:text="Very long user name ab clong user name ab clong user name ab c" />
+    </LinearLayout>
+
+    <!--Logo icon-->
+    <ImageView
+        android:id="@+id/view_toolbar_logo"
+        android:layout_width="150dp"
+        android:layout_height="38dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/mas_head_avatar_margin_left"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/mashead_avatar_description"
+        android:gravity="center_vertical"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_logo_bank"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/containerActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal">
+
+        <!--Notification icon-->
+        <vn.kingbee.widget.toolbarview.ActionButton
+            android:id="@+id/view_toolbar_btn_notifications"
+            style="@style/MasheadActionButton"
+            android:visibility="gone"
+            app:mashead_iconLeft="@drawable/mashead_selector_icon_notification"
+            app:mashead_text="@string/mashead_toolbar_notifications" />
+
+        <!--Contact icon-->
+        <vn.kingbee.widget.toolbarview.ActionButton
+            android:id="@+id/view_toolbar_btn_contact"
+            style="@style/MasheadActionButton"
+            app:mashead_drawablePadding="@dimen/mas_head_drawable_padding_contact"
+            app:mashead_iconLeft="@drawable/ic_contact"
+            app:mashead_mindWidth="@dimen/mas_head_button_width"
+            app:mashead_text="@string/mashead_toolbar_contact"
+            app:mashead_textColor="@color/cbsa_color_white" />
+
+        <!--Help icon-->
+        <vn.kingbee.widget.toolbarview.ActionButton
+            android:id="@+id/view_toolbar_btn_help"
+            style="@style/MasheadActionButton"
+            android:layout_marginRight="10dp"
+            app:mashead_drawablePadding="@dimen/default_padding_small"
+            app:mashead_iconLeft="@drawable/ic_help"
+            app:mashead_mindWidth="@dimen/mas_head_button_width"
+            app:mashead_text="@string/mashead_txt_help"
+            app:mashead_textColor="@color/cbsa_color_white" />
+
+        <!--Exit icon-->
+        <vn.kingbee.widget.toolbarview.ActionButton
+            android:id="@+id/view_toolbar_btn_exit"
+            style="@style/MasheadActionButton.Exit"
+            app:mashead_drawablePadding="@dimen/default_padding_small"
+            app:mashead_iconLeft="@drawable/ic_lock"
+            app:mashead_mindWidth="@dimen/mas_head_button_width"
+            app:mashead_text="@string/mashead_txt_logout"
+            app:mashead_textColor="@color/cbsa_color_white" />
+    </LinearLayout>
+</vn.kingbee.widget.toolbarview.RelativeInterceptTouchEvent>

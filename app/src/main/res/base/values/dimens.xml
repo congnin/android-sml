@@ -202,4 +202,7 @@
 
     <dimen name="default_loading_height">100dp</dimen>
     <dimen name="default_loading_width">100dp</dimen>
+
+    <dimen name="cbsa_text_size_paragraph_2">14sp</dimen>
+    <item format="float" name="cbsa_text_line_spacing_multiplier_1_2" type="dimen">1.2</item>
 </resources>

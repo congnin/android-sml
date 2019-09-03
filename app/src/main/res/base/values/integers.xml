@@ -3,4 +3,5 @@
     <integer name="pin_max_length">4</integer>
     <integer name="step_horizontal_indicator_animation_duration">500</integer>
     <integer name="time_countdown_dialog">30</integer>
+    <integer name="transition_duration">200</integer>
 </resources>

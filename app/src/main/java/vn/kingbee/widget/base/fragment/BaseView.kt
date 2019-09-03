@@ -34,4 +34,6 @@ interface BaseView : CommonView {
     fun showFullScreenInBlackConnectionTimeoutError()
 
     fun showFullScreenInWhiteConnectionTimeoutError()
+
+    fun setupFragmentComponent()
 }

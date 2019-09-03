@@ -16,6 +16,7 @@ import android.widget.Toast
 import vn.kingbee.widget.R
 import androidx.annotation.LayoutRes
 import vn.kingbee.utils.CommonUtils
+import vn.kingbee.utils.UIUtils
 import vn.kingbee.widget.base.presenter.BasePresenter
 
 abstract class BaseFragmentImpl : Fragment(), BaseView, DialogClickedListener {
@@ -32,15 +33,20 @@ abstract class BaseFragmentImpl : Fragment(), BaseView, DialogClickedListener {
 
     fun getInstance(): Fragment = this
 
-    fun needIdleTimeout(): Boolean = true
+    open fun needIdleTimeout(): Boolean = true
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        this.setupFragmentComponent()
+        this.setHasOptionsMenu(true)
+        this.handler = Handler()
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        this.handler = Handler()
         this.mUnbinder = ButterKnife.bind(this, view)
         this.setUpActionBar()
     }
-
 
     @Deprecated("use {@link #getLayoutContentView()} instead")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -57,12 +63,17 @@ abstract class BaseFragmentImpl : Fragment(), BaseView, DialogClickedListener {
         //nothing
     }
 
+    override fun setupFragmentComponent() {}
+
     protected fun setUpActionBar() {
         //nothing
     }
 
+    fun onBackPressed(isBackButtonDisplayed: Boolean): Boolean = !isBackButtonDisplayed
+
     override fun onResume() {
         super.onResume()
+        this.handler.postDelayed({ UIUtils.hideKeyboard(activity!!) }, 100L)
         if (getPresenter() != null) {
             getPresenter()?.resume()
         }

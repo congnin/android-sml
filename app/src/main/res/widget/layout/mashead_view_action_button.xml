@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/actionContainer"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@drawable/mashead_selector_action_button"
+    android:gravity="center"
+    android:layout_gravity="left"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/default_padding_normal"
+    android:paddingRight="@dimen/default_padding_normal">
+
+    <ImageView
+        android:id="@+id/imgIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/default_padding_normal"
+        android:layout_marginRight="@dimen/default_padding_normal"
+        android:adjustViewBounds="true"
+        android:contentDescription="@null"
+        android:gravity="left"
+        android:scaleType="center"
+        android:src="@mipmap/ic_mashead_help"/>
+
+    <TextView
+        android:id="@+id/tvText"
+        style="@style/Mashead.TextView.White"
+        android:gravity="center"
+        tools:text="@string/mashead_toolbar_notifications" />
+</LinearLayout>
