@@ -11,6 +11,6 @@ class LoginPagerActivity : KioskActionBarActivity() {
     }
 
     override fun getFragmentToHost(): BaseFragmentImpl? {
-
+        return null
     }
 }

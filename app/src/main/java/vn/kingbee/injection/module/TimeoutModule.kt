@@ -11,7 +11,7 @@ import javax.inject.Singleton
 @Module
 class TimeoutModule {
     @Provides
-    @PerView
+    @Singleton
     fun provideTimeoutProcessingService(): TimeoutProcessingService = TimeoutProcessingServiceImpl.Builder()
         .timeCountDown(AppConstant.APP_TIMEOUT)
         .build()

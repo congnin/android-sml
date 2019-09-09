@@ -28,7 +28,7 @@ class SplashFragment : BaseKioskFragmentImpl(), SplashView, SplashActivity.UserI
     protected var timeOutProcessDialog: TimeOutProcessDialog? = null
 
     override fun setupFragmentComponent() {
-//        MyApp.getInstance().mAppComponent.inject(this)
+        MyApp.getInstance().mAppComponent.inject(this)
     }
 
     override fun getTimeoutProcessingService(): TimeoutProcessingService {
@@ -48,7 +48,7 @@ class SplashFragment : BaseKioskFragmentImpl(), SplashView, SplashActivity.UserI
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//        presenter.setView(this)
+        presenter.setView(this)
 
         setupTimeoutDialog()
         setupTimeoutService()

@@ -270,7 +270,6 @@
     <color name="cbsa_color_shadow_50">#50CCCCCC</color>
     <color name="cbsa_color_yellow_30">#4DFFCC00</color>
     <color name="cbsa_color_yellow_50">#80FFCC00</color>
-    <color name="cbsa_color_yellow_down">#FFFFDF3A</color>
     <color name="cbsa_secondary_color_blue_10">#1A107BBF</color>
     <color name="cbsa_secondary_color_blue_30">#4D107BBF</color>
     <color name="cbsa_secondary_color_grey">#FFE2E2E2</color>

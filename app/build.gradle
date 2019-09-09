@@ -79,6 +79,8 @@ android {
             ]
         }
     }
+
+    compileOptions.incremental = false
 }
 
 dependencies {

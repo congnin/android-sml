@@ -89,10 +89,7 @@
         <activity android:name="vn.kingbee.rxjava.operators.PublishSubjectExampleActivity"/>
         <activity android:name="vn.kingbee.rxjava.search.SearchActivity"/>
         <activity android:name="vn.kingbee.rxjava.rxbus.RxBusActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
+
         </activity>
         <activity android:name="vn.kingbee.mock.MockOptionDialog"/>
         <activity
@@ -113,7 +110,10 @@
         <activity android:name="vn.kingbee.feature.splash.SplashActivity"
                   android:theme="@style/AppTheme.NoActionBar"
                   android:screenOrientation="landscape">
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
         </activity>
 
         <provider

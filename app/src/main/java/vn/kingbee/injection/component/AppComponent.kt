@@ -19,6 +19,8 @@ import javax.inject.Singleton
         RepositoryModule::class,
         UseCaseModule::class,
         NetworkModule::class,
+        PresenterModule::class,
+        TimeoutModule::class,
         FragmentBuilderModule::class
     ]
 )
@@ -38,5 +40,5 @@ interface AppComponent {
 
     fun inject(application: MyApp)
 
-//    fun inject(f: SplashFragment)
+    fun inject(f: SplashFragment)
 }
