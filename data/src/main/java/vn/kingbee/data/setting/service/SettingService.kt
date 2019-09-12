@@ -15,8 +15,7 @@ interface SettingService {
     fun getLOVs(
         @Header(HeaderBuilder.MSISDN_HEADER_KEY) msisdn: String?,
         @Header(HeaderBuilder.AUTHORIZATION_KEY) authorization: String?
-    )
-            : Observable<KioskResponse<LOV>>
+    ): Observable<KioskResponse<LOV>>
 
     @GET("settings/configurations")
     fun getConfigInfo(

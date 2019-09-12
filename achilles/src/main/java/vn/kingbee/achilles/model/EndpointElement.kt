@@ -20,9 +20,9 @@ class EndpointElement {
         @SerializedName("dataField")
         var dataField: String? = null
         @SerializedName("code")
-        var code: Int = 0
+        var code: Int? = null
 
-        constructor(dataField: String?, code: Int) {
+        constructor(dataField: String?, code: Int?) {
             this.dataField = dataField
             this.code = code
         }

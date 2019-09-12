@@ -1,12 +1,13 @@
 package vn.kingbee.data.token.repository
 
 import io.reactivex.Observable
+import vn.kingbee.data.base.BaseRepository
 import vn.kingbee.data.token.service.TokenService
 import vn.kingbee.domain.entity.token.AccessTokenRequest
 import vn.kingbee.domain.entity.token.AccessTokenResponse
 import vn.kingbee.domain.token.repository.TokenRepository
 
-class TokenRepositoryImpl : TokenRepository {
+class TokenRepositoryImpl : BaseRepository, TokenRepository {
 
     private var service: TokenService
 
@@ -15,7 +16,7 @@ class TokenRepositoryImpl : TokenRepository {
     }
 
     override fun getToken(request: AccessTokenRequest): Observable<AccessTokenResponse> {
-        return service.getToken(request.authorization, request.grantType, request.scope)
+        return processRequest(service.getToken(request.authorization, request.grantType, request.scope))
     }
 
     override fun revokeToken(request: AccessTokenRequest): Observable<AccessTokenResponse> {

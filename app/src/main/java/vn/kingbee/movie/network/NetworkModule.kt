@@ -10,6 +10,8 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
+import vn.kingbee.application.Named.OK_HTTP_CLIENT_NORMAL
+import vn.kingbee.application.Named.RETROFIT_MOVIE
 import vn.kingbee.movie.api.TheMovieDbService
 import vn.kingbee.movie.data.MoviesService
 import vn.kingbee.movie.model.SortHelper
@@ -30,7 +32,7 @@ class NetworkModule {
 
     @Provides
     @Singleton
-    @Named("Normal")
+    @Named(OK_HTTP_CLIENT_NORMAL)
     fun providesOkHttpClient(cache: Cache): OkHttpClient {
 
         val builder = OkHttpClient.Builder()
@@ -50,10 +52,10 @@ class NetworkModule {
 
     @Provides
     @Singleton
-    @Named("Movie")
-    fun providesRetrofit(@Named("Normal") okHttpClient: OkHttpClient): Retrofit {
+    @Named(RETROFIT_MOVIE)
+    fun providesRetrofit(@Named(OK_HTTP_CLIENT_NORMAL) okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
-            .baseUrl(BASE_URL)
+            .baseUrl(BASE_MOVIE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .client(okHttpClient)
@@ -68,7 +70,7 @@ class NetworkModule {
 
     @Provides
     @Singleton
-    fun providesTheMovieDbService(@Named("Movie") retrofit: Retrofit): TheMovieDbService {
+    fun providesTheMovieDbService(@Named(RETROFIT_MOVIE) retrofit: Retrofit): TheMovieDbService {
         return retrofit.create(TheMovieDbService::class.java)
     }
 
@@ -86,8 +88,8 @@ class NetworkModule {
     }
 
     companion object {
-        private const val BASE_URL = "http://api.themoviedb.org/3/"
-        const val BASE_KIOSK_URL = "https://10.224.19.61:8243/kiosk/1.0.0/"
+        private const val BASE_MOVIE_URL = "http://api.themoviedb.org/3/"
+        const val BASE_KIOSK_URL = "https://10.224.44.141:8243/kiosk-ic/1.0.0/"
         private const val CACHE_SIZE = (10 * 1024 * 1024).toLong()    // 10 MB
         private const val CONNECT_TIMEOUT = 15L
         private const val WRITE_TIMEOUT = 60L

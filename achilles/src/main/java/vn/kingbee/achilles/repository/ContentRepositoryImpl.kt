@@ -20,8 +20,12 @@ import java.net.URLConnection
 import java.util.Comparator
 import java.util.HashMap
 
-abstract class ContentRepositoryImpl(protected var context: Context, protected var mockApiConfiguration: MockApiConfiguration) : ContentRepository {
-    protected val alphabeticallySortOrder: Comparator<String> = Comparator { text1, text2 -> text1.compareTo(text2, ignoreCase = true) }
+abstract class ContentRepositoryImpl(
+    protected var context: Context,
+    protected var mockApiConfiguration: MockApiConfiguration
+) : ContentRepository {
+    protected val alphabeticallySortOrder: Comparator<String> =
+        Comparator { text1, text2 -> text1.compareTo(text2, ignoreCase = true) }
     private var mCurrentSequenceCounter = 1
     private var mCurrentFilePath = ""
 
@@ -49,19 +53,26 @@ abstract class ContentRepositoryImpl(protected var context: Context, protected v
             this.parseDataFields(dataFields, endpointElementDataField, jObject)
         }
 
-        val responseFilePath = if (StringUtils.isEmpty(customerResponseFilePath)) this.getDataResponseFilePath(endpointElement, fileName, dataFields) else customerResponseFilePath
+        val responseFilePath = if (StringUtils.isEmpty(customerResponseFilePath)) this.getDataResponseFilePath(
+            endpointElement,
+            fileName,
+            dataFields
+        ) else customerResponseFilePath
         val code = this.getCodeFromMockFile(fileName, responseFilePath)
         val headers = this.getResponseHeaderFromPath(fileName, responseFilePath)
         val inputStream = this.getResponseBodyInputStreamFromPath(fileName, responseFilePath)
         var mimeType: String? = URLConnection.guessContentTypeFromStream(inputStream)
         if (mimeType == null) {
-            mimeType = "application/json"
+            mimeType = JSON_MIMETYPE
         }
 
         return this.getResponse(request, inputStream, headers, mimeType, code)
     }
 
-    private fun parseDataFields(dataFields: MutableMap<String, String>, @NonNull endpointElementDataField: List<EndpointElement.Data>, jObject: JSONObject) {
+    private fun parseDataFields(
+        dataFields: MutableMap<String, String>, @NonNull endpointElementDataField: List<EndpointElement.Data>,
+        jObject: JSONObject
+    ) {
         val lstData = endpointElementDataField.iterator()
 
         while (lstData.hasNext()) {
@@ -97,7 +108,8 @@ abstract class ContentRepositoryImpl(protected var context: Context, protected v
         var scenario: Scenario? = null
 
         try {
-            scenario = this.getScenario(this.mockApiConfiguration.scenarioPath!!, this.mockApiConfiguration.scenarioName!!)
+            scenario =
+                this.getScenario(this.mockApiConfiguration.scenarioPath!!, this.mockApiConfiguration.scenarioName!!)
         } catch (e: InvalidScenarioException) {
             Timber.tag(this.tag).e(e.message, arrayOfNulls<Any>(0))
         }
@@ -106,18 +118,26 @@ abstract class ContentRepositoryImpl(protected var context: Context, protected v
         val inputStream = this.getResponseBodyInputStreamFromPath(apiFileName, responseFilePath)
         var mimeType: String? = URLConnection.guessContentTypeFromStream(inputStream)
         if (mimeType == null) {
-            mimeType = "application/json"
+            mimeType = JSON_MIMETYPE
         }
 
-        return this.getResponse(request, inputStream, null as Headers?, mimeType, 200)
+        return this.getResponse(request, inputStream, null as Headers?, mimeType, SUCCESS)
     }
 
     @NonNull
     @Throws(IOException::class)
-    protected fun getResponse(request: Request, inputStream: InputStream, headers: Headers?, mimeType: String, code: Int): Response {
+    protected fun getResponse(
+        request: Request,
+        inputStream: InputStream,
+        headers: Headers?,
+        mimeType: String,
+        code: Int
+    ): Response {
         val responseBody = ResponseBody.create(MediaType.parse(mimeType), Utils.readBytes(inputStream))
-        return Response.Builder().body(responseBody).headers(headers
-            ?: Headers.Builder().build()).request(request).message("").protocol(Protocol.HTTP_1_1).message("Mock message").code(code).build()
+        return Response.Builder().body(responseBody).headers(
+            headers
+                ?: Headers.Builder().build()
+        ).request(request).message("").protocol(Protocol.HTTP_1_1).message("Mock message").code(code).build()
     }
 
     @NonNull
@@ -128,7 +148,7 @@ abstract class ContentRepositoryImpl(protected var context: Context, protected v
             val lsIterator = ls?.iterator()
 
             while (lsIterator!!.hasNext()) {
-                val apiConfig = lsIterator.next() as ApiConfig
+                val apiConfig = lsIterator.next()
                 if (apiConfig.response!!.contains(filePath)) {
                     responseFilePath = this.getResponseFilePath(apiConfig, filePath)
                     break
@@ -167,9 +187,15 @@ abstract class ContentRepositoryImpl(protected var context: Context, protected v
 
     @Throws(JSONException::class)
     protected fun getResponseHeaderFromPath(filePath: String, prefixFileName: String): Headers {
-        val fileName = this.getFileNameFromPrefix(this.context, String.format("%s/%s", this.mockApiConfiguration.apiPath, filePath), prefixFileName)
-        val assertUrl = String.format("%s/%s/%s", this.mockApiConfiguration.apiPath, filePath, fileName
-            ?: filePath)
+        val fileName = this.getFileNameFromPrefix(
+            this.context,
+            String.format("%s/%s", this.mockApiConfiguration.apiPath, filePath),
+            prefixFileName
+        )
+        val assertUrl = String.format(
+            "%s/%s/%s", this.mockApiConfiguration.apiPath, filePath, fileName
+                ?: filePath
+        )
         val content = this.readContent(this.context, assertUrl)
         val headerBuilder = Headers.Builder()
         var jObject: JSONObject? = null
@@ -180,8 +206,8 @@ abstract class ContentRepositoryImpl(protected var context: Context, protected v
             Timber.tag(this.tag).d(var11.message, *arrayOfNulls(0))
         }
 
-        if (jObject != null && jObject.has("Header")) {
-            jObject = jObject.getJSONObject("Header")
+        if (jObject != null && jObject.has(KEY_HEADER)) {
+            jObject = jObject.getJSONObject(KEY_HEADER)
             val temp = jObject!!.keys()
 
             while (temp.hasNext()) {
@@ -196,46 +222,58 @@ abstract class ContentRepositoryImpl(protected var context: Context, protected v
 
     @Throws(JSONException::class, UnsupportedEncodingException::class)
     protected fun getResponseBodyInputStreamFromPath(filePath: String, prefixFileName: String): InputStream {
-        val fileName = this.getFileNameFromPrefix(this.context, String.format("%s/%s", this.mockApiConfiguration.apiPath, filePath), prefixFileName)
-        val assertUrl = String.format("%s/%s/%s", this.mockApiConfiguration.apiPath, filePath, fileName
-            ?: filePath)
+        val fileName = this.getFileNameFromPrefix(
+            this.context,
+            String.format("%s/%s", this.mockApiConfiguration.apiPath, filePath),
+            prefixFileName
+        )
+        val assertUrl = String.format(
+            "%s/%s/%s", this.mockApiConfiguration.apiPath, filePath, fileName
+                ?: filePath
+        )
         var content = this.readContent(this.context, assertUrl)
         var jObject: JSONObject? = null
 
         try {
             jObject = if (content != null) JSONObject(content) else null
-        } catch (var8: Exception) {
-            Timber.tag(this.tag).d(var8.message, *arrayOfNulls(0))
+        } catch (e: Exception) {
+            Timber.tag(this.tag).d(e.message, *arrayOfNulls(0))
         }
 
         if (jObject != null) {
-            if (jObject.has("Detail")) {
-                jObject = jObject.getJSONObject("Detail")
+            if (jObject.has(KEY_DETAIL)) {
+                jObject = jObject.getJSONObject(KEY_DETAIL)
                 content = jObject!!.toString()
-            } else if (jObject.has("Header")) {
+            } else if (jObject.has(KEY_HEADER)) {
                 content = ""
             }
         }
 
-        return ByteArrayInputStream(content!!.toByteArray(charset("UTF-8")))
+        return ByteArrayInputStream(content!!.toByteArray(charset(UTF_8)))
     }
 
     protected fun getCodeFromMockFile(filePath: String, prefixFileName: String): Int {
-        val fileName = this.getFileNameFromPrefix(this.context, String.format("%s/%s", this.mockApiConfiguration.apiPath, filePath), prefixFileName)
-        val assertUrl = String.format("%s/%s/%s", this.mockApiConfiguration.apiPath, filePath, fileName
-            ?: filePath)
+        val fileName = this.getFileNameFromPrefix(
+            this.context,
+            String.format("%s/%s", this.mockApiConfiguration.apiPath, filePath),
+            prefixFileName
+        )
+        val assertUrl = String.format(
+            "%s/%s/%s", this.mockApiConfiguration.apiPath, filePath, fileName
+                ?: filePath
+        )
         return this.getExceptionCode(assertUrl)
     }
 
     private fun getExceptionCode(@NonNull assertUrl: String): Int {
-        val index = assertUrl.indexOf("#")
+        val index = assertUrl.indexOf(KEY_EXCEPTION)
 
         try {
-            return if (index != -1) Integer.valueOf(assertUrl.substring(index + 1, assertUrl.lastIndexOf("#"))) else 200
+            return if (index != -1) Integer.valueOf(assertUrl.substring(index + 1, assertUrl.lastIndexOf(KEY_EXCEPTION))) else SUCCESS
         } catch (numformatEx: NumberFormatException) {
-            return 200
+            return SUCCESS
         } catch (outException: IndexOutOfBoundsException) {
-            return 200
+            return SUCCESS
         }
 
     }
@@ -248,6 +286,7 @@ abstract class ContentRepositoryImpl(protected var context: Context, protected v
 
         while (lstIterator!!.hasNext()) {
             val element = lstIterator.next() as EndpointElement
+            Timber.d(TAG + " " + element.name)
             if (element.name.equals(apiName, true)) {
                 endpointElement = element
                 break
@@ -265,10 +304,16 @@ abstract class ContentRepositoryImpl(protected var context: Context, protected v
 
     @Throws(IOException::class)
     protected fun getJsonStringFromInterceptorChain(request: Request): String? {
-        return if ("POST".equals(request.method(), ignoreCase = true)) Utils.getRequestBodyStringFromInterceptorChain(request) else null
+        return if ("POST".equals(request.method(), ignoreCase = true)) Utils.getRequestBodyStringFromInterceptorChain(
+            request
+        ) else null
     }
 
-    protected fun getDataResponseFilePath(endpointElement: EndpointElement, apiFileName: String, dataFields: Map<String, String>): String {
+    protected fun getDataResponseFilePath(
+        endpointElement: EndpointElement,
+        apiFileName: String,
+        dataFields: Map<String, String>
+    ): String {
         return Utils.getDataResponseFilePathFromEndpointConfig(endpointElement.dataField, dataFields, apiFileName)
     }
 
@@ -277,6 +322,7 @@ abstract class ContentRepositoryImpl(protected var context: Context, protected v
     }
 
     companion object {
+        private const val TAG = "ContentRepositoryImpl"
         private const val SUCCESS = 200
         private const val JSON_MIMETYPE = "application/json"
         private const val UTF_8 = "UTF-8"

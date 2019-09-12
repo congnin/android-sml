@@ -9,7 +9,7 @@ import kotlin.collections.HashMap
 
 object MockAssetManager {
     const val JSON_EXT = ".json"
-    private const val MOCK_API_FOLDER = "mock_api"
+    private const val MOCK_API_FOLDER = ""
     private const val SLASH = "/"
     private const val HASH = "#"
     private val selectedOptions = HashMap<String, String>()

@@ -1,9 +1,10 @@
 package vn.kingbee.injection.module
 
-import android.content.Context
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
+import vn.kingbee.application.Named.RETROFIT_KIOSK
+import vn.kingbee.application.Named.RETROFIT_MOCK
 import vn.kingbee.data.dataprocessing.DataProcessingRepositoryImpl
 import vn.kingbee.data.setting.repository.SettingRepositoryImpl
 import vn.kingbee.data.setting.service.SettingService
@@ -28,7 +29,7 @@ class RepositoryModule {
 
     @Provides
     @Singleton
-    fun provideSettingService(@Named("Kiosk") retrofit: Retrofit): SettingService {
+    fun provideSettingService(@Named(RETROFIT_KIOSK) retrofit: Retrofit): SettingService {
         return retrofit.create(SettingService::class.java)
     }
 
@@ -40,7 +41,7 @@ class RepositoryModule {
 
     @Provides
     @Singleton
-    fun provideTokenService(@Named("Kiosk") retrofit: Retrofit): TokenService {
+    fun provideTokenService(@Named(RETROFIT_KIOSK) retrofit: Retrofit): TokenService {
         return retrofit.create(TokenService::class.java)
     }
 

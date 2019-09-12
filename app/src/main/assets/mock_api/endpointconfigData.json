@@ -1,0 +1,527 @@
+{
+  "version": "1.0",
+  "config": [
+    {
+      "name": "token",
+      "endpoint": "/token",
+      "allowMultipleCall": true,
+      "delay": 3,
+      "data": [
+        {
+          "dataField": "profileId"
+        }
+      ]
+    },
+    {
+      "name": "application",
+      "endpoint": "/os/v1.0.0/upgrade/application",
+      "allowMultipleCall": true,
+      "delay": 3,
+      "data": [
+        {
+          "dataField": "profileId"
+        }
+      ]
+    },
+    {
+      "name": "id-card",
+      "endpoint": "/os/v1.0.0/origination/document/upload/id-card",
+      "allowMultipleCall": true,
+      "delay": 2,
+      "data": [
+        {
+          "dataField": "sessionId"
+        }
+      ]
+    },
+    {
+      "name": "capture-identity-mcq",
+      "endpoint": "/mcqs/v1.0.0/mcq/capture-identity-mcq",
+      "allowMultipleCall": true,
+      "delay": 1,
+      "data": [
+        {
+          "dataField": "sessionId"
+        }
+      ]
+    },
+    {
+      "name": "device",
+      "endpoint": "/dts/v1.0.0/device",
+      "allowMultipleCall": true,
+      "delay": 1,
+      "data": [
+        {
+          "dataField": "sessionId"
+        }
+      ]
+    },
+    {
+      "name": "delink-device",
+      "endpoint": "/dts/v1.0.0/device/delink-device",
+      "allowMultipleCall": true,
+      "delay": 1,
+      "data": [
+        {
+          "dataField": "sessionId"
+        }
+      ]
+    },
+    {
+      "name": "adhoccase",
+      "endpoint": "/pgs/v1.0.0/pegaservice/adhoccase",
+      "allowMultipleCall": true,
+      "delay": 1,
+      "data": [
+        {
+          "dataField": "sessionId"
+        }
+      ]
+    },
+    {
+      "name": "set-pin-otp",
+      "endpoint": "/context/v1.0.0/card/set-pin-otp",
+      "allowMultipleCall": true,
+      "delay": 1,
+      "data": [
+        {
+          "dataField": "sessionId"
+        }
+      ]
+    },
+    {
+      "name": "change-credential",
+      "endpoint": "change-credential",
+      "allowMultipleCall": true,
+      "delay": 1,
+      "data": [
+        {
+          "dataField": "sessionId"
+        }
+      ]
+    },
+    {
+      "name": "status",
+      "endpoint": "/os/v1.0.0/origination/card/status",
+      "allowMultipleCall": true,
+      "delay": 3,
+      "data": [
+        {
+          "dataField": "cardUID"
+        }
+      ]
+    },
+    {
+      "name": "delink",
+      "endpoint": "/os/v1.0.0/origination/card/delink",
+      "allowMultipleCall": true,
+      "delay": 3,
+      "data": [
+        {
+          "dataField": "cardUID"
+        }
+      ]
+    },
+    {
+      "name": "update-card-stock",
+      "endpoint": "/os/v1.0.0/origination/card/update-card-stock",
+      "allowMultipleCall": true,
+      "delay": 5,
+      "data": [
+        {
+          "dataField": "cardUID"
+        }
+      ]
+    },
+    {
+      "name": "update-card-stock",
+      "endpoint": "/cts/v1.0.0/card/update-card-stock",
+      "allowMultipleCall": true,
+      "delay": 5,
+      "data": [
+        {
+          "dataField": "cardUID"
+        }
+      ]
+    },
+    {
+      "name": "upload",
+      "endpoint": "/context/v1.0.0/origination/document/upload",
+      "allowMultipleCall": true,
+      "delay": 5,
+      "data": [
+        {
+          "dataField": "sessionId"
+        }
+      ]
+    },
+    {
+      "name": "compare",
+      "endpoint": "/context/v1.0.0/origination/document/compare",
+      "allowMultipleCall": true,
+      "delay": 2,
+      "data": [
+        {
+          "dataField": "sessionId"
+        }
+      ]
+    },
+    {
+      "name": "get-questions",
+      "endpoint": "/mcqs/v1.0.0/mcq/get-questions",
+      "allowMultipleCall": true,
+      "delay": 1,
+      "data": [
+        {
+          "dataField": "sessionId"
+        }
+      ]
+    },
+    {
+      "name": "pors",
+      "endpoint": "/mcqs/v1.0.0/mcq/pors",
+      "allowMultipleCall": true,
+      "delay": 1,
+      "data": [
+        {
+          "dataField": "sessionId"
+        }
+      ]
+    },
+    {
+      "name": "capture-por-mcq",
+      "endpoint": "/mcqs/v1.0.0/mcq/capture-por-mcq",
+      "allowMultipleCall": true,
+      "delay": 1,
+      "data": [
+        {
+          "dataField": "sessionId"
+        }
+      ]
+    },
+    {
+      "name": "changestatus",
+      "endpoint": "/context/v1.0.0/card/changestatus",
+      "allowMultipleCall": true,
+      "delay": 1,
+      "data": [
+        {
+          "dataField": "profileId"
+        }
+      ]
+    },
+    {
+      "name": "link",
+      "endpoint": "/os/v1.0.0/origination/card/link",
+      "allowMultipleCall": true,
+      "delay": 1,
+      "data": [
+        {
+          "dataField": "profileId"
+        }
+      ]
+    },
+    {
+      "name": "pin",
+      "endpoint": "/context/v1.0.0/origination/card/pin",
+      "allowMultipleCall": true,
+      "delay": 1,
+      "data": [
+        {
+          "dataField": "sessionId"
+        }
+      ]
+    },
+    {
+      "name": "capture-crs-answer",
+      "endpoint": "/os/v1.0.0/origination/capture-fatca-answer",
+      "allowMultipleCall": true,
+      "delay": 2,
+      "data": [
+        {
+          "dataField": "sessionId"
+        }
+      ]
+    },
+    {
+      "name": "capture-email",
+      "endpoint": "/os/v1.0.0/origination/capture-email",
+      "allowMultipleCall": true,
+      "delay": 2,
+      "data": [
+        {
+          "dataField": "sessionId"
+        }
+      ]
+    },
+    {
+      "name": "capture-profile-pin",
+      "endpoint": "/profile/v1.0.0/profile/capture-profile-pin",
+      "allowMultipleCall": true,
+      "delay": 2,
+      "data": [
+        {
+          "dataField": "sessionId"
+        }
+      ]
+    },
+    {
+      "name": "capture-fatca-answer",
+      "endpoint": "/os/v1.0.0/origination/capture-fatca-answer",
+      "allowMultipleCall": true,
+      "delay": 2,
+      "data": [
+        {
+          "dataField": "sessionId"
+        }
+      ]
+    },
+    {
+      "name": "capture-profile-pin",
+      "endpoint": "/profile/v1.0.0/profile/capture-profile-pin",
+      "allowMultipleCall": true,
+      "delay": 2,
+      "data": [
+        {
+          "dataField": "sessionId"
+        }
+      ]
+    },
+    {
+      "name": "token",
+      "endpoint": "/token",
+      "allowMultipleCall": true,
+      "delay": 1,
+      "data": [
+        {
+          "dataField": "grantType"
+        }
+      ]
+    },
+    {
+      "name": "request-token",
+      "endpoint": "/otp/v1.0.0/otp/verification/request-token",
+      "allowMultipleCall": true,
+      "data": [
+        {
+          "dataField": "otpCode"
+        }
+      ]
+    },
+    {
+      "name": "otp",
+      "endpoint": "/otp",
+      "allowMultipleCall": true,
+      "data": [
+        {
+          "dataField": "requestToken"
+        }
+      ]
+    },
+    {
+      "name": "verify-and-capture",
+      "endpoint": "/cp/v1.0.0/cellphone/verify-and-capture",
+      "allowMultipleCall": true,
+      "data": [
+        {
+          "dataField": "sessionId"
+        }
+      ]
+    },
+    {
+      "name": "get-verification-result",
+      "endpoint": "/aggregation/v1.0.0/aggregation/get-verification-result",
+      "allowMultipleCall": true,
+      "delay": 2,
+      "data": [
+        {
+          "dataField": "sessionId"
+        }
+      ]
+    },
+    {
+      "name": "capture-sources-of-funds",
+      "endpoint": "/os/v1.0.0/origination/capture-sources-of-funds",
+      "allowMultipleCall": true,
+      "delay": 2,
+      "data": [
+        {
+          "dataField": "sessionId"
+        }
+      ]
+    },
+    {
+      "name": "capture-customer-address",
+      "endpoint": "/os/v1.0.0/origination/capture-customer-address",
+      "allowMultipleCall": true,
+      "delay": 2,
+      "data": [
+        {
+          "dataField": "sessionId"
+        }
+      ]
+    },
+    {
+      "name": "no-document",
+      "endpoint": "/os/v1.0.0/origination/no-document",
+      "allowMultipleCall": true,
+      "delay": 2,
+      "data": [
+        {
+          "dataField": "sessionId"
+        }
+      ]
+    },
+    {
+      "name": "capture-fp",
+      "endpoint": "/fp/v1.0.0/fingerprint/capture-fp",
+      "allowMultipleCall": true,
+      "data": [
+        {
+          "dataField": "sessionId"
+        }
+      ]
+    },
+    {
+      "name": "application",
+      "endpoint": "/os/v1.0.0/origination/application",
+      "allowMultipleCall": true,
+      "data": [
+        {
+          "dataField": "saId"
+        }
+      ]
+    },
+    {
+      "name": "capture-tnc",
+      "endpoint": "/os/v1.0.0/origination/capture-tnc",
+      "allowMultipleCall": true,
+      "data": [
+        {
+          "dataField": "appCode"
+        }
+      ]
+    },
+    {
+      "name": "profile",
+      "endpoint": "/profile/v1.0.0/profile",
+      "allowMultipleCall": true,
+      "delay": 1,
+      "data": [
+        {
+          "dataField": "Header.SessionKey"
+        }
+      ]
+    },
+    {
+      "name": "account",
+      "endpoint": "/as/v1.0.0/account",
+      "allowMultipleCall": true,
+      "delay": 1,
+      "data": [
+        {
+          "dataField": "Header.SessionKey"
+        }
+      ]
+    },
+    {
+      "name": "list",
+      "endpoint": "/card/v1.0.0/card/8a92864d61e640c70162287f8b091f8f/list",
+      "allowMultipleCall": true,
+      "delay": 1,
+      "data": [
+        {
+          "dataField": "Header.SessionKey"
+        }
+      ]
+    },
+    {
+      "name": "capture-value-of-funds",
+      "endpoint": "/os/v1.0.0/upgrade/capture-value-of-funds",
+      "allowMultipleCall": true,
+      "delay": 2,
+      "data": [
+        {
+          "dataField": "sessionId"
+        }
+      ]
+    },
+    {
+      "name": "authorize",
+      "endpoint": "/authorize",
+      "allowMultipleCall": true,
+      "delay": 1,
+      "data": [
+        {
+          "dataField": "Header.SessionKey"
+        }
+      ]
+    },
+    {
+      "name": "logout",
+      "endpoint": "/logout",
+      "allowMultipleCall": true,
+      "delay": 1,
+      "data": [
+        {
+          "dataField": "Header.SessionKey"
+        }
+      ]
+    },
+    {
+      "name": "loan-offer",
+      "endpoint": "/lcs/v1.0.0/lending-completion/loan-offer/said/9110124960194",
+      "allowMultipleCall": true,
+      "delay": 1,
+      "data": [
+        {
+          "dataField": "Header.SessionKey"
+        }
+      ]
+    },
+    {
+      "name": "mandate",
+      "endpoint": "/lcs/v1.0.0/lending-completion/mandate/said/9110124960194",
+      "allowMultipleCall": true,
+      "delay": 1,
+      "data": [
+        {
+          "dataField": "Header.SessionKey"
+        }
+      ]
+    },
+    {
+      "name": "financial-institution",
+      "endpoint": "/mds/v1.0.0/master-data/financial-institution",
+      "allowMultipleCall": true,
+      "delay": 1,
+      "data": [
+        {
+          "dataField": "Header.SessionKey"
+        }
+      ]
+    },
+    {
+      "name": "configurations",
+      "endpoint": "/lcs/v1.0.0/lending-completion/settings/configurations",
+      "allowMultipleCall": true,
+      "delay": 1,
+      "data": [
+        {
+          "dataField": "Header.SessionKey"
+        }
+      ]
+    },
+    {
+      "name": "branch",
+      "endpoint": "/master-data/financial-institution/301105/branch",
+      "allowMultipleCall": true,
+      "delay": 1,
+      "data": [
+        {
+          "dataField": "Header.SessionKey"
+        }
+      ]
+    }
+  ]
+}

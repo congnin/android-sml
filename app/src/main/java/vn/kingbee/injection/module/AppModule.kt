@@ -21,6 +21,8 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import timber.log.Timber
 import vn.kingbee.application.AppConstant
+import vn.kingbee.application.Named.OK_HTTP_CLIENT_BYPASS_SSL
+import vn.kingbee.application.Named.RETROFIT_KIOSK
 import vn.kingbee.feature.service.TimeoutProcessingService
 import vn.kingbee.feature.service.TimeoutProcessingServiceImpl
 import vn.kingbee.movie.network.NetworkModule.Companion.BASE_KIOSK_URL
@@ -78,7 +80,7 @@ class AppModule {
 
     @Provides
     @Singleton
-    @Named("ByPassSSL")
+    @Named(OK_HTTP_CLIENT_BYPASS_SSL)
     fun provideOkHttpClient(): OkHttpClient {
         var client: OkHttpClient? = null
 
@@ -123,8 +125,8 @@ class AppModule {
 
     @Provides
     @Singleton
-    @Named("Kiosk")
-    fun providesKioskRetrofit(@Named("ByPassSSL") okHttpClient: OkHttpClient): Retrofit {
+    @Named(RETROFIT_KIOSK)
+    fun providesKioskRetrofit(@Named(OK_HTTP_CLIENT_BYPASS_SSL) okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
             .baseUrl(BASE_KIOSK_URL)
             .addConverterFactory(GsonConverterFactory.create())

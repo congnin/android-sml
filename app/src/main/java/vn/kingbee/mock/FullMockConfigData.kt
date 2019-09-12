@@ -4,9 +4,9 @@ import android.net.Uri
 import okhttp3.Headers
 import vn.kingbee.mock.MockAssetManager.JSON_EXT
 
-private const val PATH_REGEX = "\\{.*?\\}"
-
 object FullMockConfigData {
+
+    private const val PATH_REGEX = "\\{.*?\\}"
 
     private const val LOCATION_CODE_HEADER = "http://localhost/callback?" +
             "code=29e00777-248e-3076-9db0-2a6294d77992"

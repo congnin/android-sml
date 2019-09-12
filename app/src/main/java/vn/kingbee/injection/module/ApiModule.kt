@@ -21,7 +21,8 @@ import vn.kingbee.application.CachedPath
 import vn.kingbee.application.Named.CONTENT_REPOSITORY_MOCK_ASSET
 import vn.kingbee.application.Named.CONTENT_REPOSITORY_MOCK_SD_CARD
 import vn.kingbee.application.Named.END_POINT
-import vn.kingbee.application.Named.MOCK_CONTENT_REPOSITORY
+import vn.kingbee.application.Named.OK_HTTP_CLIENT_MOCK
+import vn.kingbee.application.Named.RETROFIT_MOCK
 import javax.inject.Named
 import javax.inject.Singleton
 
@@ -31,13 +32,13 @@ class ApiModule {
     @Singleton
     @Named(END_POINT)
     fun provideBaseUrl(): String =
-        "https://dev-ext-api-gtw-1222053746.eu-west-1.elb.amazonaws.com:443/"
+        "https://smldev.com:3887/"
 
     private fun getMockApiConfiguration(): MockApiConfiguration {
         return MockApiConfiguration.Builder()
-            .endpointConfigPath("mock_api/endpointconfigData.json")
-            .apiPath("mock_api/api-config")
-            .scenarioPath("mock_api/scenarios")
+            .endpointConfigPath("/endpointconfigData.json")
+            .apiPath("/api-config")
+            .scenarioPath("/scenarios")
             .scenarioName("All_Success_Flows")
             .build();
     }
@@ -71,6 +72,7 @@ class ApiModule {
 
     @Provides
     @Singleton
+    @Named(OK_HTTP_CLIENT_MOCK)
     fun provideMockOkHttpClient(@Named(CONTENT_REPOSITORY_MOCK_ASSET) contentRepository: ContentRepository,
                                 mockContractor: MockContractor): OkHttpClient {
         return OkHttpClient.Builder()
@@ -81,8 +83,9 @@ class ApiModule {
 
     @Provides
     @Singleton
+    @Named(RETROFIT_MOCK)
     fun provideRetrofit(@Named(END_POINT) endpoint: String,
-                        okHttpClient: OkHttpClient): Retrofit {
+                        @Named(OK_HTTP_CLIENT_MOCK) okHttpClient: OkHttpClient): Retrofit {
         val gson = GsonBuilder().setLenient().create()
 
         return Retrofit.Builder()

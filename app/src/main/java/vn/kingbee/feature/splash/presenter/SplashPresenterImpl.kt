@@ -6,6 +6,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.observers.DisposableObserver
 import io.reactivex.schedulers.Schedulers
+import timber.log.Timber
 import vn.kingbee.application.MyApp
 import vn.kingbee.domain.dataprocess.AppBus
 import vn.kingbee.domain.dataprocess.Runtime
@@ -33,7 +34,8 @@ class SplashPresenterImpl : BaseKioskPresenter<SplashView>, SplashPresenter {
         runtime: Runtime,
         appBus: AppBus,
         settingUseCase: SettingUseCase,
-        tokenUseCase: TokenUseCase) : super(runtime, appBus) {
+        tokenUseCase: TokenUseCase
+    ) : super(runtime, appBus) {
         this.mSettingUseCase = settingUseCase
         this.mTokenUseCase = tokenUseCase
     }
@@ -91,7 +93,8 @@ class SplashPresenterImpl : BaseKioskPresenter<SplashView>, SplashPresenter {
                 }
 
                 override fun onError(e: Throwable) {
-                    //do nothing
+                    getView()?.hideProgressDialog()
+                    Timber.d(TAG + e.message)
                 }
             })
         addOneSubscription(disposable)
@@ -153,6 +156,7 @@ class SplashPresenterImpl : BaseKioskPresenter<SplashView>, SplashPresenter {
     }
 
     companion object {
+        private const val TAG = "SplashPresenterImpl"
         private const val BASIC = "Basic"
 
         const val AUTHORIZATION = "Basic V0haOEgzV2ZIV2thSTRFYTdwTHlGSG0zVDBzYTplY0Y2c25LMTAwbkpLM05velF1dFFIV3JpaGdh"

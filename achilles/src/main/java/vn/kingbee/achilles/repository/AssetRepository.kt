@@ -18,7 +18,7 @@ class AssetRepository(context: Context, configuration: MockApiConfiguration)
             return try {
                 val list = this.context.assets.list(this.mockApiConfiguration.scenarioPath!!)
                 Arrays.sort(list, this.alphabeticallySortOrder)
-                list
+                list!!
             } catch (ex: IOException) {
                 Timber.tag(this.tag).e(ex)
                 emptyArray()
