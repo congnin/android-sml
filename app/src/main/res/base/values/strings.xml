@@ -238,4 +238,7 @@ The lake was formed about 2 million years ago and is a part of the Lake Tahoe Ba
     <string name="masthead_title_button_exit">Exit</string>
     <string name="exit_on_boarding_no_btn">No</string>
     <string name="exit_on_boarding_yes_btn">Yes</string>
+
+    <string name="title">Title</string>
+    <string name="description">This is a description</string>
 </resources>

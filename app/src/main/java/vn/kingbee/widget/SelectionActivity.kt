@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import vn.kingbee.feature.pagetransformer.IntroActivity
 import vn.kingbee.movie.ui.MainActivity
 import vn.kingbee.rxjava.RxJava2SelectionActivity
 import vn.kingbee.widget.animation.demo.ShimmerActivityDemo
@@ -115,5 +116,9 @@ class SelectionActivity : AppCompatActivity() {
 
     fun startMovie(v: View) {
         startActivity(Intent(this@SelectionActivity, MainActivity::class.java))
+    }
+
+    fun startPageTransformer(v: View) {
+        startActivity(Intent(this@SelectionActivity, IntroActivity::class.java))
     }
 }

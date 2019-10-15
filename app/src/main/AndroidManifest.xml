@@ -28,7 +28,10 @@
                 android:exported="true"/>
 
         <activity android:name=".SelectionActivity">
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
         </activity>
         <activity android:name=".progress.CircleProcessBarActivity"/>
         <activity android:name=".progress.demo.CircleProgressIndicatorDemo"/>
@@ -110,10 +113,7 @@
         <activity android:name="vn.kingbee.feature.splash.SplashActivity"
                   android:theme="@style/AppTheme.NoActionBar"
                   android:screenOrientation="landscape">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
+
         </activity>
 
         <provider
@@ -129,6 +129,8 @@
         <activity android:name="vn.kingbee.working.alarm.AlarmDemo">
 
         </activity>
+
+        <activity android:name="vn.kingbee.feature.pagetransformer.IntroActivity" />
     </application>
 
 </manifest>
