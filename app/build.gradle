@@ -61,6 +61,10 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
     buildTypes.each {
         it.buildConfigField STRING, THE_MOVIE_DB_API_KEY, '"3cc91d496a0b7cf338fafae2c567ffd7"'
     }
@@ -75,7 +79,8 @@ android {
                     'src/main/res/base',
                     'src/main/res/widget',
                     'src/main/res/movie',
-                    'src/main/res/constrainlayout'
+                    'src/main/res/constrainlayout',
+                    'src/main/res/workmanager'
             ]
         }
     }
@@ -139,8 +144,8 @@ dependencies {
 
     implementation "com.airbnb.android:lottie:2.5.1"
 
-    implementation 'androidx.viewpager2:viewpager2:1.0.0-beta02'
-    implementation 'androidx.fragment:fragment-ktx:1.2.0-alpha01'
+    implementation 'androidx.viewpager2:viewpager2:1.0.0-beta03'
+    implementation 'androidx.fragment:fragment-ktx:1.2.0-alpha03'
     debugImplementation 'com.amitshekhar.android:debug-db:1.0.6'
 
     implementation 'com.trello.rxlifecycle3:rxlifecycle:3.0.0'
@@ -149,4 +154,7 @@ dependencies {
 
     implementation 'com.afollestad.material-dialogs:core:0.8.5.9'
     implementation 'com.github.jakob-grabner:Circle-Progress-View:1.4'
+
+    implementation "androidx.work:work-runtime:2.1.0"
+    implementation "androidx.lifecycle:lifecycle-extensions:2.1.0"
 }
