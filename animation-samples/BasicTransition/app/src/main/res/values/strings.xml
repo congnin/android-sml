@@ -1,0 +1,9 @@
+<resources>
+    <string name="scene">Scene</string>
+    <string name="scene_1">1</string>
+    <string name="scene_2">2</string>
+    <string name="scene_3">3</string>
+    <string name="scene_4">4</string>
+    <string name="hello">Hello!</string>
+    <string name="additional_message">This text fades in and out.</string>
+</resources>
