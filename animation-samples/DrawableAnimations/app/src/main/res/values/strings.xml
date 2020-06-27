@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">DrawableAnimations</string>
+
+    <string name="demo_title_animated">AnimatedVectorDrawable</string>
+    <string name="demo_title_seekable">SeekableAnimatedVectorDrawable</string>
+
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="pause">Pause</string>
+    <string name="resume">Resume</string>
+</resources>
