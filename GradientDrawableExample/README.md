@@ -1,0 +1,1 @@
+# [Link](https://blog.mindorks.com/gradient-drawable-in-android)
