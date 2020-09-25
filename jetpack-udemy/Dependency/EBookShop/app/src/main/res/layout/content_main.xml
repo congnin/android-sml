@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="secondarySpinnerAdapter"
+            type="android.widget.ArrayAdapter" />
+        <variable
+            name="secondaryClickHandler"
+            type="com.androidtutz.anushka.ebookshop.MainActivity.MainActivityClickHandlers" />
+
+    </data>
+
+<LinearLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:orientation="vertical"
+    >
+
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/spinner"
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="20sp"
+        app:adapter="@{secondarySpinnerAdapter}"
+        android:onItemSelected="@{secondaryClickHandler::onSelectItem}"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvBooks"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimary"
+        />
+
+</LinearLayout>
+</layout>
